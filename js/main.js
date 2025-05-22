@@ -1,39 +1,66 @@
-// Switch Images
-function changeImage () {
-  var image = document.getElementById('dejoyaImg');
-  var prevBtn = document.getElementById('prevBtn');
-  var nextBtn = document.getElementById('nextBtn');
+// Image and text data
+const slides = [
+  {
+    image: "/images/subtract-img1.svg",
+    title: "DEJOYA 3",
+    description: "Discover how we combine power, precision, technology."
+  },
+  {
+    image: "/images/subtract-img2.svg",
+    title: "DEJOYA 4", // Example different title
+    description: "Experience the next level of performance and innovation." // Example different description
+  }
+];
 
-  image.style.opacity = 0.20;
+let currentSlide = 0;
+
+function changeImage(direction) {
+  const image = document.getElementById('dejoyaImg');
+  const textContainer = document.getElementById('imageText');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  // Fade out current content
+  image.style.opacity = 0.2;
+  textContainer.style.opacity = 0.2;
 
   setTimeout(function() {
-    if (image.src.match("subtract-img1.svg")) {
-      image.src = "../images/subtract-img2.svg";  // Change to second image
+    // Determine new slide index
+    if (direction === 'next') {
+      currentSlide = (currentSlide + 1) % slides.length;
     } else {
-      image.src = "../images/subtract-img1.svg";  // Change back to first image
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     }
+
+    // Update content
+    image.src = slides[currentSlide].image;
+    textContainer.innerHTML = `
+      <p>${slides[currentSlide].title}</p>
+      <p class="text-[10px] mt-1.5">${slides[currentSlide].description}</p>
+    `;
+
+    // Fade in new content
     image.onload = function() {
       image.style.opacity = 1;
+      textContainer.style.opacity = 1;
     };
 
-    if (prevBtn.disabled) {
-      prevBtn.disabled = false;
-      prevBtn.classList.remove('bg-[#FFFFFF5E]', 'text-white');
-      prevBtn.classList.add('bg-white', 'text-[#242323]');
-      nextBtn.disabled = true;
-      nextBtn.classList.remove('bg-white', 'text-[#242323]');
-      nextBtn.classList.add('bg-[#FFFFFF5E]', 'text-white');
-    } else {
-      nextBtn.disabled = false;
-      nextBtn.classList.remove('bg-[#FFFFFF5E]', 'text-white');
-      nextBtn.classList.add('bg-white', 'text-[#242323]');
-      prevBtn.disabled = true;
-      prevBtn.classList.remove('bg-white', 'text-[#242323]');
-      prevBtn.classList.add('bg-[#FFFFFF5E]', 'text-white');
-    }
+    // Update button states
+    prevBtn.disabled = currentSlide === 0;
+    nextBtn.disabled = currentSlide === slides.length - 1;
+    
+    // Update button styles
+    prevBtn.classList.toggle('bg-[#FFFFFF5E]', prevBtn.disabled);
+    prevBtn.classList.toggle('text-white', prevBtn.disabled);
+    prevBtn.classList.toggle('bg-white', !prevBtn.disabled);
+    prevBtn.classList.toggle('text-[#242323]', !prevBtn.disabled);
+    
+    nextBtn.classList.toggle('bg-[#FFFFFF5E]', nextBtn.disabled);
+    nextBtn.classList.toggle('text-white', nextBtn.disabled);
+    nextBtn.classList.toggle('bg-white', !nextBtn.disabled);
+    nextBtn.classList.toggle('text-[#242323]', !nextBtn.disabled);
   }, 300);
 }
-
 // Toggle Filter
 function toggleFilterBar (type) {
   const filterBar = document.getElementById('filterBar');
