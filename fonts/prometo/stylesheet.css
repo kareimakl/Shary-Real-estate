@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-LightItalic.eot');
+    src: local('Prometo Light Italic'), local('Prometo-LightItalic'),
+        url('Prometo-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-LightItalic.woff2') format('woff2'),
+        url('Prometo-LightItalic.woff') format('woff'),
+        url('Prometo-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-MediumItalic.eot');
+    src: local('Prometo Medium Italic'), local('Prometo-MediumItalic'),
+        url('Prometo-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-MediumItalic.woff2') format('woff2'),
+        url('Prometo-MediumItalic.woff') format('woff'),
+        url('Prometo-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-XBoldItalic.eot');
+    src: local('Prometo XBold Italic'), local('Prometo-XBoldItalic'),
+        url('Prometo-XBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-XBoldItalic.woff2') format('woff2'),
+        url('Prometo-XBoldItalic.woff') format('woff'),
+        url('Prometo-XBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-Medium.eot');
+    src: local('Prometo Medium'), local('Prometo-Medium'),
+        url('Prometo-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-Medium.woff2') format('woff2'),
+        url('Prometo-Medium.woff') format('woff'),
+        url('Prometo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-ThinItalic.eot');
+    src: local('Prometo Thin Italic'), local('Prometo-ThinItalic'),
+        url('Prometo-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-ThinItalic.woff2') format('woff2'),
+        url('Prometo-ThinItalic.woff') format('woff'),
+        url('Prometo-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-Black.eot');
+    src: local('Prometo Black'), local('Prometo-Black'),
+        url('Prometo-Black.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-Black.woff2') format('woff2'),
+        url('Prometo-Black.woff') format('woff'),
+        url('Prometo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-Light.eot');
+    src: local('Prometo Light'), local('Prometo-Light'),
+        url('Prometo-Light.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-Light.woff2') format('woff2'),
+        url('Prometo-Light.woff') format('woff'),
+        url('Prometo-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-Thin.eot');
+    src: local('Prometo Thin'), local('Prometo-Thin'),
+        url('Prometo-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-Thin.woff2') format('woff2'),
+        url('Prometo-Thin.woff') format('woff'),
+        url('Prometo-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-Bold.eot');
+    src: local('Prometo Bold'), local('Prometo-Bold'),
+        url('Prometo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-Bold.woff2') format('woff2'),
+        url('Prometo-Bold.woff') format('woff'),
+        url('Prometo-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-Italic.eot');
+    src: local('Prometo Italic'), local('Prometo-Italic'),
+        url('Prometo-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-Italic.woff2') format('woff2'),
+        url('Prometo-Italic.woff') format('woff'),
+        url('Prometo-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-XBold.eot');
+    src: local('Prometo XBold'), local('Prometo-XBold'),
+        url('Prometo-XBold.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-XBold.woff2') format('woff2'),
+        url('Prometo-XBold.woff') format('woff'),
+        url('Prometo-XBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-BoldItalic.eot');
+    src: local('Prometo Bold Italic'), local('Prometo-BoldItalic'),
+        url('Prometo-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-BoldItalic.woff2') format('woff2'),
+        url('Prometo-BoldItalic.woff') format('woff'),
+        url('Prometo-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo-BlackItalic.eot');
+    src: local('Prometo Black Italic'), local('Prometo-BlackItalic'),
+        url('Prometo-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Prometo-BlackItalic.woff2') format('woff2'),
+        url('Prometo-BlackItalic.woff') format('woff'),
+        url('Prometo-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Prometo';
+    src: url('Prometo.eot');
+    src: local('Prometo'),
+        url('Prometo.eot?#iefix') format('embedded-opentype'),
+        url('Prometo.woff2') format('woff2'),
+        url('Prometo.woff') format('woff'),
+        url('Prometo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
