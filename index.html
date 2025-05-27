@@ -23,13 +23,11 @@
     <!-- Header -->
     <header
       id="header"
-      class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFFFFF85] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
+      class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
     >
-      <nav
-        class="xl:h-full w-[1440px] max-w-full mx-auto xl:pt-0 md:pt-3 pt-5 xl:px-8 sm:px-6 px-4"
-      >
+      <nav class="xl:h-full w-full max-w-full mx-auto xl:pt-0 md:pt-3 pt-5">
         <div
-          class="relative flex items-center justify-between gap-4 xl:h-full text-[#1D4265]"
+          class="relative px-4 flex items-center justify-between gap-4 xl:h-full text-[#1D4265]"
         >
           <div class="md:flex hidden items-center gap-20">
             <a href="./index.html">
@@ -285,9 +283,11 @@
               href="./sign-in.html"
               class="xl:flex hidden items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-3 md:w-auto w-8"
             >
-              <img loading="lazy" src="./icons/user.svg" alt="user" />
+              <img loading="lazy" id="notifications" src="./icons/user.svg" alt="user" />
               <span data-i18n="Sign in" class="md:inline hidden text-sm"></span>
             </a>
+
+
             <button
               class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
             >
@@ -321,48 +321,188 @@
               >
               <button
                 onclick="expandCollapseNavbar()"
-                class="flex items-center justify-center rounded-full bg-[#1D4265] md:w-7 w-6 md:h-7 h-6"
+                class="flex items-center justify-center rounded-full md:w-7 w-6 md:h-7 h-6"
               >
-                <span
+                <img
+                  src="./images/ic_twotone-menu.svg"
+                  alt="ic_twotone-menu.svg"
                   id="openCloseIcon"
-                  class="material-symbols-rounded text-white md:text-3xl text-xl md:font-light font-normal transition-all duration-300 ease-in-out"
-                  >add</span
-                >
+                />  
               </button>
             </div>
           </div>
         </div>
         <div
           id="navItems"
-          class="xl:hidden opacity-0 transition-opacity duration-300 ease-in"
+          class="xl:hidden opacity-0 bg-[#fff] w-full h-[100vh] overflow-y-scroll fixed transition-opacity duration-300 ease-in"
         >
           <div
-            class="flex flex-wrap justify-center gap-6 mt-8 font-medium text-sm text-[#1D4265]"
+            class="flex flex-col justify-center gap-4 mt-8 font-medium text-sm text-[#1D4265]"
           >
-            <a href="./index.html" data-i18n="home"></a>
-            <a
-              href="./properties-abroad.html"
-              data-i18n="Properties Abroad"
-            ></a>
-            <a href="./sell.html" data-i18n="Sell"></a>
-            <a href="./blogs.html" data-i18n="Blogs"></a>
-            <a href="./about.html" data-i18n="About"></a>
-            <a href="./contact.html" data-i18n="Contact"></a>
-            <a href="./shary-card.html" data-i18n="Shary Card"></a>
-            <a href="./careers.html" data-i18n="Careers"></a>
-            <a href="./check-now.html" data-i18n="Agents"></a>
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/mdi_home.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./index.html"
+                data-i18n="home"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/Frame.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./properties-abroad.html"
+                data-i18n="Properties Abroad"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/healthicons_home-outline.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./sell.html"
+                data-i18n="Sell"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/carbon_blog.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./blogs.html"
+                data-i18n="Blogs"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/mdi_about-variant.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./about.html"
+                data-i18n="About"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/ri_chat-1-line.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./contact.html"
+                data-i18n="Contact"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/Vector.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./shary-card.html"
+                data-i18n="Shary Card"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/arcticons_jiocareers.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./careers.html"
+                data-i18n="Careers"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/Vector (1).svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./check-now.html"
+                data-i18n="Agents"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+            <div
+              class="bg-[#D9D9D9] !mb-8 justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/material-symbols_language.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <button
+                data-i18n="lang"
+                onclick="changeLanguage(!localStorage.getItem('language') || localStorage.getItem('language') === 'en' ? 'ar' : 'en')"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              ></button>
+            </div>
           </div>
-          <div class="flex items-center justify-between mt-8">
+          <div class="flex flex-col items-start gap-6 justify-between mt-8">
             <a
               href="./notifications.html"
               class="material-symbols-rounded text-[#1D4265]"
               >notifications</a
             >
-            <button
-              data-i18n="lang"
-              onclick="changeLanguage(!localStorage.getItem('language') || localStorage.getItem('language') === 'en' ? 'ar' : 'en')"
-              class="flex items-center justify-center ltr:pb-1.5 rtl:pt-0.5 rounded-full border border-solid border-[#1D4265] text-[#1D4265] font-bold w-7 h-7 shrink-0"
-            ></button>
           </div>
         </div>
       </nav>

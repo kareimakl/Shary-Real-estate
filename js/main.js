@@ -14,6 +14,7 @@ const slides = [
 
 let currentSlide = 0;
 
+
 function changeImage(direction) {
   const image = document.getElementById('dejoyaImg');
   const textContainer = document.getElementById('imageText');

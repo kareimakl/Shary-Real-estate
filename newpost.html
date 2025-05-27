@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Shary</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/components/footer.js" type="text/javascript" defer></script>
+    <script src="/js/language.js"></script>
+    <script src="/js/main.js"></script>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
+    >
+      <nav class="xl:h-full w-full max-w-full mx-auto xl:pt-0 md:pt-3 pt-5">
+        <div
+          class="relative px-4 flex items-center justify-between gap-4 xl:h-full text-[#1D4265]"
+        >
+          <div class="md:flex hidden items-center gap-20">
+            <a href="./index.html">
+              <img
+                loading="lazy"
+                src="./images/shary-logo.svg"
+                class="w-36"
+                alt="logo"
+              />
+            </a>
+            <div class="xl:flex hidden gap-5 xl:mt-2.5">
+              <a href="./index.html" data-i18n="home"></a>
+              <!-- Gulf -->
+              <div class="relative">
+                <div
+                  onclick="openDropdownMenu('subGulf')"
+                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
+                >
+                  <span data-i18n="Gulf"></span>
+                  <span
+                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="subGulf"
+                  onclick="openDropdownMenu('subGulf')"
+                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
+                >
+                  <a
+                    href="./united-arab-emirates.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >UAE</a
+                  >
+                  <a
+                    href="./united-arab-emirates.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >KSA</a
+                  >
+                </div>
+              </div>
+              <!-- Europe -->
+              <div class="relative">
+                <div
+                  onclick="openDropdownMenu('subEurope')"
+                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
+                >
+                  <span data-i18n="Europe"></span>
+                  <span
+                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="subEurope"
+                  onclick="openDropdownMenu('subEurope')"
+                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
+                >
+                  <div class="max-h-[200px] overflow-y-auto my-2.5">
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >Uk</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >PORTO</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >SPIN</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >YOUNAN</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >FR</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >OBROS</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >ITALY</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >DENE</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >FENDI</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >BELG</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >TK</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >GORG</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >CUOR</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <a href="./sell.html" data-i18n="Sell"></a>
+              <a href="./blogs.html" data-i18n="Blogs"></a>
+              <a href="./about.html" data-i18n="About"></a>
+              <a href="./contact.html" data-i18n="Contact"></a>
+              <a href="./shary-card.html" data-i18n="Shary Card"></a>
+              <a href="./careers.html" data-i18n="Careers"></a>
+              <!-- Agents -->
+              <div class="relative">
+                <div
+                  onclick="openDropdownMenu('subAgents')"
+                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
+                >
+                  <span data-i18n="Agents"></span>
+                  <span
+                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="subAgents"
+                  onclick="openDropdownMenu('subAgents')"
+                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
+                >
+                  <a
+                    href="./sign-up.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >Sign Up</a
+                  >
+                  <a
+                    href="./check-now.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >Verify Agent</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex md:w-auto w-full md:justify-start justify-between md:items-stretch items-center sm:gap-1.5 gap-1 xl:mt-2.5"
+          >
+            <!-- Search Btn -->
+            <div class="xl:block hidden relative">
+              <button
+                onclick="toggleRollDown('nav_search', 'navSearchOverlay')"
+                class="h-full flex items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-4 md:w-auto w-8"
+              >
+                <img loading="lazy" src="./icons/search.svg" alt="Search" />
+                <span
+                  data-i18n="Search"
+                  class="md:inline hidden text-sm text-[#777777]"
+                ></span>
+              </button>
+              <div
+                id="nav_search"
+                class="z-[22] absolute w-[565px] ltr:right-0 rtl:left-0 top-[55px] bg-white rounded-[30px] h-[41px] flex items-center gap-1 px-3 shadow-[0px_4px_4px_0px_#00000040] opacity-0 invisible transition-opacity ease-in-out duration-300"
+              >
+                <input
+                  type="text"
+                  placeholder="Search"
+                  class="outline-none text-sm font-normal bg-inherit w-full px-1"
+                />
+                <div class="flex items-center gap-2">
+                  <!-- Rolldown -->
+                  <div class="relative z-[1] manrope">
+                    <div
+                      onclick="openDropdownMenu('search_property_type')"
+                      class="dropdown-btn w-[158px] h-[30px] bg-[#FAFAFA] cursor-pointer flex items-center rounded-3xl px-1.5 shadow-[0px_4px_4px_0px_#00000040]"
+                    >
+                      <p
+                        class="text-xs text-[#242323] w-full text-center truncate"
+                      >
+                        Property Type
+                      </p>
+                      <span
+                        class="material-symbols-rounded font-light text-black"
+                        >expand_circle_down</span
+                      >
+                    </div>
+                    <div
+                      id="search_property_type"
+                      onclick="openDropdownMenu('search_property_type')"
+                      class="dropdown-list w-full absolute top-10 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
+                      style="box-shadow: 0px 4px 4px 0px #00000040"
+                    >
+                      <p
+                        class="pt-4 pb-2 px-3 cursor-pointer hover:text-[#1563DF]"
+                      >
+                        Apartment
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Villa
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Studio
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Commercial
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Admin
+                      </p>
+                      <p
+                        class="pb-4 pt-2 px-3 cursor-pointer hover:text-[#1563DF]"
+                      >
+                        Medical
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Btn -->
+                  <button
+                    class="w-[60px] h-[30px] flex items-center justify-center bg-[#123A4B] rounded-3xl text-white shadow-[0px_4px_4px_0px_#00000040]"
+                  >
+                    <span class="material-symbols-rounded">search</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Nav Search Overlay -->
+              <div
+                id="navSearchOverlay"
+                onclick="toggleRollDown('nav_search', 'navSearchOverlay')"
+                class="opacity-0 invisible transition-opacity ease-in-out duration-300 fixed inset-0 h-[100dvh] z-[21]"
+              ></div>
+            </div>
+            <!--  -->
+            <a
+              href="./sign-in.html"
+              class="xl:flex hidden items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-3 md:w-auto w-8"
+            >
+              <img loading="lazy" id="notifications" src="./icons/user.svg" alt="user" />
+              <span data-i18n="Sign in" class="md:inline hidden text-sm"></span>
+            </a>
+
+
+            <button
+              class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
+            >
+              <p
+                data-i18n="Get The App"
+                class="md:text-sm text-xs text-white font-bold"
+              ></p>
+            </button>
+            <button
+              data-i18n="lang"
+              onclick="changeLanguage(!localStorage.getItem('language') || localStorage.getItem('language') === 'en' ? 'ar' : 'en')"
+              class="xl:flex hidden items-center justify-center ltr:pb-1.5 rtl:pb-0 rounded-full bg-[#1D4265] text-sm text-white md:w-9 w-8 md:h-9 h-8"
+              style="box-shadow: 0px 4px 4px 0px #00000040"
+            ></button>
+            <a
+              href="./index.html"
+              class="md:hidden block absolute right-1/2 translate-x-1/2"
+            >
+              <img
+                loading="lazy"
+                src="./images/shary-logo.svg"
+                class="w-[110px] h-[30px]"
+                alt="logo"
+              />
+            </a>
+            <div class="xl:hidden flex items-center gap-1">
+              <a
+                href="./sign-in.html"
+                class="material-symbols-rounded font-light text-[#1D4265] md:text-4xl text-[32px]"
+                >account_circle</a
+              >
+              <button
+                onclick="expandCollapseNavbar()"
+                class="flex items-center justify-center rounded-full md:w-7 w-6 md:h-7 h-6"
+              >
+                <img
+                  src="./images/ic_twotone-menu.svg"
+                  alt="ic_twotone-menu.svg"
+                  id="openCloseIcon"
+                />  
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="navItems"
+          class="xl:hidden opacity-0 bg-[#fff] w-full h-[100vh] overflow-y-scroll fixed transition-opacity duration-300 ease-in"
+        >
+          <div
+            class="flex flex-col justify-center gap-4 mt-8 font-medium text-sm text-[#1D4265]"
+          >
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/mdi_home.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./index.html"
+                data-i18n="home"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/Frame.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./properties-abroad.html"
+                data-i18n="Properties Abroad"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/healthicons_home-outline.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./sell.html"
+                data-i18n="Sell"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/carbon_blog.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./blogs.html"
+                data-i18n="Blogs"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/mdi_about-variant.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./about.html"
+                data-i18n="About"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/ri_chat-1-line.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./contact.html"
+                data-i18n="Contact"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/Vector.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./shary-card.html"
+                data-i18n="Shary Card"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/arcticons_jiocareers.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./careers.html"
+                data-i18n="Careers"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/Vector (1).svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./check-now.html"
+                data-i18n="Agents"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+            <div
+              class="bg-[#D9D9D9] !mb-8 justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-96 py-4 ps-5"
+            >
+              <img
+                src="./icons/material-symbols_language.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <button
+                data-i18n="lang"
+                onclick="changeLanguage(!localStorage.getItem('language') || localStorage.getItem('language') === 'en' ? 'ar' : 'en')"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              ></button>
+            </div>
+          </div>
+          <div class="flex flex-col items-start gap-6 justify-between mt-8">
+            <a
+              href="./notifications.html"
+              class="material-symbols-rounded text-[#1D4265]"
+              >notifications</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <!-- Loop to repeat card 6 times -->
+  <!-- You can copy/paste this card 6 times or generate it via a loop if using JS/React -->
+  
+  <!-- Card 1 -->
+<!-- container grid -->
+<div class="md:!w-[70%] w-full m-auto mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-8 p-6 bg-white min-h-screen">
+
+  <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+    <div class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col">
+    <div class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300">
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+      <img src="./images/newpost.jpg" class="w-32 h-40 rounded-2xl object-cover flex-shrink-0" />
+
+    </div>
+
+    <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+      Mountain View Developments
+    </h3>
+
+    <p class="text-xs text-start text-gray-600 mb-4">
+What started out as a collective dream and an innovative idea has now become a reality. Finding the right home has always been a stressful process, that’s where
+    </p>
+
+    <div class="text-right w-full">
+      <a  href="./fullnewpost" class="text-xs font-semibold text-gray-800 hover:underline">View More</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+    <div class="-mb-14">
+      <footer-component></footer-component>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+      const containers = document.querySelectorAll(".horizontal-scroll");
+
+containers.forEach((el) => {
+  el.addEventListener("wheel", (e) => {
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      el.scrollLeft += e.deltaY;
+    }
+  });
+});
+
+    </script>
+  </body>
+</html>
