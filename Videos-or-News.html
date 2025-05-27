@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-white">
+    <div
+      class="flex md:flex-row justify-center items-center m-auto j flex-col w-full gap-8"
+    >
+      <!-- Videos Card -->
+      <div
+        class="flex flex-col relative items-center justify-between bg-[#183A5D] text-white md:w-64 md:h-40 w-[90%] h-30 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform"
+      >
+      <a href="./Videos-Story.html" class="absolute w-full inset-0 h-full  z-20 opacity-100"></a>
+
+        <div class="flex flex-col items-center justify-center">
+          <img
+            src="./icons/hugeicons_ai-video (1).svg"
+            alt=""
+            class="w-12 h-12 object-cover"
+          />
+          <span class="text-lg font-medium">Videos</span>
+        </div>
+        <div class="text-end w-full flex !justify-end">
+          <img
+            src="./icons/tabler_arrow-narrow-up.svg"
+            alt=""
+            class="w-10 h-10 object-cover text-end"
+          />
+        </div>
+      </div>
+      <!-- News Card -->
+      <div
+        class="flex flex-col items-center relative justify-between bg-[#4DBFB1] text-white md:w-64 md:h-40 w-[90%] h-30 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform"
+      >
+      <a href="./newspost.html" class="absolute w-full inset-0 h-full  z-20 opacity-100"></a>
+        <div class="flex flex-col items-center justify-center z-10">
+          <img
+            src="./icons/fluent_news-16-regular.svg"
+            alt=""
+            class="w-12 h-12 object-cover"
+          />
+          <span class="text-lg font-medium">News</span>
+        </div>
+        <div class="text-end w-full flex !justify-end z-10">
+          <img
+            src="./icons/tabler_arrow-narrow-up.svg"
+            alt=""
+            class="w-10 h-10 object-cover text-end"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

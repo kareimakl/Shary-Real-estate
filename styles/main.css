@@ -12,7 +12,33 @@
 .slider-1 ,.slider-2 ,.slider-3{
   min-height: 700px !important;
 }
+.progress-container {
+          position: relative;
+          height: 1.5rem;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 9999px;
+          overflow: hidden;
+        }
 
+        .fill-bar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 0%;
+          background: white;
+          animation: fillAnimation 4s linear forwards;
+          animation-fill-mode: forwards; /* يحفظ الحالة النهائية */
+        }
+
+        @keyframes fillAnimation {
+          from {
+            width: 0%;
+          }
+          to {
+            width: 100%;
+          }
+        }
 /* .swiper{
   overflow:visible !important;
   overflow-x: hidden !important;
@@ -105,6 +131,8 @@ a {
     background-image: url('/images/hero-img-3.jpeg');
   }
 } */
+
+
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: #1d4265 !important;
