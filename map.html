@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Shary</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/components/footer.js" type="text/javascript" defer></script>
+    <script src="/js/language.js"></script>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 p-4">
+    <h1 class="text-2xl font-bold mb-4">Real Estate Map</h1>
+
+    <!-- Map Container -->
+    <div id="map" class="mb-6 rounded-lg shadow-lg"></div>
+
+    <!-- Modal -->
+    <div
+      id="unitModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
+        <button
+          onclick="closeModal()"
+          class="absolute top-2 right-2 text-gray-500 text-2xl"
+        >
+          &times;
+        </button>
+
+        <h2 class="text-xl font-semibold mb-2">Unit Details</h2>
+
+        <a href="./inside-project.html">
+          <img
+            id="unitImage"
+            src=""
+            alt="Unit Image"
+            class="w-full rounded mb-3"
+          />
+        </a>
+
+        <div class="mt-4">
+          <div class="pb-3 flex items-center justify-between">
+            <div class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
+              <p>Total Price</p>
+              <p
+                id="unitPrice"
+                class="mt-1 font-bold text-xl text-[#1D4265] manrope"
+              >
+                11,312,000 EGP
+              </p>
+            </div>
+            <div class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
+              <p>Down Payment</p>
+              <p
+                id="unitLocation"
+                class="mt-1 font-bold text-xl text-[#1D4265] manrope"
+              >
+                11,312,000 EGP
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pb-3 flex items-center justify-between">
+          <div id="unitDate" class="text-sm text-gray-500 mb-2"></div>
+          <div class="text-sm mb-2 flex items-center">
+            <span id="unitCode" class=""></span>
+            <a
+              href="#"
+              class="ml-2 bg-[#1D4265] text-white px-2 py-1 text-xs rounded"
+              >PDF</a
+            >
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 text-sm mb-2">
+          <div class="flex gap-3 items-center">
+            <div
+              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                >page_info</span
+              >
+            </div>
+            <div>
+              <p
+                id="unitType"
+                class="text-[#5C6368] md:text-sm text-xs font-normal"
+              >
+                Type:
+              </p>
+              <p
+                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+              >
+                Villa
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div
+              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                style="transform: rotate(-45deg)"
+                >straighten</span
+              >
+            </div>
+            <div>
+              <p class="text-[#5C6368] md:text-sm text-xs font-normal">
+                Apartment area:
+              </p>
+              <p
+                id="unitSize"
+                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+              >
+                900 SqFt
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div
+              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                >bed</span
+              >
+            </div>
+            <div>
+              <p class="text-[#5C6368] md:text-sm text-xs font-normal">
+                Bedrooms:
+              </p>
+              <p
+                id="unitBedrooms"
+                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+              >
+                2 Rooms
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div
+              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+            >
+              <span
+                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                >real_estate_agent</span
+              >
+            </div>
+            <div>
+              <p class="text-[#5C6368] md:text-sm text-xs font-normal">
+                Delivery In:
+              </p>
+              <p
+                id="unitDelivery"
+                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+              >
+                2023
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="unitProject"
+          class="text-sm text-blue-700 underline mb-1"
+        ></div>
+
+        <div
+          class="w-full border-t border-1 border-solid border-[#1D4265] flex justify-center items-center m-auto text-center"
+        >
+          <div
+            class="flex items-center justify-between m-auto gap-2 bg-[#FFFFFF3B] md:rounded-[36px] rounded-2xl sm:px-4 p-2"
+          >
+            <div
+              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
+              class="shrink-0 !w-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-16 rounded-full shadow-md"
+            >
+              <img
+                loading="lazy"
+                src="./images/lo.png"
+                class="sm:w-44 !w-12"
+                alt="KWVV"
+              />
+            </div>
+            <div
+              class="border-s border-1 border-solid border-[#1D4265] h-8"
+            ></div>
+
+            <div
+              class="text-white font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
+            >
+              <p
+                id="unitDeveloper"
+                class="leading-tight text-[#1D4265] w-auto text-start"
+                data-i18n="ZED East New Cairo Compound is a prestigious project by Ora Developers."
+              ></p>
+            </div>
+          </div>
+        </div>
+        <!-- <div id="unitDeveloper" class="text-sm text-yellow-600"></div> -->
+      </div>
+    </div>
+
+    <!-- Google Maps Script -->
+    <script>
+      const units = [
+        {
+          location: { lat: 30.0444, lng: 31.2357 },
+          image: "./images/compound.jpeg",
+          price: "10,550,734 EGP",
+          locationText: "El Mostakbal City",
+          code: "Download",
+          date: "21/09/2024, 15:34",
+          type: "Apartment",
+          bedrooms: "3 Rooms",
+          size: "1200 SqFt",
+          delivery: "2026",
+          project: "ZED East",
+          developer: "Ora Developers",
+        },
+        {
+          location: { lat: 30.05, lng: 31.24 },
+          image: "./images/ora-apartment.jpeg",
+          price: "8,200,000 EGP",
+          locationText: "New Capital",
+          code: "Download",
+          date: "01/10/2024, 11:00",
+          type: "Villa",
+          bedrooms: "4 Rooms",
+          size: "1800 SqFt",
+          delivery: "2027",
+          project: "Mountain View iCity",
+          developer: "Mountain View",
+        },
+        {
+          location: { lat: 30.0333, lng: 31.22 },
+          image: "./images/ora-apartment.jpeg",
+          price: "6,750,000 EGP",
+          locationText: "Maadi",
+          code: "Download",
+          date: "15/10/2024, 10:15",
+          type: "Penthouse",
+          bedrooms: "2 Rooms",
+          size: "950 SqFt",
+          delivery: "2025",
+          project: "Skyline Maadi",
+          developer: "Memaar Al Morshedy",
+        },
+      ];
+
+      let map;
+
+      function initMap() {
+        const mapCenter = { lat: 30.0444, lng: 31.2357 };
+
+        map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: mapCenter,
+        });
+
+        units.forEach((unit) => {
+          const marker = new google.maps.Marker({
+            position: unit.location,
+            map: map,
+            title: unit.project,
+          });
+
+          marker.addListener("click", () => {
+            openModal({
+              image: unit.image,
+              price: unit.price,
+              location: unit.locationText,
+              code: unit.code,
+              date: unit.date,
+              type: unit.type,
+              bedrooms: unit.bedrooms,
+              size: unit.size,
+              delivery: unit.delivery,
+              project: unit.project,
+              developer: unit.developer,
+            });
+          });
+        });
+      }
+
+      function openModal(data) {
+        document.getElementById("unitImage").src = data.image;
+        document.getElementById("unitPrice").textContent = data.price;
+        document.getElementById(
+          "unitLocation"
+        ).textContent = ` ${data.location}`;
+        document.getElementById("unitCode").textContent = data.code;
+        document.getElementById("unitDate").textContent = data.date;
+        document.getElementById("unitType").textContent = ` ${data.type}`;
+        document.getElementById(
+          "unitBedrooms"
+        ).textContent = ` ${data.bedrooms}`;
+        document.getElementById("unitSize").textContent = ` ${data.size}`;
+        document.getElementById(
+          "unitDelivery"
+        ).textContent = ` ${data.delivery}`;
+        document.getElementById("unitProject").textContent = data.project;
+        document.getElementById(
+          "unitDeveloper"
+        ).textContent = ` ${data.developer}`;
+
+        const modal = document.getElementById("unitModal");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("unitModal");
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+    </script>
+
+    <!-- Google Maps API -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9vNqDFa_KAHfjrSXqs9NZFdiDAV7PEn8 &callback=initMap"
+    ></script>
+  </body>
+</html>

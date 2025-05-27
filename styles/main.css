@@ -28,7 +28,7 @@
           width: 0%;
           background: white;
           animation: fillAnimation 4s linear forwards;
-          animation-fill-mode: forwards; /* يحفظ الحالة النهائية */
+          animation-fill-mode: forwards;
         }
 
         @keyframes fillAnimation {
