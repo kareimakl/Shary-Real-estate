@@ -1,5 +1,5 @@
 {
-  "Mountain":"Mountain View Developments",
+  "Mountain": "Mountain View Developments",
   "lang": "عربي",
   "home": "Home",
   "Gulf": "Gulf",
@@ -29,13 +29,13 @@
   "Where Your Next Home Begins": "Where Your Next Home Begins",
   "Text Slide Tow": "Text Slide Tow",
   "Text Slide Three": "Text Slide Three",
-  
+
   "Try Searching For": "Try Searching For",
   "Property Type": "Property Type",
 
   "Explore": "Explore",
-  "View All Developers": "View All Developers",
-  
+  "View All Developers": "Show All ",
+
   "New Launches": "New Launches",
   "ZED East New Cairo Compound is a prestigious project by Ora Developers.": "ZED East New Cairo Compound is a prestigious project by Ora Developers.",
 
@@ -64,7 +64,7 @@
   "Message": "Message",
   "Address": "Address",
   "Submit": "Submit",
-  "View All Properties": "View All Properties",
+  "View All Properties": "Show All",
   "January 28, 2024": "January 28, 2024",
   "Jerome Bell": "Jerome Bell",
   "Furniture": "Furniture",
@@ -77,5 +77,5 @@
   "arrow_right_alt": "arrow_right_alt",
   "keyboard_arrow_left": "keyboard_arrow_left",
   "east": "east",
-  "arrow_right":"arrow_right"
+  "arrow_right": "arrow_right"
 }
