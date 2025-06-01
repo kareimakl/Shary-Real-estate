@@ -11,56 +11,21 @@
     <script src="/components/footer.js" type="text/javascript" defer></script>
     <script src="/js/language.js"></script>
     <script src="/js/main.js"></script>
-
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/styles/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script>
-  setTimeout(function () {
-    window.location.href = "./inside-top-developers.html";
-  }, 4000);
-</script>
-    <style>
-      .fill-bar {
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background-color: white;
-        animation: fill 4s linear forwards;
-      }
-
-      .delay-0 {
-        animation-delay: 0s;
-      }
-
-      .delay-1 {
-        animation-delay: 4s;
-      }
-
-      .delay-2 {
-        animation-delay: 8s;
-      }
-
-      @keyframes fill {
-        from {
-          width: 0%;
-        }
-        to {
-          width: 100%;
-        }
-      }
-    </style>
   </head>
-
-  <body
-    
-  >
-      <!-- Header -->
+  <body>
     <header
       id="header"
-      class="fixed md:block hidden top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
+      class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
     >
       <nav class="xl:h-full w-full max-w-full mx-auto xl:pt-0 md:pt-3 pt-5">
         <div
@@ -320,10 +285,14 @@
               href="./sign-in.html"
               class="xl:flex hidden items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-3 md:w-auto w-8"
             >
-              <img loading="lazy" id="notifications" src="./icons/user.svg" alt="user" />
+              <img
+                loading="lazy"
+                id="notifications"
+                src="./icons/user.svg"
+                alt="user"
+              />
               <span data-i18n="Sign in" class="md:inline hidden text-sm"></span>
             </a>
-
 
             <button
               class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
@@ -364,11 +333,35 @@
                   src="./images/ic_twotone-menu.svg"
                   alt="ic_twotone-menu.svg"
                   id="openCloseIcon"
-                />  
+                />
               </button>
             </div>
           </div>
         </div>
+        <div class="md:hidden px-4 mt-5">
+          <div
+            class="border border-solid border-[#1D4265] text-[#1D4265] rounded-full py-2 px-5 flex items-center justify-between gap-4"
+          >
+            <p class="flex w-full items-center gap-2">
+              <span class="material-symbols-rounded text-xl leading-none"
+                >search</span
+              >
+              <input
+                class="font-medium text-xs w-full outline-none placeholder-[#1D4265] bg-transparent"
+                type="text"
+                name=""
+                id=""
+                placeholder="Area, compound,  Real Estate Developer"
+              />
+            </p>
+            <span
+              onclick="toggleFilterBar('open')"
+              class="material-symbols-rounded text-xl leading-none cursor-pointer"
+              >tune</span
+            >
+          </div>
+        </div>
+
         <div
           id="navItems"
           class="xl:hidden opacity-0 bg-[#fff] w-full h-[100vh] overflow-y-scroll fixed transition-opacity duration-300 ease-in"
@@ -544,211 +537,84 @@
         </div>
       </nav>
     </header>
-    <div
-    class="bg-[#fff] relative  text-white flex flex-row items-start justify-center min-h-screen"
-    >
-
-    <!-- Story Container -->
-    <div class="relative block md:hidden  w-full max-w-md h-screen overflow-hidden bg-gray-900">
-      <!-- Progress Bars -->
-      <div class="flex justify-between p-1 space-x-2 !z-50">
-        <div
-          class="w-1/3 h-1.5 bg-white/30 rounded-full overflow-hidden relative"
+    <div class="sm:mt-24 mt-44 m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4">
+      <div
+        class="manrope pb-5 overflow-x-auto md:mt-6 mt-4 h-full grid md:grid-cols-6 grid-cols-3 justify-center text-center m-auto items-center gap-2"
+      >
+        <a
+          href="./apartments.html"
+          class="md:w-36 w-[109px] h-[120px] flex flex-col justify-center items-center m-auto md:h-[200px] shrink-0 border border-solid border-[#E4E4E4] rounded-2xl md:p-3 p-4 text-center cursor-pointer hover:shadow-lg"
         >
-          <div class="fill-bar delay-0"></div>
-        </div>
-        <div
-          class="w-1/3 h-1.5 bg-white/30 rounded-full overflow-hidden relative"
+          <img
+            loading="lazy"
+            src="./images/8afe8a5dc766b5373a7b95df3e29a79a54748b68.png"
+            class="m-auto md:w-auto w-14"
+            alt="Property"
+          />
+          <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-4">
+            Commercial
+          </p>
+        </a>
+        <a
+          href="./apartments.html"
+          class="md:w-36 w-[109px] h-[120px] flex flex-col justify-center items-center m-auto md:h-[200px] shrink-0 border border-solid border-[#E4E4E4] rounded-2xl md:p-3 p-4 text-center cursor-pointer hover:shadow-lg"
         >
-          <div class="fill-bar delay-1"></div>
-        </div>
-        <div
-          class="w-1/3 h-1.5 bg-white/30 rounded-full overflow-hidden relative"
+          <img
+            loading="lazy"
+            src="./images/761f323d5625702f576423bc926e21b43c61d0c3.png"
+            class="m-auto md:w-auto w-14"
+            alt="Property"
+          />
+          <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-4">
+            Admin
+          </p>
+        </a>
+        <a
+          href="./apartments.html"
+          class="md:w-36 w-[109px] h-[120px] flex flex-col justify-center items-center m-auto md:h-[200px] shrink-0 border border-solid border-[#E4E4E4] rounded-2xl md:p-3 p-4 text-center cursor-pointer hover:shadow-lg"
         >
-          <div class="fill-bar delay-2"></div>
-        </div>
-      </div>
-
-      <!-- Background Image -->
-      <img
-        src="./images/bgnewstory.png"
-        alt="Building"
-        class="w-full h-full object-cover absolute inset-0 !z-0"
-      />
-
-      <!-- Content Overlay -->
-      <div class="relative z-10 flex flex-col justify-between h-full py-4">
-        <!-- Logo & Title -->
-        <div class="w-full relative px-4 flex justify-start items-center text-center">
-      <a href="./inside-top-developers.html" class="absolute w-full inset-0 h-full  z-20 opacity-100"></a>
-
-          <div
-            class="flex text-center items-center justify-start gap-2 md:rounded-[36px] rounded-2xl"
-          >
-            <div
-              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="shrink-0 !w-12 p-2 justify-start bg-[#fff] border border-solid border-[#00000040] text-start flex items-start !h-12 rounded-full shadow-md"
-            >
-              <img
-                loading="lazy"
-                src="./images/lo.png"
-                class="!w-12"
-                alt="KWVV"
-              />
-            </div>
-            <div
-              class="text-white text-center items-center flex font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
-            >
-              <p
-                class="leading-tight font-bold text-[#fff] w-auto text-center items-center flex"
-                data-i18n="Mountain"
-              ></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phone Input -->
-        <div class="mb-4 h-full !items-end flex justify-center">
-          <div
-            class="w-[90%] bg-white/30 backdrop-blur-sm border border-[#FFFFFF] rounded-full flex items-end justify-end p-3"
-          >
-            <input
-              type="text"
-              placeholder="Phone Number"
-              class="bg-transparent w-full outline-none text-white text-start placeholder-white"
-            />
-          </div>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="bg-white py-6 px-6 flex justify-between items-center">
-          <span class="text-lg font-bold text-[#FCB424]"
-            ><span class="text-[#161E2D]">Get</span> Action
-            <br />
-            <span class="text-[#161E2D]">Now</span></span
-          >
-          <div class="flex space-x-3">
-            <a href="#" class="bg-[#1D4265] h-12 w-12 p-2 rounded-full"
-              ><img
-                src="./icons/ion_call.svg"
-                alt="Phone"
-                class="w-full object-cover"
-            /></a>
-            <a href="#" class="bg-[#00DD3B] h-12 w-12 p-2 rounded-full"
-              ><img
-                src="./icons/ic_baseline-whatsapp.svg"
-                alt="WhatsApp"
-                class="w-full object-cover"
-            /></a>
-            <a
-              href="#"
-              class="bg-[#fff] border border-[#1D4265] h-12 w-12 p-2 rounded-full"
-              ><img
-                src="./icons/ic_baseline-whatsapp (1).svg"
-                alt="Share"
-                class="w-full object-cover"
-            /></a>
-          </div>
-        </div>
+          <img
+            loading="lazy"
+            src="./images/c4e6f849a8c65c5e9f4763093f4539c0450aeec1.png"
+            class="m-auto md:w-auto w-14"
+            alt="Property"
+          />
+          <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-4">
+            Hotel Apartment
+          </p>
+        </a>
+        <a
+          href="./apartments.html"
+          class="md:w-36 w-[109px] h-[120px] flex flex-col justify-center items-center m-auto md:h-[200px] shrink-0 border border-solid border-[#E4E4E4] rounded-2xl md:p-3 p-4 text-center cursor-pointer hover:shadow-lg"
+        >
+          <img
+            loading="lazy"
+            src="./images/5337a26f3b1471efd70dfe83f70ee000e403e3a7.png"
+            class="m-auto md:w-auto w-14"
+            alt="Property"
+          />
+          <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-4">
+            Medical
+          </p>
+        </a>
+        <a
+          href="./apartments.html"
+          class="md:w-36 w-[109px] h-[120px] flex flex-col justify-center items-center m-auto md:h-[200px] shrink-0 border border-solid border-[#E4E4E4] rounded-2xl md:p-3 p-4 text-center cursor-pointer hover:shadow-lg"
+        >
+          <img
+            loading="lazy"
+            src="./images/2f360fddb9e1f7d27041283ad51cb4dd089fd777.png"
+            class="m-auto md:w-auto w-14"
+            alt="Property"
+          />
+          <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-4">
+            Office
+          </p>
+        </a>
       </div>
     </div>
-
-    <!-- Story Container  laptop-->
-
-      <div class="relative mt-16 md:block hidden  w-full max-w-md h-[45rem] overflow-hidden bg-gray-900">
-      <!-- Progress Bars -->
-      <div class="flex justify-between p-1 space-x-2">
-        <div
-          class="w-1/3 h-1.5 bg-white/30 rounded-full overflow-hidden relative"
-        >
-          <div class="fill-bar delay-0"></div>
-        </div>
-        <div
-          class="w-1/3 h-1.5 bg-white/30 rounded-full overflow-hidden relative"
-        >
-          <div class="fill-bar delay-1"></div>
-        </div>
-        <div
-          class="w-1/3 h-1.5 bg-white/30 rounded-full overflow-hidden relative"
-        >
-          <div class="fill-bar delay-2"></div>
-        </div>
-      </div>
-
-      <!-- Background Image -->
-      <img
-        src="./images/bgnewstory.png"
-        alt="Building"
-        class="w-full h-full object-cover absolute inset-0 z-0"
-      />
-
-      <!-- Content Overlay -->
-      <div class="relative z-10 flex flex-col justify-between h-full py-4">
-        <!-- Logo & Title -->
-        <div class="w-full relative  px-4 flex justify-start items-center text-center">
-      <a href="./inside-top-developers.html" class="absolute w-full inset-0 h-full  z-20 opacity-100"></a>
-          <div
-            class="flex text-center items-center justify-start gap-2 md:rounded-[36px] rounded-2xl"
-          >
-            <div
-              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="shrink-0 !w-12 p-2 justify-start bg-[#fff] border border-solid border-[#00000040] text-start flex items-start !h-12 rounded-full shadow-md"
-            >
-              <img
-                loading="lazy"
-                src="./images/lo.png"
-                class="!w-12"
-                alt="KWVV"
-              />
-            </div>
-            <div
-              class="text-white text-center items-center flex font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
-            >
-              <p
-                class="leading-tight font-bold text-[#fff] w-auto text-center items-center flex"
-                data-i18n="Mountain"
-              ></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Phone Input -->
-        <div class="mb-4 h-full !items-end flex justify-center">
-          <div
-            class="w-[90%] bg-white/30 backdrop-blur-sm border border-[#FFFFFF] rounded-full flex items-end justify-end p-3"
-          >
-            <input
-              type="text"
-              placeholder="Phone Number"
-              class="bg-transparent w-full outline-none text-white text-start placeholder-white"
-            />
-          </div>
-        </div>
-
-      
-      </div>
-
-    
-    </div>
-        <!-- Action Buttons -->
-        <div class=" mt-16 md:flex hidden absolute right-36   py-6 px-6   justify-center  items-center">
-          <div class="flex flex-col justify-between gap-3 items-center m-auto space-x-3">
-            <a href="#" class="bg-[#1D4265] h-12 w-40 p-2 flex justify-center items-center m-auto rounded-full"
-              ><img
-                src="./icons/ion_call.svg"
-                alt="Phone"
-                class="w-8 h-8  object-cover"
-            /></a>
-            <a href="#" class="bg-[#00DD3B] h-12 w-40 p-2  flex justify-center items-center m-auto rounded-full"
-              ><img
-                src="./icons/ic_baseline-whatsapp.svg"
-                alt="WhatsApp"
-                class="w-8 h-8  object-cover"
-            /></a></a>
-          </div>
-        </div>
-    </div>
-              <div class="-mb-14   md:block hidden">
+    <!-- Footer -->
+    <div class="-mb-14">
       <footer-component></footer-component>
     </div>
   </body>

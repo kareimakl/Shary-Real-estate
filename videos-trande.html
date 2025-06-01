@@ -18,9 +18,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script>
-  setTimeout(function () {
-    window.location.href = "./inside-top-developers.html";
-  }, 4000);
 </script>
     <style>
       .fill-bar {
@@ -57,10 +54,10 @@
   <body
     
   >
-      <!-- Header -->
+    <!-- Header -->
     <header
       id="header"
-      class="fixed md:block hidden top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
+      class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
     >
       <nav class="xl:h-full w-full max-w-full mx-auto xl:pt-0 md:pt-3 pt-5">
         <div
@@ -320,10 +317,14 @@
               href="./sign-in.html"
               class="xl:flex hidden items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-3 md:w-auto w-8"
             >
-              <img loading="lazy" id="notifications" src="./icons/user.svg" alt="user" />
+              <img
+                loading="lazy"
+                id="notifications"
+                src="./icons/user.svg"
+                alt="user"
+              />
               <span data-i18n="Sign in" class="md:inline hidden text-sm"></span>
             </a>
-
 
             <button
               class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
@@ -364,11 +365,35 @@
                   src="./images/ic_twotone-menu.svg"
                   alt="ic_twotone-menu.svg"
                   id="openCloseIcon"
-                />  
+                />
               </button>
             </div>
           </div>
         </div>
+        <div class="md:hidden px-4 mt-5">
+          <div
+            class="border border-solid border-[#1D4265] text-[#1D4265] rounded-full py-2 px-5 flex items-center justify-between gap-4"
+          >
+            <p class="flex w-full items-center gap-2">
+              <span class="material-symbols-rounded text-xl leading-none"
+                >search</span
+              >
+              <input
+                class="font-medium text-xs w-full outline-none placeholder-[#1D4265] bg-transparent"
+                type="text"
+                name=""
+                id=""
+                placeholder="Area, compound,  Real Estate Developer"
+              />
+            </p>
+            <span
+              onclick="toggleFilterBar('open')"
+              class="material-symbols-rounded text-xl leading-none cursor-pointer"
+              >tune</span
+            >
+          </div>
+        </div>
+
         <div
           id="navItems"
           class="xl:hidden opacity-0 bg-[#fff] w-full h-[100vh] overflow-y-scroll fixed transition-opacity duration-300 ease-in"
@@ -545,13 +570,13 @@
       </nav>
     </header>
     <div
-    class="bg-[#fff] relative  text-white flex flex-row items-start justify-center min-h-screen"
+    class="bg-[#fff] md:mt-2 relative  text-white flex flex-row items-start justify-center min-h-screen"
     >
 
     <!-- Story Container -->
     <div class="relative block md:hidden  w-full max-w-md h-screen overflow-hidden bg-gray-900">
       <!-- Progress Bars -->
-      <div class="flex justify-between p-1 space-x-2 !z-50">
+      <div class="flex justify-between p-1 space-x-2">
         <div
           class="w-1/3 h-1.5 bg-white/30 rounded-full overflow-hidden relative"
         >
@@ -570,55 +595,60 @@
       </div>
 
       <!-- Background Image -->
-      <img
-        src="./images/bgnewstory.png"
-        alt="Building"
-        class="w-full h-full object-cover absolute inset-0 !z-0"
-      />
+<video
+  id="mobileVideo"
+  src="./videos/video.mp4"
+  class="w-full h-full object-cover absolute inset-0 "
+></video>
+<button
+  id="mobilePlayButton"
+  class="absolute inset-0  z-40  flex items-center justify-center w-full h-full bg-black/40 hover:bg-black/60 transition"
+>
+  <img src="./images/Vector.png" alt="Play" class="w-16 h-16" />
+</button>
 
       <!-- Content Overlay -->
-      <div class="relative z-10 flex flex-col justify-between h-full py-4">
+      <div class="relative  flex flex-col justify-between h-full py-4">
         <!-- Logo & Title -->
         <div class="w-full relative px-4 flex justify-start items-center text-center">
-      <a href="./inside-top-developers.html" class="absolute w-full inset-0 h-full  z-20 opacity-100"></a>
 
           <div
-            class="flex text-center items-center justify-start gap-2 md:rounded-[36px] rounded-2xl"
+            class="flex text-center items-center justify-between w-full gap-2 md:rounded-[36px] rounded-2xl"
           >
             <div
-              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="shrink-0 !w-12 p-2 justify-start bg-[#fff] border border-solid border-[#00000040] text-start flex items-start !h-12 rounded-full shadow-md"
+              class="shrink-0 !w-24 p-2 justify-start text-start flex items-start !h-12 rounded-full shadow-md"
             >
               <img
+                src="./images/7325a8a8999c8970749f86fc6b13087cf1843308.png"
                 loading="lazy"
-                src="./images/lo.png"
-                class="!w-12"
+                class="!w-24"
                 alt="KWVV"
               />
             </div>
             <div
-              class="text-white text-center items-center flex font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
+              class="text-white gap-2  text-center items-center flex font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
             >
-              <p
-                class="leading-tight font-bold text-[#fff] w-auto text-center items-center flex"
-                data-i18n="Mountain"
-              ></p>
+            <a href="./index.html">
+                <img
+                src="./icons/basil_notification-outline copy.svg"
+                loading="lazy"
+                class="!w-6"
+                alt="KWVV"
+              />◊
+            </a>
+            <a href="./sign-in.html">
+                <img
+                src="./icons/Vector copy.svg"
+                loading="lazy"
+                class="!w-6"
+                alt="KWVV"
+              />◊
+            </a>
+
             </div>
           </div>
         </div>
 
-        <!-- Phone Input -->
-        <div class="mb-4 h-full !items-end flex justify-center">
-          <div
-            class="w-[90%] bg-white/30 backdrop-blur-sm border border-[#FFFFFF] rounded-full flex items-end justify-end p-3"
-          >
-            <input
-              type="text"
-              placeholder="Phone Number"
-              class="bg-transparent w-full outline-none text-white text-start placeholder-white"
-            />
-          </div>
-        </div>
 
         <!-- Action Buttons -->
         <div class="bg-white py-6 px-6 flex justify-between items-center">
@@ -676,52 +706,57 @@
       </div>
 
       <!-- Background Image -->
-      <img
-        src="./images/bgnewstory.png"
+      <video
+        src="./videos/video.mp4"
+        id="desktopVideo"
         alt="Building"
-        class="w-full h-full object-cover absolute inset-0 z-0"
-      />
-
+        class="w-full h-full object-cover absolute inset-0"
+      >
+    </video>
+<button
+  id="desktopPlayButton"
+  class="absolute inset-0  z-40  flex items-center justify-center w-full h-full bg-black/40 hover:bg-black/60 transition"
+>
+  <img src="./images/Vector.png" alt="Play" class="w-16 h-16" />
+</button>
       <!-- Content Overlay -->
-      <div class="relative z-10 flex flex-col justify-between h-full py-4">
+      <div class="relative  flex flex-col justify-between h-full py-4">
         <!-- Logo & Title -->
         <div class="w-full relative  px-4 flex justify-start items-center text-center">
-      <a href="./inside-top-developers.html" class="absolute w-full inset-0 h-full  z-20 opacity-100"></a>
           <div
-            class="flex text-center items-center justify-start gap-2 md:rounded-[36px] rounded-2xl"
+            class="flex text-center items-center justify-between w-full gap-2 md:rounded-[36px] rounded-2xl"
           >
             <div
-              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="shrink-0 !w-12 p-2 justify-start bg-[#fff] border border-solid border-[#00000040] text-start flex items-start !h-12 rounded-full shadow-md"
+              class="!w-24 p-2 justify-start  text-start flex items-start !h-12"
             >
               <img
                 loading="lazy"
-                src="./images/lo.png"
-                class="!w-12"
+                src="./images/7325a8a8999c8970749f86fc6b13087cf1843308.png"
+
+                class="!w-24"
                 alt="KWVV"
               />
             </div>
             <div
-              class="text-white text-center items-center flex font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
+              class="text-white gap-2 justify-end text-center items-center flex font-light sm:text-sm text-xs border-white ps-2"
             >
-              <p
-                class="leading-tight font-bold text-[#fff] w-auto text-center items-center flex"
-                data-i18n="Mountain"
-              ></p>
+                  <a href="./index.html">
+                <img
+                src="./icons/basil_notification-outline copy.svg"
+                loading="lazy"
+                class="!w-6"
+                alt="KWVV"
+              />◊
+            </a>
+            <a href="./sign-in.html">
+                <img
+                src="./icons/Vector copy.svg"
+                loading="lazy"
+                class="!w-6"
+                alt="KWVV"
+              />◊
+            </a>
             </div>
-          </div>
-        </div>
-
-        <!-- Phone Input -->
-        <div class="mb-4 h-full !items-end flex justify-center">
-          <div
-            class="w-[90%] bg-white/30 backdrop-blur-sm border border-[#FFFFFF] rounded-full flex items-end justify-end p-3"
-          >
-            <input
-              type="text"
-              placeholder="Phone Number"
-              class="bg-transparent w-full outline-none text-white text-start placeholder-white"
-            />
           </div>
         </div>
 
@@ -751,5 +786,42 @@
               <div class="-mb-14   md:block hidden">
       <footer-component></footer-component>
     </div>
+<script>
+  const mobileVideo = document.getElementById('mobileVideo');
+  const mobilePlayButton = document.getElementById('mobilePlayButton');
+
+  mobilePlayButton.addEventListener('click', () => {
+    mobileVideo.play();
+    mobilePlayButton.style.display = 'none';
+  });
+
+  mobileVideo.addEventListener('pause', () => {
+    mobilePlayButton.style.display = 'flex';
+  });
+
+  mobileVideo.addEventListener('ended', () => {
+    mobilePlayButton.style.display = 'flex';
+  });
+
+  const desktopVideo = document.getElementById('desktopVideo');
+  const desktopPlayButton = document.getElementById('desktopPlayButton');
+
+  desktopPlayButton.addEventListener('click', () => {
+    desktopVideo.play();
+    desktopPlayButton.style.display = 'none';
+  });
+
+  desktopVideo.addEventListener('pause', () => {
+    desktopPlayButton.style.display = 'flex';
+  });
+
+  desktopVideo.addEventListener('ended', () => {
+    desktopPlayButton.style.display = 'flex';
+  });
+</script>
+
+
+
   </body>
+  
 </html>

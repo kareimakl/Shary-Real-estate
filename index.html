@@ -11,7 +11,11 @@
     <script src="/components/footer.js" type="text/javascript" defer></script>
     <script src="/js/language.js"></script>
     <script src="/js/main.js"></script>
-
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/styles/main.css" />
     <link
       rel="stylesheet"
@@ -336,6 +340,30 @@
             </div>
           </div>
         </div>
+        <div class="md:hidden px-4 mt-5">
+          <div
+            class="border border-solid border-[#1D4265] text-[#1D4265] rounded-full py-2 px-5 flex items-center justify-between gap-4"
+          >
+            <p class="flex w-full items-center gap-2">
+              <span class="material-symbols-rounded text-xl leading-none"
+                >search</span
+              >
+              <input
+                class="font-medium text-xs w-full outline-none placeholder-[#1D4265] bg-transparent"
+                type="text"
+                name=""
+                id=""
+                placeholder="Area, compound,  Real Estate Developer"
+              />
+            </p>
+            <span
+              onclick="toggleFilterBar('open')"
+              class="material-symbols-rounded text-xl leading-none cursor-pointer"
+              >tune</span
+            >
+          </div>
+        </div>
+
         <div
           id="navItems"
           class="xl:hidden opacity-0 bg-[#fff] w-full h-[100vh] overflow-y-scroll fixed transition-opacity duration-300 ease-in"
@@ -600,25 +628,6 @@
                   </button>
                 </div>
               </div>
-
-              <!-- <p
-                class="md:hidden manrope text-2xl font-semibold text-white text-center mt-16"
-              >
-                Dejoya 2Dejoya 2Dejoya 2
-              </p>
-              <div class="md:hidden manrope text-white">
-                <p class="font-semibold text-2xl">Dejoya 2</p>
-                <p class="text-xs my-2.5 w-4/5">
-                  ZED East New Cairo Compound is a prestigious project by Ora
-                  Developers.
-                </p>
-                <p class="font-semibold text-sm">6th of October City, Egypt</p>
-                <div class="mt-6 flex justify-center gap-1.5">
-                  <p class="w-1.5 h-1.5 bg-white rounded-full"></p>
-                  <p class="w-1.5 h-1.5 bg-[#FFFFFF73] rounded-full"></p>
-                  <p class="w-1.5 h-1.5 bg-[#FFFFFF73] rounded-full"></p>
-                </div>
-              </div> -->
 
               <div class="manrope lg:block hidden mt-10 h-24">
                 <div
@@ -1423,6 +1432,70 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- hero smoll -->
+      <!-- Swiper HTML -->
+      <div
+        class="swiper md:hidden block !mt-[60px] rounded-[32px] overflow-hidden"
+      >
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div
+            class="swiper-slide bg-smoll bg-no-repeat bg-cover bg-center h-[430.76922607421875px]"
+          >
+            <div
+              class="bg-gradient-to-b from-[#00000000] from-0% to-[#000000c8] to-100% text-white flex justify-end items-start m-auto gap-2 px-4 pb-10 h-full w-full flex-col"
+            >
+              <h1 class="text-[23.69px]">Dejoya 1</h1>
+              <p
+                class="text-[11px] w-4/5"
+                style="font-weight: 400; font-family: Manrope"
+              >
+                ZED East New Cairo Compound is a prestigious project by Ora
+                Developers.
+              </p>
+              <p class="text-[14px]">6th of October City, Egypt</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div
+            class="swiper-slide bg-smoll bg-no-repeat bg-cover bg-center h-[430.76922607421875px]"
+          >
+            <div
+              class="bg-gradient-to-b from-[#00000000] from-0% to-[#000000c8] to-100% text-white flex justify-end items-start m-auto gap-2 px-4 pb-10 h-full w-full flex-col"
+            >
+              <h1 class="text-[23.69px]">Dejoya 2</h1>
+              <p
+                class="text-[11px] w-4/5"
+                style="font-weight: 400; font-family: Manrope"
+              >
+                ZED East New Cairo Compound is a prestigious project by Ora
+                Developers.
+              </p>
+              <p class="text-[14px]">6th of October City, Egypt</p>
+            </div>
+          </div>
+          <div
+            class="swiper-slide bg-smoll bg-no-repeat bg-cover bg-center h-[430.76922607421875px]"
+          >
+            <div
+              class="bg-gradient-to-b from-[#00000000] from-0% to-[#000000c8] to-100% text-white flex justify-end items-start m-auto gap-2 px-4 pb-10 h-full w-full flex-col"
+            >
+              <h1 class="text-[23.69px]">Dejoya 3</h1>
+              <p
+                class="text-[11px] w-4/5"
+                style="font-weight: 400; font-family: Manrope"
+              >
+                ZED East New Cairo Compound is a prestigious project by Ora
+                Developers.
+              </p>
+              <p class="text-[14px]">6th of October City, Egypt</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
       </div>
 
       <!-- Property Type & Filter By -->
@@ -2260,7 +2333,7 @@
 
       <!-- Try Searching For -->
       <div
-        class="sm:mt-16 mt-5 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
+        class="sm:block hidden sm:mt-16 mt-5 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
       >
         <div class="sm:block hidden">
           <p
@@ -2396,10 +2469,86 @@
           </a>
         </div>
       </div>
+      <!-- Try Searching For smoll  -->
+      <div
+        class="sm:hidden block sm:mt-16 mt-5 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
+      >
+        <div class="sm:block hidden">
+          <p
+            class="text-[#1563DF] font-medium text-sm uppercase tracking-[0.8px]"
+            data-i18n="Property Type"
+          ></p>
+          <p
+            class="mt-1 text-[#1D4265] font-medium sm:text-xl"
+            data-i18n="Try Searching For"
+          ></p>
+        </div>
+        <div
+          class="manrope pb-5 hide-scroll overflow-x-auto md:mt-6 mt-4 h-full flex justify-between items-center md:gap-4 gap-2"
+        >
+          <a
+            href="./residential.html"
+            class="md:w-36 w-28 shrink-0 rounded-2xl md:p-6 p-4 text-center cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./images/residential.png"
+              class="m-auto md:w-auto w-14"
+              alt="Property"
+            />
+            <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-2">
+              Residential
+            </p>
+          </a>
+          <a
+            href="./mixed-used.html"
+            class="md:w-36 w-28 shrink-0 rounded-2xl md:p-6 p-4 text-center cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./images/Mixed Used.jpg"
+              class="m-auto md:w-auto w-14"
+              alt="Property"
+            />
+            <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-2">
+              Mixed Used
+            </p>
+          </a>
+          <a
+            href="./apartments.html"
+            class="md:w-36 w-28 shrink-0 rounded-2xl md:p-6 p-4 text-center cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./images/resale.png"
+              class="m-auto md:w-auto w-14"
+              alt="Property"
+            />
+            <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-2">
+              Resale
+            </p>
+          </a>
+
+          <a
+            href="./coastal.html"
+            class="md:w-36 w-28 shrink-0 rounded-2xl md:p-6 p-4 text-center cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="./images/Coastal.png"
+              class="m-auto md:w-auto w-14"
+              alt="Property"
+            />
+            <p class="text-[#161E2D] font-semibold md:text-lg text-sm mt-2">
+              Coastal
+            </p>
+          </a>
+        </div>
+      </div>
 
       <!-- Exclusive Offers -->
       <div
-        class="sm:mt-20 mt-12 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
+        class="sm:mt-20 mt-1 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
       >
         <div class="relative">
           <!-- Slider container with horizontal scrolling -->
@@ -2519,8 +2668,8 @@
                     </div>
                   </div>
                   <a
-                    href="./offers.html"
-                    class="w-[201px] md:w-[359px] !m-auto md:mt-10 !mt-4 h-[20px] md:h-[35px] bg-[#1D4265] flex !justify-center !items-center rounded-3xl px-10 py-1 gap-1"
+                    href="./Videos-or-News.html"
+                    class="w-[201px] md:w-[359px] m-auto md:mt-10 mt-4 h-[20px] md:h-[35px] bg-[#1D4265] flex justify-center items-center rounded-3xl px-10 py-1 gap-1"
                     style="box-shadow: 0px 4px 55.2px 0px #ffffff40"
                   >
                     <span
@@ -2617,11 +2766,11 @@
           </a>
         </div>
         <div
-          class="hide-scroll overflow-x-auto sm:mt-6 mt-2 py-1 h-full flex items-center md:gap-4 gap-2"
+          class="hide-scroll overflow-x-auto sm:mt-6 mt-2 py-1 h-full flex items-center md:gap-4 gap-1"
         >
           <a href="./Videos-Story.html">
             <div
-              class="!w-20 p-2 justify-center border border-[3px] border-solid border-[#08A69B] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 md:h-20 w-16 h-16 p-2 justify-center border border-[3px] border-solid border-[#08A69B] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2635,7 +2784,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md shadow-custom"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md shadow-custom"
             >
               <img
                 loading="lazy"
@@ -2649,7 +2798,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md shadow-custom"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md shadow-custom"
             >
               <img
                 loading="lazy"
@@ -2663,7 +2812,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2676,7 +2825,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md shadow-custom"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md shadow-custom"
             >
               <img
                 loading="lazy"
@@ -2689,7 +2838,7 @@
           <a href="./Videos-Story.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2703,7 +2852,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2716,7 +2865,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md shadow-custom"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md shadow-custom"
             >
               <img
                 loading="lazy"
@@ -2729,7 +2878,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2743,7 +2892,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2756,7 +2905,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md shadow-custom"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md shadow-custom"
             >
               <img
                 loading="lazy"
@@ -2769,7 +2918,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2783,7 +2932,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md"
             >
               <img
                 loading="lazy"
@@ -2796,7 +2945,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md shadow-custom"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md shadow-custom"
             >
               <img
                 loading="lazy"
@@ -2809,7 +2958,7 @@
           <a href="./inside-top-developers.html">
             <div
               style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="!w-20 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-20 rounded-full shadow-md shadow-custom"
+              class="md:w-20 md:h-20 w-16 h-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center rounded-full shadow-md shadow-custom"
             >
               <img
                 loading="lazy"
@@ -3493,7 +3642,7 @@
           </button>
           <div
             id="top_compounds_slider"
-            class="hide-scroll flex lg:gap-4 gap-2 overflow-x-auto  px-1"
+            class="hide-scroll flex lg:gap-4 gap-2 overflow-x-auto px-1"
           >
             <a
               href="./top-compounds.html"
@@ -3727,77 +3876,9 @@
                 class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
                 alt="area"
               />
-              <div class="w-full px-2.5">
+              <div class="w-full mt-1">
                 <div
-                  class="flex border border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
-                  style="box-shadow: 0px 4px 4px 0px #00000040"
-                >
-                  <div class="font-semibold">
-                    <p class="text-[#161E2D] md:text-sm text-xs">
-                      <span>321</span>
-                      <span data-i18n="Property"></span>
-                    </p>
-                    <p class="md:text-lg text-sm" data-i18n="Cairo"></p>
-                  </div>
-                  <div
-                    class="cursor-pointer border border-solid border-[#E4E4E4] rounded-full md:w-10 w-6 md:h-10 h-6 flex items-center justify-center"
-                  >
-                    <span
-                      data-i18n="arrow_right_alt"
-                      class="material-symbols-rounded sm:text-2xl text-base"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <!--  -->
-            <a
-              href="./top-areas.html"
-              class="top_areas_item relative px-1 xl:w-1/4 md:w-1/3 sm:w-64 w-52 shrink-0 md:h-72 h-48"
-            >
-              <img
-                loading="lazy"
-                src="./images/area-3.jpeg"
-                class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
-                alt="area"
-              />
-              <div class="w-full px-2.5">
-                <div
-                  class="flex border border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
-                  style="box-shadow: 0px 4px 4px 0px #00000040"
-                >
-                  <div class="font-semibold">
-                    <p class="text-[#161E2D] md:text-sm text-xs">
-                      <span>321</span>
-                      <span data-i18n="Property"></span>
-                    </p>
-                    <p class="md:text-lg text-sm" data-i18n="Cairo"></p>
-                  </div>
-                  <div
-                    class="cursor-pointer border border-solid border-[#E4E4E4] rounded-full md:w-10 w-6 md:h-10 h-6 flex items-center justify-center"
-                  >
-                    <span
-                      data-i18n="arrow_right_alt"
-                      class="material-symbols-rounded sm:text-2xl text-base"
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <!--  -->
-            <a
-              href="./top-areas.html"
-              class="top_areas_item relative px-1 xl:w-1/4 md:w-1/3 sm:w-64 w-52 shrink-0 md:h-72 h-48"
-            >
-              <img
-                loading="lazy"
-                src="./images/area-3.jpeg"
-                class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
-                alt="area"
-              />
-              <div class="w-full px-2.5">
-                <div
-                  class="flex border border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
+                  class="flex border w-full border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
                   style="box-shadow: 0px 4px 4px 0px #00000040"
                 >
                   <div class="font-semibold">
@@ -3828,9 +3909,9 @@
                 class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
                 alt="area"
               />
-              <div class="w-full px-2.5">
+              <div class="w-full mt-1">
                 <div
-                  class="flex border border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
+                  class="flex border w-full border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
                   style="box-shadow: 0px 4px 4px 0px #00000040"
                 >
                   <div class="font-semibold">
@@ -3857,13 +3938,112 @@
             >
               <img
                 loading="lazy"
-                src="./images/area-3.jpeg"
+                src="./images/area-1.jpeg"
                 class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
                 alt="area"
               />
-              <div class="w-full px-2.5">
+              <div class="w-full mt-1">
                 <div
-                  class="flex border border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
+                  class="flex border w-full border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
+                  style="box-shadow: 0px 4px 4px 0px #00000040"
+                >
+                  <div class="font-semibold">
+                    <p class="text-[#161E2D] md:text-sm text-xs">
+                      <span>321</span>
+                      <span data-i18n="Property"></span>
+                    </p>
+                    <p class="md:text-lg text-sm" data-i18n="Cairo"></p>
+                  </div>
+                  <div
+                    class="cursor-pointer border border-solid border-[#E4E4E4] rounded-full md:w-10 w-6 md:h-10 h-6 flex items-center justify-center"
+                  >
+                    <span
+                      data-i18n="arrow_right_alt"
+                      class="material-symbols-rounded sm:text-2xl text-base"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="./top-areas.html"
+              class="top_areas_item relative px-1 xl:w-1/4 md:w-1/3 sm:w-64 w-52 shrink-0 md:h-72 h-48"
+            >
+              <img
+                loading="lazy"
+                src="./images/area-1.jpeg"
+                class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
+                alt="area"
+              />
+              <div class="w-full mt-1">
+                <div
+                  class="flex border w-full border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
+                  style="box-shadow: 0px 4px 4px 0px #00000040"
+                >
+                  <div class="font-semibold">
+                    <p class="text-[#161E2D] md:text-sm text-xs">
+                      <span>321</span>
+                      <span data-i18n="Property"></span>
+                    </p>
+                    <p class="md:text-lg text-sm" data-i18n="Cairo"></p>
+                  </div>
+                  <div
+                    class="cursor-pointer border border-solid border-[#E4E4E4] rounded-full md:w-10 w-6 md:h-10 h-6 flex items-center justify-center"
+                  >
+                    <span
+                      data-i18n="arrow_right_alt"
+                      class="material-symbols-rounded sm:text-2xl text-base"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="./top-areas.html"
+              class="top_areas_item relative px-1 xl:w-1/4 md:w-1/3 sm:w-64 w-52 shrink-0 md:h-72 h-48"
+            >
+              <img
+                loading="lazy"
+                src="./images/area-1.jpeg"
+                class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
+                alt="area"
+              />
+              <div class="w-full mt-1">
+                <div
+                  class="flex border w-full border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
+                  style="box-shadow: 0px 4px 4px 0px #00000040"
+                >
+                  <div class="font-semibold">
+                    <p class="text-[#161E2D] md:text-sm text-xs">
+                      <span>321</span>
+                      <span data-i18n="Property"></span>
+                    </p>
+                    <p class="md:text-lg text-sm" data-i18n="Cairo"></p>
+                  </div>
+                  <div
+                    class="cursor-pointer border border-solid border-[#E4E4E4] rounded-full md:w-10 w-6 md:h-10 h-6 flex items-center justify-center"
+                  >
+                    <span
+                      data-i18n="arrow_right_alt"
+                      class="material-symbols-rounded sm:text-2xl text-base"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a
+              href="./top-areas.html"
+              class="top_areas_item relative px-1 xl:w-1/4 md:w-1/3 sm:w-64 w-52 shrink-0 md:h-72 h-48"
+            >
+              <img
+                loading="lazy"
+                src="./images/area-1.jpeg"
+                class="md:rounded-2xl rounded-lg w-full h-[75%] object-cover"
+                alt="area"
+              />
+              <div class="w-full mt-1">
+                <div
+                  class="flex border w-full border-solid border-[#000] items-center justify-between gap-2 bg-white rounded-xl sm:py-3 py-2 sm:px-4 px-3"
                   style="box-shadow: 0px 4px 4px 0px #00000040"
                 >
                   <div class="font-semibold">
@@ -3910,11 +4090,9 @@
       <div
         class="sm:mt-16 mt-8 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4 overflow-x-hidden"
       >
-        <div
-          class="flex xl:gap-6 lg:gap-4 gap-3 manrope hide-scroll overflow-x-auto"
-        >
+        <div class="flex md:flex-row flex-col xl:gap-6 md:gap-4 gap-3 manrope">
           <div
-            class="lg:w-full w-11/12 lg:shrink shrink-0 flex flex-col justify-between rounded-[29px] md:px-8 md:py-5 py-4 sm:px-6 px-4 border border-solid border-[#1D426540] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#4DBFB11f] to-[#B6C4CE1f]"
+            class="w-full w-md:w-1/2 lg:shrink shrink-0 flex flex-col justify-between rounded-[29px] md:px-8 md:py-5 py-4 sm:px-6 px-4 border border-solid border-[#1D426540] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#4DBFB11f] to-[#B6C4CE1f]"
           >
             <div class="flex items-start justify-between lg:mt-8 mt-4 gap-2">
               <div>
@@ -3951,7 +4129,7 @@
           </div>
           <!--  -->
           <div
-            class="lg:w-full w-11/12 lg:shrink shrink-0 rounded-[29px] md:px-8 md:py-5 py-4 sm:px-6 px-4 bg-cover bg-center bg-no-repeat"
+            class="w-full w-md:w-1/2 mt-2 w-11/12 lg:shrink shrink-0 rounded-[29px] md:px-8 md:py-5 py-4 sm:px-6 px-4 bg-cover bg-center bg-no-repeat"
             style="background-image: url('./images/sell-property-bg.jpeg')"
           >
             <p
@@ -6287,15 +6465,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper(".mySwiper", {
+      const swiper = new Swiper(".swiper", {
         loop: true,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
         },
         autoplay: {
           delay: 3000,
