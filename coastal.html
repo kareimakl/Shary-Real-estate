@@ -652,27 +652,218 @@
       </a>
     </div>
     <!-- Get Action now -->
-      <div class="md:mt-24 mb-16 mt-12 max-w-[1440px] m-auto xl:px-20 md:px-8 px-4">
-        <div
-          class="bg-white md:max-w-lg sm:max-w-md m-auto rounded-[30px] sm:py-10 md:px-10 p-6"
-          style="box-shadow: 6px 6px 76.1px 0px #00000040"
+    <div
+      class="md:mt-24 mb-4 mt-12 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
+    >
+      <div
+        class="bg-white md:max-w-lg sm:max-w-md m-auto rounded-[30px] sm:py-10 md:px-10 p-6"
+        style="box-shadow: 6px 6px 76.1px 0px #00000040"
+      >
+        <p
+          class="capitalize sm:text-3xl ltr:sm:text-left rtl:sm:text-right text-center text-[#1D4265]"
         >
-          <p
-            class="capitalize sm:text-3xl ltr:sm:text-left rtl:sm:text-right text-center text-[#1D4265]"
+          <span data-i18n="Get"></span>
+          <span class="text-[#FCB424]" data-i18n="Action"></span>
+          <span data-i18n="now"></span>
+        </p>
+        <div class="manrope mt-6 flex flex-col sm:gap-6 gap-5">
+          <div>
+            <label
+              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+              for="name"
+            >
+              <span data-i18n="Name"></span>
+              <span class="text-[#FF5151]">*</span>
+            </label>
+            <div class="relative">
+              <span
+                class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                >account_circle</span
+              >
+              <input
+                class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
+                placeholder="Your name"
+                type="text"
+                name="name"
+                id="name"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+              for="phone"
+            >
+              <span data-i18n="Phone"></span>
+              <span class="text-[#FF5151]">*</span>
+            </label>
+            <div class="flex gap-2">
+              <div class="relative z-[4]">
+                <div
+                  onclick="openDropdownMenu('flag')"
+                  class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
+                >
+                  <img
+                    loading="lazy"
+                    src="./icons/egy-flag.svg"
+                    alt="flag"
+                    class="md:w-[40px] w-[24px]"
+                  />
+                  <span
+                    class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="flag"
+                  onclick="openDropdownMenu('flag')"
+                  class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
+                >
+                  <div class="cursor-pointer px-3 py-1 img-container">
+                    <img
+                      loading="lazy"
+                      src="./icons/egy-flag.svg"
+                      alt="flag"
+                      class="md:w-[42px] w-[25px] m-auto"
+                    />
+                  </div>
+                  <div class="cursor-pointer px-3 py-1 img-container">
+                    <img
+                      loading="lazy"
+                      src="./icons/egy-flag.svg"
+                      alt="flag"
+                      class="md:w-[42px] w-[25px] m-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="relative w-full">
+                <span
+                  class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                  >tag</span
+                >
+                <input
+                  class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
+                  placeholder="Phone number"
+                  type="text"
+                  name="phone"
+                  id="phone"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="relative z-[1]">
+            <label
+              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+            >
+              <span>Project</span>
+              <span class="text-[#FF5151]">*</span>
+            </label>
+            <div
+              onclick="openDropdownMenu('location')"
+              class="dropdown-btn relative cursor-pointer sm:h-[54px] h-[42px] flex items-center gap-2 rounded-full sm:py-4 py-2.5 ps-5 sm:pe-5 pe-3 border border-solid border-[#E4E4E4] leading-5"
+            >
+              <p class="sm:text-sm text-xs w-full truncate"></p>
+              <span
+                class="material-symbols-rounded text-sm leading-none text-[#5C6368]"
+                >keyboard_arrow_down</span
+              >
+            </div>
+            <div
+              id="location"
+              onclick="openDropdownMenu('location')"
+              class="dropdown-list w-full absolute sm:top-[86px] top-[72px] bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
+              style="box-shadow: 0px 4px 4px 0px #00000040"
+            >
+              <p class="pt-6 pb-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                Apartment
+              </p>
+              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">Villa</p>
+              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                Studio
+              </p>
+              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                Commercial
+              </p>
+              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">Admin</p>
+              <p class="pb-6 pt-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                Medical
+              </p>
+            </div>
+          </div>
+          <div>
+            <label
+              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+              for="message"
+              data-i18n="Message"
+            ></label>
+            <textarea
+              class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-[30px] resize-none py-4 px-5 leading-5"
+              placeholder="Your message"
+              name="message"
+              id="message"
+              rows="7"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="mb-2.5 w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-3 leading-5 bg-[#1D4265] rounded-full"
+              data-i18n="Submit"
+            ></button>
+            <button
+              onclick="togglePopup('requestMeeting')"
+              class="w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-2.5 leading-5 bg-[#1D4265] rounded-full flex items-center justify-center gap-2"
+            >
+              <span class="material-symbols-rounded">groups</span>
+              <p>Request Meeting</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Request Meeting -->
+      <div
+        id="requestMeeting"
+        class="fixed h-dvh inset-0 bg-[#00000040] z-[31] flex items-center justify-center p-4 opacity-0 invisible"
+      >
+        <div
+          class="bg-white rounded-[30px] md:px-10 md:py-7 p-5 w-[540px] max-w-full max-h-full shadow-[6px_6px_76.1px_0px_#00000040] overflow-y-auto"
+        >
+          <div class="flex items-center justify-between text-[#1D4265]">
+            <p class="md:text-xl text-sm font-medium">Request Meeting</p>
+            <span
+              onclick="togglePopup('requestMeeting')"
+              class="material-symbols-rounded cursor-pointer md:text-2xl text-xl flex shrink-0"
+              >cancel</span
+            >
+          </div>
+          <div
+            class="grid grid-cols-2 gap-2.5 font-semibold text-center manrope md:mt-5 mt-3"
           >
-            <span data-i18n="Get"></span>
-            <span class="text-[#FCB424]" data-i18n="Action"></span>
-            <span data-i18n="now"></span>
-          </p>
-          <div class="manrope mt-6 flex flex-col sm:gap-6 gap-5">
+            <div class="filter-input">
+              <input checked type="radio" name="meeting type" id="zoom" />
+              <label
+                class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                for="zoom"
+                >Zoom</label
+              >
+            </div>
+            <div class="filter-input">
+              <input type="radio" name="meeting type" id="physicalMeeting" />
+              <label
+                class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                for="physicalMeeting"
+                >Physical Meeting</label
+              >
+            </div>
+          </div>
+          <div class="md:mt-6 mt-5 flex flex-col sm:gap-5 gap-4 manrope">
             <div>
               <label
-                class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-                for="name"
-              >
-                <span data-i18n="Name"></span>
-                <span class="text-[#FF5151]">*</span>
-              </label>
+                class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+                for="meetingName"
+                data-i18n="Name"
+              ></label>
               <div class="relative">
                 <span
                   class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
@@ -682,30 +873,29 @@
                   class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
                   placeholder="Your name"
                   type="text"
-                  name="name"
-                  id="name"
+                  name="meetingName"
+                  id="meetingName"
                 />
               </div>
             </div>
+            <!--  -->
             <div>
               <label
-                class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-                for="phone"
-              >
-                <span data-i18n="Phone"></span>
-                <span class="text-[#FF5151]">*</span>
-              </label>
+                class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+                for="meetingPhone"
+                data-i18n="Phone"
+              ></label>
               <div class="flex gap-2">
                 <div class="relative z-[4]">
                   <div
-                    onclick="openDropdownMenu('flag')"
+                    onclick="openDropdownMenu('requestMeetingFlag')"
                     class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
                   >
                     <img
                       loading="lazy"
                       src="./icons/egy-flag.svg"
                       alt="flag"
-                      class="md:w-[40px] w-[24px]"
+                      class="md:w-[42px] w-[25px]"
                     />
                     <span
                       class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
@@ -713,8 +903,8 @@
                     >
                   </div>
                   <div
-                    id="flag"
-                    onclick="openDropdownMenu('flag')"
+                    id="requestMeetingFlag"
+                    onclick="openDropdownMenu('requestMeetingFlag')"
                     class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
                   >
                     <div class="cursor-pointer px-3 py-1 img-container">
@@ -735,390 +925,897 @@
                     </div>
                   </div>
                 </div>
-                <div class="relative w-full">
+                <div
+                  class="w-full md:h-[54px] h-[42px] rounded-full border border-solid border-[#E4E4E4] text-sm px-4 flex items-center gap-2 overflow-hidden"
+                >
                   <span
-                    class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                    class="material-symbols-rounded text-lg text-[#A3ABB0] shrink-0"
                     >tag</span
                   >
                   <input
-                    class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
-                    placeholder="Phone number"
                     type="text"
-                    name="phone"
-                    id="phone"
+                    placeholder="Phone number"
+                    id="meetingPhone"
+                    name="meetingPhone"
+                    class="w-full h-full sm:text-sm text-xs outline-none"
                   />
                 </div>
               </div>
             </div>
-            <div class="relative z-[1]">
-              <label
-                class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-              >
-                <span>Project</span>
-                <span class="text-[#FF5151]">*</span>
-              </label>
-              <div
-                onclick="openDropdownMenu('location')"
-                class="dropdown-btn relative cursor-pointer sm:h-[54px] h-[42px] flex items-center gap-2 rounded-full sm:py-4 py-2.5 ps-5 sm:pe-5 pe-3 border border-solid border-[#E4E4E4] leading-5"
-              >
-                <p class="sm:text-sm text-xs w-full truncate"></p>
-                <span
-                  class="material-symbols-rounded text-sm leading-none text-[#5C6368]"
-                  >keyboard_arrow_down</span
-                >
-              </div>
-              <div
-                id="location"
-                onclick="openDropdownMenu('location')"
-                class="dropdown-list w-full absolute sm:top-[86px] top-[72px] bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
-                style="box-shadow: 0px 4px 4px 0px #00000040"
-              >
-                <p class="pt-6 pb-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Apartment
-                </p>
-                <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Villa
-                </p>
-                <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Studio
-                </p>
-                <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Commercial
-                </p>
-                <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Admin
-                </p>
-                <p class="pb-6 pt-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Medical
-                </p>
-              </div>
-            </div>
+            <!--  -->
             <div>
-              <label
-                class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-                for="message"
-                data-i18n="Message"
-              ></label>
-              <textarea
-                class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-[30px] resize-none py-4 px-5 leading-5"
-                placeholder="Your message"
-                name="message"
-                id="message"
-                rows="7"
-              ></textarea>
-            </div>
-            <div>
-              <button
-                class="mb-2.5 w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-3 leading-5 bg-[#1D4265] rounded-full"
-                data-i18n="Submit"
-              ></button>
-              <button
-                onclick="togglePopup('requestMeeting')"
-                class="w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-2.5 leading-5 bg-[#1D4265] rounded-full flex items-center justify-center gap-2"
+              <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+                Select available dates
+              </p>
+              <div
+                class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
               >
-                <span class="material-symbols-rounded">groups</span>
-                <p>Request Meeting</p>
-              </button>
+                <div class="filter-input">
+                  <input checked type="checkbox" name="date1" id="date1" />
+                  <label
+                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="date1"
+                  >
+                    <p
+                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                    >
+                      SAT
+                    </p>
+                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                      22 FEB
+                    </p>
+                  </label>
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="date2" id="date2" />
+                  <label
+                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="date2"
+                  >
+                    <p
+                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                    >
+                      SAT
+                    </p>
+                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                      22 FEB
+                    </p>
+                  </label>
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="date3" id="date3" />
+                  <label
+                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="date3"
+                  >
+                    <p
+                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                    >
+                      SAT
+                    </p>
+                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                      22 FEB
+                    </p>
+                  </label>
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="date4" id="date4" />
+                  <label
+                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="date4"
+                  >
+                    <p
+                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                    >
+                      SAT
+                    </p>
+                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                      22 FEB
+                    </p>
+                  </label>
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="date5" id="date5" />
+                  <label
+                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="date5"
+                  >
+                    <p
+                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                    >
+                      SAT
+                    </p>
+                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                      22 FEB
+                    </p>
+                  </label>
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="date6" id="date6" />
+                  <label
+                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="date6"
+                  >
+                    <p
+                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                    >
+                      SAT
+                    </p>
+                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                      22 FEB
+                    </p>
+                  </label>
+                </div>
+              </div>
             </div>
+            <!--  -->
+            <div>
+              <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+                Available Time
+              </p>
+              <div
+                class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
+              >
+                <div class="filter-input">
+                  <input checked type="checkbox" name="time1" id="time1" />
+                  <label
+                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="time1"
+                    >10:00 AM</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="time2" id="time2" />
+                  <label
+                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="time2"
+                    >10:00 AM</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="time3" id="time3" />
+                  <label
+                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="time3"
+                    >10:00 AM</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="time4" id="time4" />
+                  <label
+                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="time4"
+                    >10:00 AM</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="time5" id="time5" />
+                  <label
+                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="time5"
+                    >10:00 AM</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="time6" id="time6" />
+                  <label
+                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                    for="time6"
+                    >10:00 AM</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <button
+              onclick="togglePopup('requestMeeting')"
+              class="mt-3 bg-[#1D4265] rounded-[17px] sm:h-[54px] h-[40px] md:w-[195px] w-[140px] md:text-base text-sm m-auto text-white font-semibold"
+            >
+              Sumbit
+            </button>
           </div>
         </div>
-
-        <!-- Request Meeting -->
-        <div
-          id="requestMeeting"
-          class="fixed h-dvh inset-0 bg-[#00000040] z-[31] flex items-center justify-center p-4 opacity-0 invisible"
-        >
-          <div
-            class="bg-white rounded-[30px] md:px-10 md:py-7 p-5 w-[540px] max-w-full max-h-full shadow-[6px_6px_76.1px_0px_#00000040] overflow-y-auto"
+      </div>
+    </div>
+    <!-- Zoom Meeting -->
+    <div
+      id="zoomMeeting"
+      class="fixed h-dvh inset-0 bg-[#00000040] z-[31] flex items-center justify-center p-4 opacity-0 invisible"
+    >
+      <div
+        class="bg-white rounded-[30px] md:px-10 md:py-7 p-5 w-[540px] max-w-full max-h-full shadow-[6px_6px_76.1px_0px_#00000040] overflow-y-auto"
+      >
+        <div class="flex items-center justify-between text-[#1D4265]">
+          <p class="md:text-xl text-sm font-medium">Zoom Meeting</p>
+          <span
+            onclick="togglePopup('zoomMeeting')"
+            class="material-symbols-rounded cursor-pointer md:text-2xl text-xl flex shrink-0"
+            >cancel</span
           >
-            <div class="flex items-center justify-between text-[#1D4265]">
-              <p class="md:text-xl text-sm font-medium">Request Meeting</p>
+        </div>
+        <div class="md:mt-8 mt-4 flex flex-col sm:gap-5 gap-4 manrope">
+          <div>
+            <label
+              class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+              for="meetingName"
+              data-i18n="Name"
+            ></label>
+            <div class="relative">
               <span
-                onclick="togglePopup('requestMeeting')"
-                class="material-symbols-rounded cursor-pointer md:text-2xl text-xl flex shrink-0"
-                >cancel</span
+                class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                >account_circle</span
               >
+              <input
+                class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2 ps-10 pe-5 leading-5"
+                placeholder="Your name"
+                type="text"
+                name="meetingName"
+                id="meetingName"
+              />
             </div>
-            <div
-              class="grid grid-cols-2 gap-2.5 font-semibold text-center manrope md:mt-5 mt-3"
-            >
-              <div class="filter-input">
-                <input checked type="radio" name="meeting type" id="zoom" />
-                <label
-                  class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
-                  for="zoom"
-                  >Zoom</label
+          </div>
+          <!--  -->
+          <div>
+            <label
+              class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+              for="meetingPhone"
+              data-i18n="Phone"
+            ></label>
+            <div class="flex gap-2">
+              <div class="relative z-[4]">
+                <div
+                  onclick="openDropdownMenu('zoomMeetingFlag')"
+                  class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
                 >
-              </div>
-              <div class="filter-input">
-                <input type="radio" name="meeting type" id="physicalMeeting" />
-                <label
-                  class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
-                  for="physicalMeeting"
-                  >Physical Meeting</label
-                >
-              </div>
-            </div>
-            <div class="md:mt-6 mt-5 flex flex-col sm:gap-5 gap-4 manrope">
-              <div>
-                <label
-                  class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
-                  for="meetingName"
-                  data-i18n="Name"
-                ></label>
-                <div class="relative">
-                  <span
-                    class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
-                    >account_circle</span
-                  >
-                  <input
-                    class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
-                    placeholder="Your name"
-                    type="text"
-                    name="meetingName"
-                    id="meetingName"
+                  <img
+                    loading="lazy"
+                    src="./icons/egy-flag.svg"
+                    alt="flag"
+                    class="md:w-[42px] w-[25px]"
                   />
-                </div>
-              </div>
-              <!--  -->
-              <div>
-                <label
-                  class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
-                  for="meetingPhone"
-                  data-i18n="Phone"
-                ></label>
-                <div class="flex gap-2">
-                  <div class="relative z-[4]">
-                    <div
-                      onclick="openDropdownMenu('requestMeetingFlag')"
-                      class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
-                    >
-                      <img
-                        loading="lazy"
-                        src="./icons/egy-flag.svg"
-                        alt="flag"
-                        class="md:w-[42px] w-[25px]"
-                      />
-                      <span
-                        class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
-                        >keyboard_arrow_down</span
-                      >
-                    </div>
-                    <div
-                      id="requestMeetingFlag"
-                      onclick="openDropdownMenu('requestMeetingFlag')"
-                      class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
-                    >
-                      <div class="cursor-pointer px-3 py-1 img-container">
-                        <img
-                          loading="lazy"
-                          src="./icons/egy-flag.svg"
-                          alt="flag"
-                          class="md:w-[42px] w-[25px] m-auto"
-                        />
-                      </div>
-                      <div class="cursor-pointer px-3 py-1 img-container">
-                        <img
-                          loading="lazy"
-                          src="./icons/egy-flag.svg"
-                          alt="flag"
-                          class="md:w-[42px] w-[25px] m-auto"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="w-full md:h-[54px] h-[42px] rounded-full border border-solid border-[#E4E4E4] text-sm px-4 flex items-center gap-2 overflow-hidden"
+                  <span
+                    class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
+                    >keyboard_arrow_down</span
                   >
-                    <span
-                      class="material-symbols-rounded text-lg text-[#A3ABB0] shrink-0"
-                      >tag</span
-                    >
-                    <input
-                      type="text"
-                      placeholder="Phone number"
-                      id="meetingPhone"
-                      name="meetingPhone"
-                      class="w-full h-full sm:text-sm text-xs outline-none"
+                </div>
+                <div
+                  id="zoomMeetingFlag"
+                  onclick="openDropdownMenu('zoomMeetingFlag')"
+                  class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
+                >
+                  <div class="cursor-pointer px-3 py-1 img-container">
+                    <img
+                      loading="lazy"
+                      src="./icons/egy-flag.svg"
+                      alt="flag"
+                      class="md:w-[42px] w-[25px] m-auto"
+                    />
+                  </div>
+                  <div class="cursor-pointer px-3 py-1 img-container">
+                    <img
+                      loading="lazy"
+                      src="./icons/egy-flag.svg"
+                      alt="flag"
+                      class="md:w-[42px] w-[25px] m-auto"
                     />
                   </div>
                 </div>
               </div>
-              <!--  -->
-              <div>
-                <p class="font-semibold text-[#1D4265] md:text-base text-xs">
-                  Select available dates
-                </p>
-                <div
-                  class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
-                >
-                  <div class="filter-input">
-                    <input checked type="checkbox" name="date1" id="date1" />
-                    <label
-                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="date1"
-                    >
-                      <p
-                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                      >
-                        SAT
-                      </p>
-                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                        22 FEB
-                      </p>
-                    </label>
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="date2" id="date2" />
-                    <label
-                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="date2"
-                    >
-                      <p
-                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                      >
-                        SAT
-                      </p>
-                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                        22 FEB
-                      </p>
-                    </label>
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="date3" id="date3" />
-                    <label
-                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="date3"
-                    >
-                      <p
-                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                      >
-                        SAT
-                      </p>
-                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                        22 FEB
-                      </p>
-                    </label>
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="date4" id="date4" />
-                    <label
-                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="date4"
-                    >
-                      <p
-                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                      >
-                        SAT
-                      </p>
-                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                        22 FEB
-                      </p>
-                    </label>
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="date5" id="date5" />
-                    <label
-                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="date5"
-                    >
-                      <p
-                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                      >
-                        SAT
-                      </p>
-                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                        22 FEB
-                      </p>
-                    </label>
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="date6" id="date6" />
-                    <label
-                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="date6"
-                    >
-                      <p
-                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                      >
-                        SAT
-                      </p>
-                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                        22 FEB
-                      </p>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div>
-                <p class="font-semibold text-[#1D4265] md:text-base text-xs">
-                  Available Time
-                </p>
-                <div
-                  class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
-                >
-                  <div class="filter-input">
-                    <input checked type="checkbox" name="time1" id="time1" />
-                    <label
-                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="time1"
-                      >10:00 AM</label
-                    >
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="time2" id="time2" />
-                    <label
-                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="time2"
-                      >10:00 AM</label
-                    >
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="time3" id="time3" />
-                    <label
-                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="time3"
-                      >10:00 AM</label
-                    >
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="time4" id="time4" />
-                    <label
-                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="time4"
-                      >10:00 AM</label
-                    >
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="time5" id="time5" />
-                    <label
-                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="time5"
-                      >10:00 AM</label
-                    >
-                  </div>
-                  <div class="filter-input">
-                    <input type="checkbox" name="time6" id="time6" />
-                    <label
-                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                      for="time6"
-                      >10:00 AM</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <button
-                onclick="togglePopup('requestMeeting')"
-                class="mt-3 bg-[#1D4265] rounded-[17px] sm:h-[54px] h-[40px] md:w-[195px] w-[140px] md:text-base text-sm m-auto text-white font-semibold"
+              <div
+                class="w-full md:h-[54px] h-[38px] rounded-full border border-solid border-[#E4E4E4] text-sm px-4 flex items-center gap-2 overflow-hidden"
               >
-                Sumbit
-              </button>
+                <span
+                  class="material-symbols-rounded text-lg text-[#A3ABB0] shrink-0"
+                  >tag</span
+                >
+                <input
+                  type="text"
+                  placeholder="Phone number"
+                  id="meetingPhone"
+                  name="meetingPhone"
+                  class="w-full h-full sm:text-sm text-xs outline-none"
+                />
+              </div>
             </div>
+          </div>
+          <!--  -->
+          <div>
+            <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+              Select available dates
+            </p>
+            <div
+              class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
+            >
+              <div class="filter-input">
+                <input
+                  checked
+                  type="checkbox"
+                  name="zoomDate1"
+                  id="zoomDate1"
+                />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate1"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate2" id="zoomDate2" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate2"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate3" id="zoomDate3" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate3"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate4" id="zoomDate4" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate4"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate5" id="zoomDate5" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate5"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate6" id="zoomDate6" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate6"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div>
+            <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+              Available Time
+            </p>
+            <div
+              class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
+            >
+              <div class="filter-input">
+                <input
+                  checked
+                  type="checkbox"
+                  name="zoomTime1"
+                  id="zoomTime1"
+                />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime1"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime2" id="zoomTime2" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime2"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime3" id="zoomTime3" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime3"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime4" id="zoomTime4" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime4"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime5" id="zoomTime5" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime5"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime6" id="zoomTime6" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime6"
+                  >10:00 AM</label
+                >
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <button
+            onclick="togglePopup('zoomMeeting')"
+            class="md:mt-3 mt-1 bg-[#1D4265] rounded-[17px] sm:h-[54px] h-[40px] md:w-[195px] w-[140px] md:text-base text-sm m-auto text-white font-semibold"
+          >
+            Sumbit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compare Bar -->
+    <div
+      id="compareNotification"
+      class="fixed z-[24] md:bottom-1 bottom-4 md:left-1/2 md:-translate-x-1/2 md:px-4 md:w-[100vw] md:ltr:right-1/2 md:rtl:left-1/2 ltr:right-4 rtl:left-4"
+    >
+      <div
+        class="manrope md:flex hidden flex-wrap justify-center items-center gap-10 font-medium w-fit m-auto bg-[#E7E7E7] p-4 rounded-[20px] shadow-[0px_4px_4px_0px_#00000040]"
+      >
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-rounded text-[30px] text-[#1D4265]"
+            >compare</span
+          >
+          <p class="text-lg text-[#1D4265] whitespace-nowrap">
+            2 Properties, 2 Compounds
+          </p>
+        </div>
+        <div class="shrink-0 flex gap-1.5 h-12">
+          <a
+            href="./compare.html"
+            class="h-full px-5 flex items-center justify-center bg-[#1D4265] rounded-[16px] text-white"
+            >Compare Now</a
+          >
+          <button
+            onclick="hideCompareNotification('compareNotification', event)"
+            class="h-full px-5 flex items-center justify-center text-[#1D4265] border border-solid border-[#1D4265] rounded-[16px]"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+
+    <!-- Shary AI -->
+    <div
+      class="fixed z-30 md:ltr:right-6 md:rtl:left-6 md:bottom-6 bottom-0 md:w-auto w-full md:rounded-full md:bg-transparent bg-white md:shadow-none shadow-[0px_-1px_18.1px_0px_#00000029] md:p-0 py-2.5 sm:px-6 px-4 flex justify-between items-center"
+    >
+      <p
+        class="md:hidden capitalize text-xl font-medium leading-5 text-[#1D4265]"
+      >
+        <span data-i18n="Get"></span>
+        <span class="text-[#FCB424]" data-i18n="Action"></span>
+        <span class="block" data-i18n="now"></span>
+      </p>
+      <div class="flex gap-2">
+        <div
+          class="md:hidden w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#1D4265]"
+        >
+          <img
+            loading="lazy"
+            src="./icons/phone.svg"
+            class="w-5 h-5"
+            style="filter: brightness(0) invert(1)"
+            alt="phone"
+          />
+        </div>
+        <div
+          class="md:hidden w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#00DD3B]"
+        >
+          <img
+            loading="lazy"
+            src="./icons/offers-whatsapp-icon.svg"
+            class="w-6 h-6"
+            alt="whatsApp"
+          />
+        </div>
+        <div
+          class="relative md:w-[75px] md:h-[75px] w-[50px] h-[50px] z-[24] rounded-full shrink-0 flex items-center"
+        >
+          <div
+            id="openSharyAI"
+            onclick="toggleSharyAI('open')"
+            class="transition-all md:duration-700 duration-0 md:bg-none bg-gradient-to-b from-[#1D4265] to-[#4DBFB1] md:rounded-none rounded-full p-[1px]"
+          >
+            <div
+              class="md:w-[75px] md:h-[75px] w-[49px] h-[49px] md:bg-transparent bg-white md:p-0 p-3 bg-cover bg-no-repeat rounded-full cursor-pointer flex items-center justify-center shrink-0"
+              style="background-image: url('/images/SharyAI-bg.svg')"
+            >
+              <img loading="lazy" src="./icons/SharyAI.svg" alt="SharyAI" />
+            </div>
+          </div>
+          <div
+            id="closeSharyAI"
+            onclick="toggleSharyAI('close')"
+            class="opacity-0 z-[-1] select-none absolute transition-all md:duration-700 duration-0 bg-white w-full h-full cursor-pointer rounded-full flex items-center justify-center shadow-[0px_4px_4px_0px_#00000040]"
+          >
+            <span
+              class="material-symbols-rounded text-4xl"
+              style="
+                background: linear-gradient(180deg, #ffa920 0%, #1d4265 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+              >close</span
+            >
           </div>
         </div>
       </div>
+    </div>
+    <div
+      id="sharyAiChat"
+      class="fixed md:ltr:right-[114px] md:rtl:left-[114px] md:w-[395px] w-[100vw] md:bottom-6 bottom-0 md:h-[715px] h-[100dvh] xl:max-h-[calc(100vh-115px)] md:max-h-[calc(100vh-200px)] opacity-0 z-[-1] transition-all md:duration-700 duration-0"
+    >
+      <div
+        class="shadow-[0px_4px_4px_0px_#00000040] md:rounded-[44px] w-full h-full overflow-hidden"
+        style="
+          background: linear-gradient(163.52deg, #a3f5eb 3.1%, #ffffff 24.12%);
+        "
+      >
+        <!-- Chat Header -->
+        <div
+          class="relative bg-[#FFFFFF8A] h-[95px] flex md:items-center items-end justify-center rounded-bl-[32px] rounded-br-[32px]"
+          style="
+            backdrop-filter: blur(68.30000305175781px);
+            box-shadow: 0px 4px 7.2px 0px #0000001c;
+          "
+        >
+          <img
+            loading="lazy"
+            src="./icons/SharyAI.svg"
+            class="w-[65px]"
+            alt="SharyAI"
+          />
+          <button
+            onclick="toggleSharyAI('close')"
+            class="md:hidden absolute bottom-3 w-9 h-9 border border-solid border-[#EDEDED] rounded-full flex items-center justify-center ltr:left-7 rtl:right-7"
+            style="
+              background: linear-gradient(180deg, #1d4265 0%, #4dbfb1 100%);
+            "
+          >
+            <span
+              class="material-symbols-rounded font-normal leading-none text-white"
+              data-i18n="keyboard_arrow_left"
+            ></span>
+          </button>
+        </div>
+
+        <div class="overflow-y-auto h-[calc(100%-225px)]">
+          <!-- Titik Ceria -->
+          <div class="px-8 mt-4">
+            <div
+              class="h-[58px] flex gap-3 items-center px-2 rounded-[50px]"
+              style="
+                background: linear-gradient(90deg, #1d4265 0%, #4dbfb1 100%);
+              "
+            >
+              <div class="w-10 h-10 bg-[#FFFFFF33] rounded-full shrink-0"></div>
+              <div class="text-white">
+                <p class="font-medium leading-5">Titik Ceria</p>
+                <p class="text-[#FFFFFFCC] text-xs font-normal">Welcome</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="manrope px-4">
+                <p class="text-[#111111] text-sm font-medium leading-5">
+                  Help me to find 5 potensial headlines for Finance Dashboard?
+                </p>
+                <div class="mt-2 flex gap-7">
+                  <p
+                    class="flex items-center gap-1 cursor-pointer text-[#7E8492]"
+                  >
+                    <span class="material-symbols-rounded text-base">edit</span>
+                    <span class="font-medium text-xs">Edit</span>
+                  </p>
+                  <p
+                    class="flex items-center gap-1 cursor-pointer text-[#7E8492]"
+                  >
+                    <span class="material-symbols-rounded text-base"
+                      >content_copy</span
+                    >
+                    <span class="font-medium text-xs">Copy</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-9 h-9 bg-[#00000020] rounded-full shrink-0"></div>
+            </div>
+          </div>
+
+          <!-- Messages -->
+          <div class="px-5 mt-7 manrope flex flex-col gap-2.5">
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div>
+                <p
+                  class="text-black text-[11px] font-semibold mb-1 leading-[16px]"
+                >
+                  Choose one:
+                </p>
+                <div class="flex flex-wrap gap-1">
+                  <div class="chat-choices">
+                    <input
+                      checked
+                      type="radio"
+                      name="chooseChat"
+                      id="choose1"
+                    />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose1"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose2" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose2"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose3" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose3"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose4" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose4"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose5" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose5"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div>
+                <p
+                  class="text-black text-[11px] font-semibold mb-1 leading-[16px]"
+                >
+                  Choose one:
+                </p>
+                <div class="flex flex-wrap gap-1">
+                  <div class="chat-choices">
+                    <input
+                      checked
+                      type="radio"
+                      name="chooseChat2"
+                      id="choose6"
+                    />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose6"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat2" id="choose7" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose7"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div
+                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
+              >
+                <p class="text-xs text-[#1E1E1E]">
+                  1. "Stay On Top of Your Finances with Our Customizable Finance
+                  Dashboard"
+                </p>
+                <p
+                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
+                >
+                  <span class="material-symbols-rounded text-sm"
+                    >content_copy</span
+                  >
+                  <span class="text-[10px] cursor-pointer">Copy</span>
+                </p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div
+                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
+              >
+                <p class="text-xs text-[#1E1E1E]">
+                  1. "Stay On Top of Your Finances with Our Customizable Finance
+                  Dashboard"
+                </p>
+                <p
+                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
+                >
+                  <span class="material-symbols-rounded text-sm"
+                    >content_copy</span
+                  >
+                  <span class="text-[10px] cursor-pointer">Copy</span>
+                </p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div
+                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
+              >
+                <p class="text-xs text-[#1E1E1E]">
+                  1. "Stay On Top of Your Finances with Our Customizable Finance
+                  Dashboard"
+                </p>
+                <p
+                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
+                >
+                  <span class="material-symbols-rounded text-sm"
+                    >content_copy</span
+                  >
+                  <span class="text-[10px] cursor-pointer">Copy</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Input -->
+        <div class="manrope px-5 pb-6 pt-4">
+          <div
+            class="flex items-center gap-1 text-sm font-normal w-fit cursor-pointer mx-4 mb-2"
+          >
+            <span class="material-symbols-rounded text-base">autorenew</span>
+            <p class="text-[#191B23]">Reload Response</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div
+              class="p-[1px] rounded-[100px] w-full h-[58px]"
+              style="
+                background: linear-gradient(90deg, #1d4265 0%, #4dbfb1 100%);
+              "
+            >
+              <div
+                class="px-4 bg-white flex gap-1 items-center rounded-[100px] overflow-hidden h-full w-full"
+              >
+                <input
+                  type="text"
+                  class="h-full w-full outline-none text-sm font-medium"
+                  placeholder="Send a message..."
+                  name="chat"
+                  id="chat"
+                />
+                <button>
+                  <img
+                    loading="lazy"
+                    src="./icons/send-icon.svg"
+                    class="ltr:rotate-0 rtl:rotate-180"
+                    alt="send"
+                  />
+                </button>
+              </div>
+            </div>
+            <button>
+              <img
+                loading="lazy"
+                src="./icons/chatAI.svg"
+                class="shrink-0"
+                alt="chat AI"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <div class="-mb-14">
       <footer-component></footer-component>
