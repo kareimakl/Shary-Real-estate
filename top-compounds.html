@@ -1835,7 +1835,10 @@
               alt="zed-east-logo"
             />
           </div>
-          <div>
+          <div
+            style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
+            class="md:w-24 md:h-24 w-16 h-16 p-2 m-auto w-full justify-center border border-solid border-[#00000040] text-center flex item-center rounded-full shadow-md shadow-custom"
+          >
             <img
               loading="lazy"
               src="./images/ora-developer.svg"
@@ -3392,194 +3395,206 @@
             >
               <!-- Map Container -->
               <div id="map" class="mb-6 rounded-lg shadow-lg"></div>
-                <!-- Modal -->
-    <div
-      id="unitModal"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
-    >
-      <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
-        <button
-          onclick="closeModal()"
-          class="absolute top-2 right-2 text-gray-500 text-2xl"
-        >
-          &times;
-        </button>
+              <!-- Modal -->
+              <div
+                id="unitModal"
+                class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+              >
+                <div
+                  class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative"
+                >
+                  <button
+                    onclick="closeModal()"
+                    class="absolute top-2 right-2 text-gray-500 text-2xl"
+                  >
+                    &times;
+                  </button>
 
-        <h2 class="text-xl font-semibold mb-2">Unit Details</h2>
+                  <h2 class="text-xl font-semibold mb-2">Unit Details</h2>
 
-        <a href="./inside-project.html">
-          <img
-            id="unitImage"
-            src=""
-            alt="Unit Image"
-            class="w-full rounded mb-3"
-          />
-        </a>
+                  <a href="./inside-project.html">
+                    <img
+                      id="unitImage"
+                      src=""
+                      alt="Unit Image"
+                      class="w-full rounded mb-3"
+                    />
+                  </a>
 
-        <div class="mt-4">
-          <div class="pb-3 flex items-center justify-between">
-            <div class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
-              <p>Total Price</p>
-              <p
-                id="unitPrice"
-                class="mt-1 font-bold text-xl text-[#1D4265] manrope"
-              >
-                11,312,000 EGP
-              </p>
-            </div>
-            <div class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
-              <p>Down Payment</p>
-              <p
-                id="unitLocation"
-                class="mt-1 font-bold text-xl text-[#1D4265] manrope"
-              >
-                11,312,000 EGP
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pb-3 flex items-center justify-between">
-          <div id="unitDate" class="text-sm text-gray-500 mb-2"></div>
-          <div class="text-sm mb-2 flex items-center">
-            <span id="unitCode" class=""></span>
-            <a
-              href="#"
-              class="ml-2 bg-[#1D4265] text-white px-2 py-1 text-xs rounded"
-              >PDF</a
-            >
-          </div>
-        </div>
+                  <div class="mt-4">
+                    <div class="pb-3 flex items-center justify-between">
+                      <div
+                        class="text-[#4DBFB1] sm:text-sm text-xs font-medium"
+                      >
+                        <p>Total Price</p>
+                        <p
+                          id="unitPrice"
+                          class="mt-1 font-bold text-xl text-[#1D4265] manrope"
+                        >
+                          11,312,000 EGP
+                        </p>
+                      </div>
+                      <div
+                        class="text-[#4DBFB1] sm:text-sm text-xs font-medium"
+                      >
+                        <p>Down Payment</p>
+                        <p
+                          id="unitLocation"
+                          class="mt-1 font-bold text-xl text-[#1D4265] manrope"
+                        >
+                          11,312,000 EGP
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pb-3 flex items-center justify-between">
+                    <div id="unitDate" class="text-sm text-gray-500 mb-2"></div>
+                    <div class="text-sm mb-2 flex items-center">
+                      <span id="unitCode" class=""></span>
+                      <a
+                        href="#"
+                        class="ml-2 bg-[#1D4265] text-white px-2 py-1 text-xs rounded"
+                        >PDF</a
+                      >
+                    </div>
+                  </div>
 
-        <div class="grid grid-cols-2 gap-2 text-sm mb-2">
-          <div class="flex gap-3 items-center">
-            <div
-              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
-            >
-              <span
-                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
-                >page_info</span
-              >
-            </div>
-            <div>
-              <p
-                id="unitType"
-                class="text-[#5C6368] md:text-sm text-xs font-normal"
-              >
-                Type:
-              </p>
-              <p
-                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
-              >
-                Villa
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-center">
-            <div
-              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
-            >
-              <span
-                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
-                style="transform: rotate(-45deg)"
-                >straighten</span
-              >
-            </div>
-            <div>
-              <p class="text-[#5C6368] md:text-sm text-xs font-normal">
-                Apartment area:
-              </p>
-              <p
-                id="unitSize"
-                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
-              >
-                900 SqFt
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-center">
-            <div
-              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
-            >
-              <span
-                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
-                >bed</span
-              >
-            </div>
-            <div>
-              <p class="text-[#5C6368] md:text-sm text-xs font-normal">
-                Bedrooms:
-              </p>
-              <p
-                id="unitBedrooms"
-                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
-              >
-                2 Rooms
-              </p>
-            </div>
-          </div>
-          <div class="flex gap-3 items-center">
-            <div
-              class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
-            >
-              <span
-                class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
-                >real_estate_agent</span
-              >
-            </div>
-            <div>
-              <p class="text-[#5C6368] md:text-sm text-xs font-normal">
-                Delivery In:
-              </p>
-              <p
-                id="unitDelivery"
-                class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
-              >
-                2023
-              </p>
-            </div>
-          </div>
-        </div>
+                  <div class="grid grid-cols-2 gap-2 text-sm mb-2">
+                    <div class="flex gap-3 items-center">
+                      <div
+                        class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+                      >
+                        <span
+                          class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                          >page_info</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          id="unitType"
+                          class="text-[#5C6368] md:text-sm text-xs font-normal"
+                        >
+                          Type:
+                        </p>
+                        <p
+                          class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+                        >
+                          Villa
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                      <div
+                        class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+                      >
+                        <span
+                          class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                          style="transform: rotate(-45deg)"
+                          >straighten</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[#5C6368] md:text-sm text-xs font-normal"
+                        >
+                          Apartment area:
+                        </p>
+                        <p
+                          id="unitSize"
+                          class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+                        >
+                          900 SqFt
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                      <div
+                        class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+                      >
+                        <span
+                          class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                          >bed</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[#5C6368] md:text-sm text-xs font-normal"
+                        >
+                          Bedrooms:
+                        </p>
+                        <p
+                          id="unitBedrooms"
+                          class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+                        >
+                          2 Rooms
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                      <div
+                        class="border border-solid border-[#E4E4E4] rounded-lg md:w-[52px] w-[42px] md:h-[52px] h-[42px] flex items-center justify-center"
+                      >
+                        <span
+                          class="material-symbols-rounded text-[#1D4265] md:text-2xl text-xl"
+                          >real_estate_agent</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[#5C6368] md:text-sm text-xs font-normal"
+                        >
+                          Delivery In:
+                        </p>
+                        <p
+                          id="unitDelivery"
+                          class="text-[#1D4265] md:text-base text-xs font-bold leading-tight manrope"
+                        >
+                          2023
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-        <div
-          id="unitProject"
-          class="text-sm text-blue-700 underline mb-1"
-        ></div>
+                  <div
+                    id="unitProject"
+                    class="text-sm text-blue-700 underline mb-1"
+                  ></div>
 
-        <div
-          class="w-full border-t border-1 border-solid border-[#1D4265] flex justify-center items-center m-auto text-center"
-        >
-          <div
-            class="flex items-center justify-between m-auto gap-2 bg-[#FFFFFF3B] md:rounded-[36px] rounded-2xl sm:px-4 p-2"
-          >
-            <div
-              style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
-              class="shrink-0 !w-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-16 rounded-full shadow-md"
-            >
-              <img
-                loading="lazy"
-                src="./images/lo.png"
-                class="sm:w-44 !w-12"
-                alt="KWVV"
-              />
-            </div>
-            <div
-              class="border-s border-1 border-solid border-[#1D4265] h-8"
-            ></div>
+                  <div
+                    class="w-full border-t border-1 border-solid border-[#1D4265] flex justify-center items-center m-auto text-center"
+                  >
+                    <div
+                      class="flex items-center justify-between m-auto gap-2 bg-[#FFFFFF3B] md:rounded-[36px] rounded-2xl sm:px-4 p-2"
+                    >
+                      <div
+                        style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
+                        class="shrink-0 !w-16 p-2 justify-center border border-solid border-[#00000040] m-auto text-center flex item-center !h-16 rounded-full shadow-md"
+                      >
+                        <img
+                          loading="lazy"
+                          src="./images/lo.png"
+                          class="sm:w-44 !w-12"
+                          alt="KWVV"
+                        />
+                      </div>
+                      <div
+                        class="border-s border-1 border-solid border-[#1D4265] h-8"
+                      ></div>
 
-            <div
-              class="text-white font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
-            >
-              <p
-                id="unitDeveloper"
-                class="leading-tight text-[#1D4265] w-auto text-start"
-                data-i18n="ZED East New Cairo Compound is a prestigious project by Ora Developers."
-              ></p>
-            </div>
-          </div>
-        </div>
-        <!-- <div id="unitDeveloper" class="text-sm text-yellow-600"></div> -->
-      </div>
-    </div>
+                      <div
+                        class="text-white font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
+                      >
+                        <p
+                          id="unitDeveloper"
+                          class="leading-tight text-[#1D4265] w-auto text-start"
+                          data-i18n="ZED East New Cairo Compound is a prestigious project by Ora Developers."
+                        ></p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div id="unitDeveloper" class="text-sm text-yellow-600"></div> -->
+                </div>
+              </div>
             </div>
           </div>
 
@@ -3989,7 +4004,11 @@
                         new cairo, Egypt
                       </p>
                     </div>
-                    <div>
+                    <div
+                      style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
+                      class="md:w-16 md:h-16 w-12 h-12 p-2 justify-center border border-solid border-[#00000040] text-center flex item-center rounded-full shadow-md shadow-custom"
+                    >
+
                       <img
                         loading="lazy"
                         src="./images/ora-developer.svg"
@@ -4127,7 +4146,9 @@
                         new cairo, Egypt
                       </p>
                     </div>
-                    <div>
+                    <div
+                        style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
+                      class="md:w-16 md:h-16 w-12 h-12 p-2 justify-center border border-solid border-[#00000040] text-center flex item-center rounded-full shadow-md shadow-custom">
                       <img
                         loading="lazy"
                         src="./images/ora-developer.svg"
@@ -4265,7 +4286,8 @@
                         new cairo, Egypt
                       </p>
                     </div>
-                    <div>
+                    <div    style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
+                      class="md:w-16 md:h-16 w-12 h-12 p-2 justify-center border border-solid border-[#00000040] text-center flex item-center rounded-full shadow-md shadow-custom">
                       <img
                         loading="lazy"
                         src="./images/ora-developer.svg"
