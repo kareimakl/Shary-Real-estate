@@ -2352,6 +2352,7 @@
                   >search</span
                 >
                 <input
+                  id="searchInput"
                   type="text"
                   placeholder="Search here"
                   class="w-full h-full outline-none text-xs font-normal bg-inherit placeholder-[#838383]"
@@ -2363,111 +2364,27 @@
             >
               <p
                 onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
               >
                 Property Half Map Grid
               </p>
               <p
                 onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
               >
-                Property Half Map Grid
+                Cozy Cottage
               </p>
               <p
                 onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
               >
-                Property Half Map Grid
+                Luxury Villa
               </p>
               <p
                 onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
               >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
-              </p>
-              <p
-                onclick="toggleSearchBar('close')"
-                class="py-2 px-2 w-fit hover:text-[#1563DF]"
-              >
-                Property Half Map Grid
+                Downtown Apartment
               </p>
             </div>
           </div>
@@ -3921,7 +3838,7 @@
                       />
                     </div>
 
-                    <div
+                    <dziv
                       class="text-white font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
                     >
                       <div class="text-[#1D4265] sm:text-base text-xs">
@@ -3938,7 +3855,7 @@
                           <span data-i18n="Properties"></span>
                         </p>
                       </div>
-                    </div>
+                    </dziv>
                   </div>
                 </div>
               </div>
@@ -6947,6 +6864,22 @@
       document.addEventListener("click", () => {
         document.querySelectorAll(".share-menu").forEach((menu) => {
           menu.classList.add("invisible", "opacity-0");
+        });
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      const items = document.querySelectorAll(".search-item");
+
+      searchInput.addEventListener("input", function () {
+        const searchValue = this.value.toLowerCase();
+
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(searchValue)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
         });
       });
     </script>
