@@ -1367,11 +1367,59 @@
         </div>
       </div>
     </div>
+    <!-- Compare Bar -->
+    <div
+      id="compareNotification"
+      class="fixed z-[24] md:bottom-1 bottom-[82px] md:left-1/2 md:-translate-x-1/2 md:px-4 md:w-[100vw] md:ltr:right-1/2 md:rtl:left-1/2 ltr:right-4 rtl:left-4"
+    >
+      <div
+        class="manrope md:flex hidden flex-wrap justify-center items-center gap-10 font-medium w-fit m-auto bg-[#E7E7E7] p-4 rounded-[20px] shadow-[0px_4px_4px_0px_#00000040]"
+      >
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-rounded text-[30px] text-[#1D4265]"
+            >compare</span
+          >
+          <p class="text-lg text-[#1D4265] whitespace-nowrap">
+            2 Properties, 2 Compounds
+          </p>
+        </div>
+        <div class="shrink-0 flex gap-1.5 h-12">
+          <a
+            href="./compare.html"
+            class="h-full px-5 flex items-center justify-center bg-[#1D4265] rounded-[16px] text-white"
+            >Compare Now</a
+          >
+          <button
+            onclick="hideCompareNotification('compareNotification', event)"
+            class="h-full px-5 flex items-center justify-center text-[#1D4265] border border-solid border-[#1D4265] rounded-[16px]"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      <!--  -->
+      <a
+        href="./compare.html"
+        class="md:hidden relative bg-[#1D4265] shadow-[0px_4px_4px_0px_#00000040] w-[66px] h-[66px] rounded-full flex flex-col gap-1 justify-center items-center cursor-pointer"
+      >
+        <p
+          class="absolute -top-1.5 ltr:right-0 rtl:left-0 w-6 h-6 bg-[#DA0000] rounded-full flex items-center justify-center"
+        >
+          <span class="text-[15px] font-extrabold manrope text-white">3</span>
+        </p>
+        <span class="material-symbols-rounded text-[34px] text-white"
+          >compare</span
+        >
+      </a>
+    </div>
+
     <!-- Shary AI -->
     <div
-      class="fixed z-30 md:ltr:right-6 md:rtl:left-6 md:bottom-6 bottom-0 md:w-auto w-full md:rounded-full md:bg-transparent bg-white md:shadow-none shadow-[0px_-1px_18.1px_0px_#00000029] md:p-0 pt-3 pb-4 sm:px-6 px-4 md:flex hidden justify-between items-center"
+      class="fixed z-30 md:ltr:right-6 md:rtl:left-6 md:bottom-6 bottom-0 md:w-auto w-full md:rounded-full md:bg-transparent bg-white md:shadow-none shadow-[0px_-1px_18.1px_0px_#00000029] md:p-0 py-2.5 sm:px-6 px-4 flex justify-between items-center"
     >
-      <p class="md:hidden capitalize text-xl font-medium text-[#1D4265]">
+      <p
+        class="md:hidden capitalize text-xl font-medium leading-5 text-[#1D4265]"
+      >
         <span data-i18n="Get"></span>
         <span class="text-[#FCB424]" data-i18n="Action"></span>
         <span class="block" data-i18n="now"></span>
@@ -1433,7 +1481,7 @@
     </div>
     <div
       id="sharyAiChat"
-      class="md:block hidden fixed md:ltr:right-[114px] md:rtl:left-[114px] md:w-[395px] w-[100vw] md:bottom-6 bottom-0 md:h-[715px] h-[100dvh] xl:max-h-[calc(100vh-115px)] md:max-h-[calc(100vh-140px)] opacity-0 z-[-1] transition-all md:duration-700 duration-0"
+      class="fixed md:ltr:right-[114px] md:rtl:left-[114px] md:w-[395px] w-[100vw] md:bottom-6 bottom-0 md:h-[715px] h-[100dvh] xl:max-h-[calc(100vh-115px)] md:max-h-[calc(100vh-200px)] opacity-0 z-[-1] transition-all md:duration-700 duration-0"
     >
       <div
         class="shadow-[0px_4px_4px_0px_#00000040] md:rounded-[44px] w-full h-full overflow-hidden"
