@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-<footer class="bg-white md:mb-0 mb-28 shadow-top-only">
+<footer class="bg-white md:mb-0 pb-16 shadow-top-only">
         <div class="w-[1440px] max-w-full mx-auto text-[#1D4265] md:py-16 pt-10 pb-5 xl:px-8 sm:px-6 px-4">
           <div class="flex sm:flex-row flex-col justify-between gap-x-8 gap-y-10 border-b border-solid border-[#B9B9B9] md:pb-16 pb-8">
             <div>
