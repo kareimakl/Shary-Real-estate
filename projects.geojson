@@ -1,0 +1,215 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Katameya Heights",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "10,550,734 EGP",
+        "locationText": "El Mostakbal City",
+        "code": "Download",
+        "date": "21/09/2024, 15:34",
+        "type": "Apartment",
+        "bedrooms": "3 Rooms",
+        "size": "1200 SqFt",
+        "delivery": "2026",
+        "project": "ZED East",
+        "developer": "Ora Developers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.4433, 29.9865]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mivida Compound",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "8,200,000 EGP",
+        "locationText": "New Capital",
+        "code": "Download",
+        "date": "01/10/2024, 11:00",
+        "type": "Villa",
+        "bedrooms": "4 Rooms",
+        "size": "1800 SqFt",
+        "delivery": "2027",
+        "project": "Mountain View iCity",
+        "developer": "Mountain View"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.4968, 30.0084]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mountain View Hyde Park",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "6,750,000 EGP",
+        "locationText": "Maadi",
+        "code": "Download",
+        "date": "15/10/2024, 10:15",
+        "type": "Penthouse",
+        "bedrooms": "2 Rooms",
+        "size": "950 SqFt",
+        "delivery": "2025",
+        "project": "Skyline Maadi",
+        "developer": "Memaar Al Morshedy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.4995, 30.0122]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Palm Hills New Cairo",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "9,300,000 EGP",
+        "locationText": "New Cairo",
+        "code": "Download",
+        "date": "05/11/2024, 12:45",
+        "type": "Apartment",
+        "bedrooms": "3 Rooms",
+        "size": "1400 SqFt",
+        "delivery": "2026",
+        "project": "Palm Hills",
+        "developer": "Palm Hills Developments"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.5361, 30.0194]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arabella",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "7,800,000 EGP",
+        "locationText": "New Cairo",
+        "code": "Download",
+        "date": "10/11/2024, 09:00",
+        "type": "Villa",
+        "bedrooms": "4 Rooms",
+        "size": "1600 SqFt",
+        "delivery": "2027",
+        "project": "Arabella Compound",
+        "developer": "Arabella Group"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.4660, 29.9867]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valley View",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "5,600,000 EGP",
+        "locationText": "New Cairo",
+        "code": "Download",
+        "date": "15/11/2024, 14:30",
+        "type": "Apartment",
+        "bedrooms": "2 Rooms",
+        "size": "1100 SqFt",
+        "delivery": "2025",
+        "project": "Valley View Residence",
+        "developer": "Valley Developments"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.4725, 30.0028]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Allegria",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "12,000,000 EGP",
+        "locationText": "Sheikh Zayed",
+        "code": "Download",
+        "date": "20/11/2024, 13:20",
+        "type": "Villa",
+        "bedrooms": "5 Rooms",
+        "size": "2200 SqFt",
+        "delivery": "2026",
+        "project": "Allegria",
+        "developer": "Sodic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.9504, 30.0286]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beverly Hills",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "11,300,000 EGP",
+        "locationText": "Sheikh Zayed",
+        "code": "Download",
+        "date": "25/11/2024, 16:10",
+        "type": "Duplex",
+        "bedrooms": "4 Rooms",
+        "size": "1900 SqFt",
+        "delivery": "2025",
+        "project": "Beverly Hills",
+        "developer": "Sodic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.9582, 30.0174]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zayed Dunes",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "8,900,000 EGP",
+        "locationText": "6th October",
+        "code": "Download",
+        "date": "30/11/2024, 11:50",
+        "type": "Apartment",
+        "bedrooms": "3 Rooms",
+        "size": "1300 SqFt",
+        "delivery": "2026",
+        "project": "Zayed Dunes",
+        "developer": "Dorra Group"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.9933, 30.0370]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sodic West",
+        "image": "./images/ora-apartment.jpeg",
+        "price": "13,200,000 EGP",
+        "locationText": "6th October",
+        "code": "Download",
+        "date": "02/12/2024, 10:05",
+        "type": "Townhouse",
+        "bedrooms": "4 Rooms",
+        "size": "2100 SqFt",
+        "delivery": "2027",
+        "project": "Sodic West",
+        "developer": "Sodic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.9831, 30.0379]
+      }
+    }
+  ]
+}

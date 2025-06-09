@@ -11,7 +11,9 @@
 .shadow-top-only {
   box-shadow: 0px -6px 12.8px 0px #00000045;
 }
-
+.mapboxgl-ctrl-bottom-righ{
+  display: none !important;
+}
 .slider-1,
 .slider-2,
 .slider-3 {

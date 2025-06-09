@@ -1,1264 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>مشاريع في مصر مع مناطق ملونة وخريطة قمر صناعي عند زوم</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css"
+    rel="stylesheet"
+  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shary</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+      <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <title>Shary</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/js/navbar.js"></script>
     <script src="/components/footer.js" type="text/javascript" defer></script>
     <script src="/js/language.js"></script>
     <script src="/js/main.js"></script>
-
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/styles/main.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/js/navbar.js"></script>
-    <script src="/components/footer.js" type="text/javascript" defer></script>
-    <script src="/js/language.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      #map {
-        height: 400px;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <header
-      id="header"
-      class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
-    >
-      <nav class="xl:h-full w-full max-w-full mx-auto xl:pt-0 md:pt-3 pt-5">
-        <div
-          class="relative px-4 flex items-center justify-between gap-4 xl:h-full text-[#1D4265]"
-        >
-          <div class="md:flex hidden items-center gap-20">
-            <a href="./index.html">
-              <img
-                loading="lazy"
-                src="./images/shary-logo.svg"
-                class="w-36"
-                alt="logo"
-              />
-            </a>
-            <div class="xl:flex hidden gap-5 xl:mt-2.5">
-              <a href="./index.html" data-i18n="home"></a>
-              <!-- Gulf -->
-              <div class="relative">
-                <div
-                  onclick="openDropdownMenu('subGulf')"
-                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
-                >
-                  <span data-i18n="Gulf"></span>
-                  <span
-                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
-                    >keyboard_arrow_down</span
-                  >
-                </div>
-                <div
-                  id="subGulf"
-                  onclick="openDropdownMenu('subGulf')"
-                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
-                >
-                  <a
-                    href="./united-arab-emirates.html"
-                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                    >UAE</a
-                  >
-                  <a
-                    href="./united-arab-emirates.html"
-                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                    >KSA</a
-                  >
-                </div>
-              </div>
-              <!-- Europe -->
-              <div class="relative">
-                <div
-                  onclick="openDropdownMenu('subEurope')"
-                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
-                >
-                  <span data-i18n="Europe"></span>
-                  <span
-                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
-                    >keyboard_arrow_down</span
-                  >
-                </div>
-                <div
-                  id="subEurope"
-                  onclick="openDropdownMenu('subEurope')"
-                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
-                >
-                  <div class="max-h-[200px] overflow-y-auto my-2.5">
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >Uk</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >PORTO</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >SPIN</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >YOUNAN</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >FR</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >OBROS</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >ITALY</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >DENE</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >FENDI</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >BELG</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >TK</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >GORG</a
-                    >
-                    <a
-                      href="./united-arab-emirates.html"
-                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                      >CUOR</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <a href="./sell.html" data-i18n="Sell"></a>
-              <a href="./blogs.html" data-i18n="Blogs"></a>
-              <a href="./about.html" data-i18n="About"></a>
-              <a href="./contact.html" data-i18n="Contact"></a>
-              <a href="./shary-card.html" data-i18n="Shary Card"></a>
-              <a href="./careers.html" data-i18n="Careers"></a>
-              <!-- Agents -->
-              <div class="relative">
-                <div
-                  onclick="openDropdownMenu('subAgents')"
-                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
-                >
-                  <span data-i18n="Agents"></span>
-                  <span
-                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
-                    >keyboard_arrow_down</span
-                  >
-                </div>
-                <div
-                  id="subAgents"
-                  onclick="openDropdownMenu('subAgents')"
-                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
-                >
-                  <a
-                    href="./sign-up.html"
-                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                    >Sign Up</a
-                  >
-                  <a
-                    href="./check-now.html"
-                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
-                    >Verify Agent</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex md:w-auto w-full md:justify-start justify-between md:items-stretch items-center sm:gap-1.5 gap-1 xl:mt-2.5"
-          >
-            <!-- Search Btn -->
-            <div class="xl:block hidden relative">
-              <button
-                onclick="toggleRollDown('nav_search', 'navSearchOverlay')"
-                class="h-full flex items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-4 md:w-auto w-8"
-              >
-                <img loading="lazy" src="./icons/search.svg" alt="Search" />
-                <span
-                  data-i18n="Search"
-                  class="md:inline hidden text-sm text-[#777777]"
-                ></span>
-              </button>
-              <div
-                id="nav_search"
-                class="z-[22] absolute w-[565px] ltr:right-0 rtl:left-0 top-[55px] bg-white rounded-[30px] h-[41px] flex items-center gap-1 px-3 shadow-[0px_4px_4px_0px_#00000040] opacity-0 invisible transition-opacity ease-in-out duration-300"
-              >
-                <input
-                  type="text"
-                  placeholder="Search"
-                  class="outline-none text-sm font-normal bg-inherit w-full px-1"
-                />
-                <div class="flex items-center gap-2">
-                  <!-- Rolldown -->
-                  <div class="relative z-[1] manrope">
-                    <div
-                      onclick="openDropdownMenu('search_property_type')"
-                      class="dropdown-btn w-[158px] h-[30px] bg-[#FAFAFA] cursor-pointer flex items-center rounded-3xl px-1.5 shadow-[0px_4px_4px_0px_#00000040]"
-                    >
-                      <p
-                        class="text-xs text-[#242323] w-full text-center truncate"
-                      >
-                        Property Type
-                      </p>
-                      <span
-                        class="material-symbols-rounded font-light text-black"
-                        >expand_circle_down</span
-                      >
-                    </div>
-                    <div
-                      id="search_property_type"
-                      onclick="openDropdownMenu('search_property_type')"
-                      class="dropdown-list w-full absolute top-10 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
-                      style="box-shadow: 0px 4px 4px 0px #00000040"
-                    >
-                      <p
-                        class="pt-4 pb-2 px-3 cursor-pointer hover:text-[#1563DF]"
-                      >
-                        Apartment
-                      </p>
-                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
-                        Villa
-                      </p>
-                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
-                        Studio
-                      </p>
-                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
-                        Commercial
-                      </p>
-                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
-                        Admin
-                      </p>
-                      <p
-                        class="pb-4 pt-2 px-3 cursor-pointer hover:text-[#1563DF]"
-                      >
-                        Medical
-                      </p>
-                    </div>
-                  </div>
-                  <!-- Btn -->
-                  <button
-                    class="w-[60px] h-[30px] flex items-center justify-center bg-[#123A4B] rounded-3xl text-white shadow-[0px_4px_4px_0px_#00000040]"
-                  >
-                    <span class="material-symbols-rounded">search</span>
-                  </button>
-                </div>
-              </div>
-              <!-- Nav Search Overlay -->
-              <div
-                id="navSearchOverlay"
-                onclick="toggleRollDown('nav_search', 'navSearchOverlay')"
-                class="opacity-0 invisible transition-opacity ease-in-out duration-300 fixed inset-0 h-[100dvh] z-[21]"
-              ></div>
-            </div>
-            <!--  -->
-            <a
-              href="./sign-in.html"
-              class="xl:flex hidden items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-3 md:w-auto w-8"
-            >
-              <img
-                loading="lazy"
-                id="notifications"
-                src="./icons/user.svg"
-                alt="user"
-              />
-              <span data-i18n="Sign in" class="md:inline hidden text-sm"></span>
-            </a>
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+ .search-results {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+  .search-result-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .search-result-item img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  .hidden {
+    display: none;
+  }
+  .marker-label {
+    font-weight: bold;
+    font-size: 10px;
+    background-color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 107.69px;
+    color: #000000;
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
 
-            <button
-              class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
-            >
-              <p
-                data-i18n="Get The App"
-                class="md:text-sm text-xs text-white font-bold"
-              ></p>
-            </button>
-            <button
-              data-i18n="lang"
-              onclick="changeLanguage(!localStorage.getItem('language') || localStorage.getItem('language') === 'en' ? 'ar' : 'en')"
-              class="xl:flex hidden items-center justify-center ltr:pb-1.5 rtl:pb-0 rounded-full bg-[#1D4265] text-sm text-white md:w-9 w-8 md:h-9 h-8"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            ></button>
-            <a
-              href="./index.html"
-              class="md:hidden block absolute right-1/2 translate-x-1/2"
-            >
-              <img
-                loading="lazy"
-                src="./images/shary-logo.svg"
-                class="w-[110px] h-[30px]"
-                alt="logo"
-              />
-            </a>
-            <div class="xl:hidden flex items-center gap-1">
-              <a
-                href="./sign-in.html"
-                class="material-symbols-rounded font-light text-[#1D4265] md:text-4xl text-[32px]"
-                >account_circle</a
-              >
-              <button
-                onclick="expandCollapseNavbar()"
-                class="flex items-center justify-center rounded-full md:w-7 w-6 md:h-7 h-6"
-              >
-                <img
-                  src="./images/ic_twotone-menu.svg"
-                  alt="ic_twotone-menu.svg"
-                  id="openCloseIcon"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="md:hidden px-4 mt-5">
-          <div
-            class="border border-solid border-[#1D4265] text-[#1D4265] rounded-full py-2 px-5 flex items-center justify-between gap-4"
-          >
-            <p class="flex w-full items-center gap-2">
-              <span class="material-symbols-rounded text-xl leading-none"
-                >search</span
-              >
-              <input
-                class="font-medium text-xs w-full outline-none placeholder-[#1D4265] bg-transparent"
-                type="text"
-                name=""
-                id=""
-                placeholder="Area, compound,  Real Estate Developer"
-              />
-            </p>
-            <span
-              onclick="toggleFilterBar('open')"
-              class="material-symbols-rounded text-xl leading-none cursor-pointer"
-              >tune</span
-            >
-          </div>
-        </div>
+  .search-bar {
+    position: absolute;
+    top: 20px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 10px;
+    width: 100%;
+    overflow-x: auto;
+    height: auto !important;
 
-        <div
-          id="navItems"
-          class="xl:hidden opacity-0 bg-[#fff] w-full h-[100vh] overflow-y-scroll fixed transition-opacity duration-300 ease-in"
-        >
-          <div
-            class="flex flex-col justify-center gap-4 mt-8 font-medium text-sm text-[#1D4265]"
-          >
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/mdi_home.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./index.html"
-                data-i18n="home"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/Frame.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./properties-abroad.html"
-                data-i18n="Properties Abroad"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  .search-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+    width: max-content;
+    min-width: 100%;
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/healthicons_home-outline.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./sell.html"
-                data-i18n="Sell"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  .search-container::-webkit-scrollbar {
+    display: none; /* إخفاء شريط التمرير */
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/carbon_blog.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./blogs.html"
-                data-i18n="Blogs"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  .bg-filter-box {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 107.69px;
+    width: 289px;
+    height: 50px;
+    background: white;
+    flex-shrink: 0;
+    gap:8.62px;
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/mdi_about-variant.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./about.html"
-                data-i18n="About"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  .search-input {
+    flex: 1;
+    min-width: 180px;
+    padding: 8px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/ri_chat-1-line.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./contact.html"
-                data-i18n="Contact"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  .search-input:focus {
+    border-color: #1D4265;
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/Vector.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./shary-card.html"
-                data-i18n="Shary Card"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  .filter-btn, .reset-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 107.69px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/arcticons_jiocareers.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./careers.html"
-                data-i18n="Careers"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
+  .filter-btn {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    height: 49.8px;
+    width: 181px;
+    justify-content: center;
+  }
 
-            <div
-              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/Vector (1).svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <a
-                href="./check-now.html"
-                data-i18n="Agents"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              >
-              </a>
-            </div>
-            <div
-              class="bg-[#D9D9D9] !mb-8 justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
-            >
-              <img
-                src="./icons/material-symbols_language.svg"
-                alt="home-icon"
-                class="w-8 h-8 object-contain"
-              />
-              <button
-                data-i18n="lang"
-                onclick="changeLanguage(!localStorage.getItem('language') || localStorage.getItem('language') === 'en' ? 'ar' : 'en')"
-                class="!w-full text-lg text-center flex items-center mt-2"
-              ></button>
-            </div>
-          </div>
-          <div class="flex flex-col items-start gap-6 justify-between mt-8">
-            <a
-              href="./notifications.html"
-              class="material-symbols-rounded text-[#1D4265]"
-              >notifications</a
-            >
-          </div>
-        </div>
-      </nav>
-    </header>
-    <div class="md:w-[90%] w-[95%] m-auto">
-      <div
-        class="absolute z-50 mt-1 left-0 right-0 md:w-full w-[90%] max-w-[1240px] m-auto xl:px-8 md:px-6"
-      >
-        <div
-          class="grid md:grid-cols-6 grid-cols-1 bg-white rounded-full xl:p-2 py-4 px-3"
-        >
-          <div class="col-span-4 grid md:grid-cols-3 grid-cols-3 select-none">
-            <!-- All type -->
-            <div
-              class="relative z-[2] xl:px-4 px-2 border-e border-solid border-[#E4E4E4]"
-            >
-              <p class="flex !text-xs font-semibold text-[#A3ABB0] mb-1">
-                Type
-              </p>
-              <div
-                onclick="openDropdownMenu('all_type')"
-                class="dropdown-btn cursor-pointer flex items-center justify-evenly gap-1"
-              >
-                <p class="text-[#161E2D] !text-xs font-semibold truncate">
-                  All type
-                </p>
-                <span
-                  class="material-symbols-rounded text-[#5C6368] !text-xs h-6"
-                  >keyboard_arrow_down</span
-                >
-              </div>
-              <div
-                id="all_type"
-                onclick="openDropdownMenu('all_type')"
-                class="dropdown-list w-full absolute left-0 xl:top-20 top-[72px] bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
-                style="box-shadow: 0px 4px 4px 0px #00000040"
-              >
-                <p
-                  class="pt-5 pb-2 px-1 !text-xs cursor-pointer hover:text-[#1563DF]"
-                >
-                  Property Half Map Grid
-                </p>
-                <p
-                  class="py-2 px-1 !text-xs cursor-pointer hover:text-[#1563DF]"
-                >
-                  Property Half Map List
-                </p>
-                <p
-                  class="py-2 px-1 !text-xs cursor-pointer hover:text-[#1563DF]"
-                >
-                  Find Topmap Grid
-                </p>
-                <p
-                  class="py-2 px-1 !text-xs cursor-pointer hover:text-[#1563DF]"
-                >
-                  Find Topmap Grid
-                </p>
-                <p
-                  class="py-2 px-1 !text-xs cursor-pointer hover:text-[#1563DF]"
-                >
-                  Find Topmap Grid
-                </p>
-                <p
-                  class="pb-5 pt-2 px-1 !text-xs cursor-pointer hover:text-[#1563DF]"
-                >
-                  Find Sidebar List
-                </p>
-              </div>
-            </div>
-            <!-- Search Location -->
-            <div
-              class="relative z-[2] xl:px-4 px-2 border-e border-solid border-[#E4E4E4]"
-            >
-              <p class="flex !text-xs font-semibold text-[#A3ABB0] mb-1">
-                Location
-              </p>
-              <div
-                onclick="openDropdownMenu('search_location')"
-                class="dropdown-btn cursor-pointer flex items-center justify-between gap-2"
-              >
-                <p class="text-[#161E2D] !text-xs font-semibold truncate">
-                  Search location
-                </p>
-                <span
-                  class="material-symbols-rounded text-[#5C6368] !text-xs h-6"
-                  >keyboard_arrow_down</span
-                >
-              </div>
-              <div
-                id="search_location"
-                onclick="openDropdownMenu('search_location')"
-                class="dropdown-list w-full absolute left-0 xl:top-20 top-[72px] bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
-                style="box-shadow: 0px 4px 4px 0px #00000040"
-              >
-                <p class="pt-5 pb-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Property Half Map Grid
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Property Half Map List
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Topmap Grid
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Topmap Grid
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Topmap Grid
-                </p>
-                <p class="pb-5 pt-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Sidebar List
-                </p>
-              </div>
-            </div>
-            <!-- Search Developer -->
-            <div class="relative z-[2] xl:px-4 px-2">
-              <p class="flex !text-xs font-semibold text-[#A3ABB0] mb-1">
-                Developer
-              </p>
-              <div
-                onclick="openDropdownMenu('search_developer')"
-                class="dropdown-btn cursor-pointer flex items-center justify-between gap-2"
-              >
-                <p class="text-[#161E2D] !text-xs font-semibold truncate">
-                  Search developer
-                </p>
-                <span
-                  class="material-symbols-rounded text-[#5C6368] !text-xs h-6"
-                  >keyboard_arrow_down</span
-                >
-              </div>
-              <div
-                id="search_developer"
-                onclick="openDropdownMenu('search_developer')"
-                class="dropdown-list w-full absolute left-0 xl:top-20 top-[72px] bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
-                style="box-shadow: 0px 4px 4px 0px #00000040"
-              >
-                <p class="pt-5 pb-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Property Half Map Grid
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Property Half Map List
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Topmap Grid
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Topmap Grid
-                </p>
-                <p class="py-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Topmap Grid
-                </p>
-                <p class="pb-5 pt-2 px-5 cursor-pointer hover:text-[#1563DF]">
-                  Find Sidebar List
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Search Advanced -->
-          <div class="col-span-2 md:flex hidden xl:gap-2.5 gap-1.5 select-none">
-            <div class="w-full">
-              <div
-                onclick="toggleRollDown('search_advanced', 'searchAdvancedOverlay')"
-                class="cursor-pointer md:w-full w-[50%] h-full flex items-center justify-center gap-1 text-[#161E2D] xl:py-2 py-[5px] border border-solid border-[#1563DF] rounded-full"
-              >
-                <span class="leading-5 !text-xs font-semibold"
-                  >Search advanced</span
-                >
-                <span class="material-symbols-rounded !text-xs"
-                  >instant_mix</span
-                >
-              </div>
-              <div
-                id="search_advanced"
-                class="manrope w-full absolute z-[22] left-0 xl:top-[100px] top-[88px] opacity-0 invisible transition-opacity ease-in-out duration-300 xl:px-8 md:px-6"
-              >
-                <div
-                  class="grid grid-cols-2 gap-x-2 gap-y-2 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl py-2 px-2 shadow-[0px_4px_4px_0px_#00000040]"
-                >
-                  <div class="flex md:hidden md:flex-row flex-col">
-                    <!-- Payment Plan -->
-                    <div>
-                      <p class="font-bold txet-[15px]">Payment Plan</p>
-                      <div
-                        class="mt-5 manrope flex gap-[5px] font-medium text-xs"
-                      >
-                        <input
-                          type="text"
-                          class="max-w-[165px] h-10 placeholder-[#1D4265] text-center border border-solid border-[#1D4265] rounded-xl outline-none p-2"
-                          placeholder="Down Payment"
-                        />
-                        <input
-                          type="text"
-                          class="max-w-[165px] h-10 placeholder-[#1D4265] text-center border border-solid border-[#1D4265] rounded-xl outline-none p-2"
-                          placeholder="Monthly Amount"
-                        />
-                      </div>
-                    </div>
-                    <!-- Installment Years -->
-                    <div>
-                      <p class="font-bold txet-[15px]">Installment Years</p>
-                      <div
-                        class="mt-6 manrope flex flex-wrap gap-[14px] text-[#1D4265] font-medium text-xs"
-                      >
-                        <div class="filter-input">
-                          <input type="checkbox" name="year1" id="year1" />
-                          <label
-                            class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                            for="year1"
-                            >1</label
-                          >
-                        </div>
-                        <div class="filter-input">
-                          <input type="checkbox" name="year2" id="year2" />
-                          <label
-                            class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                            for="year2"
-                            >2</label
-                          >
-                        </div>
-                        <div class="filter-input">
-                          <input type="checkbox" name="year3" id="year3" />
-                          <label
-                            class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                            for="year3"
-                            >3</label
-                          >
-                        </div>
-                        <div class="filter-input">
-                          <input type="checkbox" name="year4" id="year4" />
-                          <label
-                            class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                            for="year4"
-                            >4</label
-                          >
-                        </div>
-                        <div class="filter-input">
-                          <input type="checkbox" name="year+5" id="year+5" />
-                          <label
-                            class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                            for="year+5"
-                            >+5</label
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+  .filter-btn:hover {
+    background: #e9e9e9;
+  }
 
-                  <!-- Payment Plan -->
-                  <div class="md:flex hidden">
-                    <p class="font-bold txet-[15px]">Payment Plan</p>
-                    <div
-                      class="mt-5 manrope flex gap-[5px] font-medium text-xs"
-                    >
-                      <input
-                        type="text"
-                        class="max-w-[165px] h-10 placeholder-[#1D4265] text-center border border-solid border-[#1D4265] rounded-xl outline-none p-2"
-                        placeholder="Down Payment"
-                      />
-                      <input
-                        type="text"
-                        class="max-w-[165px] h-10 placeholder-[#1D4265] text-center border border-solid border-[#1D4265] rounded-xl outline-none p-2"
-                        placeholder="Monthly Amount"
-                      />
-                    </div>
-                  </div>
-                  <!-- Installment Years -->
-                  <div class="md:flex hidden">
-                    <p class="font-bold txet-[15px]">Installment Years</p>
-                    <div
-                      class="mt-6 manrope flex flex-wrap gap-[14px] text-[#1D4265] font-medium text-xs"
-                    >
-                      <div class="filter-input">
-                        <input type="checkbox" name="year1" id="year1" />
-                        <label
-                          class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                          for="year1"
-                          >1</label
-                        >
-                      </div>
-                      <div class="filter-input">
-                        <input type="checkbox" name="year2" id="year2" />
-                        <label
-                          class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                          for="year2"
-                          >2</label
-                        >
-                      </div>
-                      <div class="filter-input">
-                        <input type="checkbox" name="year3" id="year3" />
-                        <label
-                          class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                          for="year3"
-                          >3</label
-                        >
-                      </div>
-                      <div class="filter-input">
-                        <input type="checkbox" name="year4" id="year4" />
-                        <label
-                          class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                          for="year4"
-                          >4</label
-                        >
-                      </div>
-                      <div class="filter-input">
-                        <input type="checkbox" name="year+5" id="year+5" />
-                        <label
-                          class="rounded-xl w-8 h-8 cursor-pointer flex items-center justify-center border border-solid border-[#1D4265]"
-                          for="year+5"
-                          >+5</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Range -->
+  .reset-btn {
+    background: #fff;
+    color: #1D4265;
+    border: none;
+  }
 
-                  <div class="md:col-span-1 col-span-2">
-                    <p class="text-[15px] manrope text-[#4DBFB1] mb-4">
-                      <span class="font-semibold">Price Range:</span>
-                      <span
-                        data-unit="EGP"
-                        class="current-searchPrice-range font-extrabold"
-                      ></span>
-                    </p>
-                    <div
-                      class="range-slider w-3/4"
-                      id="range_searchPrice_slider"
-                    >
-                      <input
-                        type="range"
-                        class="range-slider__input"
-                        id="range_searchPrice_low"
-                        min="0"
-                        max="10000"
-                        step="100"
-                        value="0"
-                        oninput="updateRangeSlider('searchPrice')"
-                      />
-                      <input
-                        type="range"
-                        class="range-slider__input"
-                        id="range_searchPrice_high"
-                        min="0"
-                        max="10000"
-                        step="100"
-                        value="10000"
-                        oninput="updateRangeSlider('searchPrice')"
-                      />
-                    </div>
-                  </div>
-                  <div class="md:col-span-1 col-span-2">
-                    <p class="text-[15px] manrope text-[#4DBFB1] mb-4">
-                      <span class="font-semibold">Property Area Range:</span>
-                      <span
-                        data-unit="m&sup2;"
-                        class="current-searchArea-range font-extrabold"
-                      ></span>
-                    </p>
-                    <div
-                      class="range-slider w-3/4"
-                      id="range_searchArea_slider"
-                    >
-                      <input
-                        type="range"
-                        class="range-slider__input"
-                        id="range_searchArea_low"
-                        min="0"
-                        max="10000"
-                        step="100"
-                        value="0"
-                        oninput="updateRangeSlider('searchArea')"
-                      />
-                      <input
-                        type="range"
-                        class="range-slider__input"
-                        id="range_searchArea_high"
-                        min="0"
-                        max="10000"
-                        step="100"
-                        value="10000"
-                        oninput="updateRangeSlider('searchArea')"
-                      />
-                    </div>
-                  </div>
-                  <!-- Roll Downs -->
-                  <div class="col-span-2 grid grid-cols-4 gap-6">
-                    <div>
-                      <p class="text-[#161E2D] font-semibold text-xs mb-2">
-                        Rooms
-                      </p>
-                      <div class="relative z-[1]">
-                        <div
-                          onclick="openDropdownMenu('searchRoom')"
-                          class="dropdown-btn cursor-pointer h-[45px] flex items-center gap-2 rounded-full px-4 py-2 border border-solid border-[#E4E4E4]"
-                        >
-                          <p
-                            class="text-xs text-[#161E2D] w-full font-normal truncate"
-                          >
-                            Rooms
-                          </p>
-                          <span
-                            class="material-symbols-rounded text-base flex items-center leading-none text-[#3A3A3C]"
-                            >keyboard_arrow_down</span
-                          >
-                        </div>
-                        <div
-                          id="searchRoom"
-                          onclick="openDropdownMenu('searchRoom')"
-                          class="dropdown-list w-full absolute top-12 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0px_4px_4px_0px_#00000040]"
-                        >
-                          <p
-                            class="pt-5 pb-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            1
-                          </p>
-                          <p
-                            class="py-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            2
-                          </p>
-                          <p
-                            class="pb-5 pt-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            3
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div>
-                      <p class="text-[#161E2D] font-semibold text-xs mb-2">
-                        Bathrooms
-                      </p>
-                      <div class="relative z-[1]">
-                        <div
-                          onclick="openDropdownMenu('searchBathroom')"
-                          class="dropdown-btn cursor-pointer h-[45px] flex items-center gap-2 rounded-full px-4 py-2 border border-solid border-[#E4E4E4]"
-                        >
-                          <p
-                            class="text-xs text-[#161E2D] w-full font-normal truncate"
-                          >
-                            Bathrooms
-                          </p>
-                          <span
-                            class="material-symbols-rounded text-base flex items-center leading-none text-[#3A3A3C]"
-                            >keyboard_arrow_down</span
-                          >
-                        </div>
-                        <div
-                          id="searchBathroom"
-                          onclick="openDropdownMenu('searchBathroom')"
-                          class="dropdown-list w-full absolute top-12 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0px_4px_4px_0px_#00000040]"
-                        >
-                          <p
-                            class="pt-5 pb-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            1
-                          </p>
-                          <p
-                            class="py-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            2
-                          </p>
-                          <p
-                            class="pb-5 pt-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            3
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div>
-                      <p class="text-[#161E2D] font-semibold text-xs mb-2">
-                        Bedrooms
-                      </p>
-                      <div class="relative z-[1]">
-                        <div
-                          onclick="openDropdownMenu('searchBedroom')"
-                          class="dropdown-btn cursor-pointer h-[45px] flex items-center gap-2 rounded-full px-4 py-2 border border-solid border-[#E4E4E4]"
-                        >
-                          <p
-                            class="text-xs text-[#161E2D] w-full font-normal truncate"
-                          >
-                            Bedrooms
-                          </p>
-                          <span
-                            class="material-symbols-rounded text-base flex items-center leading-none text-[#3A3A3C]"
-                            >keyboard_arrow_down</span
-                          >
-                        </div>
-                        <div
-                          id="searchBedroom"
-                          onclick="openDropdownMenu('searchBedroom')"
-                          class="dropdown-list w-full absolute top-12 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0px_4px_4px_0px_#00000040]"
-                        >
-                          <p
-                            class="pt-5 pb-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            1
-                          </p>
-                          <p
-                            class="py-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            2
-                          </p>
-                          <p
-                            class="pb-5 pt-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            3
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div>
-                      <p class="text-[#161E2D] font-semibold text-xs mb-2">
-                        Delivery in
-                      </p>
-                      <div class="relative z-[1]">
-                        <div
-                          onclick="openDropdownMenu('searchDeliveryIn')"
-                          class="dropdown-btn cursor-pointer h-[45px] flex items-center gap-2 rounded-full px-4 py-2 border border-solid border-[#E4E4E4]"
-                        >
-                          <p
-                            class="text-xs text-[#161E2D] w-full font-normal truncate"
-                          >
-                            Delivery in
-                          </p>
-                          <span
-                            class="material-symbols-rounded text-base flex items-center leading-none text-[#3A3A3C]"
-                            >keyboard_arrow_down</span
-                          >
-                        </div>
-                        <div
-                          id="searchDeliveryIn"
-                          onclick="openDropdownMenu('searchDeliveryIn')"
-                          class="dropdown-list w-full absolute top-12 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0px_4px_4px_0px_#00000040]"
-                        >
-                          <p
-                            class="pt-5 pb-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            2025
-                          </p>
-                          <p
-                            class="py-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            2027
-                          </p>
-                          <p
-                            class="pb-5 pt-2 px-4 cursor-pointer hover:text-[#1563DF]"
-                          >
-                            2030
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Amentities -->
-                  <div class="col-span-2">
-                    <p class="text-[#1C1C1E] font-semibold text-base">
-                      Amentities:
-                    </p>
-                    <div
-                      class="mt-3 grid md:grid-cols-6 grid-cols-3 gap-3 text-xs font-normal text-[#161E2D]"
-                    >
-                      <div class="filter-checkbox">
-                        <input
-                          checked
-                          type="checkbox"
-                          name="sAirCondition"
-                          id="sAirCondition"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sAirCondition"
-                          >Air Condition</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          checked
-                          type="checkbox"
-                          name="sCableTV"
-                          id="sCableTV"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sCableTV"
-                          >Cable TV</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sFireplace1"
-                          id="sFireplace1"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sFireplace1"
-                          >Fireplace 1</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sFireplace2"
-                          id="sFireplace2"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sFireplace2"
-                          >Fireplace 2</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sFireplace3"
-                          id="sFireplace3"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sFireplace3"
-                          >Fireplace 3</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sFireplace4"
-                          id="sFireplace4"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sFireplace4"
-                          >Fireplace 4</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sAirCondition2"
-                          id="sAirCondition2"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sAirCondition2"
-                          >Air Condition</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sCableTV2"
-                          id="sCableTV2"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sCableTV2"
-                          >Cable TV</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sFireplace12"
-                          id="sFireplace12"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sFireplace12"
-                          >Fireplace 1</label
-                        >
-                      </div>
-                      <div class="filter-checkbox">
-                        <input
-                          type="checkbox"
-                          name="sFireplace22"
-                          id="sFireplace22"
-                        />
-                        <label
-                          class="block relative ps-7 cursor-pointer w-fit"
-                          for="sFireplace22"
-                          >Fireplace 2</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button
-              class="flex items-center gap-2 bg-[#1D4265] rounded-full xl:py-3 py-2 xl:px-8 px-4 text-white"
-            >
-              <span class="leading-5 font-semibold !text-xs">Search</span>
-              <span class="material-symbols-rounded !text-xs">search</span>
-            </button>
-          </div>
-          <!-- Search Advanced Overlay -->
-          <div
-            id="searchAdvancedOverlay !text-xs"
-            onclick="toggleRollDown('search_advanced', 'searchAdvancedOverlay')"
-            class="opacity-0 invisible transition-opacity ease-in-out duration-300 fixed inset-0 h-[100dvh] z-[21]"
-          ></div>
-        </div>
+  .filter-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .filter-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .filter-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+  }
+
+  .filter-select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 768px) {
+    .search-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+  .search-bar {
+    top: 0px;
+    left: 50%;
+    height: auto !important;
+  }
+
+    .search-container::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .search-container::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 3px;
+    } 
+    .filter-btn {
+    height: 32px;
+    width: 140px;
+  }
+
+  }
+</style>
+
+</head>
+<body>
+  <div id="map">
+<div class="search-bar">
+  <div class="search-container flex md:flex-row flex-col items-start justify-start  flex-nowrap ">
+    <div class="filter-btn-box items-start md:block flex gap-1 justify-start left-2  translate-y-0 ">
+  <!-- مربع البحث -->
+      <button class="filter-btn md:hidden flex  m-auto w-[50px] h-[51px]">
+      <img src="./icons/Vector copy 2.svg" alt="" class="w-6 h-6  m-auto" />
+    </button>
+    <div class="bg-filter-box ">
+      <img src="./icons/search.svg" alt="" class="w-4 h-4 ml-2" />
+      <input 
+        type="text" 
+        class="search-input border-none" 
+        placeholder="Search By Area, Compound, Developer"
+      />
+
+    </div>
+    <!-- زر الريسيت -->
+    <button class="reset-btn md:flex hidden mt-2 h-[29px]">
+      Reset View
+    </button>
+    </div>
+  
+<div class="overflow-x-auto md:gap-4  gap-1 w-full flex flex-nowrap">
+
+
+    <!-- الفلاتر -->
+    <button class="filter-btn"
+    onclick="priceFilter('open')">
+      <img src="./icons/Search copy.svg" alt="" class="w-6 h-6" />
+      Price Range
+    </button>
+
+    <button class="filter-btn"
+          onclick="propertyFilter('open')">
+      <img src="./icons/Search copy 2.svg" alt="" class="w-6 h-6" />
+      Property Types
+    </button>
+    <button class="filter-btn"
+      onclick="deliveryFilter('open')">
+      <img src="./icons/Search copy 3.svg" alt="" class="w-6 h-6" />
+      Delivery
+    </button>
+
+    <button class="filter-btn"
+        onclick="toggleFilterBar('open')">
+      <img src="./icons/weui_more-filled.svg" alt="" class="w-6 h-6" />
+      More Filters
+    </button>
+
+</div>
+  </div>
+</div>
+
       </div>
-      <!-- Map Container -->
-      <div
-        id="map"
-        class="xl:pt-[70px] pt-24 sm:mb-24 mb-12 md:mt-24 mt-40 mb-6 relative rounded-lg shadow-lg"
-      ></div>
+    </div>
+  </div>
+  
       <!-- Modal -->
       <div
         id="unitModal"
-        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+        class="fixed m-auto left-0 right-0 inset-0 bg-black bg-opacity-50 hidden items-center justify-center !z-50"
       >
-        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
+        <div class="bg-white p-6 m-auto mt-16 rounded-lg shadow-lg w-full max-w-md relative">
           <button
             onclick="closeModal()"
             class="absolute top-2 right-2 text-gray-500 text-2xl"
@@ -1271,7 +318,7 @@
           <a href="./inside-project.html">
             <img
               id="unitImage"
-              src=""
+              src="./images/compound.jpeg"
               alt="Unit Image"
               class="w-full rounded mb-3"
             />
@@ -1441,1296 +488,1259 @@
           <!-- <div id="unitDeveloper" class="text-xs text-yellow-600"></div> -->
         </div>
       </div>
-    </div>
-    <!-- Get Action now -->
-    <div
-      class="md:mt-24 mt-12 mb-4 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
-    >
-      <div
-        class="bg-white md:max-w-lg sm:max-w-md m-auto rounded-[30px] sm:py-10 md:px-10 p-6"
-        style="box-shadow: 6px 6px 76.1px 0px #00000040"
-      >
-        <p
-          class="capitalize sm:text-3xl ltr:sm:text-left rtl:sm:text-right text-center text-[#1D4265]"
-        >
-          <span data-i18n="Get"></span>
-          <span class="text-[#FCB424]" data-i18n="Action"></span>
-          <span data-i18n="now"></span>
-        </p>
-        <div class="manrope mt-6 flex flex-col sm:gap-6 gap-5">
-          <div>
-            <label
-              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-              for="name"
-            >
-              <span data-i18n="Name"></span>
-              <span class="text-[#FF5151]">*</span>
-            </label>
-            <div class="relative">
-              <span
-                class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
-                >account_circle</span
-              >
-              <input
-                class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
-                placeholder="Your name"
-                type="text"
-                name="name"
-                id="name"
-              />
-            </div>
-          </div>
-          <div>
-            <label
-              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-              for="phone"
-            >
-              <span data-i18n="Phone"></span>
-              <span class="text-[#FF5151]">*</span>
-            </label>
-            <div class="flex gap-2">
-              <div class="relative z-[4]">
-                <div
-                  onclick="openDropdownMenu('flag')"
-                  class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
-                >
-                  <img
-                    loading="lazy"
-                    src="./icons/egy-flag.svg"
-                    alt="flag"
-                    class="md:w-[40px] w-[24px]"
-                  />
-                  <span
-                    class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
-                    >keyboard_arrow_down</span
-                  >
-                </div>
-                <div
-                  id="flag"
-                  onclick="openDropdownMenu('flag')"
-                  class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
-                >
-                  <div class="cursor-pointer px-3 py-1 img-container">
-                    <img
-                      loading="lazy"
-                      src="./icons/egy-flag.svg"
-                      alt="flag"
-                      class="md:w-[42px] w-[25px] m-auto"
-                    />
-                  </div>
-                  <div class="cursor-pointer px-3 py-1 img-container">
-                    <img
-                      loading="lazy"
-                      src="./icons/egy-flag.svg"
-                      alt="flag"
-                      class="md:w-[42px] w-[25px] m-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="relative w-full">
-                <span
-                  class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
-                  >tag</span
-                >
-                <input
-                  class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
-                  placeholder="Phone number"
-                  type="text"
-                  name="phone"
-                  id="phone"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="relative z-[1]">
-            <label
-              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-            >
-              <span>Project</span>
-              <span class="text-[#FF5151]">*</span>
-            </label>
-            <div
-              onclick="openDropdownMenu('location')"
-              class="dropdown-btn relative cursor-pointer sm:h-[54px] h-[42px] flex items-center gap-2 rounded-full sm:py-4 py-2.5 ps-5 sm:pe-5 pe-3 border border-solid border-[#E4E4E4] leading-5"
-            >
-              <p class="sm:text-sm text-xs w-full truncate"></p>
-              <span
-                class="material-symbols-rounded text-sm leading-none text-[#5C6368]"
-                >keyboard_arrow_down</span
-              >
-            </div>
-            <div
-              id="location"
-              onclick="openDropdownMenu('location')"
-              class="dropdown-list w-full absolute sm:top-[86px] top-[72px] bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            >
-              <p class="pt-6 pb-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                Apartment
-              </p>
-              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">Villa</p>
-              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                Studio
-              </p>
-              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                Commercial
-              </p>
-              <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">Admin</p>
-              <p class="pb-6 pt-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                Medical
-              </p>
-            </div>
-          </div>
-          <div>
-            <label
-              class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
-              for="message"
-              data-i18n="Message"
-            ></label>
-            <textarea
-              class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-[30px] resize-none py-4 px-5 leading-5"
-              placeholder="Your message"
-              name="message"
-              id="message"
-              rows="7"
-            ></textarea>
-          </div>
-          <div>
-            <button
-              class="mb-2.5 w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-3 leading-5 bg-[#1D4265] rounded-full"
-              data-i18n="Submit"
-            ></button>
-            <button
-              onclick="togglePopup('requestMeeting')"
-              class="w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-2.5 leading-5 bg-[#1D4265] rounded-full flex items-center justify-center gap-2"
-            >
-              <span class="material-symbols-rounded">groups</span>
-              <p>Request Meeting</p>
-            </button>
-          </div>
-        </div>
-      </div>
 
-      <!-- Request Meeting -->
+
+      <!-- Fixed Filter -->
       <div
-        id="requestMeeting"
-        class="fixed h-dvh inset-0 bg-[#00000040] z-[31] flex items-center justify-center p-4 opacity-0 invisible"
+        id="filterBar"
+        class=" bg-white md:max-w-[388px] fixed bottom-0 max-h-0 w-full z-40"
+        style="transition: max-height 0.3s ease-in-out"
       >
-        <div
-          class="bg-white rounded-[30px] md:px-10 md:py-7 p-5 w-[540px] max-w-full max-h-full shadow-[6px_6px_76.1px_0px_#00000040] overflow-y-auto"
-        >
-          <div class="flex items-center justify-between text-[#1D4265]">
-            <p class="md:text-xl text-sm font-medium">Request Meeting</p>
-            <span
-              onclick="togglePopup('requestMeeting')"
-              class="material-symbols-rounded cursor-pointer md:text-2xl text-xl flex shrink-0"
-              >cancel</span
-            >
-          </div>
-          <div
-            class="grid grid-cols-2 gap-2.5 font-semibold text-center manrope md:mt-5 mt-3"
-          >
-            <div class="filter-input">
-              <input checked type="radio" name="meeting type" id="zoom" />
-              <label
-                class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
-                for="zoom"
-                >Zoom</label
-              >
-            </div>
-            <div class="filter-input">
-              <input type="radio" name="meeting type" id="physicalMeeting" />
-              <label
-                class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
-                for="physicalMeeting"
-                >Physical Meeting</label
-              >
-            </div>
-          </div>
-          <div class="md:mt-6 mt-5 flex flex-col sm:gap-5 gap-4 manrope">
-            <div>
-              <label
-                class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
-                for="meetingName"
-                data-i18n="Name"
-              ></label>
-              <div class="relative">
-                <span
-                  class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
-                  >account_circle</span
-                >
-                <input
-                  class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
-                  placeholder="Your name"
-                  type="text"
-                  name="meetingName"
-                  id="meetingName"
-                />
-              </div>
-            </div>
-            <!--  -->
-            <div>
-              <label
-                class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
-                for="meetingPhone"
-                data-i18n="Phone"
-              ></label>
-              <div class="flex gap-2">
-                <div class="relative z-[4]">
-                  <div
-                    onclick="openDropdownMenu('requestMeetingFlag')"
-                    class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
-                  >
-                    <img
-                      loading="lazy"
-                      src="./icons/egy-flag.svg"
-                      alt="flag"
-                      class="md:w-[42px] w-[25px]"
-                    />
-                    <span
-                      class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
-                      >keyboard_arrow_down</span
-                    >
-                  </div>
-                  <div
-                    id="requestMeetingFlag"
-                    onclick="openDropdownMenu('requestMeetingFlag')"
-                    class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
-                  >
-                    <div class="cursor-pointer px-3 py-1 img-container">
-                      <img
-                        loading="lazy"
-                        src="./icons/egy-flag.svg"
-                        alt="flag"
-                        class="md:w-[42px] w-[25px] m-auto"
-                      />
-                    </div>
-                    <div class="cursor-pointer px-3 py-1 img-container">
-                      <img
-                        loading="lazy"
-                        src="./icons/egy-flag.svg"
-                        alt="flag"
-                        class="md:w-[42px] w-[25px] m-auto"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="w-full md:h-[54px] h-[42px] rounded-full border border-solid border-[#E4E4E4] text-sm px-4 flex items-center gap-2 overflow-hidden"
-                >
-                  <span
-                    class="material-symbols-rounded text-lg text-[#A3ABB0] shrink-0"
-                    >tag</span
-                  >
-                  <input
-                    type="text"
-                    placeholder="Phone number"
-                    id="meetingPhone"
-                    name="meetingPhone"
-                    class="w-full h-full sm:text-sm text-xs outline-none"
-                  />
-                </div>
-              </div>
-            </div>
-            <!--  -->
-            <div>
-              <p class="font-semibold text-[#1D4265] md:text-base text-xs">
-                Select available dates
-              </p>
-              <div
-                class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
-              >
-                <div class="filter-input">
-                  <input checked type="checkbox" name="date1" id="date1" />
-                  <label
-                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="date1"
-                  >
-                    <p
-                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                    >
-                      SAT
-                    </p>
-                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                      22 FEB
-                    </p>
-                  </label>
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="date2" id="date2" />
-                  <label
-                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="date2"
-                  >
-                    <p
-                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                    >
-                      SAT
-                    </p>
-                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                      22 FEB
-                    </p>
-                  </label>
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="date3" id="date3" />
-                  <label
-                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="date3"
-                  >
-                    <p
-                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                    >
-                      SAT
-                    </p>
-                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                      22 FEB
-                    </p>
-                  </label>
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="date4" id="date4" />
-                  <label
-                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="date4"
-                  >
-                    <p
-                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                    >
-                      SAT
-                    </p>
-                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                      22 FEB
-                    </p>
-                  </label>
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="date5" id="date5" />
-                  <label
-                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="date5"
-                  >
-                    <p
-                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                    >
-                      SAT
-                    </p>
-                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                      22 FEB
-                    </p>
-                  </label>
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="date6" id="date6" />
-                  <label
-                    class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="date6"
-                  >
-                    <p
-                      class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                    >
-                      SAT
-                    </p>
-                    <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
-                      22 FEB
-                    </p>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <!--  -->
-            <div>
-              <p class="font-semibold text-[#1D4265] md:text-base text-xs">
-                Available Time
-              </p>
-              <div
-                class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
-              >
-                <div class="filter-input">
-                  <input checked type="checkbox" name="time1" id="time1" />
-                  <label
-                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="time1"
-                    >10:00 AM</label
-                  >
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="time2" id="time2" />
-                  <label
-                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="time2"
-                    >10:00 AM</label
-                  >
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="time3" id="time3" />
-                  <label
-                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="time3"
-                    >10:00 AM</label
-                  >
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="time4" id="time4" />
-                  <label
-                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="time4"
-                    >10:00 AM</label
-                  >
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="time5" id="time5" />
-                  <label
-                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="time5"
-                    >10:00 AM</label
-                  >
-                </div>
-                <div class="filter-input">
-                  <input type="checkbox" name="time6" id="time6" />
-                  <label
-                    class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                    for="time6"
-                    >10:00 AM</label
-                  >
-                </div>
-              </div>
-            </div>
-            <!--  -->
-            <button
-              onclick="togglePopup('requestMeeting')"
-              class="mt-3 bg-[#1D4265] rounded-[17px] sm:h-[54px] h-[40px] md:w-[195px] w-[140px] md:text-base text-sm m-auto text-white font-semibold"
-            >
-              Sumbit
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Zoom Meeting -->
-    <div
-      id="zoomMeeting"
-      class="fixed h-dvh inset-0 bg-[#00000040] z-[31] flex items-center justify-center p-4 opacity-0 invisible"
-    >
-      <div
-        class="bg-white rounded-[30px] md:px-10 md:py-7 p-5 w-[540px] max-w-full max-h-full shadow-[6px_6px_76.1px_0px_#00000040] overflow-y-auto"
-      >
-        <div class="flex items-center justify-between text-[#1D4265]">
-          <p class="md:text-xl text-sm font-medium">Zoom Meeting</p>
-          <span
-            onclick="togglePopup('zoomMeeting')"
-            class="material-symbols-rounded cursor-pointer md:text-2xl text-xl flex shrink-0"
-            >cancel</span
-          >
-        </div>
-        <div class="md:mt-8 mt-4 flex flex-col sm:gap-5 gap-4 manrope">
-          <div>
-            <label
-              class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
-              for="meetingName"
-              data-i18n="Name"
-            ></label>
-            <div class="relative">
-              <span
-                class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
-                >account_circle</span
-              >
-              <input
-                class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2 ps-10 pe-5 leading-5"
-                placeholder="Your name"
-                type="text"
-                name="meetingName"
-                id="meetingName"
-              />
-            </div>
-          </div>
-          <!--  -->
-          <div>
-            <label
-              class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
-              for="meetingPhone"
-              data-i18n="Phone"
-            ></label>
-            <div class="flex gap-2">
-              <div class="relative z-[4]">
-                <div
-                  onclick="openDropdownMenu('zoomMeetingFlag')"
-                  class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
-                >
-                  <img
-                    loading="lazy"
-                    src="./icons/egy-flag.svg"
-                    alt="flag"
-                    class="md:w-[42px] w-[25px]"
-                  />
-                  <span
-                    class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
-                    >keyboard_arrow_down</span
-                  >
-                </div>
-                <div
-                  id="zoomMeetingFlag"
-                  onclick="openDropdownMenu('zoomMeetingFlag')"
-                  class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
-                >
-                  <div class="cursor-pointer px-3 py-1 img-container">
-                    <img
-                      loading="lazy"
-                      src="./icons/egy-flag.svg"
-                      alt="flag"
-                      class="md:w-[42px] w-[25px] m-auto"
-                    />
-                  </div>
-                  <div class="cursor-pointer px-3 py-1 img-container">
-                    <img
-                      loading="lazy"
-                      src="./icons/egy-flag.svg"
-                      alt="flag"
-                      class="md:w-[42px] w-[25px] m-auto"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                class="w-full md:h-[54px] h-[38px] rounded-full border border-solid border-[#E4E4E4] text-sm px-4 flex items-center gap-2 overflow-hidden"
-              >
-                <span
-                  class="material-symbols-rounded text-lg text-[#A3ABB0] shrink-0"
-                  >tag</span
-                >
-                <input
-                  type="text"
-                  placeholder="Phone number"
-                  id="meetingPhone"
-                  name="meetingPhone"
-                  class="w-full h-full sm:text-sm text-xs outline-none"
-                />
-              </div>
-            </div>
-          </div>
-          <!--  -->
-          <div>
-            <p class="font-semibold text-[#1D4265] md:text-base text-xs">
-              Select available dates
-            </p>
-            <div
-              class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
-            >
-              <div class="filter-input">
-                <input
-                  checked
-                  type="checkbox"
-                  name="zoomDate1"
-                  id="zoomDate1"
-                />
-                <label
-                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomDate1"
-                >
-                  <p
-                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                  >
-                    SAT
-                  </p>
-                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
-                </label>
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomDate2" id="zoomDate2" />
-                <label
-                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomDate2"
-                >
-                  <p
-                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                  >
-                    SAT
-                  </p>
-                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
-                </label>
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomDate3" id="zoomDate3" />
-                <label
-                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomDate3"
-                >
-                  <p
-                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                  >
-                    SAT
-                  </p>
-                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
-                </label>
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomDate4" id="zoomDate4" />
-                <label
-                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomDate4"
-                >
-                  <p
-                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                  >
-                    SAT
-                  </p>
-                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
-                </label>
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomDate5" id="zoomDate5" />
-                <label
-                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomDate5"
-                >
-                  <p
-                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                  >
-                    SAT
-                  </p>
-                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
-                </label>
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomDate6" id="zoomDate6" />
-                <label
-                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomDate6"
-                >
-                  <p
-                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
-                  >
-                    SAT
-                  </p>
-                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
-                </label>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-          <div>
-            <p class="font-semibold text-[#1D4265] md:text-base text-xs">
-              Available Time
-            </p>
-            <div
-              class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
-            >
-              <div class="filter-input">
-                <input
-                  checked
-                  type="checkbox"
-                  name="zoomTime1"
-                  id="zoomTime1"
-                />
-                <label
-                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomTime1"
-                  >10:00 AM</label
-                >
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomTime2" id="zoomTime2" />
-                <label
-                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomTime2"
-                  >10:00 AM</label
-                >
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomTime3" id="zoomTime3" />
-                <label
-                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomTime3"
-                  >10:00 AM</label
-                >
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomTime4" id="zoomTime4" />
-                <label
-                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomTime4"
-                  >10:00 AM</label
-                >
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomTime5" id="zoomTime5" />
-                <label
-                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomTime5"
-                  >10:00 AM</label
-                >
-              </div>
-              <div class="filter-input">
-                <input type="checkbox" name="zoomTime6" id="zoomTime6" />
-                <label
-                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
-                  for="zoomTime6"
-                  >10:00 AM</label
-                >
-              </div>
-            </div>
-          </div>
-          <!--  -->
+        <div class="bg-white p-4 pt-16 relative">
           <button
-            onclick="togglePopup('zoomMeeting')"
-            class="md:mt-3 mt-1 bg-[#1D4265] rounded-[17px] sm:h-[54px] h-[40px] md:w-[195px] w-[140px] md:text-base text-sm m-auto text-white font-semibold"
-          >
-            Sumbit
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Compare Bar -->
-    <div
-      id="compareNotification"
-      class="fixed z-[24] md:bottom-1 bottom-4 md:left-1/2 md:-translate-x-1/2 md:px-4 md:w-[100vw] md:ltr:right-1/2 md:rtl:left-1/2 ltr:right-4 rtl:left-4"
-    >
-      <div
-        class="manrope md:flex hidden flex-wrap justify-center items-center gap-10 font-medium w-fit m-auto bg-[#E7E7E7] p-4 rounded-[20px] shadow-[0px_4px_4px_0px_#00000040]"
-      >
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-rounded text-[30px] text-[#1D4265]"
-            >compare</span
-          >
-          <p class="text-lg text-[#1D4265] whitespace-nowrap">
-            2 Properties, 2 Compounds
-          </p>
-        </div>
-        <div class="shrink-0 flex gap-1.5 h-12">
-          <a
-            href="./compare.html"
-            class="h-full px-5 flex items-center justify-center bg-[#1D4265] rounded-[16px] text-white"
-            >Compare Now</a
-          >
-          <button
-            onclick="hideCompareNotification('compareNotification', event)"
-            class="h-full px-5 flex items-center justify-center text-[#1D4265] border border-solid border-[#1D4265] rounded-[16px]"
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
-      <!--  -->
-    </div>
-
-    <!-- Shary AI -->
-    <div
-      class="fixed z-30 md:ltr:right-6 md:rtl:left-6 md:bottom-6 bottom-0 md:w-auto w-full md:rounded-full md:bg-transparent bg-white md:shadow-none shadow-[0px_-1px_18.1px_0px_#00000029] md:p-0 py-2.5 sm:px-6 px-4 flex justify-between items-center"
-    >
-      <p
-        class="md:hidden capitalize text-xl font-medium leading-5 text-[#1D4265]"
-      >
-        <span data-i18n="Get"></span>
-        <span class="text-[#FCB424]" data-i18n="Action"></span>
-        <span class="block" data-i18n="now"></span>
-      </p>
-      <div class="flex gap-2">
-        <div
-          class="md:hidden w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#1D4265]"
-        >
-          <img
-            loading="lazy"
-            src="./icons/phone.svg"
-            class="w-5 h-5"
-            style="filter: brightness(0) invert(1)"
-            alt="phone"
-          />
-        </div>
-        <div
-          class="md:hidden w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#00DD3B]"
-        >
-          <img
-            loading="lazy"
-            src="./icons/offers-whatsapp-icon.svg"
-            class="w-6 h-6"
-            alt="whatsApp"
-          />
-        </div>
-        <div
-          class="relative md:w-[75px] md:h-[75px] w-[50px] h-[50px] z-[24] rounded-full shrink-0 flex items-center"
-        >
-          <div
-            id="openSharyAI"
-            onclick="toggleSharyAI('open')"
-            class="transition-all md:duration-700 duration-0 md:bg-none bg-gradient-to-b from-[#1D4265] to-[#4DBFB1] md:rounded-none rounded-full p-[1px]"
-          >
-            <div
-              class="md:w-[75px] md:h-[75px] w-[49px] h-[49px] md:bg-transparent bg-white md:p-0 p-3 bg-cover bg-no-repeat rounded-full cursor-pointer flex items-center justify-center shrink-0"
-              style="background-image: url('/images/SharyAI-bg.svg')"
-            >
-              <img loading="lazy" src="./icons/SharyAI.svg" alt="SharyAI" />
-            </div>
-          </div>
-          <div
-            id="closeSharyAI"
-            onclick="toggleSharyAI('close')"
-            class="opacity-0 z-[-1] select-none absolute transition-all md:duration-700 duration-0 bg-white w-full h-full cursor-pointer rounded-full flex items-center justify-center shadow-[0px_4px_4px_0px_#00000040]"
+            onclick="toggleFilterBar('close')"
+            class="absolute bottom-2 bg-[#F5F5F5] rounded-full w-10 h-10 cursor-pointer flex items-center justify-center"
           >
             <span
-              class="material-symbols-rounded text-4xl"
-              style="
-                background: linear-gradient(180deg, #ffa920 0%, #1d4265 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-              "
-              >close</span
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      id="sharyAiChat"
-      class="fixed md:ltr:right-[114px] md:rtl:left-[114px] md:w-[395px] w-[100vw] md:bottom-6 bottom-0 md:h-[715px] h-[100dvh] xl:max-h-[calc(100vh-115px)] md:max-h-[calc(100vh-200px)] opacity-0 z-[-1] transition-all md:duration-700 duration-0"
-    >
-      <div
-        class="shadow-[0px_4px_4px_0px_#00000040] md:rounded-[44px] w-full h-full overflow-hidden"
-        style="
-          background: linear-gradient(163.52deg, #a3f5eb 3.1%, #ffffff 24.12%);
-        "
-      >
-        <!-- Chat Header -->
-        <div
-          class="relative bg-[#FFFFFF8A] h-[95px] flex md:items-center items-end justify-center rounded-bl-[32px] rounded-br-[32px]"
-          style="
-            backdrop-filter: blur(68.30000305175781px);
-            box-shadow: 0px 4px 7.2px 0px #0000001c;
-          "
-        >
-          <img
-            loading="lazy"
-            src="./icons/SharyAI.svg"
-            class="w-[65px]"
-            alt="SharyAI"
-          />
-          <button
-            onclick="toggleSharyAI('close')"
-            class="md:hidden absolute bottom-3 w-9 h-9 border border-solid border-[#EDEDED] rounded-full flex items-center justify-center ltr:left-7 rtl:right-7"
-            style="
-              background: linear-gradient(180deg, #1d4265 0%, #4dbfb1 100%);
-            "
-          >
-            <span
-              class="material-symbols-rounded font-normal leading-none text-white"
+              class="material-symbols-rounded font-normal text-xl leading-none text-[#1D1D1D]"
               data-i18n="keyboard_arrow_left"
             ></span>
           </button>
-        </div>
-
-        <div class="overflow-y-auto h-[calc(100%-225px)]">
-          <!-- Titik Ceria -->
-          <div class="px-8 mt-4">
-            <div
-              class="h-[58px] flex gap-3 items-center px-2 rounded-[50px]"
-              style="
-                background: linear-gradient(90deg, #1d4265 0%, #4dbfb1 100%);
-              "
-            >
-              <div class="w-10 h-10 bg-[#FFFFFF33] rounded-full shrink-0"></div>
-              <div class="text-white">
-                <p class="font-medium leading-5">Titik Ceria</p>
-                <p class="text-[#FFFFFFCC] text-xs font-normal">Welcome</p>
-              </div>
-            </div>
-            <div class="mt-4 flex items-center justify-between">
-              <div class="manrope px-4">
-                <p class="text-[#111111] text-sm font-medium leading-5">
-                  Help me to find 5 potensial headlines for Finance Dashboard?
-                </p>
-                <div class="mt-2 flex gap-7">
-                  <p
-                    class="flex items-center gap-1 cursor-pointer text-[#7E8492]"
-                  >
-                    <span class="material-symbols-rounded text-base">edit</span>
-                    <span class="font-medium text-xs">Edit</span>
-                  </p>
-                  <p
-                    class="flex items-center gap-1 cursor-pointer text-[#7E8492]"
-                  >
-                    <span class="material-symbols-rounded text-base"
-                      >content_copy</span
-                    >
-                    <span class="font-medium text-xs">Copy</span>
-                  </p>
-                </div>
-              </div>
-              <div class="w-9 h-9 bg-[#00000020] rounded-full shrink-0"></div>
-            </div>
-          </div>
-
-          <!-- Messages -->
-          <div class="px-5 mt-7 manrope flex flex-col gap-2.5">
-            <div class="flex items-start gap-2">
-              <img
-                loading="lazy"
-                src="./icons/SharyAI.svg"
-                class="w-[50px] shrink-0"
-                alt="SharyAI"
-              />
-              <div>
-                <p
-                  class="text-black text-[11px] font-semibold mb-1 leading-[16px]"
-                >
-                  Choose one:
-                </p>
-                <div class="flex flex-wrap gap-1">
-                  <div class="chat-choices">
-                    <input
-                      checked
-                      type="radio"
-                      name="chooseChat"
-                      id="choose1"
-                    />
-                    <label
-                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
-                      for="choose1"
-                    >
-                      <p class="bg-white rounded-full py-[6px] px-2">
-                        Recidencial
-                      </p>
-                    </label>
-                  </div>
-                  <div class="chat-choices">
-                    <input type="radio" name="chooseChat" id="choose2" />
-                    <label
-                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
-                      for="choose2"
-                    >
-                      <p class="bg-white rounded-full py-[6px] px-2">
-                        Recidencial
-                      </p>
-                    </label>
-                  </div>
-                  <div class="chat-choices">
-                    <input type="radio" name="chooseChat" id="choose3" />
-                    <label
-                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
-                      for="choose3"
-                    >
-                      <p class="bg-white rounded-full py-[6px] px-2">
-                        Recidencial
-                      </p>
-                    </label>
-                  </div>
-                  <div class="chat-choices">
-                    <input type="radio" name="chooseChat" id="choose4" />
-                    <label
-                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
-                      for="choose4"
-                    >
-                      <p class="bg-white rounded-full py-[6px] px-2">
-                        Recidencial
-                      </p>
-                    </label>
-                  </div>
-                  <div class="chat-choices">
-                    <input type="radio" name="chooseChat" id="choose5" />
-                    <label
-                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
-                      for="choose5"
-                    >
-                      <p class="bg-white rounded-full py-[6px] px-2">
-                        Recidencial
-                      </p>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-start gap-2">
-              <img
-                loading="lazy"
-                src="./icons/SharyAI.svg"
-                class="w-[50px] shrink-0"
-                alt="SharyAI"
-              />
-              <div>
-                <p
-                  class="text-black text-[11px] font-semibold mb-1 leading-[16px]"
-                >
-                  Choose one:
-                </p>
-                <div class="flex flex-wrap gap-1">
-                  <div class="chat-choices">
-                    <input
-                      checked
-                      type="radio"
-                      name="chooseChat2"
-                      id="choose6"
-                    />
-                    <label
-                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
-                      for="choose6"
-                    >
-                      <p class="bg-white rounded-full py-[6px] px-2">
-                        Recidencial
-                      </p>
-                    </label>
-                  </div>
-                  <div class="chat-choices">
-                    <input type="radio" name="chooseChat2" id="choose7" />
-                    <label
-                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
-                      for="choose7"
-                    >
-                      <p class="bg-white rounded-full py-[6px] px-2">
-                        Recidencial
-                      </p>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-start gap-2">
-              <img
-                loading="lazy"
-                src="./icons/SharyAI.svg"
-                class="w-[50px] shrink-0"
-                alt="SharyAI"
-              />
-              <div
-                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
-              >
-                <p class="text-xs text-[#1E1E1E]">
-                  1. "Stay On Top of Your Finances with Our Customizable Finance
-                  Dashboard"
-                </p>
-                <p
-                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
-                >
-                  <span class="material-symbols-rounded text-sm"
-                    >content_copy</span
-                  >
-                  <span class="text-[10px] cursor-pointer">Copy</span>
-                </p>
-              </div>
-            </div>
-            <!--  -->
-            <div class="flex items-start gap-2">
-              <img
-                loading="lazy"
-                src="./icons/SharyAI.svg"
-                class="w-[50px] shrink-0"
-                alt="SharyAI"
-              />
-              <div
-                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
-              >
-                <p class="text-xs text-[#1E1E1E]">
-                  1. "Stay On Top of Your Finances with Our Customizable Finance
-                  Dashboard"
-                </p>
-                <p
-                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
-                >
-                  <span class="material-symbols-rounded text-sm"
-                    >content_copy</span
-                  >
-                  <span class="text-[10px] cursor-pointer">Copy</span>
-                </p>
-              </div>
-            </div>
-            <!--  -->
-            <div class="flex items-start gap-2">
-              <img
-                loading="lazy"
-                src="./icons/SharyAI.svg"
-                class="w-[50px] shrink-0"
-                alt="SharyAI"
-              />
-              <div
-                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
-              >
-                <p class="text-xs text-[#1E1E1E]">
-                  1. "Stay On Top of Your Finances with Our Customizable Finance
-                  Dashboard"
-                </p>
-                <p
-                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
-                >
-                  <span class="material-symbols-rounded text-sm"
-                    >content_copy</span
-                  >
-                  <span class="text-[10px] cursor-pointer">Copy</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Search Input -->
-        <div class="manrope px-5 pb-6 pt-4">
-          <div
-            class="flex items-center gap-1 text-sm font-normal w-fit cursor-pointer mx-4 mb-2"
+          <button
+            id="searchBar_close"
+            onclick="toggleSearchBar('close')"
+            class="z-[-1] absolute bottom-2 bg-[#F5F5F5] rounded-full w-10 h-10 cursor-pointer flex items-center justify-center"
           >
-            <span class="material-symbols-rounded text-base">autorenew</span>
-            <p class="text-[#191B23]">Reload Response</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <div
-              class="p-[1px] rounded-[100px] w-full h-[58px]"
-              style="
-                background: linear-gradient(90deg, #1d4265 0%, #4dbfb1 100%);
-              "
+            <span
+              class="material-symbols-rounded font-normal text-xl leading-none text-[#1D1D1D]"
+              data-i18n="keyboard_arrow_left"
+            ></span>
+          </button>
+          <p class="text-[#1D4265] flex items-center justify-center gap-1.5">
+            <span
+              class="material-symbols-rounded text-xl flex leading-none h-[22px]"
+              >tune</span
             >
-              <div
-                class="px-4 bg-white flex gap-1 items-center rounded-[100px] overflow-hidden h-full w-full"
+            <span class="font-medium text-xl leading-none">Filter</span>
+          </p>
+        </div>
+        <div class="overflow-y-auto h-full" style="height: calc(100% - 173px)">
+          <div
+            class="py-3 px-6 flex justify-center gap-3 manrope text-xs font-medium border-b border-[#D9D9D9]"
+          >
+            <div class="filter-input">
+              <input
+                checked
+                type="radio"
+                name="header filter"
+                id="developerUnits"
+              />
+              <label
+                class="block py-2 px-4 rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                for="developerUnits"
+                >Developer Units</label
               >
-                <input
-                  type="text"
-                  class="h-full w-full outline-none text-sm font-medium"
-                  placeholder="Send a message..."
-                  name="chat"
-                  id="chat"
-                />
-                <button>
-                  <img
-                    loading="lazy"
-                    src="./icons/send-icon.svg"
-                    class="ltr:rotate-0 rtl:rotate-180"
-                    alt="send"
-                  />
+            </div>
+            <div class="filter-input">
+              <input type="radio" name="header filter" id="resale" />
+              <label
+                class="block py-2 px-4 rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                for="resale"
+                >Resale</label
+              >
+            </div>
+          </div>
+
+          <!-- Property Type -->
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Property Type</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="mt-3 manrope flex gap-x-2.5 gap-y-5 flex-wrap text-xs">
+              <div class="filter-input">
+                <input type="checkbox" name="apartment" id="apartment" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="apartment"
+                  >Apartment</label
+                >
+              </div>
+              <div class="filter-input">
+                <input checked type="checkbox" name="villa" id="villa" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="villa"
+                  >Villa</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="studio" id="studio" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="studio"
+                  >Studio</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="duplex" id="duplex" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="duplex"
+                  >Duplex</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="townhouse" id="townhouse" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="townhouse"
+                  >Townhouse</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="twinhouse" id="twinhouse" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="twinhouse"
+                  >Twinhouse</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="penthouse" id="penthouse" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="penthouse"
+                  >Penthouse</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="chalet" id="chalet" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="chalet"
+                  >Chalet</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="cabin" id="cabin" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="cabin"
+                  >Cabin</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="clinic" id="clinic" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="clinic"
+                  >Clinic</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="office" id="office" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="office"
+                  >Office</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="retail" id="retail" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="retail"
+                  >Retail</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Area & Developer -->
+          <div class="py-4 px-6 border-b border-[#D9D9D9] font-medium">
+            <div class="flex justify-end">
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="grid grid-cols-2 gap-10">
+              <div>
+                <p class="text-[#1D4265] text-[15px] leading-7">Area</p>
+                <button
+                  onclick="toggleSearchBar('open')"
+                  class="manrope w-full text-xs p-2 text-center border border-solid border-[#92929226] bg-[#FAFAFA] rounded-full text-[#5990FF]"
+                >
+                  + Add
+                </button>
+              </div>
+              <div>
+                <p class="text-[#1D4265] text-[15px] leading-7">Developer</p>
+                <button
+                  onclick="toggleSearchBar('open')"
+                  class="manrope w-full text-xs p-2 text-center border border-solid border-[#92929226] bg-[#FAFAFA] rounded-full text-[#5990FF]"
+                >
+                  + Add
                 </button>
               </div>
             </div>
-            <button>
-              <img
-                loading="lazy"
-                src="./icons/chatAI.svg"
-                class="shrink-0"
-                alt="chat AI"
+          </div>
+
+          <!-- Bedrooms -->
+          <div class="py-4 px-6 border-b border-[#D9D9D9] font-medium">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Bedrooms</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="mt-3 manrope flex gap-4 flex-wrap text-sm">
+              <div class="filter-input">
+                <input type="checkbox" name="bedroom1" id="bedroom1" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bedroom1"
+                  >1</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bedroom2" id="bedroom2" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bedroom2"
+                  >2</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bedroom3" id="bedroom3" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bedroom3"
+                  >3</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bedroom4" id="bedroom4" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bedroom4"
+                  >4</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bedroom+5" id="bedroom+5" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bedroom+5"
+                  >+5</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Bathrooms -->
+          <div class="py-4 px-6 border-b border-[#D9D9D9] font-medium">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Bathrooms</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="mt-3 manrope flex gap-4 flex-wrap text-sm">
+              <div class="filter-input">
+                <input type="checkbox" name="bathrooms1" id="bathrooms1" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bathrooms1"
+                  >1</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bathrooms2" id="bathrooms2" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bathrooms2"
+                  >2</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bathrooms3" id="bathrooms3" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bathrooms3"
+                  >3</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bathrooms4" id="bathrooms4" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bathrooms4"
+                  >4</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="bathrooms+5" id="bathrooms+5" />
+                <label
+                  class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                  for="bathrooms+5"
+                  >+5</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Finishing -->
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Finishing</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="mt-3 manrope flex gap-x-2.5 gap-y-4 flex-wrap text-xs">
+              <div class="filter-input">
+                <input type="checkbox" name="notFinished" id="notFinished" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="notFinished"
+                  >Not Finished</label
+                >
+              </div>
+              <div class="filter-input">
+                <input
+                  checked
+                  type="checkbox"
+                  name="semiFinished"
+                  id="semiFinished"
+                />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="semiFinished"
+                  >Semi-Finished</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="finished" id="finished" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="finished"
+                  >Finished</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="furnished" id="furnished" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="furnished"
+                  >Furnished</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery in -->
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Delivery in</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="mt-3 manrope flex gap-x-2.5 gap-y-4 flex-wrap text-xs">
+              <div class="filter-input">
+                <input type="checkbox" name="readyToMove" id="readyToMove" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="readyToMove"
+                  >Ready To Move</label
+                >
+              </div>
+              <div class="filter-input">
+                <input checked type="checkbox" name="2025" id="2025" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="2025"
+                  >2025</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="2026" id="2026" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="2026"
+                  >2026</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="2027" id="2027" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="2027"
+                  >2027</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="2028" id="2028" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="2028"
+                  >2028</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="+2029" id="+2029" />
+                <label
+                  class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+                  for="+2029"
+                  >+2029</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Range -->
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Price Range</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <p class="mt-4 mb-2 text-sm manrope font-semibold text-[#161E2D]">
+              <span>Price:</span>
+              <span
+                data-unit="EGP"
+                class="current-sideSmFilterPrice-range"
+              ></span>
+            </p>
+            <div class="range-slider" id="range_sideSmFilterPrice_slider">
+              <input
+                type="range"
+                class="range-slider__input"
+                id="range_sideSmFilterPrice_low"
+                min="0"
+                max="10000"
+                step="100"
+                value="0"
+                oninput="updateRangeSlider('sideSmFilterPrice')"
               />
-            </button>
+              <input
+                type="range"
+                class="range-slider__input"
+                id="range_sideSmFilterPrice_high"
+                min="0"
+                max="10000"
+                step="100"
+                value="10000"
+                oninput="updateRangeSlider('sideSmFilterPrice')"
+              />
+            </div>
+          </div>
+
+          <!-- Unit Area -->
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Unit Area</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <p class="mt-4 mb-2 text-sm manrope font-semibold text-[#161E2D]">
+              <span>Area:</span>
+              <span
+                data-unit="SqFt"
+                class="current-sideSmFilterArea-range"
+              ></span>
+            </p>
+            <div class="range-slider" id="range_sideSmFilterArea_slider">
+              <input
+                type="range"
+                class="range-slider__input"
+                id="range_sideSmFilterArea_low"
+                min="0"
+                max="10000"
+                step="100"
+                value="0"
+                oninput="updateRangeSlider('sideSmFilterArea')"
+              />
+              <input
+                type="range"
+                class="range-slider__input"
+                id="range_sideSmFilterArea_high"
+                min="0"
+                max="10000"
+                step="100"
+                value="10000"
+                oninput="updateRangeSlider('sideSmFilterArea')"
+              />
+            </div>
+          </div>
+
+          <!-- Payment Plan & Installment Years -->
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Payment Plan</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="mt-3 manrope grid grid-cols-2 gap-4 text-xs">
+              <input
+                type="text"
+                class="placeholder-white text-center bg-[#D9D9D9] rounded-xl outline-none p-3"
+                placeholder="Down Payment"
+              />
+              <input
+                type="text"
+                class="placeholder-white text-center bg-[#D9D9D9] rounded-xl outline-none p-3"
+                placeholder="Monthly Amount"
+              />
+            </div>
+
+            <div class="mt-8">
+              <p class="text-[#1D4265] text-[15px]">Installment Years</p>
+              <div class="mt-3 manrope flex gap-4 flex-wrap text-sm">
+                <div class="filter-input">
+                  <input type="checkbox" name="year1" id="year1" />
+                  <label
+                    class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                    for="year1"
+                    >1</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="year2" id="year2" />
+                  <label
+                    class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                    for="year2"
+                    >2</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="year3" id="year3" />
+                  <label
+                    class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                    for="year3"
+                    >3</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="year4" id="year4" />
+                  <label
+                    class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                    for="year4"
+                    >4</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="year5" id="year5" />
+                  <label
+                    class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                    for="year5"
+                    >5</label
+                  >
+                </div>
+                <div class="filter-input">
+                  <input type="checkbox" name="year+6" id="year+6" />
+                  <label
+                    class="rounded-xl w-8 h-8 flex items-center text-[#1D4265] justify-center bg-[#2972FF1A]"
+                    for="year+6"
+                    >+6</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amentities -->
+          <div class="pt-4 pb-10 px-6">
+            <div class="flex items-center justify-between font-medium">
+              <p class="text-[#1D4265] text-[15px]">Amentities</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div
+              class="mt-3 manrope grid grid-cols-2 gap-4 text-sm text-[#161E2D]"
+            >
+              <div class="filter-checkbox">
+                <input
+                  checked
+                  type="checkbox"
+                  name="airCondition"
+                  id="airCondition"
+                />
+                <label class="block relative ps-7" for="airCondition"
+                  >Air Condition</label
+                >
+              </div>
+              <div class="filter-checkbox">
+                <input checked type="checkbox" name="cableTV" id="cableTV" />
+                <label class="block relative ps-7" for="cableTV"
+                  >Cable TV</label
+                >
+              </div>
+              <div class="filter-checkbox">
+                <input type="checkbox" name="fireplace1" id="fireplace1" />
+                <label class="block relative ps-7" for="fireplace1"
+                  >Fireplace 1</label
+                >
+              </div>
+              <div class="filter-checkbox">
+                <input type="checkbox" name="fireplace2" id="fireplace2" />
+                <label class="block relative ps-7" for="fireplace2"
+                  >Fireplace 2</label
+                >
+              </div>
+              <div class="filter-checkbox">
+                <input type="checkbox" name="fireplace3" id="fireplace3" />
+                <label class="block relative ps-7" for="fireplace3"
+                  >Fireplace 3</label
+                >
+              </div>
+              <div class="filter-checkbox">
+                <input type="checkbox" name="fireplace4" id="fireplace4" />
+                <label class="block relative ps-7" for="fireplace4"
+                  >Fireplace 4</label
+                >
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Search Bar -->
+        <div
+          id="searchBar"
+          class="bg-[#FFFFFF8A] fixed bottom-0 max-h-0 w-full"
+          style="
+            transition: max-height 0.3s ease-in-out;
+            backdrop-filter: blur(1px);
+          "
+        >
+          <div
+            class="bg-white h-full mt-[122px] shadow-[0px_-2px_4px_0px_#00000040] rounded-t-[35px] py-5 flex flex-col gap-4"
+          >
+            <div class="px-4">
+              <div
+                class="flex items-center gap-2 h-10 px-[14px] py-1 bg-[#F5F5F5] rounded-[68px]"
+              >
+                <span
+                  class="material-symbols-rounded shrink-0 text-[#838383] text-base"
+                  >search</span
+                >
+                <input
+                  id="searchInput"
+                  type="text"
+                  placeholder="Search here"
+                  class="w-full h-full outline-none text-xs font-normal bg-inherit placeholder-[#838383]"
+                />
+              </div>
+            </div>
+            <div
+              class="h-[calc(100%-240px)] overflow-y-auto px-4 manrope text-[#161E2D] text-sm font-semibold"
+            >
+              <p
+                onclick="toggleSearchBar('close')"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
+              >
+                Property Half Map Grid
+              </p>
+              <p
+                onclick="toggleSearchBar('close')"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
+              >
+                Cozy Cottage
+              </p>
+              <p
+                onclick="toggleSearchBar('close')"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
+              >
+                Luxury Villa
+              </p>
+              <p
+                onclick="toggleSearchBar('close')"
+                class="py-2 px-2 w-fit search-item hover:text-[#1563DF]"
+              >
+                Downtown Apartment
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative z-[1] flex w-full gap-3 bg-white manrope rounded-ss-3xl text-xs font-semibold rounded-se-3xl pt-3 pb-4 px-6 border border-solid border-[#99999933]"
+        >
+          <button
+            class="w-full bg-[#388DEB] rounded-3xl p-3 text-white leading-tight"
+          >
+            Show 1235 Results
+          </button>
+          <button
+            class="px-8 py-3 border border-solid border-[#388DEB] text-[#388DEB] rounded-3xl leading-tight"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+
+
+<!-- Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 z-40 hidden"></div>
+
+<!-- Wrapper -->
+<div
+  id="deliveryfilter"
+  class="fixed bottom-0 left-0 right-0 z-50 hidden overflow-hidden transition-all duration-300 ease-in-out"
+  style="max-height: 0px;"
+>
+  <!-- Bottom Sheet -->
+  <div
+    id="bottomSheet"
+    class="md:max-w-[388px] bg-white rounded-t-[40px] shadow-lg z-50 p-4 transition-transform duration-300 translate-y-0"
+  >
+    <!-- Drag Handle -->
+    <div class="flex justify-center mb-4 cursor-pointer" id="dragHandle">
+      <div class="h-1 w-12 bg-black rounded-full"></div>
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-center text-lg font-semibold text-[#1D4265] mb-4">Delivery</h2>
+
+    <!-- Options -->
+    <div class="space-y-3">
+      <div class="flex items-center justify-between bg-[#D9D9D9] rounded-xl px-4 py-1">
+        <span class="text-gray-800 font-medium">2027</span>
+        <input type="checkbox"
+               class="w-5 h-5 rounded-full appearance-none border-2 border-[#C2C2C2] checked:bg-[#C2C2C2] checked:border-[#C2C2C2]" />
+      </div>
+      <!-- Repeat Options ... -->
+         <div class="flex items-center justify-between bg-[#D9D9D9] rounded-xl px-4 py-1">
+        <span class="text-gray-800 font-medium">2027</span>
+        <input type="checkbox"
+               class="w-5 h-5 rounded-full appearance-none border-2 border-[#C2C2C2] checked:bg-[#C2C2C2] checked:border-[#C2C2C2]" />
+      </div>  <div class="flex items-center justify-between bg-[#D9D9D9] rounded-xl px-4 py-1">
+        <span class="text-gray-800 font-medium">2027</span>
+        <input type="checkbox"
+               class="w-5 h-5 rounded-full appearance-none border-2 border-[#C2C2C2] checked:bg-[#C2C2C2] checked:border-[#C2C2C2]" />
       </div>
     </div>
-    <!-- Footer -->
-    <div class="-mb-14">
-      <footer-component></footer-component>
+
+    <!-- Apply Button -->
+    <div class="mt-6 w-full m-auto flex justify-center">
+      <button class="w-[100px] bg-[#1D4265] text-white py-1 rounded-full font-medium">Apply</button>
     </div>
-    <!-- Google Maps Script -->
+  </div>
+</div>
+
+
+
+
+      <!-- Property Types Filter -->
+       <div id="overlaytow" class="fixed inset-0 bg-black bg-opacity-40 z-40 hidden"></div>
+   <div
+     id="propertyfilter"
+  class="fixed bottom-0 left-0 right-0 z-50 hidden overflow-hidden transition-all duration-300 ease-in-out"
+  style="max-height: 0px;">
+
+  <!-- Bottom Sheet -->
+  <div id="bottomSheet"
+  class="md:max-w-[388px] bg-white rounded-t-[40px] shadow-lg z-50 p-4 transition-transform duration-300 translate-y-0">
+
+    <!-- Drag Handle -->
+    <div class="flex justify-center mb-4 cursor-pointer" id="dragHandle">
+      <div class="h-1 w-12 bg-black rounded-full"></div>
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-center text-lg font-semibold text-[#1D4265] mb-4">Property Types</h2>
+
+    <!-- Property Options -->
+    <div class="space-y-3">
+      <div class="flex items-center justify-between bg-[#D9D9D9] rounded-xl px-4 py-2">
+        <div class="flex items-center space-x-3">
+          <img src="./images/4cb71df8306c59a57f64e4e23660dbb5d44b3188.png" class="w-6 h-6" />
+          <span class="text-gray-800 font-medium">Apartment</span>
+        </div>
+<input type="checkbox" class="w-5 h-5 rounded-full appearance-none border-2 border-[#C2C2C2] checked:bg-[#C2C2C2] checked:border-[#C2C2C2]" />
+
+      </div>
+      <!-- تكرار -->
+      <div class="flex items-center justify-between bg-[#D9D9D9] rounded-xl px-4 py-2">
+        <div class="flex items-center space-x-3">
+          <img src="./images/4cb71df8306c59a57f64e4e23660dbb5d44b3188.png" class="w-6 h-6" />
+          <span class="text-gray-800 font-medium">Apartment</span>
+        </div>
+        <input type="checkbox" class="w-5 h-5 rounded-full appearance-none border-2 border-[#C2C2C2] checked:bg-[#C2C2C2] checked:border-[#C2C2C2]" />
+
+      </div>
+      <div class="flex items-center justify-between bg-[#D9D9D9] rounded-xl px-4 py-2">
+        <div class="flex items-center space-x-3">
+          <img src="./images/4cb71df8306c59a57f64e4e23660dbb5d44b3188.png" class="w-6 h-6" />
+          <span class="text-gray-800 font-medium">Apartment</span>
+        </div>
+<input type="checkbox" class="w-5 h-5 rounded-full appearance-none border-2 border-[#C2C2C2] checked:bg-[#C2C2C2] checked:border-[#C2C2C2]" />
+      </div>
+    </div>
+
+    <!-- Apply Button -->
+    <div class="mt-6 w-full m-auto flex justify-center">
+      <button class="w-[100px]  bg-[#1D4265] text-white py-1 rounded-full font-medium">Apply</button>
+    </div>
+  </div>
+    </div>
+
+
+
+      <!-- Price RangeFilter -->
+       <div id="overlaythree" class="fixed inset-0 bg-black bg-opacity-40 z-40 hidden"></div>
+       <div
+     id="pricefilter" 
+class="fixed bottom-0 left-0 right-0 z-50 hidden overflow-hidden transition-all duration-300 ease-in-out"
+  style="max-height: 0px;">
+
+  <!-- Bottom Sheet -->
+  <div
+    id="bottomSheet"
+    class="md:max-w-[388px] bg-white rounded-t-[40px] shadow-lg z-50 p-4 transition-transform duration-300 translate-y-0"
+  >
+
+    <!-- Drag Handle -->
+    <div class="flex justify-center mb-4 cursor-pointer" id="dragHandle">
+      <div class="h-1 w-12 bg-black rounded-full"></div>
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-center text-lg font-semibold text-[#1D4265] mb-4">Price Range</h2>
+
+    <!-- Property Options -->
+
+    <div class=" m-auto w-full ">
+  <span class="text-[#1D4265] flex  justify-center items-center text-[12px] w-full m-auto ">Enter the minimum and maximum budget</span>
+
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <p class="mt-4 mb-2 text-sm manrope font-semibold text-[#161E2D]">
+              <span>Area:</span>
+              <span
+                data-unit="SqFt"
+                class="current-sideSmFilterArea-range"
+              ></span>
+            </p>
+            <div class="range-slider" id="range_sideSmFilterArea_slider">
+              <input
+                type="range"
+                class="range-slider__input"
+                id="range_sideSmFilterArea_low"
+                min="0"
+                max="10000"
+                step="100"
+                value="0"
+                oninput="updateRangeSlider('sideSmFilterArea')"
+              />
+              <input
+                type="range"
+                class="range-slider__input"
+                id="range_sideSmFilterArea_high"
+                min="0"
+                max="10000"
+                step="100"
+                value="10000"
+                oninput="updateRangeSlider('sideSmFilterArea')"
+              />
+            </div>
+          </div>
+
+          <!-- Payment Plan & Installment Years -->
+          <div class="py-4 px-6 font-medium border-b border-[#D9D9D9]">
+            <div class="flex items-center justify-between">
+              <p class="text-[#1D4265] text-[15px]">Payment Plan</p>
+              <button class="text-[#1563DF] text-[10px]">Reset</button>
+            </div>
+            <div class="mt-3 manrope grid grid-cols-2 gap-4 text-xs">
+              <input
+                type="text"
+                class="placeholder-black text-center bg-[#D9D9D9] rounded-xl outline-none p-3"
+                placeholder="0 EGP"
+              />
+              <input
+                type="text"
+                class="placeholder-black text-center bg-[#D9D9D9] rounded-xl outline-none p-3"
+                placeholder="1000,0 EGP"
+              />
+            </div>
+
+      
+          </div>
+    </div>
+
+    <!-- Apply Button -->
+    <div class="mt-6 w-full m-auto flex justify-center">
+      <button class="w-[100px]  bg-[#1D4265] text-white py-1 rounded-full font-medium">Apply</button>
+    </div>
+  </div>
+    </div>
     <script>
-      const units = [
-        {
-          location: { lat: 30.0444, lng: 31.2357 },
-          image: "./images/compound.jpeg",
-          price: "10,550,734 EGP",
-          locationText: "El Mostakbal City",
-          code: "Download",
-          date: "21/09/2024, 15:34",
-          type: "Apartment",
-          bedrooms: "3 Rooms",
-          size: "1200 SqFt",
-          delivery: "2026",
-          project: "ZED East",
-          developer: "Ora Developers",
-        },
-        {
-          location: { lat: 30.05, lng: 31.24 },
-          image: "./images/ora-apartment.jpeg",
-          price: "8,200,000 EGP",
-          locationText: "New Capital",
-          code: "Download",
-          date: "01/10/2024, 11:00",
-          type: "Villa",
-          bedrooms: "4 Rooms",
-          size: "1800 SqFt",
-          delivery: "2027",
-          project: "Mountain View iCity",
-          developer: "Mountain View",
-        },
-        {
-          location: { lat: 30.0333, lng: 31.22 },
-          image: "./images/ora-apartment.jpeg",
-          price: "6,750,000 EGP",
-          locationText: "Maadi",
-          code: "Download",
-          date: "15/10/2024, 10:15",
-          type: "Penthouse",
-          bedrooms: "2 Rooms",
-          size: "950 SqFt",
-          delivery: "2025",
-          project: "Skyline Maadi",
-          developer: "Memaar Al Morshedy",
-        },
-      ];
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoia2FyaW1ha2wiLCJhIjoiY21icDBhampvMXNiMTJ2cXg4ZHRwcGJ4NSJ9.sEZaAXS8epoHMjPfclOh2g";
 
-      let map;
+      const styleStreets = "mapbox://styles/mapbox/streets-v12";
+      const styleSatellite = "mapbox://styles/mapbox/satellite-streets-v12";
 
-      function initMap() {
-        const mapCenter = { lat: 30.0444, lng: 31.2357 };
+let markers = [];
+let currentStyle = styleStreets;
+const initialCenter = [31.2, 30.05];
+const initialZoom = 7;
 
-        map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 12,
-          center: mapCenter,
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: currentStyle,
+        center: [31.2, 30.05],
+        zoom: 1,
+      });
+      map.on("load", () => {
+  // بعد 2 ثانية (2000 مللي ثانية)
+  setTimeout(() => {
+    map.flyTo({
+      center: [31.2, 30.05],
+      zoom: 7, // 👈 الزوم اللي تحب توصله تلقائيًا
+      speed: 1.5, // سرعة التحرك
+      curve: 1.2, // انحناء الحركة
+      essential: true
+    });
+  }, 200);
+});
+
+
+      function createCustomProjectMarker(name) {
+        const el = document.createElement("div");
+        el.style.width = "20px";
+        el.style.height = "30px";
+        el.style.backgroundColor = "#155e9a";
+        el.style.border = "2px solid white";
+        el.style.borderRadius = "3px";
+        el.style.boxShadow = "0 0 5px rgba(0,0,0,0.5)";
+        el.style.position = "relative";
+        el.style.display = "flex";
+        el.style.flexWrap = "wrap";
+        el.style.alignContent = "flex-start";
+        el.style.padding = "2px";
+
+        // إضافة نوافذ صغيرة (مربعات بيضاء)
+        for (let i = 0; i < 6; i++) {
+          const windowDiv = document.createElement("div");
+          windowDiv.style.width = "4px";
+          windowDiv.style.height = "4px";
+          windowDiv.style.margin = "1px";
+          windowDiv.style.backgroundColor = "white";
+          el.appendChild(windowDiv);
+        }
+
+        // اسم المشروع فوق المبنى
+        const label = document.createElement("div");
+        label.textContent = name;
+        label.style.position = "absolute";
+        label.style.top = "-20px";
+        label.style.left = "50%";
+        label.style.transform = "translateX(-50%)";
+        label.style.backgroundColor = "white";
+        label.style.color = "#000";
+        label.style.padding = "2px 6px";
+        label.style.borderRadius = "6px";
+        label.style.fontSize = "10px";
+        label.style.fontWeight = "bold";
+        label.style.fontFamily = "Arial, sans-serif";
+        label.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+        label.style.whiteSpace = "nowrap";
+        label.style.pointerEvents = "none";
+
+        el.appendChild(label);
+
+        return el;
+      }
+
+  function addProjectsMarkers() {
+  fetch("projects.geojson")
+    .then((res) => res.json())
+    .then((data) => {
+          console.log("Projects Loaded:", data);
+      data.features.forEach((feat) => {
+        const [lng, lat] = feat.geometry.coordinates;
+
+        const marker = new mapboxgl.Marker()
+  .setLngLat([lng, lat])
+  .addTo(map);
+
+// ✅ أضف الزووم هنا قبل فتح المودال:
+marker.getElement().addEventListener("click", () => {
+  // zoom in and move to marker location
+  map.flyTo({
+    center: [lng, lat],
+    zoom: 14,
+    speed: 1.2,
+    curve: 1,
+    essential: true
+  });
+
+  // فتح المودال
+  openModal({
+    image: feat.properties.image,
+    price: feat.properties.price,
+    locationText: feat.properties.locationText,
+    date: feat.properties.date,
+    code: feat.properties.code,
+    type: feat.properties.type,
+    size: feat.properties.size,
+    bedrooms: feat.properties.bedrooms,
+    delivery: feat.properties.delivery,
+    project: feat.properties.name,
+    developer: feat.properties.developer
+          });
         });
 
-        units.forEach((unit) => {
-          const marker = new google.maps.Marker({
-            position: unit.location,
-            map: map,
-            title: unit.project,
-          });
+        // إنشاء التسمية
+        const label = document.createElement("div");
+        label.className = "marker-label";
+        label.textContent = feat.properties.name;
 
-          marker.addListener("click", () => {
-            openModal({
-              image: unit.image,
-              price: unit.price,
-              location: unit.locationText,
-              code: unit.code,
-              date: unit.date,
-              type: unit.type,
-              bedrooms: unit.bedrooms,
-              size: unit.size,
-              delivery: unit.delivery,
-              project: unit.project,
-              developer: unit.developer,
+        // إضافة التسمية فوق الماركر
+        new mapboxgl.Marker(label)
+          .setLngLat([lng, lat])
+          .setOffset([0, -45])
+          .addTo(map);
+      });
+    });
+}
+
+function addAreaMarkers() {
+  fetch("areas.geojson")
+    .then((res) => res.json())
+    .then((data) => {
+      data.features.forEach((feat) => {
+        const coords = feat.geometry.coordinates?.[0];
+
+        if (!Array.isArray(coords) || coords.length === 0) {
+          console.warn("Skipping invalid area geometry:", feat);
+          return;
+        }
+
+        // حساب المركز
+        const center = coords
+          .reduce((acc, pt) => {
+            if (!Array.isArray(pt) || pt.length < 2) return acc;
+            return [acc[0] + pt[0], acc[1] + pt[1]];
+          }, [0, 0])
+          .map((v) => v / coords.length);
+
+        if (isNaN(center[0]) || isNaN(center[1])) {
+          console.error("Calculated center is invalid (NaN)", center, feat);
+          return;
+        }
+
+        const label = document.createElement("div");
+        label.className = "marker-label";
+        label.textContent = feat.properties.shapeName;
+
+        const marker = new mapboxgl.Marker(label).setLngLat(center).addTo(map);
+        markers.push(marker);
+      });
+    });
+}
+
+      function removeMarkers() {
+        markers.forEach((m) => m.remove());
+        markers = [];
+      }
+
+      function addLayersAndMarkers() {
+        removeMarkers();
+
+        if (currentStyle === styleStreets) {
+          if (!map.getSource("areas")) {
+            map.addSource("areas", {
+              type: "geojson",
+              data: "areas.geojson",
             });
-          });
+          }
+
+          if (!map.getLayer("areas-fill")) {
+            map.addLayer({
+              id: "areas-fill",
+              type: "fill",
+              source: "areas",
+              paint: {
+                "fill-color": "rgb(177,200,216)",
+                "fill-opacity": 0.4,
+              },
+            });
+          }
+
+          if (!map.getLayer("areas-border")) {
+            map.addLayer({
+              id: "areas-border",
+              type: "line",
+              source: "areas",
+              paint: {
+                "line-color": "rgb(100,120,130)",
+                "line-width": 2,
+              },
+            });
+          }
+
+          addAreaMarkers();
+        } else if (currentStyle === styleSatellite) {
+          if (map.getLayer("areas-fill")) map.removeLayer("areas-fill");
+          if (map.getLayer("areas-border")) map.removeLayer("areas-border");
+          if (map.getSource("areas")) map.removeSource("areas");
+
+          if (!map.getSource("projects")) {
+            map.addSource("projects", {
+              type: "geojson",
+              data: "projects.geojson",
+            });
+          }
+
+          addProjectsMarkers();
+        }
+      }
+
+      map.on("style.load", () => {
+        addLayersAndMarkers();
+      });
+
+      function updateStyleByZoom() {
+        const zoom = map.getZoom();
+        if (zoom >= 10 && currentStyle !== styleSatellite) {
+          currentStyle = styleSatellite;
+          map.setStyle(currentStyle);
+        } else if (zoom < 10 && currentStyle !== styleStreets) {
+          currentStyle = styleStreets;
+          map.setStyle(currentStyle);
+        }
+      }
+
+      map.on("zoomend", updateStyleByZoom);
+
+function openModal(unitData) {
+  document.getElementById("unitModal").classList.remove("hidden");
+
+  // تحديث صورة الوحدة
+  document.getElementById("unitImage").src = unitData.image || './images/compound.jpeg';
+
+  document.getElementById("unitPrice").textContent = unitData.price || "غير متوفر";
+  document.getElementById("unitLocation").textContent = unitData.locationText || "غير متوفر";
+  document.getElementById("unitDate").textContent = unitData.date || "";
+  document.getElementById("unitCode").textContent = unitData.code || "";
+  document.getElementById("unitType").textContent = unitData.type || "";
+  document.getElementById("unitSize").textContent = unitData.size || "";
+  document.getElementById("unitBedrooms").textContent = unitData.bedrooms || "";
+  document.getElementById("unitDelivery").textContent = unitData.delivery || "";
+  document.getElementById("unitProject").textContent = unitData.project || "";
+  document.getElementById("unitDeveloper").textContent = unitData.developer || "";
+}
+
+
+function closeModal() {
+  document.getElementById("unitModal").classList.add("hidden");
+}
+      function handleShareClick(event) {
+        event.stopPropagation();
+
+        const isMobile = window.innerWidth <= 768;
+        const menu = event.currentTarget.querySelector(".share-menu");
+
+        if (isMobile) {
+          // Toggle share menu visibility
+          menu.classList.toggle("invisible");
+          menu.classList.toggle("opacity-0");
+        } else {
+          // Just copy the link on desktop
+          copyLink();
+        }
+      }
+
+    
+      // Close the share menu if clicking outside
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".share-menu").forEach((menu) => {
+          menu.classList.add("invisible", "opacity-0");
         });
-      }
+      });
 
-      function openModal(data) {
-        document.getElementById("unitImage").src = data.image;
-        document.getElementById("unitPrice").textContent = data.price;
-        document.getElementById(
-          "unitLocation"
-        ).textContent = ` ${data.location}`;
-        document.getElementById("unitCode").textContent = data.code;
-        document.getElementById("unitDate").textContent = data.date;
-        document.getElementById("unitType").textContent = ` ${data.type}`;
-        document.getElementById(
-          "unitBedrooms"
-        ).textContent = ` ${data.bedrooms}`;
-        document.getElementById("unitSize").textContent = ` ${data.size}`;
-        document.getElementById(
-          "unitDelivery"
-        ).textContent = ` ${data.delivery}`;
-        document.getElementById("unitProject").textContent = data.project;
-        document.getElementById(
-          "unitDeveloper"
-        ).textContent = ` ${data.developer}`;
+      const searchInput = document.getElementById("searchInput");
+      const items = document.querySelectorAll(".search-item");
 
-        const modal = document.getElementById("unitModal");
-        modal.classList.remove("hidden");
-        modal.classList.add("flex");
-      }
+      searchInput.addEventListener("input", function () {
+        const searchValue = this.value.toLowerCase();
 
-      function closeModal() {
-        const modal = document.getElementById("unitModal");
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
-      }
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(searchValue)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+  document.getElementById('overlay').addEventListener('click', function () {
+    deliveryFilter('close');
+  });
+    document.getElementById("overlaytow").addEventListener("click", function () {
+    propertyFilter("close");
+  });
+   document.getElementById("overlaythree").addEventListener("click", function () {
+    priceFilter("close");
+  });
+  
+document.querySelector('.reset-btn').addEventListener('click', () => {
+  map.flyTo({
+    center: initialCenter,
+    zoom: initialZoom,
+    speed: 1.2,
+    curve: 1,
+    essential: true
+  });
+});
+const projects = [
+  { name: "O West Orascom", logo: "./images/brand1.svg", coordinates: [31.02, 30.05] },
+  { name: "Badya", logo: "./images/7325a8a8999c8970749f86fc6b13087cf1843308.png", coordinates: [30.9, 30.1] },
+  { name: "City Gate", logo: "./images/7325a8a8999c8970749f86fc6b13087cf1843308.png", coordinates: [31.1, 30.08] },
+  { name: "ZED East", logo: "./images/7325a8a8999c8970749f86fc6b13087cf1843308.png", coordinates: [31.05, 30.07] },
+];
+const input = document.getElementById("searchInput");
+const resultsBox = document.getElementById("searchResults");
+
+function renderResults(filteredProjects) {
+  resultsBox.innerHTML = "";
+
+  if (filteredProjects.length === 0) {
+    resultsBox.classList.add("hidden");
+    return;
+  }
+
+  filteredProjects.forEach((project) => {
+    const item = document.createElement("div");
+    item.className = "search-result-item";
+
+    item.innerHTML = `
+      <img src="${project.logo}" alt="${project.name}" />
+      <span>${project.name}</span>
+    `;
+
+    item.addEventListener("click", () => {
+      map.flyTo({ center: project.coordinates, zoom: 14 });
+      resultsBox.classList.add("hidden");
+      input.value = project.name;
+    });
+
+    resultsBox.appendChild(item);
+  });
+
+  resultsBox.classList.remove("hidden");
+}
+
+// ✅ لما المستخدم يبدأ يكتب
+input.addEventListener("input", () => {
+  const value = input.value.trim().toLowerCase();
+
+  if (!value) {
+    renderResults(projects); // إظهار كل المشاريع بشكل افتراضي
+    return;
+  }
+
+  const filtered = projects.filter((p) =>
+    p.name.toLowerCase().includes(value)
+  );
+
+  renderResults(filtered);
+});
+
+// ✅ لما المستخدم يضغط على خانة البحث (focus)
+input.addEventListener("focus", () => {
+  renderResults(projects); // إظهار كل المشاريع أول ما يضغط
+});
+
+
     </script>
-
-    <!-- Google Maps API -->
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9vNqDFa_KAHfjrSXqs9NZFdiDAV7PEn8 &callback=initMap"
-    ></script>
   </body>
 </html>
