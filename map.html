@@ -99,7 +99,7 @@
 
   .search-bar {
     position: absolute;
-    top: 20px;
+    top: 20px !important;
     left: 55%;
     transform: translateX(-50%);
     z-index: 10;
@@ -215,7 +215,7 @@
   @media (max-width: 768px) {
     .search-container {
       flex-wrap: nowrap;
-      overflow-x: auto;
+      /* overflow-x: auto; */
       padding-bottom: 10px;
     }
   .search-bar {
@@ -848,10 +848,9 @@
       </nav>
     </header>
 
-  <div id="map" class="xl:mt-[70px] mt-32 md:translate-y-0 -translate-y-7">
-<div class="search-bar ">
-  <div class="search-container flex md:flex-row flex-col items-start justify-start  flex-nowrap ">
-    <div class="filter-btn-box items-start md:block flex gap-1 justify-start left-2  translate-y-0 ">
+  <div id="map" class="xl:mt-[70px] mt-[100px] md:translate-y-0 ">
+
+  <div class="filter-btn-box relative z-50 top-2  items-start md:hidden flex  gap-1 justify-start -left-2  translate-y-0 ">
   <!-- مربع البحث -->
       <button class="filter-btn reset-btn  md:hidden flex  m-auto w-[50px] h-[51px]">
       <img src="./icons/Vector copy 2.svg" alt="" class="w-6 h-6  m-auto" />
@@ -870,8 +869,29 @@
       Reset View
     </button>
     </div>
-  
-<div class="overflow-x-auto md:gap-4  gap-1 w-full flex flex-nowrap scrollbar-hide">
+<div class="search-bar ">
+  <div class="search-container flex md:flex-row flex-col items-start justify-start  flex-nowrap ">
+    <div class="filter-btn-box hidden  items-start md:block   gap-1 justify-start left-2  translate-y-0 ">
+  <!-- مربع البحث -->
+      <button class="filter-btn reset-btn  md:hidden flex  m-auto w-[50px] h-[51px]">
+      <img src="./icons/Vector copy 2.svg" alt="" class="w-6 h-6  m-auto" />
+    </button>
+    <div class="bg-filter-box ">
+      <img src="./icons/search.svg" alt="" class="w-4 h-4 ml-2" />
+      <input 
+        type="text" 
+        class="search-input border-none"
+        placeholder="Search By Area, Compound, Developer"
+      />
+
+    </div>
+    <!-- زر الريسيت -->
+    <button class="reset-btn md:flex hidden mt-2 h-[29px]">
+      Reset View
+    </button>
+    </div>
+
+<div class="overflow-x-auto md:gap-4 md:mt-0 mt-10  gap-1 w-full flex flex-nowrap scrollbar-hide">
 
     <!-- الفلاتر -->
     <button class="filter-btn"
@@ -904,7 +924,10 @@
       </div>
     </div>
   </div>
-  
+      <a href="./index.html" class="absolute left-0 right-0 m-auto bottom-2 bg-[#fff] rounded-full md:w-[153px] w-[120px] gap-2 flex justify-center items-center md:h-[53px] h-[43px]">
+      <img src="./images/Search.svg" alt="" class="w-6 h-6" />
+      List View
+    </a>
       <!-- Modal -->
       <div
         id="unitModal"
