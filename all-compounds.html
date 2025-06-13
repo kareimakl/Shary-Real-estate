@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="/styles/main.css">
 </head>
-<body>
+<body class="">
   <!-- Header -->
   <header id="header" class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFFFFF85] xl:h-[70px] xl:min-h-fit header-filter header-filter-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out">
     <nav class="xl:h-full w-[1440px] max-w-full mx-auto xl:pt-0 md:pt-3 pt-5 xl:px-8 sm:px-6 px-4">
@@ -575,65 +575,59 @@
                   </div>
 
                   <!-- Share -->
-                  <div
-                    onclick="handleShareClick(event)"
-                    class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
-                  >
-                    <span
-                      class="material-symbols-rounded text-[#A3ABB0] text-base"
-                      >share</span
-                    >
+                   <div
+              onclick="handleShareClick(event)"
+              class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
+            >
+              <span class="material-symbols-rounded text-[#A3ABB0] text-base"
+                >share</span
+              >
 
-                    <div
-                      class="share-menu absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[180px] md:!hidden"
-                    >
-                      <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/facebook.svg"
-                          alt="Facebook"
-                          class="w-4 h-4"
-                        />
-                        Facebook
-                      </a>
-                      <a
-                        href="https://twitter.com/intent/tweet?url=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/twitter.svg"
-                          alt="Twitter"
-                          class="w-4 h-4"
-                        />
-                        Twitter
-                      </a>
-                      <a
-                        href="https://wa.me/?text=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/whatsapp.svg"
-                          alt="WhatsApp"
-                          class="w-4 h-4"
-                        />
-                        WhatsApp
-                      </a>
-                      <button
-                        onclick="copyLink(event)"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <span class="material-symbols-rounded text-sm"
-                          >link</span
-                        >
-                        Copy Link
-                      </button>
-                    </div>
-                  </div>
+              <!-- Share Menu (Visible only on mobile) -->
+              <div
+                class="share-menu absolute top-full mt-2 -ms-16  bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[130px] md:!hidden"
+              >
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/facebook.svg"
+                    alt="Facebook"
+                    class="w-4 h-4"
+                  />
+                  Facebook
+                </a>
+                <a
+                  href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img src="/icons/twitter.svg" alt="Twitter" class="w-4 h-4" />
+                  Twitter
+                </a>
+                <a
+                  href="https://wa.me/?text=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    class="w-4 h-4"
+                  />
+                  WhatsApp
+                </a>
+                <button
+                  onclick="copyLink(event)"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <span class="material-symbols-rounded text-sm">link</span>
+                  Copy Link
+                </button>
+              </div>
+            </div>
                 </div>
 
                 <a href="./top-compounds.html">
@@ -686,7 +680,7 @@
                 </div>
               </div>
             </div>
-                <div
+    <div
               class="new_launches_item relative  md:h-[362px] h-[246px] shrink-0"
             >
               <div class="relative">
@@ -720,65 +714,59 @@
                   </div>
 
                   <!-- Share -->
-                  <div
-                    onclick="handleShareClick(event)"
-                    class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
-                  >
-                    <span
-                      class="material-symbols-rounded text-[#A3ABB0] text-base"
-                      >share</span
-                    >
+                   <div
+              onclick="handleShareClick(event)"
+              class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
+            >
+              <span class="material-symbols-rounded text-[#A3ABB0] text-base"
+                >share</span
+              >
 
-                    <div
-                      class="share-menu absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[180px] md:!hidden"
-                    >
-                      <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/facebook.svg"
-                          alt="Facebook"
-                          class="w-4 h-4"
-                        />
-                        Facebook
-                      </a>
-                      <a
-                        href="https://twitter.com/intent/tweet?url=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/twitter.svg"
-                          alt="Twitter"
-                          class="w-4 h-4"
-                        />
-                        Twitter
-                      </a>
-                      <a
-                        href="https://wa.me/?text=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/whatsapp.svg"
-                          alt="WhatsApp"
-                          class="w-4 h-4"
-                        />
-                        WhatsApp
-                      </a>
-                      <button
-                        onclick="copyLink(event)"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <span class="material-symbols-rounded text-sm"
-                          >link</span
-                        >
-                        Copy Link
-                      </button>
-                    </div>
-                  </div>
+              <!-- Share Menu (Visible only on mobile) -->
+              <div
+                class="share-menu absolute top-full mt-2 -ms-16  bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[130px] md:!hidden"
+              >
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/facebook.svg"
+                    alt="Facebook"
+                    class="w-4 h-4"
+                  />
+                  Facebook
+                </a>
+                <a
+                  href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img src="/icons/twitter.svg" alt="Twitter" class="w-4 h-4" />
+                  Twitter
+                </a>
+                <a
+                  href="https://wa.me/?text=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    class="w-4 h-4"
+                  />
+                  WhatsApp
+                </a>
+                <button
+                  onclick="copyLink(event)"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <span class="material-symbols-rounded text-sm">link</span>
+                  Copy Link
+                </button>
+              </div>
+            </div>
                 </div>
 
                 <a href="./top-compounds.html">
@@ -830,7 +818,8 @@
                   </div>
                 </div>
               </div>
-            </div>    <div
+            </div>
+    <div
               class="new_launches_item relative  md:h-[362px] h-[246px] shrink-0"
             >
               <div class="relative">
@@ -864,65 +853,59 @@
                   </div>
 
                   <!-- Share -->
-                  <div
-                    onclick="handleShareClick(event)"
-                    class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
-                  >
-                    <span
-                      class="material-symbols-rounded text-[#A3ABB0] text-base"
-                      >share</span
-                    >
+                   <div
+              onclick="handleShareClick(event)"
+              class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
+            >
+              <span class="material-symbols-rounded text-[#A3ABB0] text-base"
+                >share</span
+              >
 
-                    <div
-                      class="share-menu absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[180px] md:!hidden"
-                    >
-                      <a
-                        href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/facebook.svg"
-                          alt="Facebook"
-                          class="w-4 h-4"
-                        />
-                        Facebook
-                      </a>
-                      <a
-                        href="https://twitter.com/intent/tweet?url=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/twitter.svg"
-                          alt="Twitter"
-                          class="w-4 h-4"
-                        />
-                        Twitter
-                      </a>
-                      <a
-                        href="https://wa.me/?text=YOUR_URL"
-                        target="_blank"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <img
-                          src="/icons/whatsapp.svg"
-                          alt="WhatsApp"
-                          class="w-4 h-4"
-                        />
-                        WhatsApp
-                      </a>
-                      <button
-                        onclick="copyLink(event)"
-                        class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                      >
-                        <span class="material-symbols-rounded text-sm"
-                          >link</span
-                        >
-                        Copy Link
-                      </button>
-                    </div>
-                  </div>
+              <!-- Share Menu (Visible only on mobile) -->
+              <div
+                class="share-menu absolute top-full mt-2 -ms-16  bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[130px] md:!hidden"
+              >
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/facebook.svg"
+                    alt="Facebook"
+                    class="w-4 h-4"
+                  />
+                  Facebook
+                </a>
+                <a
+                  href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img src="/icons/twitter.svg" alt="Twitter" class="w-4 h-4" />
+                  Twitter
+                </a>
+                <a
+                  href="https://wa.me/?text=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    class="w-4 h-4"
+                  />
+                  WhatsApp
+                </a>
+                <button
+                  onclick="copyLink(event)"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <span class="material-symbols-rounded text-sm">link</span>
+                  Copy Link
+                </button>
+              </div>
+            </div>
                 </div>
 
                 <a href="./top-compounds.html">
@@ -974,6 +957,148 @@
                   </div>
                 </div>
               </div>
+            </div>
+    <div
+              class="new_launches_item relative  md:h-[362px] h-[246px] shrink-0"
+            >
+              <div class="relative">
+                <div
+                  class="absolute top-2 md:top-3 md:ltr:right-5 right-2 md:rtl:left-5 rtl:left-2 flex justify-end gap-1 z-10"
+                >
+                  <!-- Compare -->
+                  <div class="compare-icon shrink-0">
+                    <input type="checkbox" id="compareIcon1" />
+                    <label
+                      for="compareIcon1"
+                      class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
+                    >
+                      <span class="material-symbols-rounded text-base"
+                        >compare</span
+                      >
+                    </label>
+                  </div>
+
+                  <!-- Favorite -->
+                  <div class="fav-icon shrink-0">
+                    <input type="checkbox" id="favIcon1" />
+                    <label
+                      for="favIcon1"
+                      class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
+                    >
+                      <span class="material-symbols-rounded text-base"
+                        >favorite</span
+                      >
+                    </label>
+                  </div>
+
+                  <!-- Share -->
+                   <div
+              onclick="handleShareClick(event)"
+              class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
+            >
+              <span class="material-symbols-rounded text-[#A3ABB0] text-base"
+                >share</span
+              >
+
+              <!-- Share Menu (Visible only on mobile) -->
+              <div
+                class="share-menu absolute top-full mt-2 -ms-16  bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[130px] md:!hidden"
+              >
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/facebook.svg"
+                    alt="Facebook"
+                    class="w-4 h-4"
+                  />
+                  Facebook
+                </a>
+                <a
+                  href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img src="/icons/twitter.svg" alt="Twitter" class="w-4 h-4" />
+                  Twitter
+                </a>
+                <a
+                  href="https://wa.me/?text=YOUR_URL"
+                  target="_blank"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img
+                    src="/icons/whatsapp.svg"
+                    alt="WhatsApp"
+                    class="w-4 h-4"
+                  />
+                  WhatsApp
+                </a>
+                <button
+                  onclick="copyLink(event)"
+                  class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <span class="material-symbols-rounded text-sm">link</span>
+                  Copy Link
+                </button>
+              </div>
+            </div>
+                </div>
+
+                <a href="./top-compounds.html">
+                  <img
+                    loading="lazy"
+                    src="./images/909a847da98c6bc6cfa5d039945ef8bfaaee9631.jpg"
+                    class="md:rounded-[36px] rounded-2xl w-full md:h-[205px] h-[150px] object-cover transition-all duration-300 hover:scale-[1.01]"
+                    alt="launch"
+                  />
+                </a>
+
+                <div
+                  class="w-full flex justify-center items-center m-auto text-center"
+                >
+                  <div
+                    class="flex items-center justify-around md:w-[90%] w-[80%] m-auto gap-2 bg-[#FFFFFF3B] md:rounded-[36px] rounded-2xl sm:px-4 p-2"
+                  >
+                    <div
+                      style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.53)"
+                      class="shrink-0 md:w-[77px] w-[44px] md:h-[77px] h-[44px] p-2 justify-center border border-solid border-[#00000040] text-center flex items-center rounded-full shadow-md"
+                    >
+                      <img
+                        src="./images/brand4.svg"
+                        class="sm:w-44 !w-12"
+                        alt="KWVV"
+                      />
+                    </div>
+                    <div
+                      class="border-s border-1 border-solid border-[#1D4265] h-8"
+                    ></div>
+                    <div
+                      class="text-white font-light sm:text-sm text-xs sm:border-s border-solid border-white ps-2"
+                    >
+                      <div class="text-[#1D4265] sm:text-base text-xs">
+                        <p
+                          data-i18n="New Cairo"
+                          class="font-bold text-[12] font-light"
+                          style="font-weight: 700"
+                        ></p>
+                        <p
+                          style="font-weight: 700"
+                          class="font-bold text-[12] font-light"
+                        >
+                          <span>84</span>
+                          <span data-i18n="Properties"></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+              
             </div>
     </div>
   </main>
@@ -2031,5 +2156,65 @@
 
   <!-- Footer -->
   <footer-component></footer-component>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+      function handleShareClick(event) {
+        event.stopPropagation();
+
+        const isMobile = window.innerWidth <= 768;
+        const menu = event.currentTarget.querySelector(".share-menu");
+
+        if (isMobile) {
+          // Toggle share menu visibility
+          menu.classList.toggle("invisible");
+          menu.classList.toggle("opacity-0");
+        } else {
+          // Just copy the link on desktop
+          copyLink();
+        }
+      }
+
+      function copyLink(event) {
+        if (event) event.stopPropagation();
+        const url = "http://127.0.0.1:5500/new-launch.html";
+        navigator.clipboard.writeText(url).then(() => {
+          alert("تم نسخ الرابط!");
+        });
+      }
+
+      // Close the share menu if clicking outside
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".share-menu").forEach((menu) => {
+          menu.classList.add("invisible", "opacity-0");
+        });
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      const items = document.querySelectorAll(".search-item");
+
+      searchInput.addEventListener("input", function () {
+        const searchValue = this.value.toLowerCase();
+
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(searchValue)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
 </body>
 </html>
