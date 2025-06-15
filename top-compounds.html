@@ -19,6 +19,16 @@
         width: 100%;
       }
     </style>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -1727,98 +1737,431 @@
     ></div>
 
     <!-- Main -->
-    <main class="xl:pt-[70px] pt-64 -mt-1 sm:mb-24 mb-12">
+    <main class="xl:pt-[70px] pt-[160px] -mt-1 sm:mb-24 mb-12">
       <!-- Hero -->
-      <div class="lg:hidden xl:px-2 xl:mt-0 -mt-24">
-        <div
-          class="hero-container bg-no-repeat bg-cover bg-center overflow-hidden pt-24"
-        >
+      <!-- Swiper HTML -->
+      <div
+        class="swiper md:hidden block overflow-hidden"
+        style="direction: ltr"
+      >
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
           <div
-            class="bg-gradient-to-b from-[#00000000] from-0% to-[#000000c8] to-100%"
+            class="swiper-slide thumb bg-smoll bg-no-repeat bg-cover bg-center h-[430.76922607421875px]"
+            onclick="openGallery('/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg')"
+            style="
+              background-image: url('/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg');
+            "
           >
-            <div class="relative md:h-80 h-[294px] flex items-end m-auto p-5">
-              <div class="text-white manrope">
-                <p class="md:text-lg sm:text-base text-sm font-medium">
-                  ZED East
-                </p>
-                <p class="md:text-lg sm:text-base text-sm font-medium">
-                  in New Cairo by Ora Developers
-                </p>
-                <p class="md:text-base sm:text-sm text-xs mt-1">Compound</p>
-                <div class="flex gap-1.5 mt-2">
-                  <p class="w-1.5 h-1.5 bg-white rounded-full"></p>
-                  <p class="w-1.5 h-1.5 bg-[#FFFFFF73] rounded-full"></p>
-                  <p class="w-1.5 h-1.5 bg-[#FFFFFF73] rounded-full"></p>
-                </div>
-                <div
-                  class="absolute bottom-5 ltr:right-5 rtl:left-5 flex items-center gap-2"
+            <div
+              class="bg-gradient-to-b from-[#00000000] from-0% to-[#000000c8] to-100% text-white flex justify-end items-start m-auto gap-2 px-4 pb-10 h-full w-full flex-col"
+            >
+              <h1 class="text-[23.69px]">Dejoya 1</h1>
+              <p
+                class="text-[11px] w-4/5"
+                style="font-weight: 400; font-family: Manrope"
+              >
+                ZED East New Cairo Compound is a prestigious project by Ora
+                Developers.
+              </p>
+              <p class="text-[14px]">6th of October City, Egypt</p>
+            </div>
+            <div
+              class="absolute z-50 bottom-2 md:top-3 md:ltr:right-5 right-2 md:rtl:left-5 rtl:left-2 flex justify-end gap-1"
+            >
+              <!-- Compare -->
+              <div class="compare-icon shrink-0">
+                <input type="checkbox" id="compareIcon" />
+                <label
+                  for="compareIcon"
+                  class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
                 >
-                  <div class="compare-icon">
-                    <input
-                      type="checkbox"
-                      name="compareIcon"
-                      id="compareIcon"
-                    />
-                    <label
-                      class="select-none cursor-pointer border border-solid border-white text-white rounded-[10px] w-7 h-7 flex items-center justify-center"
-                      for="compareIcon"
-                    >
-                      <span
-                        class="material-symbols-rounded text-sm leading-none"
-                        >compare</span
-                      >
-                    </label>
-                  </div>
-                  <div class="fav-icon">
-                    <input type="checkbox" name="favIcon" id="favIcon" />
-                    <label
-                      class="select-none cursor-pointer border border-solid border-white text-white rounded-[10px] w-7 h-7 flex items-center justify-center"
-                      for="favIcon"
-                    >
-                      <span
-                        class="material-symbols-rounded text-sm leading-none"
-                        >favorite</span
-                      >
-                    </label>
-                  </div>
-                  <div
-                    class="cursor-pointer border border-solid border-white rounded-[10px] w-7 h-7 flex items-center justify-center"
+                  <span class="material-symbols-rounded text-base"
+                    >compare</span
                   >
-                    <span
-                      class="material-symbols-rounded text-white text-sm leading-none"
-                      >share</span
-                    >
-                  </div>
+                </label>
+              </div>
+
+              <!-- Favorite -->
+              <div class="fav-icon shrink-0">
+                <input type="checkbox" id="favIcon" />
+                <label
+                  for="favIcon"
+                  class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
+                >
+                  <span class="material-symbols-rounded text-base"
+                    >favorite</span
+                  >
+                </label>
+              </div>
+
+              <!-- Share -->
+              <div
+                onclick="handleShareClick(event)"
+                class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
+              >
+                <span class="material-symbols-rounded text-[#A3ABB0] text-base"
+                  >share</span
+                >
+
+                <!-- Share Menu (Visible only on mobile) -->
+                <div
+                  class="share-menu absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[180px] md:!hidden"
+                >
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/facebook.svg"
+                      alt="Facebook"
+                      class="w-4 h-4"
+                    />
+                    Facebook
+                  </a>
+                  <a
+                    href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/twitter.svg"
+                      alt="Twitter"
+                      class="w-4 h-4"
+                    />
+                    Twitter
+                  </a>
+                  <a
+                    href="https://wa.me/?text=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      class="w-4 h-4"
+                    />
+                    WhatsApp
+                  </a>
+                  <button
+                    onclick="copyLink(event)"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <span class="material-symbols-rounded text-sm">link</span>
+                    Copy Link
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div
+            class="swiper-slide thumb bg-smoll bg-no-repeat bg-cover bg-center h-[430.76922607421875px]"
+            onclick="openGallery('/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg')"
+          >
+            <div
+              class="bg-gradient-to-b from-[#00000000] from-0% to-[#000000c8] to-100% text-white flex justify-end items-start m-auto gap-2 px-4 pb-10 h-full w-full flex-col"
+            >
+              <h1 class="text-[23.69px]">Dejoya 2</h1>
+              <p
+                class="text-[11px] w-4/5"
+                style="font-weight: 400; font-family: Manrope"
+              >
+                ZED East New Cairo Compound is a prestigious project by Ora
+                Developers.
+              </p>
+              <p class="text-[14px]">6th of October City, Egypt</p>
+            </div>
+            <div
+              class="absolute bottom-2 md:top-3 md:ltr:right-5 right-2 md:rtl:left-5 rtl:left-2 flex justify-end gap-1 z-10"
+            >
+              <!-- Compare -->
+              <div class="compare-icon shrink-0">
+                <input type="checkbox" id="compareIcon" />
+                <label
+                  for="compareIcon"
+                  class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
+                >
+                  <span class="material-symbols-rounded text-base"
+                    >compare</span
+                  >
+                </label>
+              </div>
+
+              <!-- Favorite -->
+              <div class="fav-icon shrink-0">
+                <input type="checkbox" id="favIcon" />
+                <label
+                  for="favIcon"
+                  class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
+                >
+                  <span class="material-symbols-rounded text-base"
+                    >favorite</span
+                  >
+                </label>
+              </div>
+
+              <!-- Share -->
+              <div
+                onclick="handleShareClick(event)"
+                class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
+              >
+                <span class="material-symbols-rounded text-[#A3ABB0] text-base"
+                  >share</span
+                >
+
+                <!-- Share Menu (Visible only on mobile) -->
+                <div
+                  class="share-menu absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[180px] md:!hidden"
+                >
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/facebook.svg"
+                      alt="Facebook"
+                      class="w-4 h-4"
+                    />
+                    Facebook
+                  </a>
+                  <a
+                    href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/twitter.svg"
+                      alt="Twitter"
+                      class="w-4 h-4"
+                    />
+                    Twitter
+                  </a>
+                  <a
+                    href="https://wa.me/?text=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      class="w-4 h-4"
+                    />
+                    WhatsApp
+                  </a>
+                  <button
+                    onclick="copyLink(event)"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <span class="material-symbols-rounded text-sm">link</span>
+                    Copy Link
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onclick="openGallery('/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg')"
+            class="swiper-slide thumb bg-smoll bg-no-repeat bg-cover bg-center h-[430.76922607421875px]"
+          >
+            <div
+              class="bg-gradient-to-b from-[#00000000] from-0% to-[#000000c8] to-100% text-white flex justify-end items-start m-auto gap-2 px-4 pb-10 h-full w-full flex-col"
+            >
+              <h1 class="text-[23.69px]">Dejoya 3</h1>
+              <p
+                class="text-[11px] w-4/5"
+                style="font-weight: 400; font-family: Manrope"
+              >
+                ZED East New Cairo Compound is a prestigious project by Ora
+                Developers.
+              </p>
+              <p class="text-[14px]">6th of October City, Egypt</p>
+            </div>
+            <div
+              class="absolute bottom-2 md:top-3 md:ltr:right-5 right-2 md:rtl:left-5 rtl:left-2 flex justify-end gap-1 z-10"
+            >
+              <!-- Compare -->
+              <div class="compare-icon shrink-0">
+                <input type="checkbox" id="compareIcon" />
+                <label
+                  for="compareIcon"
+                  class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
+                >
+                  <span class="material-symbols-rounded text-base"
+                    >compare</span
+                  >
+                </label>
+              </div>
+
+              <!-- Favorite -->
+              <div class="fav-icon shrink-0">
+                <input type="checkbox" id="favIcon" />
+                <label
+                  for="favIcon"
+                  class="select-none cursor-pointer text-[#A3ABB0] rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center"
+                >
+                  <span class="material-symbols-rounded text-base"
+                    >favorite</span
+                  >
+                </label>
+              </div>
+
+              <!-- Share -->
+              <div
+                onclick="handleShareClick(event)"
+                class="shrink-0 select-none cursor-pointer rounded-[8px] h-[28px] w-[28px] bg-white flex items-center justify-center relative"
+              >
+                <span class="material-symbols-rounded text-[#A3ABB0] text-base"
+                  >share</span
+                >
+
+                <!-- Share Menu (Visible only on mobile) -->
+                <div
+                  class="share-menu absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-2 flex flex-col gap-2 opacity-0 invisible transition-all duration-200 z-50 w-[180px] md:!hidden"
+                >
+                  <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/facebook.svg"
+                      alt="Facebook"
+                      class="w-4 h-4"
+                    />
+                    Facebook
+                  </a>
+                  <a
+                    href="https://twitter.com/intent/tweet?url=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/twitter.svg"
+                      alt="Twitter"
+                      class="w-4 h-4"
+                    />
+                    Twitter
+                  </a>
+                  <a
+                    href="https://wa.me/?text=YOUR_URL"
+                    target="_blank"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <img
+                      src="/icons/whatsapp.svg"
+                      alt="WhatsApp"
+                      class="w-4 h-4"
+                    />
+                    WhatsApp
+                  </a>
+                  <button
+                    onclick="copyLink(event)"
+                    class="flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                  >
+                    <span class="material-symbols-rounded text-sm">link</span>
+                    Copy Link
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--  -->
-        <div class="mt-5 md:px-8 px-4">
-          <div
-            class="pb-3 flex items-center justify-between border-b border-solid border-[#E4E4E4]"
-          >
-            <div>
-              <p class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
-                Developer Start Price
-              </p>
-              <p class="mt-1 font-bold text-xl text-[#1D4265] manrope">
-                1,312,000 EGP
-              </p>
-            </div>
-            <div>
-              <p class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
-                Resale Start Price
-              </p>
-              <p class="mt-1 font-bold text-xl text-[#1D4265] manrope">
-                1,312,000 EGP
-              </p>
+
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Modal Fullscreen -->
+      <div
+        id="galleryModal"
+        class="fixed inset-0 bg-black bg-opacity-100 hidden z-50 flex flex-col justify-between"
+      >
+        <div
+          class="flex items-center bg-[#202426] py-4 px-8 bg-opacity-100 justify-start"
+        >
+          <!-- Close Button -->
+          <button onclick="closeGallery()" class="text-white text-2xl z-50">
+            ×
+          </button>
+          <div class="ml-10 flex gap-4 justify-center items-center">
+            <img
+              src="/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg"
+              alt="img"
+              class="thumbnail w-[50px] h-[55px] object-cover cursor-pointer rounded"
+            />
+            <div class="flex flex-col justify-start items-start">
+              <p class="text-[#fff]">Talala Compaond</p>
+              <span class="text-[#fff] items-start text-start text-xs"
+                >4 Photos
+              </span>
             </div>
           </div>
         </div>
+
+        <!-- Main Image (Centered) -->
+        <div class="flex flex-1 items-center justify-center">
+          <img
+            id="mainImage"
+            class="max-w-[100%] max-h-[80%] object-contain"
+            src=""
+          />
+        </div>
+
+        <!-- Thumbnails at bottom -->
+        <div
+          class="flex gap-2 overflow-x-auto m-auto justify-center items-center w-full py-4 bg-[#202426] bg-opacity-100"
+        >
+          <img
+            class="thumbnail w-[50px] h-[55px] border border-green-300 object-cover cursor-pointer"
+            src="/images/area-3.jpeg"
+            data-src="/images/area-3.jpeg"
+            onclick="changeImage('/images/area-3.jpeg')"
+          />
+          <img
+            class="thumbnail w-[50px] h-[55px] object-cover cursor-pointer"
+            src="/images/MC-cover.jpeg"
+            data-src="/images/MC-cover.jpeg"
+            onclick="changeImage('/images/MC-cover.jpeg')"
+          />
+          <img
+            class="thumbnail w-[50px] h-[55px] object-cover cursor-pointer"
+            src="/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg"
+            data-src="/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg"
+            onclick="changeImage('/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg')"
+          />
+          <img
+            class="thumbnail w-[50px] h-[55px] object-cover cursor-pointer"
+            src="/images/sahel.png"
+            data-src="/images/sahel.png"
+            onclick="changeImage('/images/sahel.png')"
+          />
+        </div>
       </div>
 
+      <div class="mt-5 md:px-8 px-4 md:hidden block">
+        <div
+          class="pb-3 flex items-center justify-between border-b border-solid border-[#E4E4E4]"
+        >
+          <div>
+            <p class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
+              Developer Start Price
+            </p>
+            <p class="mt-1 font-bold text-xl text-[#1D4265] manrope">
+              1,312,000 EGP
+            </p>
+          </div>
+          <div>
+            <p class="text-[#4DBFB1] sm:text-sm text-xs font-medium">
+              Resale Start Price
+            </p>
+            <p class="mt-1 font-bold text-xl text-[#1D4265] manrope">
+              1,312,000 EGP
+            </p>
+          </div>
+        </div>
+      </div>
       <!-- Page Header -->
       <div
         class="lg:block hidden mt-3 max-w-[1440px] mx-auto xl:px-20 md:px-8 px-4"
@@ -5668,12 +6011,82 @@
         modal.classList.remove("flex");
       }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+      function handleShareClick(event) {
+        event.stopPropagation();
 
+        const isMobile = window.innerWidth <= 768;
+        const menu = event.currentTarget.querySelector(".share-menu");
+
+        if (isMobile) {
+          // Toggle share menu visibility
+          menu.classList.toggle("invisible");
+          menu.classList.toggle("opacity-0");
+        } else {
+          // Just copy the link on desktop
+          copyLink();
+        }
+      }
+
+      function copyLink(event) {
+        if (event) event.stopPropagation();
+        const url = "http://127.0.0.1:5500/new-launch.html";
+        navigator.clipboard.writeText(url).then(() => {
+          alert("تم نسخ الرابط!");
+        });
+      }
+
+      // Close the share menu if clicking outside
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".share-menu").forEach((menu) => {
+          menu.classList.add("invisible", "opacity-0");
+        });
+      });
+    </script>
     <!-- Google Maps API -->
     <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9vNqDFa_KAHfjrSXqs9NZFdiDAV7PEn8 &callback=initMap"
     ></script>
+    <script>
+      function openGallery(src) {
+        document.getElementById("mainImage").src = src;
+        document.getElementById("galleryModal").classList.remove("hidden");
+        document.getElementById("galleryModal").classList.add("flex");
+      }
+
+      function closeGallery() {
+        document.getElementById("galleryModal").classList.remove("flex");
+        document.getElementById("galleryModal").classList.add("hidden");
+      }
+
+      function changeImage(src) {
+        document.getElementById("mainImage").src = src;
+
+        document.querySelectorAll(".thumbnail").forEach((thumb) => {
+          thumb.classList.remove("border", "border-green-300");
+        });
+
+        const activeThumb = document.querySelector(
+          `.thumbnail[data-src="${src}"]`
+        );
+        if (activeThumb) {
+          activeThumb.classList.add("border", "border-green-300");
+        }
+      }
+    </script>
   </body>
 </html>
