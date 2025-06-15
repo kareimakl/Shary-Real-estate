@@ -2073,11 +2073,11 @@
 
         <div class="swiper-pagination"></div>
       </div>
-      <!-- Modal Fullscreen -->
-      <div
+    <div
         id="galleryModal"
-        class="fixed inset-0 bg-black bg-opacity-100 hidden z-50 flex flex-col justify-between"
+        class="fixed inset-0 bg-black hidden z-50 flex flex-col"
       >
+        <!-- الهيدر -->
         <div
           class="flex items-center bg-[#202426] py-4 px-8 bg-opacity-100 justify-start"
         >
@@ -2100,42 +2100,64 @@
           </div>
         </div>
 
-        <!-- Main Image (Centered) -->
-        <div class="flex flex-1 items-center justify-center">
-          <img
-            id="mainImage"
-            class="max-w-[100%] max-h-[80%] object-contain"
-            src=""
-          />
-        </div>
+    <!-- Main Swiper -->
+<div class="swiper mainSwiper w-full flex-1 flex items-center justify-center bg-black">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide flex justify-center">
+      <img
+        src="/images/area-3.jpeg"
+        class="max-h-[80vh] object-contain"
+        alt="Slide 1"
+      />
+    </div>
+    <div class="swiper-slide flex justify-center">
+      <img
+        src="/images/MC-cover.jpeg"
+        class="max-h-[80vh] object-contain"
+        alt="Slide 2"
+      />
+    </div>
+    <div class="swiper-slide flex justify-center">
+      <img
+        src="/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg"
+        class="max-h-[80vh] object-contain"
+        alt="Slide 3"
+      />
+    </div>
+    <div class="swiper-slide flex justify-center">
+      <img
+        src="/images/sahel.png"
+        class="max-h-[80vh] object-contain"
+        alt="Slide 4"
+      />
+    </div>
+  </div>
+</div>
 
-        <!-- Thumbnails at bottom -->
+
+        <!-- الصور المصغرة -->
         <div
-          class="flex gap-2 overflow-x-auto m-auto justify-center items-center w-full py-4 bg-[#202426] bg-opacity-100"
+          class="flex gap-2 overflow-x-auto justify-center items-center py-4 bg-[#202426]"
         >
           <img
-            class="thumbnail w-[50px] h-[55px] border border-green-300 object-cover cursor-pointer"
+            class="thumb w-[50px] h-[55px] object-cover cursor-pointer border-2 border-transparent"
             src="/images/area-3.jpeg"
-            data-src="/images/area-3.jpeg"
-            onclick="changeImage('/images/area-3.jpeg')"
+            data-index="0"
           />
           <img
-            class="thumbnail w-[50px] h-[55px] object-cover cursor-pointer"
+            class="thumb w-[50px] h-[55px] object-cover cursor-pointer border-2 border-transparent"
             src="/images/MC-cover.jpeg"
-            data-src="/images/MC-cover.jpeg"
-            onclick="changeImage('/images/MC-cover.jpeg')"
+            data-index="1"
           />
           <img
-            class="thumbnail w-[50px] h-[55px] object-cover cursor-pointer"
+            class="thumb w-[50px] h-[55px] object-cover cursor-pointer border-2 border-transparent"
             src="/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg"
-            data-src="/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg"
-            onclick="changeImage('/images/82ae5c6922bac547a73178394c139c6e8634a385.jpg')"
+            data-index="2"
           />
           <img
-            class="thumbnail w-[50px] h-[55px] object-cover cursor-pointer"
+            class="thumb w-[50px] h-[55px] object-cover cursor-pointer border-2 border-transparent"
             src="/images/sahel.png"
-            data-src="/images/sahel.png"
-            onclick="changeImage('/images/sahel.png')"
+            data-index="3"
           />
         </div>
       </div>
@@ -6062,31 +6084,16 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9vNqDFa_KAHfjrSXqs9NZFdiDAV7PEn8 &callback=initMap"
     ></script>
     <script>
-      function openGallery(src) {
-        document.getElementById("mainImage").src = src;
-        document.getElementById("galleryModal").classList.remove("hidden");
-        document.getElementById("galleryModal").classList.add("flex");
-      }
 
-      function closeGallery() {
-        document.getElementById("galleryModal").classList.remove("flex");
-        document.getElementById("galleryModal").classList.add("hidden");
-      }
+  function openGallery(index) {
+    document.getElementById("galleryModal").classList.remove("hidden");
+    swiper.slideTo(index);
+  }
 
-      function changeImage(src) {
-        document.getElementById("mainImage").src = src;
+  function closeGallery() {
+    document.getElementById("galleryModal").classList.add("hidden");
+  }
 
-        document.querySelectorAll(".thumbnail").forEach((thumb) => {
-          thumb.classList.remove("border", "border-green-300");
-        });
-
-        const activeThumb = document.querySelector(
-          `.thumbnail[data-src="${src}"]`
-        );
-        if (activeThumb) {
-          activeThumb.classList.add("border", "border-green-300");
-        }
-      }
     </script>
   </body>
 </html>
