@@ -509,6 +509,16 @@ input:checked + .toggle-input:before {
     outline: none;
     transition: border 0.3s;
   }
+  .search-input2 {
+    flex: 1;
+    min-width: 150px;
+    padding: 8px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+  }
 
   .search-input:focus {
     border-color: #1D4265;

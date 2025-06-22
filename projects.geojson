@@ -3,6 +3,7 @@
   "features": [
     {
       "type": "Feature",
+      "id": "project-1",
       "properties": {
         "name": "Katameya Heights",
         "image": "./images/ora-apartment.jpeg",
