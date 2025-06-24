@@ -763,53 +763,55 @@
 
   <div id="map" class="xl:mt-[70px] mt-[100px] md:translate-y-0 ">
 
-  <div class="filter-btn-box relative z-20 top-2  items-start md:hidden flex  gap-1 justify-start -left-2  translate-y-0 ">
+  <div class="filter-btn-box relative z-20 top-2  items-start md:hidden flex  gap-1 justify-start   translate-y-0 ">
   <!-- مربع البحث -->
-      <button class="filter-btn reset-btn  md:hidden flex  m-auto w-[50px] h-[51px]">
+      <button class=" reset-btn-out bg-white rounded-full  justify-center items-center  md:hidden flex  m-auto w-[50px] h-[51px]">
       <img src="./icons/Vector copy 2.svg" alt="" class="w-6 h-6  m-auto" />
     </button>
 <div class="bg-filter-box relative">
-  <img src="./icons/search.svg" alt="" class="w-4 h-4 ml-2" />
+  <img src="./icons/search.svg" alt="" class="w-4 h-4 ms-2" />
   <input 
     type="text" 
-    id="searchInput"
+    id="searchInputOne"
     class="search-input border-none w-full"
     placeholder="Search By Area, Compound, Developer"
   />
   
   <!-- نتائج البحث -->
-  <div id="searchResults" class="hidden absolute left-0 right-0 top-full mt-1 bg-white shadow-lg rounded-lg z-50 max-h-[300px] overflow-y-auto">
+  <div id="searchResultsOne" class="hidden absolute left-0 right-0 top-full mt-1 bg-white shadow-lg rounded-lg z-50 max-h-[300px] overflow-y-auto">
     <!-- سيتم ملؤها ديناميكيًا -->
   </div>
 </div>
     <!-- زر الريسيت -->
-    <button class="reset-btn md:flex hidden mt-2 h-[29px]">
+    <button class="reset-btn-out md:flex hidden mt-2 h-[29px]">
       Reset View
     </button>
     </div>
-<div class="search-bar ">
-  <div class="search-container flex md:flex-row flex-col items-start justify-start  flex-nowrap ">
+<div class="search-bar     overflow-visible  w-full m-auto flex justify-center items-center ">
+  <div class="search-container flex md:flex-row flex-col items-start justify-center  flex-nowrap ">
     <div class="filter-btn-box hidden  items-start md:block   gap-1 justify-start left-2  translate-y-0 ">
   
+      <div class="bg-filter-box relative flex items-center  border border-gray-300 w-[300px] rounded-3xl px-4  py-2 bg-white ">
+        <img src="./icons/search.svg" alt="" class="w-4 h-4 mr-2" />
+        <input 
+          type="text" 
+          id="searchInputTow"
+          class="search-inputTow w-full bg-transparent focus:outline-none"
+          placeholder="Search By Area, Compound, Developer"
+        />
 
-        <div class="bg-filter-box relative">
-  <img src="./icons/search.svg" alt="" class="w-4 h-4 ml-2" />
-  <input 
-    type="text" 
-    id="searchInput3"
-    class="search-input2 border-none w-full !bg-none"
-    placeholder="Search By Area, Compound, Developer"
-  />
-  
-  <!-- نتائج البحث -->
-  <div id="searchResults3" class="hidden absolute left-0 right-0 top-full mt-1 bg-white shadow-lg rounded-lg z-50 max-h-[300px] overflow-y-auto">
-    <!-- سيتم ملؤها ديناميكيًا -->
-  </div>
-</div>
+        <!-- نتائج البحث -->
+  <div 
+  id="searchResultsTow"
+  class="hidden absolute left-0 right-0 top-full mt-1 bg-white shadow-lg rounded-lg z-50 max-h-[300px] overflow-y-auto"
+>
+          <!-- سيتم ملؤها ديناميكيًا -->
+        </div>
+      </div>
 
 
     <!-- زر الريسيت -->
-    <button class="reset-btn md:flex hidden mt-2 h-[29px]">
+    <button class="reset-btn-Tow md:flex z-50 hidden mt-2 h-[29px]">
       Reset View
     </button>
     </div>
@@ -1159,6 +1161,7 @@
 </div>
 
       <!-- Fixed Filter -->
+      <div id="overlayfore" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
       <div
         id="filterBar"
         class=" bg-white md:max-w-[388px] fixed bottom-0 max-h-0 w-full z-40"
@@ -2297,55 +2300,7 @@ function checkProjectsInView() {
 
 let displayedProjectsMap = new Map();
 
-function showProjectsInModal(projects) {
-  const modal = document.getElementById('ModalComp');
-  const container = modal.querySelector('.projects-container');
-  
-  // إنشاء خريطة للمشاريع الجديدة
-  const newProjectsMap = new Map();
-  projects.forEach(project => {
-    newProjectsMap.set(project.id, project);
-  });
 
-  // إزالة المشاريع التي لم تعد في النطاق
-  displayedProjectsMap.forEach((project, id) => {
-    if (!newProjectsMap.has(id)) {
-      const element = document.getElementById(`project-${id}`);
-      if (element) element.remove();
-      displayedProjectsMap.delete(id);
-    }
-  });
-
-  // إضافة المشاريع الجديدة
-  newProjectsMap.forEach((project, id) => {
-    if (!displayedProjectsMap.has(id)) {
-      const projectElement = document.createElement('div');
-      projectElement.className = 'project-item';
-      projectElement.id = `project-${id}`;
-      projectElement.innerHTML = `
-        <img src="${project.image}" alt="${project.project}" class="project-image">
-        <div class="project-info">
-          <h3>${project.project}</h3>
-          <p>Start Price: ${project.price}</p>
-        </div>
-      `;
-      
-      projectElement.addEventListener('click', () => {
-        closeModalComp();
-        openModal(project);
-      });
-      
-      container.appendChild(projectElement);
-      displayedProjectsMap.set(id, project);
-    }
-  });
-  
-  if (projects.length > 0) {
-    modal.classList.remove('hidden');
-  } else {
-    modal.classList.add('hidden');
-  }
-}
 function addAreaMarkers() {
   fetch("areas.geojson")
     .then((res) => res.json())
@@ -2588,8 +2543,29 @@ function closeModalComp() {
    document.getElementById("overlaythree").addEventListener("click", function () {
     priceFilter("close");
   });
-  
-document.querySelector('.reset-btn').addEventListener('click', () => {
+// إضافة حدث للكليك على الـ overlay
+document.addEventListener("DOMContentLoaded", function () {
+  const overlayfore = document.getElementById("overlayfore");
+
+  overlayfore.addEventListener("click", function (event) {
+    // تأكد إن الكليك مش على عناصر داخل الفلتر
+    const filterBar = document.getElementById("filterBar");
+    if (!filterBar.contains(event.target)) {
+      toggleFilterBar("close");
+    }
+  });
+});
+
+document.querySelector('.reset-btn-out').addEventListener('click', () => {
+  map.flyTo({
+    center: initialCenter,
+    zoom: initialZoom,
+    speed: 1.2,
+    curve: 1,
+    essential: true
+  });
+});
+document.querySelector('.reset-btn-Tow').addEventListener('click', () => {
   map.flyTo({
     center: initialCenter,
     zoom: initialZoom,
@@ -2599,98 +2575,65 @@ document.querySelector('.reset-btn').addEventListener('click', () => {
   });
 });
 
-// متغير لتخزين بيانات المشاريع
 let allProjects = [];
 
-// جلب بيانات المشاريع عند تحميل الصفحة
-function loadProjectsData() {
-  return fetch('projects.geojson')
-    .then(res => {
-      if (!res.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return res.json();
-    })
-    .then(data => {
-      if (!data || !data.features) {
-        throw new Error('Invalid GeoJSON data');
-      }
-      
-      allProjects = data.features.map(feat => {
-        try {
-          const center = turf.center(feat.geometry).geometry.coordinates;
-          return {
-            id: feat.id || feat.properties.id || Math.random().toString(36).substr(2, 9),
-            name: feat.properties.name || "Unnamed Project",
-            developer: feat.properties.developer || "غير محدد",
-            area: feat.properties.area || "غير محدد",
-            coordinates: center,
-            image: feat.properties.image || './images/compound.jpeg',
-            price: feat.properties.price || "غير متوفر",
-            logo: feat.properties.logo || './images/default-logo.png'
-          };
-        } catch (error) {
-          console.error("Error processing feature:", feat, error);
-          return null;
-        }
-      }).filter(Boolean);
-      
-      console.log("تم تحميل المشاريع:", allProjects.length);
-      return allProjects;
-    })
-    .catch(error => {
-      console.error("خطأ في تحميل بيانات المشاريع:", error);
-      return [];
-    });
+async function loadProjectsData() {
+  const response = await fetch('projects.geojson');
+  const data = await response.json();
+  allProjects = data.features.map(feature => ({
+    name: feature.properties.name,
+    developer: feature.properties.developer,
+    area: feature.properties.area,
+    image: feature.properties.image,
+    geometry: feature.geometry // ضيف دي هنا 👈
+  }));
 }
 
-// تهيئة البحث
-async function initSearch() {
+
+// دالة البحث الأولى
+async function initSearchOne() {
   try {
     await loadProjectsData();
     
-    const searchInput = document.getElementById('searchInput');
-    const searchResults = document.getElementById('searchResults');
+    const searchInput = document.getElementById('searchInputOne');
+    const searchResults = document.getElementById('searchResultsOne');
     
     if (!searchInput || !searchResults) {
-      console.error("عناصر البحث غير موجودة!");
+      console.error("عناصر البحث الأولى غير موجودة!");
       return;
     }
     
-    searchInput.addEventListener('focus', function() {
+    searchInput.addEventListener('focus', function () {
       searchResults.classList.remove('hidden');
       if (this.value.trim() === '') {
-        displayTopProjects();
+        displayTopProjectsOne();
       } else {
-        filterProjects(this.value);
+        filterProjectsOne(this.value);
       }
     });
     
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
       const searchTerm = this.value.trim();
-      filterProjects(searchTerm);
+      filterProjectsOne(searchTerm);
     });
     
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.bg-filter-box') && !e.target.closest('#searchResults')) {
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.bg-filter-box') && !e.target.closest('#searchResultsOne')) {
         searchResults.classList.add('hidden');
       }
     });
-    
-    console.log("Search initialized successfully");
   } catch (error) {
-    console.error("Error initializing search:", error);
+    console.error("خطأ في البحث الأول:", error);
   }
 }
 
-// عرض المشاريع الأكثر صلة افتراضياً
-function displayTopProjects() {
-  const searchResults = document.getElementById('searchResults');
+function displayTopProjectsOne() {
+  const searchResults = document.getElementById('searchResultsOne');
   if (!searchResults || !allProjects.length) return;
-  
+
   searchResults.innerHTML = '';
-  const topProjects = allProjects.slice(0, 5);
-  
+  const topProjects = allProjects
+
   topProjects.forEach(project => {
     const projectElement = document.createElement('div');
     projectElement.className = 'p-3 hover:bg-gray-100 cursor-pointer border-b border-gray-200';
@@ -2703,88 +2646,234 @@ function displayTopProjects() {
         </div>
       </div>
     `;
-    
     projectElement.addEventListener('click', () => {
-      map.flyTo({
-        center: project.coordinates,
-        zoom: 14,
-        essential: true
-      });
-      document.getElementById('searchResults').classList.add('hidden');
-      document.getElementById('searchInput').value = project.name;
+      const firstCoordinate = project.geometry?.coordinates?.[0]?.[0];
+
+if (firstCoordinate && firstCoordinate.length === 2) {
+  map.flyTo({
+    center: firstCoordinate,
+    zoom: 14,
+    essential: true
+  });
+} else {
+  console.error("لا يمكن تحديد إحداثيات صحيحة من المشروع:", project);
+}
+
+
+      searchResults.classList.add('hidden');
+      document.getElementById('searchInputOne').value = project.name;
     });
-    
     searchResults.appendChild(projectElement);
   });
 }
 
-// تصفية المشاريع حسب كلمة البحث
-function filterProjects(searchTerm) {
-  const searchResults = document.getElementById('searchResults');
+function filterProjectsOne(searchTerm) {
+  const searchResults = document.getElementById('searchResultsOne');
   if (!searchResults || !allProjects.length) return;
-  
+
   if (!searchTerm) {
-    displayTopProjects();
+    displayTopProjectsOne();
     return;
   }
-  
-  const searchTermLower = searchTerm.toLowerCase();
-  const filtered = allProjects.filter(project => 
-    project.name.toLowerCase().includes(searchTermLower) ||
-    project.developer.toLowerCase().includes(searchTermLower) ||
-    project.area.toLowerCase().includes(searchTermLower)
+
+  const filtered = allProjects.filter(project =>
+    project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    project.developer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    project.area.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  
-  displayResults(filtered);
+
+  displayResultsOne(filtered);
 }
 
-function displayResults(projects) {
-  const searchResults = document.getElementById('searchResults');
+function displayResultsOne(projects) {
+  const searchResults = document.getElementById('searchResultsOne');
   if (!searchResults) return;
-  
+
   searchResults.innerHTML = '';
-  
+
   if (!projects.length) {
     searchResults.innerHTML = '<p class="text-center py-4 text-gray-500">لا توجد نتائج مطابقة</p>';
     return;
   }
-  
-  projects.slice(0, 5).forEach(project => {
+
+  projects.forEach(project => {
     const projectElement = document.createElement('div');
     projectElement.className = 'p-3 hover:bg-gray-100 cursor-pointer border-b border-gray-200';
     projectElement.innerHTML = `
       <div class="flex items-center gap-2">
-        <img src="${project.logo}" alt="${project.name}" class="w-10 h-10 object-cover rounded">
+        <img src="${project.image}" alt="${project.name}" class="w-10 h-10 object-cover rounded">
         <div>
           <h4 class="text-sm font-semibold">${project.name}</h4>
           <p class="text-xs text-gray-500">${project.developer}</p>
         </div>
       </div>
     `;
-    
     projectElement.addEventListener('click', () => {
-      map.flyTo({
-        center: project.coordinates,
-        zoom: 14,
-        essential: true
-      });
+      const firstCoordinate = project.geometry?.coordinates?.[0]?.[0];
+
+if (firstCoordinate && firstCoordinate.length === 2) {
+  map.flyTo({
+    center: firstCoordinate,
+    zoom: 14,
+    essential: true
+  });
+} else {
+  console.error("لا يمكن تحديد إحداثيات صحيحة من المشروع:", project);
+}
+
+
       searchResults.classList.add('hidden');
-      document.getElementById('searchInput').value = project.name;
+      document.getElementById('searchInputOne').value = project.name;
     });
-    
     searchResults.appendChild(projectElement);
   });
 }
 
-// تهيئة عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', () => {
-  // تأخير التهيئة لضمان تحميل الخريطة أولاً
-  setTimeout(() => {
-    initSearch().catch(error => {
-      console.error("Error in search initialization:", error);
+// دالة البحث الثانية
+async function initSearchTow() {
+  try {
+    await loadProjectsData();
+    
+    const searchInput = document.getElementById('searchInputTow');
+    const searchResults = document.getElementById('searchResultsTow');
+    
+    if (!searchInput || !searchResults) {
+      console.error("عناصر البحث الأولى غير موجودة!");
+      return;
+    }
+    
+    searchInput.addEventListener('focus', function () {
+      searchResults.classList.remove('hidden');
+      if (this.value.trim() === '') {
+        displayTopProjectsTow();
+      } else {
+        filterProjectsTow(this.value);
+      }
     });
+    
+    searchInput.addEventListener('input', function () {
+      const searchTerm = this.value.trim();
+      filterProjectsTow(searchTerm);
+    });
+    
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.bg-filter-box') && !e.target.closest('#searchResultsTow')) {
+        searchResults.classList.add('hidden');
+      }
+    });
+  } catch (error) {
+    console.error("خطأ في البحث الأول:", error);
+  }
+}
+
+function displayTopProjectsTow() {
+  const searchResults = document.getElementById('searchResultsTow');
+  if (!searchResults || !allProjects.length) return;
+
+  searchResults.innerHTML = '';
+  const topProjects = allProjects
+
+  topProjects.forEach(project => {
+    const projectElement = document.createElement('div');
+    projectElement.className = 'p-3 hover:bg-gray-100 cursor-pointer border-b border-gray-200';
+    projectElement.innerHTML = `
+      <div class="flex items-center gap-3">
+        <img src="${project.image}" alt="${project.name}" class="w-10 h-10 object-cover rounded">
+        <div>
+          <h4 class="text-sm font-semibold">${project.name}</h4>
+          <p class="text-xs text-gray-500">${project.developer}</p>
+        </div>
+      </div>
+    `;
+    projectElement.addEventListener('click', () => {
+      const firstCoordinate = project.geometry?.coordinates?.[0]?.[0];
+
+if (firstCoordinate && firstCoordinate.length === 2) {
+  map.flyTo({
+    center: firstCoordinate,
+    zoom: 14,
+    essential: true
+  });
+} else {
+  console.error("لا يمكن تحديد إحداثيات صحيحة من المشروع:", project);
+}
+
+
+      searchResults.classList.add('hidden');
+      document.getElementById('searchInputTow').value = project.name;
+    });
+    searchResults.appendChild(projectElement);
+  });
+}
+
+function filterProjectsTow(searchTerm) {
+  const searchResults = document.getElementById('searchResultsTow');
+  if (!searchResults || !allProjects.length) return;
+
+  if (!searchTerm) {
+    displayTopProjectsTow();
+    return;
+  }
+
+  const filtered = allProjects.filter(project =>
+    project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    project.developer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    project.area.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  displayResultsTow(filtered);
+}
+
+function displayResultsTow(projects) {
+  const searchResults = document.getElementById('searchResultsTow');
+  if (!searchResults) return;
+
+  searchResults.innerHTML = '';
+
+  if (!projects.length) {
+    searchResults.innerHTML = '<p class="text-center py-4 text-gray-500">لا توجد نتائج مطابقة</p>';
+    return;
+  }
+
+  projects.forEach(project => {
+    const projectElement = document.createElement('div');
+    projectElement.className = 'p-3 hover:bg-gray-100 cursor-pointer border-b border-gray-200';
+    projectElement.innerHTML = `
+      <div class="flex items-center gap-2">
+        <img src="${project.image}" alt="${project.name}" class="w-10 h-10 object-cover rounded">
+        <div>
+          <h4 class="text-sm font-semibold">${project.name}</h4>
+          <p class="text-xs text-gray-500">${project.developer}</p>
+        </div>
+      </div>
+    `;
+    projectElement.addEventListener('click', () => {
+      const firstCoordinate = project.geometry?.coordinates?.[0]?.[0];
+
+if (firstCoordinate && firstCoordinate.length === 2) {
+  map.flyTo({
+    center: firstCoordinate,
+    zoom: 14,
+    essential: true
+  });
+} else {
+  console.error("لا يمكن تحديد إحداثيات صحيحة من المشروع:", project);
+}
+
+
+      searchResults.classList.add('hidden');
+      document.getElementById('searchInputTow').value = project.name;
+    });
+    searchResults.appendChild(projectElement);
+  });
+}
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    initSearchOne();
+    initSearchTow();
   }, 1000);
 });
+
     </script>
   </body>
 </html>

@@ -64,13 +64,20 @@ function changeImage(direction) {
 // Toggle Filter
 function toggleFilterBar(type) {
   const filterBar = document.getElementById("filterBar");
+  const overlayfore = document.getElementById("overlayfore");
   if (type === "open") {
+    overlayfore.classList.remove("hidden");
+    filterBar.classList.remove("hidden");
     filterBar.style.height = "100dvh";
     filterBar.style.maxHeight = "100dvh";
     document.querySelector("body").style.overflow = "hidden";
   } else {
     filterBar.style.maxHeight = "0px";
     document.querySelector("body").style.overflow = "auto";
+    setTimeout(() => {
+      filterBar.classList.add("hidden");
+      overlayfore.classList.add("hidden");
+    }, 300);
   }
 }
 function deliveryFilter(type) {

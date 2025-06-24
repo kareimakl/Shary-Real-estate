@@ -7,16 +7,9 @@
       "properties": {
         "name": "Katameya Heights",
         "image": "./images/ora-apartment.jpeg",
-        "price": "10,550,734 EGP",
-        "locationText": "El Mostakbal City",
-        "code": "Download",
-        "date": "21/09/2024, 15:34",
-        "type": "Apartment",
-        "bedrooms": "3 Rooms",
-        "size": "1200 SqFt",
-        "delivery": "2026",
-        "project": "ZED East",
-        "developer": "Ora Developers"
+        "developer": "Ora Developers",
+        "area": "Katameya",
+        "price": "10,550,734 EGP"
       },
       "geometry": {
         "type": "Polygon",
@@ -50,6 +43,145 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "id": "project-2",
+      "properties": {
+        "name": "Palm Hills October",
+        "image": "./images/ora-apartment.jpeg",
+        "developer": "Ora Developers",
+        "area": "6th of October",
+        "price": "8,200,000 EGP"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [30.955, 29.991],
+            [30.96, 29.995],
+            [30.958, 29.998],
+            [30.953, 29.994],
+            [30.955, 29.991]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "project-3",
+      "properties": {
+        "name": "Mountain View New Cairo",
+        "image": "./images/ora-apartment.jpeg",
+        "developer": "Ora Developers",
+        "area": "New Cairo",
+        "price": "12,300,000 EGP"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [31.115, 30.0105],
+            [31.12, 30.014],
+            [31.118, 30.016],
+            [31.113, 30.0125],
+            [31.115, 30.0105]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "project-4",
+      "properties": {
+        "name": "New Cairo Residences",
+        "image": "./images/ora-apartment.jpeg",
+        "developer": "Ora Developers",
+        "area": "New Cairo",
+        "price": "9,500,000 EGP"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [31.105, 30.02],
+            [31.11, 30.023],
+            [31.108, 30.025],
+            [31.103, 30.021],
+            [31.105, 30.02]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "project-5",
+      "properties": {
+        "name": "Cairo Festival City",
+        "image": "./images/ora-apartment.jpeg",
+        "developer": "Ora Developers",
+        "area": "New Cairo",
+        "price": "18,000,000 EGP"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [31.43632, 30.028051],
+            [31.439234, 30.02756],
+            [31.440545, 30.029378],
+            [31.437852, 30.030328],
+            [31.43632, 30.028051]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "project-6",
+      "properties": {
+        "name": "Mountain View iCity",
+        "image": "./images/ora-apartment.jpeg",
+        "developer": "Ora Developers",
+        "area": "New Cairo",
+        "price": "12,500,000 EGP"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [31.523442, 30.0421],
+            [31.5248, 30.0427],
+            [31.5241, 30.0439],
+            [31.5226, 30.0432],
+            [31.523442, 30.0421]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "project-7",
+      "properties": {
+        "name": "Palm Hills New Cairo",
+        "image": "./images/ora-apartment.jpeg",
+        "developer": "Ora Developers",
+        "area": "New Cairo",
+        "price": "14,200,000 EGP"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [31.500321, 30.008741],
+            [31.501821, 30.008741],
+            [31.501821, 30.010241],
+            [31.500321, 30.010241],
+            [31.500321, 30.008741]
+          ]
+        ]
+      }
     }
+    
   ]
 }

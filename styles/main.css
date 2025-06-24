@@ -464,11 +464,11 @@ input:checked + .toggle-input:before {
   .search-bar {
     position: absolute;
     top: 20px !important;
-    left: 55%;
-    transform: translateX(-50%);
+    /* left: 50% !important; */
+    /* transform: translateX(-50%); */
     z-index: 10;
     padding: 10px;
-    width: 100%;
+    width: 95%;
     overflow-x: auto;
     height: auto !important;
 
@@ -524,20 +524,20 @@ input:checked + .toggle-input:before {
     border-color: #1D4265;
   }
 
-  .filter-btn, .reset-btn {
+  .filter-btn, .reset-btn ,.reset-btn-Tow{
     white-space: nowrap;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 15px;
+    padding: 20px 15px;
     font-size: 14px;
     border-radius: 107.69px;
     cursor: pointer;
     transition: all 0.3s;
   }
 
-  .filter-btn {
+  .filter-btn  {
     background: #fff;
     border: 1px solid #e0e0e0;
     height: 49.8px;
@@ -549,7 +549,7 @@ input:checked + .toggle-input:before {
     background: #e9e9e9;
   }
 
-  .reset-btn {
+  .reset-btn ,.reset-btn-Tow{
     background: #fff;
     color: #1D4265;
     border: none;
@@ -592,11 +592,7 @@ input:checked + .toggle-input:before {
       /* overflow-x: auto; */
       padding-bottom: 10px;
     }
-  .search-bar {
-    top: 0px;
-    left: 50%;
-    height: auto !important;
-  }
+
 
     .search-container::-webkit-scrollbar {
       height: 6px;
