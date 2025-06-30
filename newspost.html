@@ -518,56 +518,14 @@
     <!-- Card 1 -->
     <!-- container grid -->
     <div
-      class="md:!w-[70%] w-full  mt-24 m-auto justify-center items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-8 p-6 bg-white min-h-screen"
+      class="md:!w-[70%] w-full mt-24 m-auto justify-center items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-2 gap-y-8 p-6 bg-white min-h-screen"
     >
       <div
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
-        >
-          <img
-            src="./images/newpost.jpg"
-            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
-          />
-          <img
-            src="./images/newpost.jpg"
-            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
-          />
-          <img
-            src="./images/newpost.jpg"
-            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
-          />
-          <img
-            src="./images/newpost.jpg"
-            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
-          />
-        </div>
-
-        <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
-          Mountain View Developments
-        </h3>
-
-        <p class="text-xs text-start text-gray-600 mb-4">
-          What started out as a collective dream and an innovative idea has now
-          become a reality. Finding the right home has always been a stressful
-          process, that’s where
-        </p>
-
-        <div class="text-right w-full">
-          <a
-            href="./fullnewpost.html"
-            class="text-xs font-semibold text-gray-800 hover:underline"
-            >View More</a
-          >
-        </div>
-      </div>
-
-      <div
-        class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
-      >
-        <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -609,7 +567,8 @@
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -651,7 +610,8 @@
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -693,7 +653,8 @@
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -735,7 +696,8 @@
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -777,7 +739,8 @@
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -819,7 +782,8 @@
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -861,7 +825,51 @@
         class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
       >
         <div
-          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300"
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
+        >
+          <img
+            src="./images/newpost.jpg"
+            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
+          />
+          <img
+            src="./images/newpost.jpg"
+            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
+          />
+          <img
+            src="./images/newpost.jpg"
+            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
+          />
+          <img
+            src="./images/newpost.jpg"
+            class="w-32 h-40 rounded-2xl object-cover flex-shrink-0"
+          />
+        </div>
+
+        <h3 class="text-sm font-semibold text-start text-gray-800 mb-1">
+          Mountain View Developments
+        </h3>
+
+        <p class="text-xs text-start text-gray-600 mb-4">
+          What started out as a collective dream and an innovative idea has now
+          become a reality. Finding the right home has always been a stressful
+          process, that’s where
+        </p>
+
+        <div class="text-right w-full">
+          <a
+            href="./fullnewpost.html"
+            class="text-xs font-semibold text-gray-800 hover:underline"
+            >View More</a
+          >
+        </div>
+      </div>
+      <div
+        class="w-72 h-[352px] mx-auto bg-white rounded-3xl border border-[2px] border-[#1D4265] shadow-md p-4 flex flex-col"
+      >
+        <div
+          id="scrollContainer"
+          class="horizontal-scroll flex overflow-x-auto gap-3 mb-4 scrollbar-thin scrollbar-thumb-gray-300 cursor-grab active:cursor-grabbing"
         >
           <img
             src="./images/newpost.jpg"
@@ -1827,14 +1835,36 @@
           disableOnInteraction: false,
         },
       });
-      const containers = document.querySelectorAll(".horizontal-scroll");
+      const scrollContainers = document.querySelectorAll(".horizontal-scroll");
 
-      containers.forEach((el) => {
-        el.addEventListener("wheel", (e) => {
-          if (e.deltaY !== 0) {
-            e.preventDefault();
-            el.scrollLeft += e.deltaY;
-          }
+      scrollContainers.forEach((container) => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        container.addEventListener("mousedown", (e) => {
+          isDown = true;
+          container.classList.add("active");
+          startX = e.pageX - container.offsetLeft;
+          scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener("mouseleave", () => {
+          isDown = false;
+          container.classList.remove("active");
+        });
+
+        container.addEventListener("mouseup", () => {
+          isDown = false;
+          container.classList.remove("active");
+        });
+
+        container.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - container.offsetLeft;
+          const walk = (x - startX) * 2; // سرعة السحب
+          container.scrollLeft = scrollLeft - walk;
         });
       });
     </script>
