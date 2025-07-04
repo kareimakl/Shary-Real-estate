@@ -5,92 +5,121 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-<footer class="bg-white md:mb-0 pb-16 shadow-top-only">
-        <div class="w-[1440px] max-w-full mx-auto text-[#1D4265] md:py-16 pt-10 pb-5 xl:px-8 sm:px-6 px-4">
-          <div class="flex sm:flex-row flex-col justify-between gap-x-8 gap-y-10 border-b border-solid border-[#B9B9B9] md:pb-16 pb-8">
+      <footer class="bg-white shadow-top-only  border-t border-gray-200 pt-8 pb-6 text-[#1D4265]">
+        <div class="max-w-[1221px] mx-auto px-4 sm:px-6 xl:px-8">
+
+          <!-- Mobile Dropdown -->
+          <div class="md:hidden block text-sm text-gray-700 space-y-4 mb-10">
+            ${["Areas", "Compounds", "Developers", "Top Searches", "Others"]
+              .map(
+                (title) => `
+              <div>
+                <button class="w-full flex justify-between items-center footer-toggle font-bold text-black">
+                  ${title}
+                  <svg class="icon transition-transform transform w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <ul class="mt-2 space-y-1 hidden">
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+
+          <!-- Static Desktop Grid -->
+          <div class="md:flex hidden grid-cols-2 justify-between  md:grid-cols-5 gap-6 text-sm text-gray-600 mb-12">
             <div>
-              <div class="font-medium sm:text-4xl text-3xl mb-4">
-                <p data-i18n="Do you have"></p>
-                <p data-i18n="any questions?"></p>
-              </div>
-              <p data-i18n="Feel free to send us your questions or request a free consultation."></p>
-              <button class="md:mt-10 mt-8 uppercase text-xs text-white py-3 px-6 bg-[#1D4265] rounded-3xl">
-                <p style="letter-spacing: 0.04em;" data-i18n="Send a message"></p>
-              </button>
+              <h4 class="font-[600] text-[14px] text-black mb-4">Areas</h4>
+              <ul class="space-y-2 text-[#8E8E8E]"><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li></ul>
             </div>
-            <div class="md:block hidden">
-              <p class="whitespace-nowrap" data-i18n="Download Our Application"></p>
-              <div class="flex gap-2 mt-2">
-                <a href="">
-                  <img loading="lazy" src="./icons/google-play.svg" class="w-full" alt="google play">
-                </a>
-                <a href="">
-                  <img loading="lazy" src="./icons/app-store.svg" class="w-full" alt="app store">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="md:mt-6 mt-8 flex flex-wrap md:justify-start justify-center md:gap-x-10 md:gap-y-6 gap-6 font-medium text-sm">
-            <a href="./index.html" data-i18n="home"></a>
-            <button onclick="openDropdownMenu('subGulf')" class="dropdown-btn-footer xl:block hidden" data-i18n="Gulf"></button>
-            <button onclick="openDropdownMenu('subEurope')" class="dropdown-btn-footer xl:block hidden" data-i18n="Europe"></button>
-            <a href="./properties-abroad.html" class="xl:hidden" data-i18n="Properties Abroad"></a>
-            <a href="./sell.html" data-i18n="Sell"></a>
-            <a href="./blogs.html" data-i18n="Blogs"></a>
-            <a href="./about.html" data-i18n="About"></a>
-            <a href="./contact.html" data-i18n="Contact"></a>
-            <a href="./shary-card.html" data-i18n="Shary Card"></a>
-            <a href="./careers.html" data-i18n="Careers"></a>
-            <a href="./check-now.html" data-i18n="Agents"></a>
-          </div>
-          <div class="md:mt-20 mt-10 flex md:flex-row flex-col md:ltr:text-left md:rtl:text-right text-center justify-between md:items-end gap-8">
             <div>
-              <div class="flex items-center md:justify-start justify-center gap-3">
-                <img loading="lazy" src="./icons/facebook.svg" height="18" width="9" class="cursor-pointer" alt="facebook">
-                <img loading="lazy" src="./icons/instagram.svg" height="17" width="17" class="cursor-pointer" alt="instagram">
-                <img loading="lazy" src="./icons/twitter.svg" height="16" width="17" class="cursor-pointer" alt="twitter">
-                <img loading="lazy" src="./icons/youtube.svg" height="14" width="22" class="cursor-pointer" alt="youtube">
-                <img loading="lazy" src="./icons/linkedIn.svg" height="17" width="19" class="cursor-pointer" alt="linkedIn">
-                <img loading="lazy" src="./icons/snapchat.svg" height="18" width="19" class="cursor-pointer" alt="snapchat">
-                <img loading="lazy" src="./icons/tiktok.svg" height="18" width="16" class="cursor-pointer" alt="tiktok">
-              </div>
-              <div class="mt-12 flex flex-col justify-between md:gap-10 gap-6">
-                <div class="flex md:flex-col flex-row md:justify-start justify-center">
-                  <p class="font-medium uppercase text-xs md:mb-3" data-i18n="Contact us"></p>
-                  <p class="font-medium md:text-sm text-xs">
-                    <span class="md:hidden">: </span>
-                    <span>+1 890 123-52-61</span>
-                  </p>
-                </div>
-                <div class="flex md:flex-col flex-row md:justify-start justify-center">
-                  <p class="font-medium uppercase text-xs md:mb-3" data-i18n="Email"></p>
-                  <p class="font-medium md:text-sm text-xs">
-                    <span class="md:hidden">: </span>
-                    <span>info@shary.com</span>
-                  </p>
-                </div>
-              </div>
-              <div class="md:hidden mt-8">
-                <p class="whitespace-nowrap text-xs font-normal" data-i18n="Download Our Application"></p>
-                <div class="flex justify-center gap-2 mt-3">
-                  <a href="">
-                    <img loading="lazy" src="./icons/google-play.svg" class="w-[86px] h-[33px]" alt="google play">
-                  </a>
-                  <a href="">
-                    <img loading="lazy" src="./icons/app-store.svg" class="w-[86px] h-[33px]" alt="app store">
-                  </a>
-                </div>
-              </div>
+              <h4 class="font-[600] text-[14px] text-black mb-4">Compounds</h4>
+              <ul class="space-y-2 text-[#8E8E8E]"><li>Zed East</li><li>Sodic East</li><li>Zed East</li><li>Zed East</li><li>Zed East</li><li>Zed East</li><li>Zed East</li></ul>
             </div>
-            <div class="md:ltr:text-left md:rtl:text-right text-center">
-              <img loading="lazy" src="./images/shary-logo.svg" class="md:w-[200px] w-36 md:ms-0 m-auto" alt="logo">
-              <p class="md:my-2 my-1 font-medium md:ms-1 md:text-base text-xs">Real Estate Company</p>
-              <p class="manrope text-xs font-medium md:ms-1 md:mt-0 mt-4 md:py-0 py-2.5 md:border-0 border-t border-solid border-[#B9B9B9]">©Copyright 2025 — Shary.</p>
+            <div>
+              <h4 class="font-[600] text-[14px] text-black mb-4">Developers</h4>
+              <ul class="space-y-2 text-[#8E8E8E]"><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li></ul>
+            </div>
+            <div>
+              <h4 class="font-[600] text-[14px] text-black mb-4">Top Searches</h4>
+              <ul class="space-y-2 text-[#8E8E8E]"><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li></ul>
+            </div>
+            <div>
+              <h4 class="font-[600] text-[14px] text-black mb-4">Others</h4>
+              <ul class="space-y-2 text-[#8E8E8E]"><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li></ul>
             </div>
           </div>
+
+          
+    <!-- Bottom Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 ">
+      <!-- Left: Logo and Info -->
+      <div class="text-center md:text-left">
+        <img src="./images/shary-logo.svg" alt="Shary Logo" class="mx-auto md:mx-0 mb-2 w-36 md:w-44" />
+        <p class="text-sm font-medium mb-1">Real Estate Company</p>
+          <!-- Center: Social Icons -->
+      <div class="flex mt-6 items-center justify-center gap-4">
+        <img src="./icons/facebook.svg" alt="facebook" class="h-4 cursor-pointer" />
+        <img src="./icons/instagram.svg" alt="instagram" class="h-4 cursor-pointer" />
+        <img src="./icons/twitter.svg" alt="twitter" class="h-4 cursor-pointer" />
+        <img src="./icons/youtube.svg" alt="youtube" class="h-4 cursor-pointer" />
+        <img src="./icons/linkedIn.svg" alt="linkedin" class="h-4 cursor-pointer" />
+        <img src="./icons/snapchat.svg" alt="snapchat" class="h-4 cursor-pointer" />
+        <img src="./icons/tiktok.svg" alt="tiktok" class="h-4 cursor-pointer" />
+      </div>
+      </div>
+
+
+      <!-- Right: Store Buttons -->
+      <div class="text-center mb-2  md:text-right flex md:translate-y-1/2 h-[100%] flex-col">
+        <p class="text-sm font-medium mb-2">Download Our Application</p>
+        <div class="flex justify-center md:justify-end gap-2">
+          <a href="#"><img src="./icons/google-play.svg" alt="Google Play" class="h-8" /></a>
+          <a href="#"><img src="./icons/app-store.svg" alt="App Store" class="h-8" /></a>
+        </div>
+      </div>
+    </div>
+<div class="text-xs md:border-[#1D4265] mb-16      border-[#D7D7D7] border-t md:pt-6 pt-2 md:mt-6 mt-1 flex md:hidden flex-wrap justify-center md:justify-between text-center text-gray-600 gap-4">
+        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2024 — Shary.</p>
+    </div>
+    
+    <!-- Bottom Navigation Links -->
+    <div class="text-xs md:border-[#1D4265]   border-[#D7D7D7] border-t md:pt-6 pt-2 md:mt-6 mt-1 md:flex  hidden flex-wrap justify-center md:justify-between text-center text-gray-600 gap-4">
+        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2024 — Shary.</p>
+    
+    <div class="flex w-[70%]  text-xs justify-between ">
+
+      <a class="text-[#8E8E8E] text-[16px]" href="./index.html">Home</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="#">Gulf</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="#">Europe</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./sell.html">Sell</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./blogs.html">Blog</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./about.html">About</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./contact.html">Contact</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./shary-card.html">Shary Card</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./privacy-policy.html">Privacy Policy</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./careers.html">Careers</a>
+      <a class="text-[#8E8E8E] text-[16px]" href="./check-now.html">Agents</a>
+          </div>
+    </div>
         </div>
       </footer>
     `;
+
+    // Toggle Dropdowns
+    this.querySelectorAll(".footer-toggle").forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const list = toggle.nextElementSibling;
+        const icon = toggle.querySelector(".icon");
+        list.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      });
+    });
   }
 }
 

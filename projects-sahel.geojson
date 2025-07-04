@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "safia-ras-el-hekma",
+      "properties": {
+        "name": "Safia Ras El‑Hekma",
+        "developer": "Il Cazar",
+        "image": "./images/ora-apartment.jpeg",
+        "area": "Ras El‑Hekma, North Coast",
+        "price": "from 5,200,000 EGP",
+        "unit_types": ["Chalet", "Villa"],
+        "down_payment": "5%",
+        "installments": "8 years",
+        "beachfront": "≈750 m",
+        "total_area": "≈180 acres"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [29.5, 30.9],
+            [29.5, 30.9],
+            [29.51, 30.9],
+            [29.46, 30.92],
+            [29.423, 30.912619]
+          ]
+        ]
+      }
+    }
+  ]
+}
