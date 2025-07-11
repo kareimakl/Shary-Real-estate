@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-      <footer class="bg-white shadow-top-only  border-t border-gray-200 pt-8 pb-6 text-[#1D4265]">
+      <footer class="bg-white   border-t border-gray-200 pt-8 pb-6 text-[#1D4265]">
         <div class="max-w-[1221px] mx-auto px-4 sm:px-6 xl:px-8">
 
           <!-- Mobile Dropdown -->
@@ -34,23 +34,23 @@ class Footer extends HTMLElement {
           <!-- Static Desktop Grid -->
           <div class="md:flex hidden grid-cols-2 justify-between  md:grid-cols-5 gap-6 text-sm text-gray-600 mb-12">
             <div>
-              <h4 class="font-[600] text-[14px] text-black mb-4">Areas</h4>
+              <h4 class="font-[600] text-[16px] text-black mb-4 font-prometo font-bold ">Areas</h4>
               <ul class="space-y-2 text-[#8E8E8E]"><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li><li>New Cairo</li></ul>
             </div>
             <div>
-              <h4 class="font-[600] text-[14px] text-black mb-4">Compounds</h4>
+              <h4 class="font-[600] text-[16px] text-black mb-4 font-prometo font-bold ">Compounds</h4>
               <ul class="space-y-2 text-[#8E8E8E]"><li>Zed East</li><li>Sodic East</li><li>Zed East</li><li>Zed East</li><li>Zed East</li><li>Zed East</li><li>Zed East</li></ul>
             </div>
             <div>
-              <h4 class="font-[600] text-[14px] text-black mb-4">Developers</h4>
+              <h4 class="font-[600] text-[16px] text-black mb-4 font-prometo font-bold ">Developers</h4>
               <ul class="space-y-2 text-[#8E8E8E]"><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li><li>Ora Developments</li></ul>
             </div>
             <div>
-              <h4 class="font-[600] text-[14px] text-black mb-4">Top Searches</h4>
+              <h4 class="font-[600] text-[16px] text-black mb-4 font-prometo font-bold ">Top Searches</h4>
               <ul class="space-y-2 text-[#8E8E8E]"><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li><li>16177 Zizinia New Cairo...</li></ul>
             </div>
             <div>
-              <h4 class="font-[600] text-[14px] text-black mb-4">Others</h4>
+              <h4 class="font-[600] text-[16px] text-black mb-4 font-prometo font-bold ">Others</h4>
               <ul class="space-y-2 text-[#8E8E8E]"><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li><li>3 bedroom Villas for...</li></ul>
             </div>
           </div>
@@ -61,7 +61,18 @@ class Footer extends HTMLElement {
       <!-- Left: Logo and Info -->
       <div class="text-center md:text-left">
         <img src="./images/shary-logo.svg" alt="Shary Logo" class="mx-auto md:mx-0 mb-2 w-36 md:w-44" />
-        <p class="text-sm font-medium mb-1">Real Estate Company</p>
+        <p class="  mb-1 font-medium md:ms-1 md:text-base text-xs ">Real Estate Company</p>
+          <div class="flex md:flex-row flex-col justify-center gap-2 items-center mt-6  text-[#1f3c5d] font-medium">
+  <div class="flex md:flex-col !mt-0 text-center flex-row gap-2 justify-center items-center ">
+    <p class="font-prometo md:text-sm text-xs   uppercase tracking-wide">Contact Us:</p>
+    <a href="tel:+201000730208" class="font-prometo md:text-sm text-xs  hover:underline text-inherit">+201000730208</a>
+  </div>
+
+  <div class="flex md:flex-col flex-row gap-2 justify-center items-center ">
+    <p class="font-prometo md:text-sm text-xs uppercase tracking-wide">Email Address:</p>
+    <a href="mailto:info@shary.com" class="font-prometo md:text-sm text-xs  hover:underline text-inherit">info@shary.com</a>
+  </div>
+</div>
           <!-- Center: Social Icons -->
       <div class="flex mt-6 items-center justify-center gap-4">
         <img src="./icons/facebook.svg" alt="facebook" class="h-4 cursor-pointer" />
@@ -85,12 +96,12 @@ class Footer extends HTMLElement {
       </div>
     </div>
 <div class="text-xs md:border-[#1D4265] mb-16      border-[#D7D7D7] border-t md:pt-6 pt-2 md:mt-6 mt-1 flex md:hidden flex-wrap justify-center md:justify-between text-center text-gray-600 gap-4">
-        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2024 — Shary.</p>
+        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2025 — Shary.</p>
     </div>
     
     <!-- Bottom Navigation Links -->
     <div class="text-xs md:border-[#1D4265]   border-[#D7D7D7] border-t md:pt-6 pt-2 md:mt-6 mt-1 md:flex  hidden flex-wrap justify-center md:justify-between text-center text-gray-600 gap-4">
-        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2024 — Shary.</p>
+        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2025 — Shary.</p>
     
     <div class="flex w-[70%]  text-xs justify-between ">
 

@@ -2707,10 +2707,15 @@
       <div
         class="sm:mt-20 mt-1 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
       >
-        <div class="relative">
+  <style>
+      #customSlider::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
           <!-- Slider container with horizontal scrolling -->
           <div
-            class="hide-scroll overflow-y-hidden flex gap-2 overflow-x-auto pb-4"
+           id="customSlider"
+            class="hide-scroll  overflow-y-hidden flex gap-2 overflow-x-auto pb-4"
           >
             <!-- Second Card - Full width on mobile -->
             <div
@@ -2923,7 +2928,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
       <!-- Top Developers -->
       <div
@@ -7017,6 +7021,52 @@
           }
         });
       });
+
     </script>
+    <script>
+  const container = document.getElementById("customSlider");
+  let scrollIndex = 0;
+  let slideCount = container.children.length;
+  let isScrolling = false; // Flag to prevent overlapping animations
+
+  function scrollToNext() {
+    if (isScrolling) return;
+    isScrolling = true;
+    
+    scrollIndex = (scrollIndex + 1) % slideCount;
+    const slideWidth = container.children[0].offsetWidth;
+    const scrollLeft = scrollIndex * slideWidth;
+    
+    container.scrollTo({
+      left: scrollLeft,
+      behavior: "smooth"
+    });
+    
+    // Reset flag after animation completes
+    setTimeout(() => {
+      isScrolling = false;
+    }, 1000);
+  }
+
+  // Handle manual scrolling to update index
+  container.addEventListener("scroll", () => {
+    if (isScrolling) return;
+    
+    const slideWidth = container.children[0].offsetWidth;
+    scrollIndex = Math.round(container.scrollLeft / slideWidth);
+  });
+
+  // Start auto-scrolling
+  const interval = setInterval(scrollToNext, 4000);
+
+  // Pause on hover
+  container.addEventListener("mouseenter", () => clearInterval(interval));
+  container.addEventListener("mouseleave", () => {
+    interval = setInterval(scrollToNext, 4000);
+  });
+</script>
+
+
+
   </body>
 </html>

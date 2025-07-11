@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Manrope:300,400,500,600,700,800,900");
 @import url("https://fonts.googleapis.com/css?family=Tajawal:300,400,500,600,700,800,900");
 @import url("https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded:FILL,ROND@0..1,100&display=block");
+#customSlider {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+#customSlider > * {
+  scroll-snap-align: start;
+}
 
 * {
   margin: 0;
