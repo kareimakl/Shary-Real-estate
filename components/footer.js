@@ -62,13 +62,13 @@ class Footer extends HTMLElement {
       <div class="text-center md:text-left">
         <img src="./images/shary-logo.svg" alt="Shary Logo" class="mx-auto md:mx-0 mb-2 w-36 md:w-44" />
         <p class="  mb-1 font-medium md:ms-1 md:text-base text-xs ">Real Estate Company</p>
-          <div class="flex md:flex-row flex-col justify-center gap-2 items-center mt-6  text-[#1f3c5d] font-medium">
-  <div class="flex md:flex-col !mt-0 text-center flex-row gap-2 justify-center items-center ">
+          <div class="flex  flex-col justify-center gap-2 md:items-start items-center mt-2  text-[#1f3c5d] font-medium">
+  <div class="flex ml-0  !mt-0 text-start  gap-2 justify-start items-start ">
     <p class="font-prometo md:text-sm text-xs   uppercase tracking-wide">Contact Us:</p>
     <a href="tel:+201000730208" class="font-prometo md:text-sm text-xs  hover:underline text-inherit">+201000730208</a>
   </div>
 
-  <div class="flex md:flex-col flex-row gap-2 justify-center items-center ">
+  <div class="flex  gap-2 justify-center items-center ">
     <p class="font-prometo md:text-sm text-xs uppercase tracking-wide">Email Address:</p>
     <a href="mailto:info@shary.com" class="font-prometo md:text-sm text-xs  hover:underline text-inherit">info@shary.com</a>
   </div>
