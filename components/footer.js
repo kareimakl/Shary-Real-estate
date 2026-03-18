@@ -26,7 +26,7 @@ class Footer extends HTMLElement {
                   <li>Item 3</li>
                 </ul>
               </div>
-            `
+            `,
               )
               .join("")}
           </div>
@@ -70,7 +70,7 @@ class Footer extends HTMLElement {
 
   <div class="flex  gap-2 justify-center items-center ">
     <p class="font-prometo md:text-sm text-xs uppercase tracking-wide">Email Address:</p>
-    <a href="mailto:info@shary.com" class="font-prometo md:text-sm text-xs  hover:underline text-inherit">info@shary.com</a>
+    <a href="mailto:info@shary.eg" class="font-prometo md:text-sm text-xs  hover:underline text-inherit">info@shary.eg</a>
   </div>
 </div>
           <!-- Center: Social Icons -->
@@ -96,13 +96,20 @@ class Footer extends HTMLElement {
       </div>
     </div>
 <div class="text-xs md:border-[#1D4265] mb-16      border-[#D7D7D7] border-t md:pt-6 pt-2 md:mt-6 mt-1 flex md:hidden flex-wrap justify-center md:justify-between text-center text-gray-600 gap-4">
-        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2025 — Shary.</p>
+    <p class="text-[15px] font-medium text-[#1D4265]">
+  © Copyright <span class="year"></span> — Shary.
+</p>
+
+
     </div>
     
     <!-- Bottom Navigation Links -->
     <div class="text-xs md:border-[#1D4265]   border-[#D7D7D7] border-t md:pt-6 pt-2 md:mt-6 mt-1 md:flex  hidden flex-wrap justify-center md:justify-between text-center text-gray-600 gap-4">
-        <p class="text-[15px] font-medium text-[#1D4265] ">© Copyright 2025 — Shary.</p>
-    
+<p class="text-[15px] font-medium text-[#1D4265]">
+  © Copyright <span class="year"></span> — Shary.
+</p>
+
+
     <div class="flex w-[70%]  text-xs justify-between ">
 
       <a class="text-[#8E8E8E] text-[16px]" href="./index.html">Home</a>
@@ -131,6 +138,12 @@ class Footer extends HTMLElement {
         icon.classList.toggle("rotate-180");
       });
     });
+
+this.querySelectorAll(".year").forEach((el) => {
+  el.textContent = new Date().getFullYear();
+});
+
+    
   }
 }
 
