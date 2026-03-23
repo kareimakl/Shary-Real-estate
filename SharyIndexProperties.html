@@ -1,0 +1,2417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Shary</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/components/footer.js" type="text/javascript" defer></script>
+    <script src="/js/language.js"></script>
+    <script src="/js/main.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed top-0 w-screen z-30 xl:py-0 py-6 bg-[#FFF] xl:h-[70px] xl:min-h-fit header-filter header-collapsed xl:rounded-none md:rounded-ee-[32px] rounded-ee-3xl md:rounded-es-[32px] rounded-es-3xl transition-all duration-300 ease-in-out"
+    >
+      <nav class="xl:h-full w-full max-w-full mx-auto xl:pt-0 md:pt-3 pt-5">
+        <div
+          class="relative px-4 flex items-center justify-between gap-4 xl:h-full text-[#1D4265]"
+        >
+          <div class="md:flex hidden items-center gap-20">
+            <a href="./index.html">
+              <img
+                loading="lazy"
+                src="./images/shary-logo.svg"
+                class="w-36"
+                alt="logo"
+              />
+            </a>
+            <div class="xl:flex hidden gap-5 xl:mt-2.5">
+              <a href="./index.html" data-i18n="home"></a>
+              <!-- Gulf -->
+              <div class="relative">
+                <div
+                  onclick="openDropdownMenu('subGulf')"
+                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
+                >
+                  <span data-i18n="Gulf"></span>
+                  <span
+                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="subGulf"
+                  onclick="openDropdownMenu('subGulf')"
+                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
+                >
+                  <a
+                    href="./united-arab-emirates.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >UAE</a
+                  >
+                  <a
+                    href="./united-arab-emirates.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >KSA</a
+                  >
+                </div>
+              </div>
+              <!-- Europe -->
+              <div class="relative">
+                <div
+                  onclick="openDropdownMenu('subEurope')"
+                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
+                >
+                  <span data-i18n="Europe"></span>
+                  <span
+                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="subEurope"
+                  onclick="openDropdownMenu('subEurope')"
+                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
+                >
+                  <div class="max-h-[200px] overflow-y-auto my-2.5">
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >Uk</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >PORTO</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >SPIN</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >YOUNAN</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >FR</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >OBROS</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >ITALY</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >DENE</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >FENDI</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >BELG</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >TK</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >GORG</a
+                    >
+                    <a
+                      href="./united-arab-emirates.html"
+                      class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                      >CUOR</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <a href="./sell.html" data-i18n="Sell"></a>
+              <a href="./blogs.html" data-i18n="Blogs"></a>
+              <a href="./about.html" data-i18n="About"></a>
+              <a href="./contact.html" data-i18n="Contact"></a>
+              <a href="./shary-card.html" data-i18n="Shary Card"></a>
+              <a href="./careers.html" data-i18n="Careers"></a>
+              <!-- Agents -->
+              <div class="relative">
+                <div
+                  onclick="openDropdownMenu('subAgents')"
+                  class="dropdown-btn flex items-center gap-1 cursor-pointer"
+                >
+                  <span data-i18n="Agents"></span>
+                  <span
+                    class="material-symbols-rounded text-base leading-none text-[#5C6368]"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="subAgents"
+                  onclick="openDropdownMenu('subAgents')"
+                  class="dropdown-list absolute top-8 min-w-[280px] bg-white rounded-2xl shadow-[0px_4px_4px_0px_#00000040] text-[#161E2D] text-sm font-medium opacity-0 invisible transition-opacity ease-in-out duration-300"
+                >
+                  <a
+                    href="./sign-up.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >Sign Up</a
+                  >
+                  <a
+                    href="./check-now.html"
+                    class="h-10 flex items-center px-6 hover:text-[#1563DF] cursor-pointer"
+                    >Verify Agent</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex md:w-auto w-full md:justify-start justify-between md:items-stretch items-center sm:gap-1.5 gap-1 xl:mt-2.5"
+          >
+            <!-- Search Btn -->
+            <div class="xl:block hidden relative">
+              <button
+                onclick="toggleRollDown('nav_search', 'navSearchOverlay')"
+                class="h-full flex items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-4 md:w-auto w-8"
+              >
+                <img loading="lazy" src="./icons/search.svg" alt="Search" />
+                <span
+                  data-i18n="Search"
+                  class="md:inline hidden text-sm text-[#777777]"
+                ></span>
+              </button>
+              <div
+                id="nav_search"
+                class="z-[22] absolute w-[565px] ltr:right-0 rtl:left-0 top-[55px] bg-white rounded-[30px] h-[41px] flex items-center gap-1 px-3 shadow-[0px_4px_4px_0px_#00000040] opacity-0 invisible transition-opacity ease-in-out duration-300"
+              >
+                <input
+                  type="text"
+                  placeholder="Search"
+                  class="outline-none text-sm font-normal bg-inherit w-full px-1"
+                />
+                <div class="flex items-center gap-2">
+                  <!-- Rolldown -->
+                  <div class="relative z-[1] manrope">
+                    <div
+                      onclick="openDropdownMenu('search_property_type')"
+                      class="dropdown-btn w-[158px] h-[30px] bg-[#FAFAFA] cursor-pointer flex items-center rounded-3xl px-1.5 shadow-[0px_4px_4px_0px_#00000040]"
+                    >
+                      <p
+                        class="text-xs text-[#242323] w-full text-center truncate"
+                      >
+                        Property Type
+                      </p>
+                      <span
+                        class="material-symbols-rounded font-light text-black"
+                        >expand_circle_down</span
+                      >
+                    </div>
+                    <div
+                      id="search_property_type"
+                      onclick="openDropdownMenu('search_property_type')"
+                      class="dropdown-list w-full absolute top-10 bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
+                      style="box-shadow: 0px 4px 4px 0px #00000040"
+                    >
+                      <p
+                        class="pt-4 pb-2 px-3 cursor-pointer hover:text-[#1563DF]"
+                      >
+                        Apartment
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Villa
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Studio
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Commercial
+                      </p>
+                      <p class="py-2 px-3 cursor-pointer hover:text-[#1563DF]">
+                        Admin
+                      </p>
+                      <p
+                        class="pb-4 pt-2 px-3 cursor-pointer hover:text-[#1563DF]"
+                      >
+                        Medical
+                      </p>
+                    </div>
+                  </div>
+                  <!-- Btn -->
+                  <button
+                    class="w-[60px] h-[30px] flex items-center justify-center bg-[#123A4B] rounded-3xl text-white shadow-[0px_4px_4px_0px_#00000040]"
+                  >
+                    <span class="material-symbols-rounded">search</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Nav Search Overlay -->
+              <div
+                id="navSearchOverlay"
+                onclick="toggleRollDown('nav_search', 'navSearchOverlay')"
+                class="opacity-0 invisible transition-opacity ease-in-out duration-300 fixed inset-0 h-[100dvh] z-[21]"
+              ></div>
+            </div>
+            <!--  -->
+            <a
+              href="./sign-in.html"
+              class="xl:flex hidden items-center justify-center gap-2 border border-solid border-[#1D4265] rounded-full md:px-3 md:w-auto w-8"
+            >
+              <img
+                loading="lazy"
+                id="notifications"
+                src="./icons/user.svg"
+                alt="user"
+              />
+              <span data-i18n="Sign in" class="md:inline hidden text-sm"></span>
+            </a>
+
+            <button
+              class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
+            >
+              <p
+                data-i18n="Get The App"
+                class="md:text-sm text-xs text-white font-bold"
+              ></p>
+            </button>
+            <button
+              data-i18n="lang"
+              onclick="
+                changeLanguage(
+                  !localStorage.getItem('language') ||
+                    localStorage.getItem('language') === 'en'
+                    ? 'ar'
+                    : 'en',
+                )
+              "
+              class="xl:flex hidden items-center justify-center ltr:pb-1.5 rtl:pb-0 rounded-full bg-[#1D4265] text-sm text-white md:w-9 w-8 md:h-9 h-8"
+              style="box-shadow: 0px 4px 4px 0px #00000040"
+            ></button>
+            <a
+              href="./index.html"
+              class="md:hidden block absolute right-1/2 translate-x-1/2"
+            >
+              <img
+                loading="lazy"
+                src="./images/shary-logo.svg"
+                class="w-[110px] h-[30px]"
+                alt="logo"
+              />
+            </a>
+            <div class="xl:hidden flex items-center gap-1">
+              <a
+                href="./sign-in.html"
+                class="material-symbols-rounded font-light text-[#1D4265] md:text-4xl text-[32px]"
+                >account_circle</a
+              >
+              <button
+                onclick="expandCollapseNavbar()"
+                class="flex items-center justify-center rounded-full md:w-7 w-6 md:h-7 h-6"
+              >
+                <img
+                  src="./images/ic_twotone-menu.svg"
+                  alt="ic_twotone-menu.svg"
+                  id="openCloseIcon"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="md:hidden px-4 mt-5">
+          <div
+            class="border border-solid border-[#1D4265] text-[#1D4265] rounded-full py-2 px-5 flex items-center justify-between gap-4"
+          >
+            <p class="flex w-full items-center gap-2">
+              <span class="material-symbols-rounded text-xl leading-none"
+                >search</span
+              >
+              <input
+                class="font-medium text-xs w-full outline-none placeholder-[#1D4265] bg-transparent"
+                type="text"
+                name=""
+                id=""
+                placeholder="Area, compound,  Real Estate Developer"
+              />
+            </p>
+            <span
+              onclick="toggleFilterBar('open')"
+              class="material-symbols-rounded text-xl leading-none cursor-pointer"
+              >tune</span
+            >
+          </div>
+        </div>
+
+        <div
+          id="navItems"
+          class="xl:hidden opacity-0 bg-[#fff] w-full h-[100vh] overflow-y-scroll fixed transition-opacity duration-300 ease-in"
+        >
+          <div
+            class="flex flex-col justify-center gap-4 mt-4 font-medium text-sm text-[#1D4265]"
+          >
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/mdi_home.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./index.html"
+                data-i18n="home"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/Frame.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./properties-abroad.html"
+                data-i18n="Properties Abroad"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/healthicons_home-outline.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./sell.html"
+                data-i18n="Sell"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/carbon_blog.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./blogs.html"
+                data-i18n="Blogs"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/mdi_about-variant.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./about.html"
+                data-i18n="About"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/ri_chat-1-line.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./contact.html"
+                data-i18n="Contact"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/Vector.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./shary-card.html"
+                data-i18n="Shary Card"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/arcticons_jiocareers.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./careers.html"
+                data-i18n="Careers"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+
+            <div
+              class="bg-[#D9D9D9] justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/Vector (1).svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <a
+                href="./check-now.html"
+                data-i18n="Agents"
+                class="!w-full text-lg text-center flex items-center mt-2"
+              >
+              </a>
+            </div>
+            <div
+              class="bg-[#D9D9D9] mb-2 justify-center items-center m-auto text-start flex gap-4 rounded-[11px] w-[90%] py-4 ps-5"
+            >
+              <img
+                src="./icons/material-symbols_language.svg"
+                alt="home-icon"
+                class="w-8 h-8 object-contain"
+              />
+              <button
+                data-i18n="lang"
+                onclick="
+                  changeLanguage(
+                    !localStorage.getItem('language') ||
+                      localStorage.getItem('language') === 'en'
+                      ? 'ar'
+                      : 'en',
+                  )
+                "
+                class="!w-full text-lg text-center flex items-center mt-2"
+              ></button>
+            </div>
+            <p
+              class="font-medium flex justify-center w-full m-auto uppercase text-xs md:mb-3"
+              data-i18n="For Information"
+            ></p>
+            <div class="flex items-center justify-center gap-3">
+              <img
+                loading="lazy"
+                src="./icons/facebook.svg"
+                height="18"
+                width="9"
+                class="cursor-pointer"
+                alt="facebook"
+              />
+              <img
+                loading="lazy"
+                src="./icons/instagram.svg"
+                height="17"
+                width="17"
+                class="cursor-pointer"
+                alt="instagram"
+              />
+              <img
+                loading="lazy"
+                src="./icons/twitter.svg"
+                height="16"
+                width="17"
+                class="cursor-pointer"
+                alt="twitter"
+              />
+              <img
+                loading="lazy"
+                src="./icons/youtube.svg"
+                height="14"
+                width="22"
+                class="cursor-pointer"
+                alt="youtube"
+              />
+              <img
+                loading="lazy"
+                src="./icons/linkedIn.svg"
+                height="17"
+                width="19"
+                class="cursor-pointer"
+                alt="linkedIn"
+              />
+              <img
+                loading="lazy"
+                src="./icons/snapchat.svg"
+                height="18"
+                width="19"
+                class="cursor-pointer"
+                alt="snapchat"
+              />
+              <img
+                loading="lazy"
+                src="./icons/tiktok.svg"
+                height="18"
+                width="16"
+                class="cursor-pointer"
+                alt="tiktok"
+              />
+            </div>
+            <div class="mt-12 flex flex-col justify-between md:gap-10 gap-6">
+              <div class="flex flex-row justify-center">
+                <p
+                  class="font-medium uppercase text-xs md:mb-3"
+                  data-i18n="Contact us"
+                ></p>
+                <p class="font-medium text-xs">
+                  <span class="">: </span>
+                  <span>+1 890 123-52-61</span>
+                </p>
+              </div>
+              <div class="flex flex-row md:justify-start justify-center">
+                <p
+                  class="font-medium uppercase text-xs md:mb-3"
+                  data-i18n="Email"
+                ></p>
+                <p class="font-medium md:text-sm text-xs">
+                  <span class="">: </span>
+                  <span>info@shary.eg</span>
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-center items-center flex-col m-auto mt-8">
+              <p
+                class="whitespace-nowrap text-xs font-normal"
+                data-i18n="Download Our Application"
+              ></p>
+              <div class="flex justify-center gap-2 mt-3">
+                <a href="">
+                  <img
+                    loading="lazy"
+                    src="./icons/google-play.svg"
+                    class="w-[86px] h-[33px]"
+                    alt="google play"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    loading="lazy"
+                    src="./icons/app-store.svg"
+                    class="w-[86px] h-[33px]"
+                    alt="app store"
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              class="text-center mb-56 flex flex-col m-auto justify-center items-center"
+            >
+              <img
+                loading="lazy"
+                src="./images/shary-logo.svg"
+                class="w-36 m-auto"
+                alt="logo"
+              />
+              <p class="my-1 font-medium text-xs">Real Estate Company</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main
+      class="xl:pt-[70px] bg-gradient-to-r from-[#173A59] to-[#173A59] pt-24 pb-4 mb-10"
+    >
+      <!-- Scripts -->
+      <script>
+        // Download App popup
+        const popup = document.getElementById("appPopup");
+        const closeBtn = document.getElementById("closePopup");
+
+        if (localStorage.getItem("popupShown") === "true") {
+          popup.style.display = "none";
+        }
+
+        closeBtn.addEventListener("click", () => {
+          popup.style.display = "none";
+          localStorage.setItem("popupShown", "true");
+        });
+
+        // Privacy Policy popup
+        const popupTow = document.getElementById("appPopupTow");
+        const closeBtnTow = document.getElementById("closePopupTow");
+
+        if (localStorage.getItem("popupShownTow") === "true") {
+          popupTow.style.display = "none";
+        }
+
+        closeBtnTow.addEventListener("click", () => {
+          popupTow.style.display = "none";
+          localStorage.setItem("popupShownTow", "true");
+        });
+      </script>
+      <div
+        class="relative w-[100%] flex-shrink-0 h-[200px] md:mt-0 mt-16 m-auto justify-start items-end text-center flex md:h-[441px] sm:px-8 px-4 py-5 overflow-hidden"
+      >
+        <!-- Background -->
+        <div
+          class="absolute inset-0 bg-[url('/images/8ffe4f226cf54d312c0d01849fcc33e353e1f0e3.png')] bg-cover bg-center scale-110"
+        ></div>
+
+        <!-- Gradient -->
+        <div
+          class="absolute inset-0"
+          style="
+            background: linear-gradient(
+              to right,
+              #1d4265 15%,
+              rgba(29, 66, 101, 0.4) 50%,
+              transparent 100%
+            );
+          "
+        ></div>
+
+        <!-- Content -->
+        <div class="relative text-start z-10 h-full flex text-white">
+          <div class="h-full flex-col items-start justify-center flex">
+            <h2 class="md:text-[54px] text-[30px] font-[Prometo] text-center">
+              Shary Index Properties
+            </h2>
+            <p class="md:text-[22px] text-[14px] text-center">
+              Real Estate Market Indicator
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-4">
+        <div
+          id="tabs"
+          class="flex justify-center gap-3 m-auto justify-start overflow-x-auto whitespace-nowrap scrollbar-hide scroll-smooth snap-x snap-mandatory p-3 rounded-full"
+        >
+          <a
+            href="/SharyIndexProperties-id.html"
+            class="tab active px-6 py-2 text-[#ffffff] rounded-full"
+          >
+            New Cairo
+          </a>
+          <a
+            href="/SharyIndexProperties-id.html"
+            class="tab px-6 py-2 text-[#ffffff] rounded-full"
+          >
+            New Capital
+          </a>
+          <a
+            href="/SharyIndexProperties-id.html"
+            class="tab px-6 py-2 text-[#ffffff] rounded-full"
+          >
+            North Coast
+          </a>
+          <a
+            href="/SharyIndexProperties-id.html"
+            class="tab px-6 py-2 text-[#ffffff] rounded-full"
+          >
+            Sheikh Zayed
+          </a>
+          <a
+            href="/SharyIndexProperties-id.html"
+            class="tab px-6 py-2 text-[#ffffff] rounded-full"
+          >
+            6 October
+          </a>
+          <a
+            href="/SharyIndexProperties-id.html"
+            class="tab px-6 py-2 text-[#ffffff] rounded-full"
+          >
+            New Area
+          </a>
+          <a
+            href="/SharyIndexProperties-id.html"
+            class="tab px-6 py-2 text-[#ffffff] rounded-full"
+          >
+            New Area
+          </a>
+        </div>
+      </div>
+      <style>
+        .tab {
+          @apply relative px-6 py-2 rounded-full text-sm font-medium 
+             text-white/80 transition-all duration-300 whitespace-nowrap;
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Hover */
+        .tab:hover {
+          @apply text-white;
+          background: #1d4265;
+          transform: translateY(-1px);
+        }
+
+        /* Active button */
+        .tab.active {
+          background: linear-gradient(90deg, #1d4265, #1d4265);
+          color: white;
+          box-shadow:
+            0 4px 15px #1d4265,
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        /* Glow effect */
+        .tab.active::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 9999px;
+          background: #1d4265;
+          filter: blur(10px);
+          z-index: -1;
+        }
+
+        /* Hide scrollbar */
+        #tabs::-webkit-scrollbar {
+          display: none;
+        }
+      </style>
+      <script>
+        const slider = document.getElementById("tabs");
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener("mousedown", (e) => {
+          isDown = true;
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener("mouseleave", () => {
+          isDown = false;
+        });
+
+        slider.addEventListener("mouseup", () => {
+          isDown = false;
+        });
+
+        slider.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 2;
+          slider.scrollLeft = scrollLeft - walk;
+        });
+      </script>
+      <script>
+        const tabs = document.querySelectorAll(".tab");
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+          });
+        });
+      </script>
+
+      <div class="max-w-[1440px] mx-auto min-h-screen text-white md:p-6 p-2">
+        <div class="grid md:grid-cols-3 grid-cols-2 gap-2">
+          <!-- Card -->
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative md:flex hidden rounded-3xl overflow-hidden">
+            <!-- Image -->
+            <img
+              src="images/f907244db9ba3fe970a867e93791ca1afb26f028.jpg"
+              class="w-full md:h-[300px] h-[150px] object-cover"
+            />
+
+            <!-- Glass Overlay -->
+            <div class="absolute bottom-0 left-0 right-0">
+              <div
+                class="rounded-2xl md:py-4 py-2 md:px-6 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              >
+                <!-- Title -->
+                <h2 class="text-white md:text-xl text-sm mb-2">
+                  Properties in New Cairo
+                </h2>
+                <!-- Sub -->
+                <div
+                  class="flex items-center gap-2 text-white/80 md:text-sm text-xs"
+                >
+                  <img src="./images/Group copy.svg" alt="" />
+                  <p>View 120 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="rounded-xl flex justify-center mt-2 font-SemiBold m-auto md:py-2 py-2 md:px-8 px-2 border border-white/20 bg-white/10 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+        >
+          Load More
+        </button>
+      </div>
+      <!-- Get Action now -->
+      <div
+        class="bg-none mt-4 max-w-[1440px] m-auto xl:px-40 lg:px-20 md:px-10 sm:px-6 px-4"
+      >
+        <div
+          class="max-w-4xl bg-none m-auto sm:rounded-ss-xl sm:rounded-es-xl rounded-[32px]"
+        >
+          <div
+            class="bg-white md:max-w-lg sm:max-w-md mx-auto rounded-[30px] sm:py-10 md:px-10 p-6"
+          >
+            <p
+              class="capitalize sm:text-3xl ltr:sm:text-left rtl:sm:text-right text-center text-[#1D4265]"
+            >
+              <span data-i18n="Get"></span>
+              <span class="text-[#FCB424]" data-i18n="Action"></span>
+              <span data-i18n="now"></span>
+            </p>
+            <div class="manrope mt-6 flex flex-col sm:gap-6 gap-5">
+              <div class="grid grid-cols-2 gap-2.5 font-semibold text-center">
+                <div class="filter-input">
+                  <input checked type="radio" name="action type" id="buy" />
+                  <label
+                    class="cursor-pointer flex items-center justify-center md:text-base text-sm md:h-[54px] h-[44px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                    for="buy"
+                    >Buy</label
+                  >
+                </div>
+                <a
+                  href="./sell.html"
+                  class="cursor-pointer flex items-center justify-center md:text-base text-sm md:h-[54px] h-[44px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                  >Sell</a
+                >
+              </div>
+              <div>
+                <label
+                  class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+                  for="name"
+                >
+                  <span data-i18n="Name"></span>
+                  <span class="text-[#FF5151]">*</span>
+                </label>
+                <div class="relative">
+                  <span
+                    class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                    >account_circle</span
+                  >
+                  <input
+                    class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
+                    placeholder="Your name"
+                    type="text"
+                    name="name"
+                    id="name"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+                  for="phone"
+                >
+                  <span data-i18n="Phone"></span>
+                  <span class="text-[#FF5151]">*</span>
+                </label>
+                <div class="flex gap-2">
+                  <div class="relative z-[4]">
+                    <div
+                      onclick="openDropdownMenu('flag')"
+                      class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
+                    >
+                      <img
+                        loading="lazy"
+                        src="./icons/egy-flag.svg"
+                        alt="flag"
+                        class="md:w-[40px] w-[24px]"
+                      />
+                      <span
+                        class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
+                        >keyboard_arrow_down</span
+                      >
+                    </div>
+                    <div
+                      id="flag"
+                      onclick="openDropdownMenu('flag')"
+                      class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
+                    >
+                      <div class="cursor-pointer px-3 py-1 img-container">
+                        <img
+                          loading="lazy"
+                          src="./icons/egy-flag.svg"
+                          alt="flag"
+                          class="md:w-[42px] w-[25px] m-auto"
+                        />
+                      </div>
+                      <div class="cursor-pointer px-3 py-1 img-container">
+                        <img
+                          loading="lazy"
+                          src="./icons/egy-flag.svg"
+                          alt="flag"
+                          class="md:w-[42px] w-[25px] m-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative w-full">
+                    <span
+                      class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                      >tag</span
+                    >
+                    <input
+                      class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
+                      placeholder="Phone number"
+                      type="text"
+                      name="phone"
+                      id="phone"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="relative z-[1]">
+                <label
+                  class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+                >
+                  <span>Location</span>
+                  <span class="text-[#FF5151]">*</span>
+                </label>
+                <div
+                  onclick="openDropdownMenu('location')"
+                  class="dropdown-btn relative cursor-pointer sm:h-[54px] h-[42px] flex items-center gap-2 rounded-full sm:py-4 py-2.5 ps-5 sm:pe-5 pe-3 border border-solid border-[#E4E4E4] leading-5"
+                >
+                  <p class="sm:text-sm text-xs w-full truncate"></p>
+                  <span
+                    class="material-symbols-rounded text-sm leading-none text-[#5C6368]"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="location"
+                  onclick="openDropdownMenu('location')"
+                  class="dropdown-list w-full absolute sm:top-[86px] top-[72px] bg-white text-[#161E2D] font-semibold text-xs rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300"
+                  style="box-shadow: 0px 4px 4px 0px #00000040"
+                >
+                  <p class="pt-6 pb-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                    Apartment
+                  </p>
+                  <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                    Villa
+                  </p>
+                  <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                    Studio
+                  </p>
+                  <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                    Commercial
+                  </p>
+                  <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                    Admin
+                  </p>
+                  <p class="pb-6 pt-3 px-4 cursor-pointer hover:text-[#1563DF]">
+                    Medical
+                  </p>
+                </div>
+              </div>
+              <div>
+                <label
+                  class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
+                  for="message"
+                  data-i18n="Message"
+                ></label>
+                <textarea
+                  class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-[30px] resize-none py-4 px-5 leading-5"
+                  placeholder="Your message"
+                  name="message"
+                  id="message"
+                  rows="7"
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  class="mb-2.5 w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-3 leading-5 bg-[#1D4265] rounded-full"
+                  data-i18n="Submit"
+                ></button>
+                <button
+                  onclick="togglePopup('requestMeeting')"
+                  class="w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-2.5 leading-5 bg-[#1D4265] rounded-full flex items-center justify-center gap-2"
+                >
+                  <span class="material-symbols-rounded">groups</span>
+                  <p>Request Meeting</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Request Meeting -->
+        <div
+          id="requestMeeting"
+          class="fixed h-dvh inset-0 bg-[#00000040] z-[31] flex items-center justify-center p-4 opacity-0 invisible"
+        >
+          <div
+            class="bg-white rounded-[30px] md:px-10 md:py-7 p-5 w-[540px] max-w-full max-h-full shadow-[6px_6px_76.1px_0px_#00000040] overflow-y-auto"
+          >
+            <div class="flex items-center justify-between text-[#1D4265]">
+              <p class="md:text-xl text-sm font-medium">Request Meeting</p>
+              <span
+                onclick="togglePopup('requestMeeting')"
+                class="material-symbols-rounded cursor-pointer md:text-2xl text-xl flex shrink-0"
+                >cancel</span
+              >
+            </div>
+            <div
+              class="grid grid-cols-2 gap-2.5 font-semibold text-center manrope md:mt-5 mt-3"
+            >
+              <div class="filter-input">
+                <input checked type="radio" name="meeting type" id="zoom" />
+                <label
+                  class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                  for="zoom"
+                  >Zoom</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="radio" name="meeting type" id="physicalMeeting" />
+                <label
+                  class="cursor-pointer flex items-center justify-center md:text-base text-[13px] md:h-[54px] h-[36px] rounded-full border border-solid border-[#1D4265] bg-white text-[#1D4265]"
+                  for="physicalMeeting"
+                  >Physical Meeting</label
+                >
+              </div>
+            </div>
+            <div class="md:mt-6 mt-5 flex flex-col sm:gap-5 gap-4 manrope">
+              <div>
+                <label
+                  class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+                  for="meetingName"
+                  data-i18n="Name"
+                ></label>
+                <div class="relative">
+                  <span
+                    class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                    >account_circle</span
+                  >
+                  <input
+                    class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2.5 ps-10 pe-5 leading-5"
+                    placeholder="Your name"
+                    type="text"
+                    name="meetingName"
+                    id="meetingName"
+                  />
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <label
+                  class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+                  for="meetingPhone"
+                  data-i18n="Phone"
+                ></label>
+                <div class="flex gap-2">
+                  <div class="relative z-[4]">
+                    <div
+                      onclick="openDropdownMenu('requestMeetingFlag')"
+                      class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
+                    >
+                      <img
+                        loading="lazy"
+                        src="./icons/egy-flag.svg"
+                        alt="flag"
+                        class="md:w-[42px] w-[25px]"
+                      />
+                      <span
+                        class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
+                        >keyboard_arrow_down</span
+                      >
+                    </div>
+                    <div
+                      id="requestMeetingFlag"
+                      onclick="openDropdownMenu('requestMeetingFlag')"
+                      class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
+                    >
+                      <div class="cursor-pointer px-3 py-1 img-container">
+                        <img
+                          loading="lazy"
+                          src="./icons/egy-flag.svg"
+                          alt="flag"
+                          class="md:w-[42px] w-[25px] m-auto"
+                        />
+                      </div>
+                      <div class="cursor-pointer px-3 py-1 img-container">
+                        <img
+                          loading="lazy"
+                          src="./icons/egy-flag.svg"
+                          alt="flag"
+                          class="md:w-[42px] w-[25px] m-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full md:h-[54px] h-[42px] rounded-full border border-solid border-[#E4E4E4] text-sm px-4 flex items-center gap-2 overflow-hidden"
+                  >
+                    <span
+                      class="material-symbols-rounded text-lg text-[#A3ABB0] shrink-0"
+                      >tag</span
+                    >
+                    <input
+                      type="text"
+                      placeholder="Phone number"
+                      id="meetingPhone"
+                      name="meetingPhone"
+                      class="w-full h-full sm:text-sm text-xs outline-none"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+                  Select available dates
+                </p>
+                <div
+                  class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
+                >
+                  <div class="filter-input">
+                    <input checked type="checkbox" name="date1" id="date1" />
+                    <label
+                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="date1"
+                    >
+                      <p
+                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                      >
+                        SAT
+                      </p>
+                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                        22 FEB
+                      </p>
+                    </label>
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="date2" id="date2" />
+                    <label
+                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="date2"
+                    >
+                      <p
+                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                      >
+                        SAT
+                      </p>
+                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                        22 FEB
+                      </p>
+                    </label>
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="date3" id="date3" />
+                    <label
+                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="date3"
+                    >
+                      <p
+                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                      >
+                        SAT
+                      </p>
+                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                        22 FEB
+                      </p>
+                    </label>
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="date4" id="date4" />
+                    <label
+                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="date4"
+                    >
+                      <p
+                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                      >
+                        SAT
+                      </p>
+                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                        22 FEB
+                      </p>
+                    </label>
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="date5" id="date5" />
+                    <label
+                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="date5"
+                    >
+                      <p
+                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                      >
+                        SAT
+                      </p>
+                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                        22 FEB
+                      </p>
+                    </label>
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="date6" id="date6" />
+                    <label
+                      class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="date6"
+                    >
+                      <p
+                        class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                      >
+                        SAT
+                      </p>
+                      <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">
+                        22 FEB
+                      </p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+                  Available Time
+                </p>
+                <div
+                  class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
+                >
+                  <div class="filter-input">
+                    <input checked type="checkbox" name="time1" id="time1" />
+                    <label
+                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="time1"
+                      >10:00 AM</label
+                    >
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="time2" id="time2" />
+                    <label
+                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="time2"
+                      >10:00 AM</label
+                    >
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="time3" id="time3" />
+                    <label
+                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="time3"
+                      >10:00 AM</label
+                    >
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="time4" id="time4" />
+                    <label
+                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="time4"
+                      >10:00 AM</label
+                    >
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="time5" id="time5" />
+                    <label
+                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="time5"
+                      >10:00 AM</label
+                    >
+                  </div>
+                  <div class="filter-input">
+                    <input type="checkbox" name="time6" id="time6" />
+                    <label
+                      class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                      for="time6"
+                      >10:00 AM</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <button
+                onclick="togglePopup('requestMeeting')"
+                class="mt-3 bg-[#1D4265] rounded-[17px] sm:h-[54px] h-[40px] md:w-[195px] w-[140px] md:text-base text-sm m-auto text-white font-semibold"
+              >
+                Sumbit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Zoom Meeting -->
+    <div
+      id="zoomMeeting"
+      class="fixed h-dvh inset-0 bg-[#00000040] z-[31] flex items-center justify-center p-4 opacity-0 invisible"
+    >
+      <div
+        class="bg-white rounded-[30px] md:px-10 md:py-7 p-5 w-[540px] max-w-full max-h-full shadow-[6px_6px_76.1px_0px_#00000040] overflow-y-auto"
+      >
+        <div class="flex items-center justify-between text-[#1D4265]">
+          <p class="md:text-xl text-sm font-medium">Zoom Meeting</p>
+          <span
+            onclick="togglePopup('zoomMeeting')"
+            class="material-symbols-rounded cursor-pointer md:text-2xl text-xl flex shrink-0"
+            >cancel</span
+          >
+        </div>
+        <div class="md:mt-8 mt-4 flex flex-col sm:gap-5 gap-4 manrope">
+          <div>
+            <label
+              class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+              for="meetingName"
+              data-i18n="Name"
+            ></label>
+            <div class="relative">
+              <span
+                class="absolute top-1/2 ltr:left-4 rtl:right-4 -translate-y-1/2 material-symbols-rounded text-lg text-[#A3ABB0]"
+                >account_circle</span
+              >
+              <input
+                class="w-full sm:text-sm text-xs font-normal outline-none border border-solid border-[#E4E4E4] rounded-full sm:py-4 py-2 ps-10 pe-5 leading-5"
+                placeholder="Your name"
+                type="text"
+                name="meetingName"
+                id="meetingName"
+              />
+            </div>
+          </div>
+          <!--  -->
+          <div>
+            <label
+              class="block text-[#1D4265] sm:text-sm text-xs font-semibold md:mb-2 mb-1"
+              for="meetingPhone"
+              data-i18n="Phone"
+            ></label>
+            <div class="flex gap-2">
+              <div class="relative z-[4]">
+                <div
+                  onclick="openDropdownMenu('zoomMeetingFlag')"
+                  class="dropdown-btn cursor-pointer shrink-0 md:w-[93px] w-[60px] rounded-[45px] border border-solid border-[#E4E4E4] flex items-center justify-between gap-1 md:px-3 px-2 h-full"
+                >
+                  <img
+                    loading="lazy"
+                    src="./icons/egy-flag.svg"
+                    alt="flag"
+                    class="md:w-[42px] w-[25px]"
+                  />
+                  <span
+                    class="material-symbols-rounded text-[#5C6368] text-base flex leading-none"
+                    >keyboard_arrow_down</span
+                  >
+                </div>
+                <div
+                  id="zoomMeetingFlag"
+                  onclick="openDropdownMenu('zoomMeetingFlag')"
+                  class="dropdown-list flex flex-col w-full absolute left-0 md:top-14 top-12 bg-white text-[#161E2D] font-semibold text-sm rounded-2xl opacity-0 invisible transition-opacity ease-in-out duration-300 shadow-[0_4px_4px_0_rgba(0,0,0,0.2)]"
+                >
+                  <div class="cursor-pointer px-3 py-1 img-container">
+                    <img
+                      loading="lazy"
+                      src="./icons/egy-flag.svg"
+                      alt="flag"
+                      class="md:w-[42px] w-[25px] m-auto"
+                    />
+                  </div>
+                  <div class="cursor-pointer px-3 py-1 img-container">
+                    <img
+                      loading="lazy"
+                      src="./icons/egy-flag.svg"
+                      alt="flag"
+                      class="md:w-[42px] w-[25px] m-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="w-full md:h-[54px] h-[38px] rounded-full border border-solid border-[#E4E4E4] text-sm px-4 flex items-center gap-2 overflow-hidden"
+              >
+                <span
+                  class="material-symbols-rounded text-lg text-[#A3ABB0] shrink-0"
+                  >tag</span
+                >
+                <input
+                  type="text"
+                  placeholder="Phone number"
+                  id="meetingPhone"
+                  name="meetingPhone"
+                  class="w-full h-full sm:text-sm text-xs outline-none"
+                />
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div>
+            <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+              Select available dates
+            </p>
+            <div
+              class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
+            >
+              <div class="filter-input">
+                <input
+                  checked
+                  type="checkbox"
+                  name="zoomDate1"
+                  id="zoomDate1"
+                />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate1"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate2" id="zoomDate2" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate2"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate3" id="zoomDate3" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate3"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate4" id="zoomDate4" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate4"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate5" id="zoomDate5" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate5"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomDate6" id="zoomDate6" />
+                <label
+                  class="block rounded-[47px] text-[#1D4265] md:py-2.5 py-1 md:w-[102px] w-[72px] md:h-[60px] h-[34px] text-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomDate6"
+                >
+                  <p
+                    class="font-bold md:text-xl text-[11px] md:leading-[22px] leading-[12px]"
+                  >
+                    SAT
+                  </p>
+                  <p class="text-[#A3ABB0] md:text-[13px] text-[9px]">22 FEB</p>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div>
+            <p class="font-semibold text-[#1D4265] md:text-base text-xs">
+              Available Time
+            </p>
+            <div
+              class="md:mt-3 mt-1.5 flex md:gap-1.5 gap-1 hide-scroll overflow-auto"
+            >
+              <div class="filter-input">
+                <input
+                  checked
+                  type="checkbox"
+                  name="zoomTime1"
+                  id="zoomTime1"
+                />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime1"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime2" id="zoomTime2" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime2"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime3" id="zoomTime3" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime3"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime4" id="zoomTime4" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime4"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime5" id="zoomTime5" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime5"
+                  >10:00 AM</label
+                >
+              </div>
+              <div class="filter-input">
+                <input type="checkbox" name="zoomTime6" id="zoomTime6" />
+                <label
+                  class="rounded-[47px] text-[#1D4265] md:font-semibold font-medium md:w-[102px] w-[72px] md:text-base text-[11px] md:h-[60px] h-[34px] flex items-center justify-center cursor-pointer border border-solid border-[#E4E4E4]"
+                  for="zoomTime6"
+                  >10:00 AM</label
+                >
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <button
+            onclick="togglePopup('zoomMeeting')"
+            class="md:mt-3 mt-1 bg-[#1D4265] rounded-[17px] sm:h-[54px] h-[40px] md:w-[195px] w-[140px] md:text-base text-sm m-auto text-white font-semibold"
+          >
+            Sumbit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compare Bar -->
+    <div
+      id="compareNotification"
+      class="fixed z-[24] md:bottom-1 bottom-[82px] md:left-1/2 md:-translate-x-1/2 md:px-4 md:w-[100vw] md:ltr:right-1/2 md:rtl:left-1/2 ltr:right-4 rtl:left-4"
+    >
+      <div
+        class="manrope md:flex hidden flex-wrap justify-center items-center gap-10 font-medium w-fit m-auto bg-[#E7E7E7] p-4 rounded-[20px] shadow-[0px_4px_4px_0px_#00000040]"
+      >
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-rounded text-[30px] text-[#1D4265]"
+            >compare</span
+          >
+          <p class="text-lg text-[#1D4265] whitespace-nowrap">
+            2 Properties, 2 Compounds
+          </p>
+        </div>
+        <div class="shrink-0 flex gap-1.5 h-12">
+          <a
+            href="./compare.html"
+            class="h-full px-5 flex items-center justify-center bg-[#1D4265] rounded-[16px] text-white"
+            >Compare Now</a
+          >
+          <button
+            onclick="hideCompareNotification('compareNotification', event)"
+            class="h-full px-5 flex items-center justify-center text-[#1D4265] border border-solid border-[#1D4265] rounded-[16px]"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+      <!--  -->
+      <a
+        href="./compare.html"
+        class="md:hidden relative bg-[#1D4265] shadow-[0px_4px_4px_0px_#00000040] w-[66px] h-[66px] rounded-full flex flex-col gap-1 justify-center items-center cursor-pointer"
+      >
+        <p
+          class="absolute -top-1.5 ltr:right-0 rtl:left-0 w-6 h-6 bg-[#DA0000] rounded-full flex items-center justify-center"
+        >
+          <span class="text-[15px] font-extrabold manrope text-white">3</span>
+        </p>
+        <span class="material-symbols-rounded text-[34px] text-white"
+          >compare</span
+        >
+      </a>
+    </div>
+
+    <!-- Shary AI -->
+    <div
+      class="fixed z-30 md:ltr:right-6 md:rtl:left-6 md:bottom-6 bottom-0 md:w-auto w-full md:rounded-full md:bg-transparent bg-white md:shadow-none shadow-[0px_-1px_18.1px_0px_#00000029] md:p-0 py-2.5 sm:px-6 px-4 flex justify-between items-center"
+    >
+      <p
+        class="md:hidden capitalize text-xl font-medium leading-5 text-[#1D4265]"
+      >
+        <span data-i18n="Get"></span>
+        <span class="text-[#FCB424]" data-i18n="Action"></span>
+        <span class="block" data-i18n="now"></span>
+      </p>
+      <div class="flex gap-2">
+        <div
+          class="md:hidden w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#1D4265]"
+        >
+          <img
+            loading="lazy"
+            src="./icons/phone.svg"
+            class="w-5 h-5"
+            style="filter: brightness(0) invert(1)"
+            alt="phone"
+          />
+        </div>
+        <div
+          class="md:hidden w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#00DD3B]"
+        >
+          <img
+            loading="lazy"
+            src="./icons/offers-whatsapp-icon.svg"
+            class="w-6 h-6"
+            alt="whatsApp"
+          />
+        </div>
+        <div
+          class="relative md:w-[75px] md:h-[75px] w-[50px] h-[50px] z-[24] rounded-full shrink-0 flex items-center"
+        >
+          <div
+            id="openSharyAI"
+            onclick="toggleSharyAI('open')"
+            class="transition-all md:duration-700 duration-0 md:bg-none bg-gradient-to-b from-[#1D4265] to-[#4DBFB1] md:rounded-none rounded-full p-[1px]"
+          >
+            <div
+              class="md:w-[75px] md:h-[75px] w-[49px] h-[49px] md:bg-transparent bg-white md:p-0 p-3 bg-cover bg-no-repeat rounded-full cursor-pointer flex items-center justify-center shrink-0"
+              style="background-image: url(&quot;/images/SharyAI-bg.svg&quot;)"
+            >
+              <img loading="lazy" src="./icons/SharyAI.svg" alt="SharyAI" />
+            </div>
+          </div>
+          <div
+            id="closeSharyAI"
+            onclick="toggleSharyAI('close')"
+            class="opacity-0 z-[-1] select-none absolute transition-all md:duration-700 duration-0 bg-white w-full h-full cursor-pointer rounded-full flex items-center justify-center shadow-[0px_4px_4px_0px_#00000040]"
+          >
+            <span
+              class="material-symbols-rounded text-4xl"
+              style="
+                background: linear-gradient(180deg, #ffa920 0%, #1d4265 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+              >close</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="sharyAiChat"
+      class="fixed md:ltr:right-[114px] md:rtl:left-[114px] md:w-[395px] w-[100vw] md:bottom-6 bottom-0 md:h-[715px] h-[100dvh] xl:max-h-[calc(100vh-115px)] md:max-h-[calc(100vh-200px)] opacity-0 z-[-1] transition-all md:duration-700 duration-0"
+    >
+      <div
+        class="shadow-[0px_4px_4px_0px_#00000040] md:rounded-[44px] w-full h-full overflow-hidden"
+        style="
+          background: linear-gradient(163.52deg, #a3f5eb 3.1%, #ffffff 24.12%);
+        "
+      >
+        <!-- Chat Header -->
+        <div
+          class="relative bg-[#FFFFFF8A] h-[95px] flex md:items-center items-end justify-center rounded-bl-[32px] rounded-br-[32px]"
+          style="
+            backdrop-filter: blur(68.30000305175781px);
+            box-shadow: 0px 4px 7.2px 0px #0000001c;
+          "
+        >
+          <img
+            loading="lazy"
+            src="./icons/SharyAI.svg"
+            class="w-[65px]"
+            alt="SharyAI"
+          />
+          <button
+            onclick="toggleSharyAI('close')"
+            class="md:hidden absolute bottom-3 w-9 h-9 border border-solid border-[#EDEDED] rounded-full flex items-center justify-center ltr:left-7 rtl:right-7"
+            style="
+              background: linear-gradient(180deg, #1d4265 0%, #4dbfb1 100%);
+            "
+          >
+            <span
+              class="material-symbols-rounded font-normal leading-none text-white"
+              data-i18n="keyboard_arrow_left"
+            ></span>
+          </button>
+        </div>
+
+        <div class="overflow-y-auto h-[calc(100%-225px)]">
+          <!-- Titik Ceria -->
+          <div class="px-8 mt-4">
+            <div
+              class="h-[58px] flex gap-3 items-center px-2 rounded-[50px]"
+              style="
+                background: linear-gradient(90deg, #1d4265 0%, #4dbfb1 100%);
+              "
+            >
+              <div class="w-10 h-10 bg-[#FFFFFF33] rounded-full shrink-0"></div>
+              <div class="text-white">
+                <p class="font-medium leading-5">Titik Ceria</p>
+                <p class="text-[#FFFFFFCC] text-xs font-normal">Welcome</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <div class="manrope px-4">
+                <p class="text-[#111111] text-sm font-medium leading-5">
+                  Help me to find 5 potensial headlines for Finance Dashboard?
+                </p>
+                <div class="mt-2 flex gap-7">
+                  <p
+                    class="flex items-center gap-1 cursor-pointer text-[#7E8492]"
+                  >
+                    <span class="material-symbols-rounded text-base">edit</span>
+                    <span class="font-medium text-xs">Edit</span>
+                  </p>
+                  <p
+                    class="flex items-center gap-1 cursor-pointer text-[#7E8492]"
+                  >
+                    <span class="material-symbols-rounded text-base"
+                      >content_copy</span
+                    >
+                    <span class="font-medium text-xs">Copy</span>
+                  </p>
+                </div>
+              </div>
+              <div class="w-9 h-9 bg-[#00000020] rounded-full shrink-0"></div>
+            </div>
+          </div>
+
+          <!-- Messages -->
+          <div class="px-5 mt-7 manrope flex flex-col gap-2.5">
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div>
+                <p
+                  class="text-black text-[11px] font-semibold mb-1 leading-[16px]"
+                >
+                  Choose one:
+                </p>
+                <div class="flex flex-wrap gap-1">
+                  <div class="chat-choices">
+                    <input
+                      checked
+                      type="radio"
+                      name="chooseChat"
+                      id="choose1"
+                    />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose1"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose2" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose2"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose3" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose3"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose4" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose4"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat" id="choose5" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose5"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div>
+                <p
+                  class="text-black text-[11px] font-semibold mb-1 leading-[16px]"
+                >
+                  Choose one:
+                </p>
+                <div class="flex flex-wrap gap-1">
+                  <div class="chat-choices">
+                    <input
+                      checked
+                      type="radio"
+                      name="chooseChat2"
+                      id="choose6"
+                    />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose6"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                  <div class="chat-choices">
+                    <input type="radio" name="chooseChat2" id="choose7" />
+                    <label
+                      class="block text-xs font-semibold rounded-full p-[1px] text-black cursor-pointer leading-[16px] ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#1D4265] to-[#4DBFB1] select-none"
+                      for="choose7"
+                    >
+                      <p class="bg-white rounded-full py-[6px] px-2">
+                        Recidencial
+                      </p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div
+                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
+              >
+                <p class="text-xs text-[#1E1E1E]">
+                  1. "Stay On Top of Your Finances with Our Customizable Finance
+                  Dashboard"
+                </p>
+                <p
+                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
+                >
+                  <span class="material-symbols-rounded text-sm"
+                    >content_copy</span
+                  >
+                  <span class="text-[10px] cursor-pointer">Copy</span>
+                </p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div
+                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
+              >
+                <p class="text-xs text-[#1E1E1E]">
+                  1. "Stay On Top of Your Finances with Our Customizable Finance
+                  Dashboard"
+                </p>
+                <p
+                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
+                >
+                  <span class="material-symbols-rounded text-sm"
+                    >content_copy</span
+                  >
+                  <span class="text-[10px] cursor-pointer">Copy</span>
+                </p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="flex items-start gap-2">
+              <img
+                loading="lazy"
+                src="./icons/SharyAI.svg"
+                class="w-[50px] shrink-0"
+                alt="SharyAI"
+              />
+              <div
+                class="font-medium w-full border border-solid border-[#111111] rounded-[14px] ltr:rounded-tl-none rtl:rounded-tr-none py-2 px-4"
+              >
+                <p class="text-xs text-[#1E1E1E]">
+                  1. "Stay On Top of Your Finances with Our Customizable Finance
+                  Dashboard"
+                </p>
+                <p
+                  class="mt-0.5 flex items-center justify-end gap-0.5 text-[#7E8492]"
+                >
+                  <span class="material-symbols-rounded text-sm"
+                    >content_copy</span
+                  >
+                  <span class="text-[10px] cursor-pointer">Copy</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Input -->
+        <div class="manrope px-5 pb-6 pt-4">
+          <div
+            class="flex items-center gap-1 text-sm font-normal w-fit cursor-pointer mx-4 mb-2"
+          >
+            <span class="material-symbols-rounded text-base">autorenew</span>
+            <p class="text-[#191B23]">Reload Response</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div
+              class="p-[1px] rounded-[100px] w-full h-[58px]"
+              style="
+                background: linear-gradient(90deg, #1d4265 0%, #4dbfb1 100%);
+              "
+            >
+              <div
+                class="px-4 bg-white flex gap-1 items-center rounded-[100px] overflow-hidden h-full w-full"
+              >
+                <input
+                  type="text"
+                  class="h-full w-full outline-none text-sm font-medium"
+                  placeholder="Send a message..."
+                  name="chat"
+                  id="chat"
+                />
+                <button>
+                  <img
+                    loading="lazy"
+                    src="./icons/send-icon.svg"
+                    class="ltr:rotate-0 rtl:rotate-180"
+                    alt="send"
+                  />
+                </button>
+              </div>
+            </div>
+            <button>
+              <img
+                loading="lazy"
+                src="./icons/chatAI.svg"
+                class="shrink-0"
+                alt="chat AI"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="-mb-14">
+      <footer-component></footer-component>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+      function handleShareClick(event) {
+        event.stopPropagation();
+
+        const isMobile = window.innerWidth <= 768;
+        const menu = event.currentTarget.querySelector(".share-menu");
+
+        if (isMobile) {
+          // Toggle share menu visibility
+          menu.classList.toggle("invisible");
+          menu.classList.toggle("opacity-0");
+        } else {
+          // Just copy the link on desktop
+          copyLink();
+        }
+      }
+
+      function copyLink(event) {
+        if (event) event.stopPropagation();
+        const url = "http://127.0.0.1:5500/new-launch.html";
+        navigator.clipboard.writeText(url).then(() => {
+          alert("تم نسخ الرابط!");
+        });
+      }
+
+      // Close the share menu if clicking outside
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".share-menu").forEach((menu) => {
+          menu.classList.add("invisible", "opacity-0");
+        });
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      const items = document.querySelectorAll(".search-item");
+
+      searchInput.addEventListener("input", function () {
+        const searchValue = this.value.toLowerCase();
+
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(searchValue)) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
+    <script>
+      const container = document.getElementById("customSlider");
+      let scrollIndex = 0;
+      let slideCount = container.children.length;
+      let isScrolling = false; // Flag to prevent overlapping animations
+
+      function scrollToNext() {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        scrollIndex = (scrollIndex + 1) % slideCount;
+        const slideWidth = container.children[0].offsetWidth;
+        const scrollLeft = scrollIndex * slideWidth;
+
+        container.scrollTo({
+          left: scrollLeft,
+          behavior: "smooth",
+        });
+
+        // Reset flag after animation completes
+        setTimeout(() => {
+          isScrolling = false;
+        }, 1000);
+      }
+
+      // Handle manual scrolling to update index
+      container.addEventListener("scroll", () => {
+        if (isScrolling) return;
+
+        const slideWidth = container.children[0].offsetWidth;
+        scrollIndex = Math.round(container.scrollLeft / slideWidth);
+      });
+
+      // Start auto-scrolling
+      const interval = setInterval(scrollToNext, 4000);
+
+      // Pause on hover
+      container.addEventListener("mouseenter", () => clearInterval(interval));
+      container.addEventListener("mouseleave", () => {
+        interval = setInterval(scrollToNext, 4000);
+      });
+    </script>
+  </body>
+</html>
