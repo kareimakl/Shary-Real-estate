@@ -401,7 +401,7 @@
     </header>
     <!--- Limited Offer Section -->
     <div
-      class="relative block w-[100%] flex-shrink-0 h-[200px] md:h-[441px] sm:px-8 px-4 md:mt-16 mt-[156px] py-5 overflow-hidden"
+      class="relative block w-[100%] rounded-b-2xl flex-shrink-0 h-[200px] md:h-[441px] sm:px-8 px-4 md:mt-16 mt-[135px] py-5 overflow-hidden"
     >
       <!-- Background -->
       <div
@@ -422,36 +422,39 @@
       ></div>
 
       <!-- Content -->
-      <div class="relative z-10 flex h-full justify-between items-center">
+      <div
+        class="relative z-10 flex h-full justify-between md:items-center items-end"
+      >
         <div class="flex flex-col justify-between items-start h-full w-full">
-          <div class="flex flex-col md:justify-around  items-start h-full">
+          <div
+            class="flex flex-col md:justify-around items-start h-full justify-end"
+          >
             <p
-              class="lg:text-[54px] flex gap-1   flex-col font-stretch-95% w-8 text-[#08A69B] text-4xl "
+              class="lg:text-[54px] font-[500] flex gap-1 flex-col font-stretch-95% w-8 text-[#08A69B] text-4xl"
             >
               <span class="md:text-4xl font-stretch-normal text-xl"
                 >LIMITED</span
               >
               <span class="">OFFER</span>
-              
             </p>
             <div>
-              <p class="mt-2 text-white md:text-[14px] text-[8px]">
+              <p class="mt-2 text-white md:text-[14px] text-[10px]">
                 • Best-Priced Units in the Market
               </p>
 
-              <p class="mt-2 text-white md:text-[14px] text-[8px]">
+              <p class="mt-2 text-white md:text-[14px] text-[10px]">
                 • Prices Below Market Value
               </p>
             </div>
 
             <p
-              class="mt-1 flex  ml-2 text-white md:text-[14px] text-[8px]"
+              class="mt-2 text-center flex justify-content items-center text-white md:text-[14px] text-[8px]"
             >
-              <img src="images/Group.svg" class="inline-block w-4 h-4 mr-2" />
+              <img src="images/Group.svg" class="inline-block w-4 h-2" />
               30 Units Available
             </p>
           </div>
-    
+
           <img
             class="absolute md:top-auto md:w-[150px] w-[80px] sm:bottom-0 -bottom-4 sm:ltr:right-0 ltr:-right-4 md:translate-y-[-15%] translate-y-[5%] translate-x-[-40%]"
             src="images/Group 54.svg"
@@ -459,111 +462,107 @@
         </div>
       </div>
     </div>
-  <div class="mx-auto md:w-full overflow-y-scroll pt-4 flex flex-col justify-center items-center rounded-2xl max-w-2xl">
-  
-  <div
-        class="mt-2 manrope flex gap-2 text-xs font-medium hide-scroll overflow-x-auto"
+    <div
+      id="filtersScroll"
+      class="mt-2 mx-auto w-full max-w-[95%] md:max-w-[600px] justify-center items-center flex-col flex p-2 manrope gap-2 text-xs font-medium hide-scroll"
+    >
+      <div
+        class="mt-2 p-2 flex flex-nowrap gap-2 text-xs font-medium hide-scroll overflow-x-auto w-full"
       >
         <div class="filter-input">
-          <input type="checkbox" name="apartment" id="apartment2" />
+          <input type="checkbox" name="apartment" id="Ready" />
           <label
-            class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
-            for="apartment2"
+            class="block cursor-pointer rounded-full text-[15.92px] md:py-2 py-3 md:px-8 px-6 font-[700] shadow-[0_0_11.1px_0_rgba(0,0,0,0.25)] font-bold leading-4 border border-solid border-[#92929226] bg-[#FFFFFF] text-[#121212]"
+            for="Ready"
             >Ready</label
           >
         </div>
         <div class="filter-input">
           <input checked type="checkbox" name="villa" id="villa2" />
           <label
-            class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+            class="block cursor-pointer rounded-full text-[15.92px] md:py-2 py-3 md:px-8 px-6 font-[700] shadow-[0_0_11.1px_0_rgba(0,0,0,0.25)] font-bold leading-4 border border-solid border-[#92929226] bg-[#FFFFFF] text-[#121212]"
             for="villa2"
             >5%</label
           >
         </div>
-    
+
         <div class="filter-input">
           <input type="checkbox" name="townhouse" id="townhouse2" />
           <label
-            class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
+            class="block cursor-pointer rounded-full text-[15.92px] md:py-2 py-3 md:px-8 px-6 font-[700] shadow-[0_0_11.1px_0_rgba(0,0,0,0.25)] font-bold leading-4 border border-solid border-[#92929226] bg-[#FFFFFF] text-[#121212]"
             for="townhouse2"
             >10%</label
           >
         </div>
         <div class="filter-input">
-          <input type="checkbox" name="twinhouse" id="twinhouse2" />
+          <input type="checkbox" name="twinhouse" id="Deposit" />
           <label
-            class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
-            for="twinhouse2"
+            class="block cursor-pointer rounded-full text-[15.92px] md:py-2 py-3 md:px-8 px-6 font-[700] shadow-[0_0_11.1px_0_rgba(0,0,0,0.25)] font-bold leading-4 border border-solid border-[#92929226] bg-[#FFFFFF] text-[#121212]"
+            for="Deposit"
             >Deposit</label
           >
         </div>
         <div class="filter-input">
-          <input type="checkbox" name="twinhouse" id="twinhouse2" />
+          <input type="checkbox" name="twinhouse" id="Price" />
           <label
-            class="block rounded-full py-2 px-4 leading-4 border border-solid border-[#92929226] bg-[#FAFAFA] text-[#121212]"
-            for="twinhouse2"
+            class="block cursor-pointer rounded-full text-[15.92px] md:py-2 py-3 md:px-8 px-6 font-[700] shadow-[0_0_11.1px_0_rgba(0,0,0,0.25)] font-bold leading-4 border border-solid border-[#92929226] bg-[#FFFFFF] text-[#121212]"
+            for="Price"
             >Price</label
           >
         </div>
-
-      
       </div>
 
-  <!-- Slider -->
-  <div class="flex mt-4 items-center gap-4 w-[95%]">
-    <span class="text-gray-500 font-medium">1M</span>
+      <!-- Slider -->
+      <div class="flex mt-4 items-center gap-4 w-[95%]">
+        <span class="text-gray-500 font-medium">1M</span>
 
-    <input
-      id="range"
-      type="range"
-      min="1"
-      max="100"
-      value="20"
-      class="w-full h-2 bg-[#1D4265] rounded-lg appearance-none cursor-pointer
-      [&::-webkit-slider-thumb]:appearance-none
-      [&::-webkit-slider-thumb]:w-4
-      [&::-webkit-slider-thumb]:h-4
-      [&::-webkit-slider-thumb]:bg-white
-      [&::-webkit-slider-thumb]:border-2
-      [&::-webkit-slider-thumb]:border-[#1D4265]
-      [&::-webkit-slider-thumb]:rounded-full
-      [&::-webkit-slider-thumb]:shadow-md"
-    />
+        <input
+          id="range"
+          type="range"
+          min="1"
+          max="100"
+          value="20"
+          class="w-full h-2 appearance-none cursor-pointer bg-gray-300 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:shadow-[0_0_0_3px_rgba(29,66,101,1)] [&::-webkit-slider-thumb]:border-[#1D4265] [&::-webkit-slider-thumb]:rounded-full"
+        />
+        <span class="text-gray-500 font-medium">100M</span>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById("filtersScroll");
+      const active = container.querySelector("input:checked");
 
-    <span class="text-gray-500 font-medium">100M</span>
-  </div>
+      if (active) {
+        const label = container.querySelector(`label[for="${active.id}"]`);
 
-  <!-- Value
-  <div class="mt-4 text-lg font-semibold text-[#1D4265]">
-    Value: <span id="value">20</span>M
-  </div> -->
+        const labelRect = label.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
 
-</div>
+        const offset =
+          labelRect.left -
+          containerRect.left -
+          containerRect.width / 2 +
+          labelRect.width / 2;
 
-<script>
-  // Tabs Logic
-  const tabs = document.querySelectorAll(".tab");
+        container.scrollBy({
+          left: offset,
+          behavior: "smooth",
+        });
+      }
+    </script>
+    <script>
+      const range = document.getElementById("range");
 
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((t) => {
-        t.classList.remove("bg-[#1D4265]", "text-white", "shadow-md");
-        t.classList.add("bg-gray-200", "text-gray-700");
-      });
+      function updateRange() {
+        const value =
+          ((range.value - range.min) / (range.max - range.min)) * 100;
 
-      tab.classList.remove("bg-gray-200", "text-gray-700");
-      tab.classList.add("bg-[#1D4265]", "text-white", "shadow-md");
-    });
-  });
+        range.style.background = `linear-gradient(to right, #1D4265 ${value}%, #08A69B63 ${value}%)`;
+      }
 
-  // Slider Logic
-  const range = document.getElementById("range");
-  const value = document.getElementById("value");
+      range.addEventListener("input", updateRange);
 
-  range.addEventListener("input", () => {
-    value.textContent = range.value;
-  });
-</script>
+      updateRange();
+    </script>
     <!-- Fixed Filter -->
     <div
       id="filterBar"
@@ -1324,7 +1323,6 @@
     <main
       class="xl:pt-[10px] pt-2 sm:mb-24 mb-12 max-w-[1440px] mx-auto xl:px-40 md:px-10 sm:px-6 px-4"
     >
-    
       <div
         class="lg:mt-10 mt-8 manrope grid lg:grid-cols-1 grid-cols-1 xl:gap-6 gap-4"
       >
@@ -1333,10 +1331,9 @@
           <div class="grid sm:grid-cols-3 grid-cols-1 gap-4">
             <a
               href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
+              class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
-              <div class="relative">
+              <div class="md:flex hidden relative">
                 <img
                   loading="lazy"
                   src="./images/recommend.svg"
@@ -1359,65 +1356,99 @@
                   </p>
                 </div>
               </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+              <div class="md:p-4 p-3 flex gap-2 justify-between flex-row">
+                <div class="md:hidden flex">
+                  <img
+                    loading="lazy"
+                    src="./images/recommend.svg"
+                    class="w-[117px] h-[125px] object-cover rounded-[15px]"
+                    alt="recommend"
+                  />
+                </div>
+                <div class="flex flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-1">
                     <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
+                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      data-i18n="Apartment - O West Orascom"
+                    ></p>
+                    <div class="flex md:hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
+                    </div>
                   </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
+                  <div class="flex justify-between text-center items-center">
+                    <div
+                      class="flex gap-2 text-center items-center justify-center"
+                    >
+                      <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+                      <p
+                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                      >
+                        10,785,852
+                        <span class="text-[#161E2D] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </p>
+                    </div>
+                    <p
+                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                    >
+                      11,350,000
                     </p>
                   </div>
                   <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
                   >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
+                    <div class="md:flex hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
                     </div>
-
                     <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
                     >
-                      750,000 <span class="text-base font-medium">EGP</span>
+                      <div
+                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                      >
+                        Save
+                      </div>
+
+                      <div
+                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      >
+                        750,000
+                        <span class="text-[#fff] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
+              </div>
+              <div class="flex px-4 py-2 flex-row items-center justify-between">
+                <div class="flex items-center justify-between xl:gap-4 gap-2">
                   <div class="flex flex-col justify-center items-start">
                     <div
                       class="flex gap-2 text-center items-center justify-center"
                     >
                       <img
                         src="/images/lets-icons_view.svg"
-                        class="mt-1"
+                        class="mt-1 w-[16px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         13 are watcing now
                       </p>
@@ -1427,47 +1458,46 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1"
+                        class="mt-1 w-[14px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         3 days and 4 hours left
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
+                <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/phone.svg"
+                    alt="phone"
+                  />
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/whatsapp.svg"
+                    alt="whatsapp"
+                  />
+                  <div
+                    class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
+                  >
+                    <p class="text-[#fff] text-sm font-[800]">View Details</p>
                   </div>
                 </div>
               </div>
             </a>
             <a
               href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
+              class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
-              <div class="relative">
+              <div class="md:flex hidden relative">
                 <img
                   loading="lazy"
                   src="./images/recommend.svg"
@@ -1490,65 +1520,99 @@
                   </p>
                 </div>
               </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+              <div class="md:p-4 p-3 flex gap-2 justify-between flex-row">
+                <div class="md:hidden flex">
+                  <img
+                    loading="lazy"
+                    src="./images/recommend.svg"
+                    class="w-[117px] h-[125px] object-cover rounded-[15px]"
+                    alt="recommend"
+                  />
+                </div>
+                <div class="flex flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-1">
                     <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
+                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      data-i18n="Apartment - O West Orascom"
+                    ></p>
+                    <div class="flex md:hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
+                    </div>
                   </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
+                  <div class="flex justify-between text-center items-center">
+                    <div
+                      class="flex gap-2 text-center items-center justify-center"
+                    >
+                      <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+                      <p
+                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                      >
+                        10,785,852
+                        <span class="text-[#161E2D] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </p>
+                    </div>
+                    <p
+                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                    >
+                      11,350,000
                     </p>
                   </div>
                   <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
                   >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
+                    <div class="md:flex hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
                     </div>
-
                     <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
                     >
-                      750,000 <span class="text-base font-medium">EGP</span>
+                      <div
+                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                      >
+                        Save
+                      </div>
+
+                      <div
+                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      >
+                        750,000
+                        <span class="text-[#fff] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
+              </div>
+              <div class="flex px-4 py-2 flex-row items-center justify-between">
+                <div class="flex items-center justify-between xl:gap-4 gap-2">
                   <div class="flex flex-col justify-center items-start">
                     <div
                       class="flex gap-2 text-center items-center justify-center"
                     >
                       <img
                         src="/images/lets-icons_view.svg"
-                        class="mt-1"
+                        class="mt-1 w-[16px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         13 are watcing now
                       </p>
@@ -1558,47 +1622,46 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1"
+                        class="mt-1 w-[14px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         3 days and 4 hours left
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
+                <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/phone.svg"
+                    alt="phone"
+                  />
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/whatsapp.svg"
+                    alt="whatsapp"
+                  />
+                  <div
+                    class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
+                  >
+                    <p class="text-[#fff] text-sm font-[800]">View Details</p>
                   </div>
                 </div>
               </div>
             </a>
             <a
               href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
+              class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
-              <div class="relative">
+              <div class="md:flex hidden relative">
                 <img
                   loading="lazy"
                   src="./images/recommend.svg"
@@ -1621,65 +1684,99 @@
                   </p>
                 </div>
               </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+              <div class="md:p-4 p-3 flex gap-2 justify-between flex-row">
+                <div class="md:hidden flex">
+                  <img
+                    loading="lazy"
+                    src="./images/recommend.svg"
+                    class="w-[117px] h-[125px] object-cover rounded-[15px]"
+                    alt="recommend"
+                  />
+                </div>
+                <div class="flex flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-1">
                     <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
+                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      data-i18n="Apartment - O West Orascom"
+                    ></p>
+                    <div class="flex md:hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
+                    </div>
                   </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
+                  <div class="flex justify-between text-center items-center">
+                    <div
+                      class="flex gap-2 text-center items-center justify-center"
+                    >
+                      <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+                      <p
+                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                      >
+                        10,785,852
+                        <span class="text-[#161E2D] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </p>
+                    </div>
+                    <p
+                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                    >
+                      11,350,000
                     </p>
                   </div>
                   <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
                   >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
+                    <div class="md:flex hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
                     </div>
-
                     <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
                     >
-                      750,000 <span class="text-base font-medium">EGP</span>
+                      <div
+                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                      >
+                        Save
+                      </div>
+
+                      <div
+                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      >
+                        750,000
+                        <span class="text-[#fff] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
+              </div>
+              <div class="flex px-4 py-2 flex-row items-center justify-between">
+                <div class="flex items-center justify-between xl:gap-4 gap-2">
                   <div class="flex flex-col justify-center items-start">
                     <div
                       class="flex gap-2 text-center items-center justify-center"
                     >
                       <img
                         src="/images/lets-icons_view.svg"
-                        class="mt-1"
+                        class="mt-1 w-[16px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         13 are watcing now
                       </p>
@@ -1689,47 +1786,46 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1"
+                        class="mt-1 w-[14px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         3 days and 4 hours left
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
+                <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/phone.svg"
+                    alt="phone"
+                  />
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/whatsapp.svg"
+                    alt="whatsapp"
+                  />
+                  <div
+                    class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
+                  >
+                    <p class="text-[#fff] text-sm font-[800]">View Details</p>
                   </div>
                 </div>
               </div>
             </a>
             <a
               href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
+              class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
-              <div class="relative">
+              <div class="md:flex hidden relative">
                 <img
                   loading="lazy"
                   src="./images/recommend.svg"
@@ -1752,65 +1848,99 @@
                   </p>
                 </div>
               </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+              <div class="md:p-4 p-3 flex gap-2 justify-between flex-row">
+                <div class="md:hidden flex">
+                  <img
+                    loading="lazy"
+                    src="./images/recommend.svg"
+                    class="w-[117px] h-[125px] object-cover rounded-[15px]"
+                    alt="recommend"
+                  />
+                </div>
+                <div class="flex flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-1">
                     <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
+                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      data-i18n="Apartment - O West Orascom"
+                    ></p>
+                    <div class="flex md:hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
+                    </div>
                   </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
+                  <div class="flex justify-between text-center items-center">
+                    <div
+                      class="flex gap-2 text-center items-center justify-center"
+                    >
+                      <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+                      <p
+                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                      >
+                        10,785,852
+                        <span class="text-[#161E2D] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </p>
+                    </div>
+                    <p
+                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                    >
+                      11,350,000
                     </p>
                   </div>
                   <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
                   >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
+                    <div class="md:flex hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
                     </div>
-
                     <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
                     >
-                      750,000 <span class="text-base font-medium">EGP</span>
+                      <div
+                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                      >
+                        Save
+                      </div>
+
+                      <div
+                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      >
+                        750,000
+                        <span class="text-[#fff] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
+              </div>
+              <div class="flex px-4 py-2 flex-row items-center justify-between">
+                <div class="flex items-center justify-between xl:gap-4 gap-2">
                   <div class="flex flex-col justify-center items-start">
                     <div
                       class="flex gap-2 text-center items-center justify-center"
                     >
                       <img
                         src="/images/lets-icons_view.svg"
-                        class="mt-1"
+                        class="mt-1 w-[16px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         13 are watcing now
                       </p>
@@ -1820,47 +1950,46 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1"
+                        class="mt-1 w-[14px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         3 days and 4 hours left
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
+                <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/phone.svg"
+                    alt="phone"
+                  />
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/whatsapp.svg"
+                    alt="whatsapp"
+                  />
+                  <div
+                    class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
+                  >
+                    <p class="text-[#fff] text-sm font-[800]">View Details</p>
                   </div>
                 </div>
               </div>
             </a>
             <a
               href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
+              class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
-              <div class="relative">
+              <div class="md:flex hidden relative">
                 <img
                   loading="lazy"
                   src="./images/recommend.svg"
@@ -1883,65 +2012,99 @@
                   </p>
                 </div>
               </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+              <div class="md:p-4 p-3 flex gap-2 justify-between flex-row">
+                <div class="md:hidden flex">
+                  <img
+                    loading="lazy"
+                    src="./images/recommend.svg"
+                    class="w-[117px] h-[125px] object-cover rounded-[15px]"
+                    alt="recommend"
+                  />
+                </div>
+                <div class="flex flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-1">
                     <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
+                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      data-i18n="Apartment - O West Orascom"
+                    ></p>
+                    <div class="flex md:hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
+                    </div>
                   </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
+                  <div class="flex justify-between text-center items-center">
+                    <div
+                      class="flex gap-2 text-center items-center justify-center"
+                    >
+                      <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+                      <p
+                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                      >
+                        10,785,852
+                        <span class="text-[#161E2D] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </p>
+                    </div>
+                    <p
+                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                    >
+                      11,350,000
                     </p>
                   </div>
                   <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
                   >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
+                    <div class="md:flex hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
                     </div>
-
                     <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
                     >
-                      750,000 <span class="text-base font-medium">EGP</span>
+                      <div
+                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                      >
+                        Save
+                      </div>
+
+                      <div
+                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      >
+                        750,000
+                        <span class="text-[#fff] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
+              </div>
+              <div class="flex px-4 py-2 flex-row items-center justify-between">
+                <div class="flex items-center justify-between xl:gap-4 gap-2">
                   <div class="flex flex-col justify-center items-start">
                     <div
                       class="flex gap-2 text-center items-center justify-center"
                     >
                       <img
                         src="/images/lets-icons_view.svg"
-                        class="mt-1"
+                        class="mt-1 w-[16px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         13 are watcing now
                       </p>
@@ -1951,47 +2114,46 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1"
+                        class="mt-1 w-[14px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         3 days and 4 hours left
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
+                <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/phone.svg"
+                    alt="phone"
+                  />
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/whatsapp.svg"
+                    alt="whatsapp"
+                  />
+                  <div
+                    class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
+                  >
+                    <p class="text-[#fff] text-sm font-[800]">View Details</p>
                   </div>
                 </div>
               </div>
             </a>
             <a
               href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
+              class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
-              <div class="relative">
+              <div class="md:flex hidden relative">
                 <img
                   loading="lazy"
                   src="./images/recommend.svg"
@@ -2014,65 +2176,99 @@
                   </p>
                 </div>
               </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+              <div class="md:p-4 p-3 flex gap-2 justify-between flex-row">
+                <div class="md:hidden flex">
+                  <img
+                    loading="lazy"
+                    src="./images/recommend.svg"
+                    class="w-[117px] h-[125px] object-cover rounded-[15px]"
+                    alt="recommend"
+                  />
+                </div>
+                <div class="flex flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-1">
                     <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
+                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      data-i18n="Apartment - O West Orascom"
+                    ></p>
+                    <div class="flex md:hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
+                    </div>
                   </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
+                  <div class="flex justify-between text-center items-center">
+                    <div
+                      class="flex gap-2 text-center items-center justify-center"
+                    >
+                      <img src="/images/ep_coin.svg" class="mt-1" alt="" />
+                      <p
+                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                      >
+                        10,785,852
+                        <span class="text-[#161E2D] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </p>
+                    </div>
+                    <p
+                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                    >
+                      11,350,000
                     </p>
                   </div>
                   <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
                   >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
+                    <div class="md:flex hidden items-center gap-1">
+                      <img
+                        loading="lazy"
+                        src="/images/Group (1).svg"
+                        alt="bed"
+                      />
+                      <p class="md:text-sm text-xs text-[#5C6368]">
+                        <span class="font-light" data-i18n="Appartment"></span>
+                      </p>
                     </div>
-
                     <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
                     >
-                      750,000 <span class="text-base font-medium">EGP</span>
+                      <div
+                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                      >
+                        Save
+                      </div>
+
+                      <div
+                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                      >
+                        750,000
+                        <span class="text-[#fff] md:text-sm font-bold"
+                          >EGP</span
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
+              </div>
+              <div class="flex px-4 py-2 flex-row items-center justify-between">
+                <div class="flex items-center justify-between xl:gap-4 gap-2">
                   <div class="flex flex-col justify-center items-start">
                     <div
                       class="flex gap-2 text-center items-center justify-center"
                     >
                       <img
                         src="/images/lets-icons_view.svg"
-                        class="mt-1"
+                        class="mt-1 w-[16px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         13 are watcing now
                       </p>
@@ -2082,823 +2278,37 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1"
+                        class="mt-1 w-[14px]"
                         alt=""
                       />
                       <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
+                        class="mt-1 text-[#5C6368] md:text-[12px] text-xs font-light"
                       >
                         3 days and 4 hours left
                       </p>
                     </div>
                   </div>
+                </div>
 
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            >
-              <div class="relative">
-                <img
-                  loading="lazy"
-                  src="./images/recommend.svg"
-                  class="w-full lg:h-auto md:h-48 h-40 object-cover rounded-tl-2xl rounded-tr-2xl"
-                  alt="recommend"
-                />
-                <div
-                  class="absolute top-3 rtl:left-2.5 ltr:right-2.5 bg-[#1D4265] py-1.5 px-3 rounded-full"
-                >
-                  <p class="text-xs font-semibold text-white leading-4">-5%</p>
-                </div>
-                <div
-                  class="absolute bottom-0 max-w-full py-2.5 md:px-4 px-2 flex items-center gap-1 text-white"
-                >
-                  <span class="material-symbols-rounded md:text-base text-sm"
-                    >location_on</span
-                  >
-                  <p class="md:text-sm text-xs truncate">
-                    O West Orascom, 6th of October City, Egypt
-                  </p>
-                </div>
-              </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
+                <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/phone.svg"
+                    alt="phone"
+                  />
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[25px] cursor-pointer"
+                    src="./icons/whatsapp.svg"
+                    alt="whatsapp"
+                  />
                   <div
-                    class="flex gap-2 text-center items-center justify-center"
+                    class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
                   >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
-                    <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
-                  </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
-                    </p>
-                  </div>
-                  <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
-                  >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
-                    </div>
-
-                    <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
-                    >
-                      750,000 <span class="text-base font-medium">EGP</span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
-                  <div class="flex flex-col justify-center items-start">
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/lets-icons_view.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        13 are watcing now
-                      </p>
-                    </div>
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/mingcute_time-line.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        3 days and 4 hours left
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            >
-              <div class="relative">
-                <img
-                  loading="lazy"
-                  src="./images/recommend.svg"
-                  class="w-full lg:h-auto md:h-48 h-40 object-cover rounded-tl-2xl rounded-tr-2xl"
-                  alt="recommend"
-                />
-                <div
-                  class="absolute top-3 rtl:left-2.5 ltr:right-2.5 bg-[#1D4265] py-1.5 px-3 rounded-full"
-                >
-                  <p class="text-xs font-semibold text-white leading-4">-5%</p>
-                </div>
-                <div
-                  class="absolute bottom-0 max-w-full py-2.5 md:px-4 px-2 flex items-center gap-1 text-white"
-                >
-                  <span class="material-symbols-rounded md:text-base text-sm"
-                    >location_on</span
-                  >
-                  <p class="md:text-sm text-xs truncate">
-                    O West Orascom, 6th of October City, Egypt
-                  </p>
-                </div>
-              </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
-                    <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
-                  </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
-                    </p>
-                  </div>
-                  <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
-                  >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
-                    </div>
-
-                    <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
-                    >
-                      750,000 <span class="text-base font-medium">EGP</span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
-                  <div class="flex flex-col justify-center items-start">
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/lets-icons_view.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        13 are watcing now
-                      </p>
-                    </div>
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/mingcute_time-line.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        3 days and 4 hours left
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            >
-              <div class="relative">
-                <img
-                  loading="lazy"
-                  src="./images/recommend.svg"
-                  class="w-full lg:h-auto md:h-48 h-40 object-cover rounded-tl-2xl rounded-tr-2xl"
-                  alt="recommend"
-                />
-                <div
-                  class="absolute top-3 rtl:left-2.5 ltr:right-2.5 bg-[#1D4265] py-1.5 px-3 rounded-full"
-                >
-                  <p class="text-xs font-semibold text-white leading-4">-5%</p>
-                </div>
-                <div
-                  class="absolute bottom-0 max-w-full py-2.5 md:px-4 px-2 flex items-center gap-1 text-white"
-                >
-                  <span class="material-symbols-rounded md:text-base text-sm"
-                    >location_on</span
-                  >
-                  <p class="md:text-sm text-xs truncate">
-                    O West Orascom, 6th of October City, Egypt
-                  </p>
-                </div>
-              </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
-                    <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
-                  </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
-                    </p>
-                  </div>
-                  <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
-                  >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
-                    </div>
-
-                    <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
-                    >
-                      750,000 <span class="text-base font-medium">EGP</span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
-                  <div class="flex flex-col justify-center items-start">
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/lets-icons_view.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        13 are watcing now
-                      </p>
-                    </div>
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/mingcute_time-line.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        3 days and 4 hours left
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            >
-              <div class="relative">
-                <img
-                  loading="lazy"
-                  src="./images/recommend.svg"
-                  class="w-full lg:h-auto md:h-48 h-40 object-cover rounded-tl-2xl rounded-tr-2xl"
-                  alt="recommend"
-                />
-                <div
-                  class="absolute top-3 rtl:left-2.5 ltr:right-2.5 bg-[#1D4265] py-1.5 px-3 rounded-full"
-                >
-                  <p class="text-xs font-semibold text-white leading-4">-5%</p>
-                </div>
-                <div
-                  class="absolute bottom-0 max-w-full py-2.5 md:px-4 px-2 flex items-center gap-1 text-white"
-                >
-                  <span class="material-symbols-rounded md:text-base text-sm"
-                    >location_on</span
-                  >
-                  <p class="md:text-sm text-xs truncate">
-                    O West Orascom, 6th of October City, Egypt
-                  </p>
-                </div>
-              </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
-                    <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
-                  </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
-                    </p>
-                  </div>
-                  <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
-                  >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
-                    </div>
-
-                    <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
-                    >
-                      750,000 <span class="text-base font-medium">EGP</span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
-                  <div class="flex flex-col justify-center items-start">
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/lets-icons_view.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        13 are watcing now
-                      </p>
-                    </div>
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/mingcute_time-line.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        3 days and 4 hours left
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            >
-              <div class="relative">
-                <img
-                  loading="lazy"
-                  src="./images/recommend.svg"
-                  class="w-full lg:h-auto md:h-48 h-40 object-cover rounded-tl-2xl rounded-tr-2xl"
-                  alt="recommend"
-                />
-                <div
-                  class="absolute top-3 rtl:left-2.5 ltr:right-2.5 bg-[#1D4265] py-1.5 px-3 rounded-full"
-                >
-                  <p class="text-xs font-semibold text-white leading-4">-5%</p>
-                </div>
-                <div
-                  class="absolute bottom-0 max-w-full py-2.5 md:px-4 px-2 flex items-center gap-1 text-white"
-                >
-                  <span class="material-symbols-rounded md:text-base text-sm"
-                    >location_on</span
-                  >
-                  <p class="md:text-sm text-xs truncate">
-                    O West Orascom, 6th of October City, Egypt
-                  </p>
-                </div>
-              </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
-                    <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
-                  </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
-                    </p>
-                  </div>
-                  <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
-                  >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
-                    </div>
-
-                    <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
-                    >
-                      750,000 <span class="text-base font-medium">EGP</span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
-                  <div class="flex flex-col justify-center items-start">
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/lets-icons_view.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        13 are watcing now
-                      </p>
-                    </div>
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/mingcute_time-line.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        3 days and 4 hours left
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./inside-project-lo.html"
-              class="rounded-2xl lg:w-full shrink-0"
-              style="box-shadow: 0px 4px 4px 0px #00000040"
-            >
-              <div class="relative">
-                <img
-                  loading="lazy"
-                  src="./images/recommend.svg"
-                  class="w-full lg:h-auto md:h-48 h-40 object-cover rounded-tl-2xl rounded-tr-2xl"
-                  alt="recommend"
-                />
-                <div
-                  class="absolute top-3 rtl:left-2.5 ltr:right-2.5 bg-[#1D4265] py-1.5 px-3 rounded-full"
-                >
-                  <p class="text-xs font-semibold text-white leading-4">-5%</p>
-                </div>
-                <div
-                  class="absolute bottom-0 max-w-full py-2.5 md:px-4 px-2 flex items-center gap-1 text-white"
-                >
-                  <span class="material-symbols-rounded md:text-base text-sm"
-                    >location_on</span
-                  >
-                  <p class="md:text-sm text-xs truncate">
-                    O West Orascom, 6th of October City, Egypt
-                  </p>
-                </div>
-              </div>
-              <div class="md:p-4 p-3">
-                <p
-                  class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
-                  data-i18n="Apartment - O West Orascom"
-                ></p>
-                <div class="flex justify-between text-center items-center">
-                  <div
-                    class="flex gap-2 text-center items-center justify-center"
-                  >
-                    <img src="/images/ep_coin.svg" class="mt-1" alt="" />
-                    <p
-                      class="mt-1 text-[#161E2D] md:text-xl text-lg font-extrabold"
-                    >
-                      10,785,852 EGP
-                    </p>
-                  </div>
-                  <p
-                    class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
-                  >
-                    11,350,000 EGP
-                  </p>
-                </div>
-                <div
-                  class="md:mt-2 mt-3 flex flex-row justify-between items-center"
-                >
-                  <div class="flex items-center gap-1">
-                    <img loading="lazy" src="/images/Group (1).svg" alt="bed" />
-                    <p class="md:text-sm text-xs text-[#5C6368]">
-                      <span class="font-light" data-i18n="Appartment"></span>:
-                    </p>
-                  </div>
-                  <div
-                    class="flex items-center bg-gray-100 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-fit overflow-hidden px-2"
-                  >
-                    <div class="px-3 py-1 text-[#1D4265] text-lg font-semibold">
-                      Save
-                    </div>
-
-                    <div
-                      class="px-3 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
-                    >
-                      750,000 <span class="text-base font-medium">EGP</span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="mt-3 pt-3 flex items-center justify-between xl:gap-4 gap-2 border-t border-solid border-[#E4E4E4]"
-                >
-                  <div class="flex flex-col justify-center items-start">
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/lets-icons_view.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        13 are watcing now
-                      </p>
-                    </div>
-                    <div
-                      class="flex gap-2 text-center items-center justify-center"
-                    >
-                      <img
-                        src="/images/mingcute_time-line.svg"
-                        class="mt-1"
-                        alt=""
-                      />
-                      <p
-                        class="mt-1 text-[#5C6368] md:text-[10px] text-xs font-light"
-                      >
-                        3 days and 4 hours left
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="flex items-center xl:gap-2 gap-1.5 shrink-0">
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/phone.svg"
-                      alt="phone"
-                    />
-                    <img
-                      onclick="perventParentEvent(event)"
-                      loading="lazy"
-                      class="h-[25px] cursor-pointer"
-                      src="./icons/whatsapp.svg"
-                      alt="whatsapp"
-                    />
-                    <div
-                      class="bg-[#1D4265] px-3 py-1 m-auto flex justify-center rounded-full"
-                    >
-                      <p class="text-[#fff] text-sm">View Details</p>
-                    </div>
+                    <p class="text-[#fff] text-sm font-[800]">View Details</p>
                   </div>
                 </div>
               </div>
@@ -3051,7 +2461,7 @@
               <label
                 class="block text-[#161E2D] sm:text-sm text-xs font-semibold mb-2"
               >
-                <span>Project</span>
+                <span>Location</span>
                 <span class="text-[#FF5151]">*</span>
               </label>
               <div
@@ -3071,22 +2481,22 @@
                 style="box-shadow: 0px 4px 4px 0px #00000040"
               >
                 <p class="pt-6 pb-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Apartment
+                  New Cairo
                 </p>
                 <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Villa
+                  6th of October
                 </p>
                 <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Studio
+                  Sheikh Zayed
                 </p>
                 <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Commercial
+                  Heliopolis
                 </p>
                 <p class="py-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Admin
+                  Nasr City
                 </p>
                 <p class="pb-6 pt-3 px-4 cursor-pointer hover:text-[#1563DF]">
-                  Medical
+                  Maadi
                 </p>
               </div>
             </div>
@@ -3113,7 +2523,10 @@
                 onclick="togglePopup('requestMeeting')"
                 class="w-full text-white font-semibold sm:text-base text-sm sm:p-4 p-2.5 leading-5 bg-[#1D4265] rounded-full flex items-center justify-center gap-2"
               >
-                <span class="material-symbols-rounded">groups</span>
+                <img
+                  src="./images/streamline_group-meeting-call.svg"
+                  alt="Request Meeting"
+                />
                 <p>Request Meeting</p>
               </button>
             </div>
