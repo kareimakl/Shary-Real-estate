@@ -401,7 +401,7 @@
     </header>
     <!--- Limited Offer Section -->
     <div
-      class="relative block w-[100%] rounded-b-2xl flex-shrink-0 h-[200px] md:h-[441px] sm:px-8 px-4 md:mt-16 mt-[135px] py-5 overflow-hidden"
+      class="relative block w-[100%] rounded-b-2xl flex-shrink-0 h-[180px] md:h-[441px] sm:px-8 px-4 md:mt-16 mt-[135px] py-5 overflow-hidden"
     >
       <!-- Background -->
       <div
@@ -430,33 +430,41 @@
             class="flex flex-col md:justify-around items-start h-full justify-end"
           >
             <p
-              class="lg:text-[54px] font-[500] flex gap-1 flex-col font-stretch-95% w-8 text-[#08A69B] text-4xl"
+              class="md:text-4xl text-[#08A69B] md:w-auto flex flex-col gap-0 leading-none font-stretch-95% font-Prometo text-[23px] font-[400]"
             >
-              <span class="md:text-4xl font-stretch-normal text-xl"
+              <span
+                class="md:text-4xl text-[#08A69B] text-[15px] font-[400] leading-none"
                 >LIMITED</span
               >
-              <span class="">OFFER</span>
+              OFFER
             </p>
-            <div>
-              <p class="mt-2 text-white md:text-[14px] text-[10px]">
-                • Best-Priced Units in the Market
+            <div class="mt-3 flex flex-col gap-1">
+              <p
+                class="text-white md:text-[14px] font-[200] font-Poppins text-[8px]"
+              >
+                <span class="text-[6px]">•</span> Best-Priced Units in the
+                Market
               </p>
-
-              <p class="mt-2 text-white md:text-[14px] text-[10px]">
-                • Prices Below Market Value
+              <p
+                class="text-white md:text-[14px] font-[200] font-Poppins text-[8px]"
+              >
+                <span class="text-[6px]">•</span> Prices Below Market Value
               </p>
             </div>
 
             <p
-              class="mt-2 text-center flex justify-content items-center text-white md:text-[14px] text-[8px]"
+              class="flex mt-2 items-center text-white md:text-[14px] text-[8px] ont-SemiBold font-Poppin font-[400]"
             >
-              <img src="images/Group.svg" class="inline-block w-4 h-2" />
+              <img
+                src="images/Group.svg"
+                class="inline-block w-[13px] h-[7px] mr-1"
+              />
               30 Units Available
             </p>
           </div>
 
           <img
-            class="absolute md:top-auto md:w-[150px] w-[80px] sm:bottom-0 -bottom-4 sm:ltr:right-0 ltr:-right-4 md:translate-y-[-15%] translate-y-[5%] translate-x-[-40%]"
+            class="absolute md:top-auto md:w-[150px] w-[80px] rotate-12 sm:bottom-0 -bottom-4 sm:ltr:right-0 ltr:-right-4 md:translate-y-[-15%] translate-y-[5%] translate-x-[-40%]"
             src="images/Group 54.svg"
           />
         </div>
@@ -464,7 +472,7 @@
     </div>
     <div
       id="filtersScroll"
-      class="mt-2 mx-auto w-full max-w-[95%] md:max-w-[600px] justify-center items-center flex-col flex p-2 manrope gap-2 text-xs font-medium hide-scroll"
+      class="mx-auto w-full max-w-[95%] md:max-w-[600px] justify-center items-center flex-col flex p-2 manrope gap-2 text-xs font-medium hide-scroll"
     >
       <div
         class="mt-2 p-2 flex flex-nowrap gap-2 text-xs font-medium hide-scroll overflow-x-auto w-full"
@@ -513,7 +521,7 @@
       </div>
 
       <!-- Slider -->
-      <div class="flex mt-4 items-center gap-4 w-[95%]">
+      <div class="flex mt-2 items-center gap-4 w-[95%]">
         <span class="text-gray-500 font-medium">1M</span>
 
         <input
@@ -1324,7 +1332,7 @@
       class="xl:pt-[10px] pt-2 sm:mb-24 mb-12 max-w-[1440px] mx-auto xl:px-40 md:px-10 sm:px-6 px-4"
     >
       <div
-        class="lg:mt-10 mt-8 manrope grid lg:grid-cols-1 grid-cols-1 xl:gap-6 gap-4"
+        class="lg:mt-10 mt-4 manrope grid lg:grid-cols-1 grid-cols-1 xl:gap-6 gap-4"
       >
         <!-- Content Items -->
         <div class="lg:col-span-2">
@@ -1365,21 +1373,30 @@
                     alt="recommend"
                   />
                 </div>
-                <div class="flex flex-col justify-between gap-1">
-                  <div class="justify-between flex flex-col gap-1">
+                <div class="flex relative flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-0">
                     <p
-                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      class="text-[#161E2D] mt-1 md:text-lg md:font-semibold font-bold"
                       data-i18n="Apartment - O West Orascom"
                     ></p>
-                    <div class="flex md:hidden items-center gap-1">
+                    <div class="flex  md:hidden items-center gap-1">
                       <img
                         loading="lazy"
                         src="/images/Group (1).svg"
                         alt="bed"
+                        class="h-[13px] mt-3"
                       />
-                      <p class="md:text-sm text-xs text-[#5C6368]">
+                  
+                      <p class="md:text-sm mt-3 flex items-center text-xs text-[#5C6368]">
                         <span class="font-light" data-i18n="Appartment"></span>
                       </p>
+                          <div
+                        class="absolute top-1 rtl:left-1 ltr:right-1 bg-[#1D4265] py-1 px-3 rounded-full"
+                      >
+                        <p class="text-xs font-semibold text-white leading-4">
+                          -5%
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div class="flex justify-between text-center items-center">
@@ -1388,7 +1405,7 @@
                     >
                       <img src="/images/ep_coin.svg" class="mt-1" alt="" />
                       <p
-                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                        class="mt-1 text-[#161E2D] md:text-xl text-[15px] font-extrabold"
                       >
                         10,785,852
                         <span class="text-[#161E2D] md:text-sm font-bold"
@@ -1397,13 +1414,13 @@
                       </p>
                     </div>
                     <p
-                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                      class="mt-1 text-[#959595] md:text-lg text-[13px] line-through font-medium"
                     >
-                      11,350,000
+                      10,785,852 
                     </p>
                   </div>
                   <div
-                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-2 flex flex-row justify-between items-center"
                   >
                     <div class="md:flex hidden items-center gap-1">
                       <img
@@ -1416,16 +1433,16 @@
                       </p>
                     </div>
                     <div
-                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-full overflow-hidden"
                     >
                       <div
-                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                        class="px-3  text-[#1D4265] text-lg font-semibold"
                       >
                         Save
                       </div>
 
                       <div
-                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                        class="px-7 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
                       >
                         750,000
                         <span class="text-[#fff] md:text-sm font-bold"
@@ -1458,7 +1475,7 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1 w-[14px]"
+                        class="mt-1 ms-[0.5px] w-[14px]"
                         alt=""
                       />
                       <p
@@ -1492,8 +1509,7 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a
+            </a>    <a
               href="./inside-project-lo.html"
               class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
@@ -1529,21 +1545,30 @@
                     alt="recommend"
                   />
                 </div>
-                <div class="flex flex-col justify-between gap-1">
-                  <div class="justify-between flex flex-col gap-1">
+                <div class="flex relative flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-0">
                     <p
-                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      class="text-[#161E2D] mt-1 md:text-lg md:font-semibold font-bold"
                       data-i18n="Apartment - O West Orascom"
                     ></p>
-                    <div class="flex md:hidden items-center gap-1">
+                    <div class="flex  md:hidden items-center gap-1">
                       <img
                         loading="lazy"
                         src="/images/Group (1).svg"
                         alt="bed"
+                        class="h-[13px] mt-3"
                       />
-                      <p class="md:text-sm text-xs text-[#5C6368]">
+                  
+                      <p class="md:text-sm mt-3 flex items-center text-xs text-[#5C6368]">
                         <span class="font-light" data-i18n="Appartment"></span>
                       </p>
+                          <div
+                        class="absolute top-1 rtl:left-1 ltr:right-1 bg-[#1D4265] py-1 px-3 rounded-full"
+                      >
+                        <p class="text-xs font-semibold text-white leading-4">
+                          -5%
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div class="flex justify-between text-center items-center">
@@ -1552,7 +1577,7 @@
                     >
                       <img src="/images/ep_coin.svg" class="mt-1" alt="" />
                       <p
-                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                        class="mt-1 text-[#161E2D] md:text-xl text-[15px] font-extrabold"
                       >
                         10,785,852
                         <span class="text-[#161E2D] md:text-sm font-bold"
@@ -1561,13 +1586,13 @@
                       </p>
                     </div>
                     <p
-                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                      class="mt-1 text-[#959595] md:text-lg text-[13px] line-through font-medium"
                     >
-                      11,350,000
+                      10,785,852 
                     </p>
                   </div>
                   <div
-                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-2 flex flex-row justify-between items-center"
                   >
                     <div class="md:flex hidden items-center gap-1">
                       <img
@@ -1580,16 +1605,16 @@
                       </p>
                     </div>
                     <div
-                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-full overflow-hidden"
                     >
                       <div
-                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                        class="px-3  text-[#1D4265] text-lg font-semibold"
                       >
                         Save
                       </div>
 
                       <div
-                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                        class="px-7 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
                       >
                         750,000
                         <span class="text-[#fff] md:text-sm font-bold"
@@ -1622,7 +1647,7 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1 w-[14px]"
+                        class="mt-1 ms-[0.5px] w-[14px]"
                         alt=""
                       />
                       <p
@@ -1656,8 +1681,7 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a
+            </a>    <a
               href="./inside-project-lo.html"
               class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
@@ -1693,21 +1717,30 @@
                     alt="recommend"
                   />
                 </div>
-                <div class="flex flex-col justify-between gap-1">
-                  <div class="justify-between flex flex-col gap-1">
+                <div class="flex relative flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-0">
                     <p
-                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      class="text-[#161E2D] mt-1 md:text-lg md:font-semibold font-bold"
                       data-i18n="Apartment - O West Orascom"
                     ></p>
-                    <div class="flex md:hidden items-center gap-1">
+                    <div class="flex  md:hidden items-center gap-1">
                       <img
                         loading="lazy"
                         src="/images/Group (1).svg"
                         alt="bed"
+                        class="h-[13px] mt-3"
                       />
-                      <p class="md:text-sm text-xs text-[#5C6368]">
+                  
+                      <p class="md:text-sm mt-3 flex items-center text-xs text-[#5C6368]">
                         <span class="font-light" data-i18n="Appartment"></span>
                       </p>
+                          <div
+                        class="absolute top-1 rtl:left-1 ltr:right-1 bg-[#1D4265] py-1 px-3 rounded-full"
+                      >
+                        <p class="text-xs font-semibold text-white leading-4">
+                          -5%
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div class="flex justify-between text-center items-center">
@@ -1716,7 +1749,7 @@
                     >
                       <img src="/images/ep_coin.svg" class="mt-1" alt="" />
                       <p
-                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                        class="mt-1 text-[#161E2D] md:text-xl text-[15px] font-extrabold"
                       >
                         10,785,852
                         <span class="text-[#161E2D] md:text-sm font-bold"
@@ -1725,13 +1758,13 @@
                       </p>
                     </div>
                     <p
-                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                      class="mt-1 text-[#959595] md:text-lg text-[13px] line-through font-medium"
                     >
-                      11,350,000
+                      10,785,852 
                     </p>
                   </div>
                   <div
-                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-2 flex flex-row justify-between items-center"
                   >
                     <div class="md:flex hidden items-center gap-1">
                       <img
@@ -1744,16 +1777,16 @@
                       </p>
                     </div>
                     <div
-                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-full overflow-hidden"
                     >
                       <div
-                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                        class="px-3  text-[#1D4265] text-lg font-semibold"
                       >
                         Save
                       </div>
 
                       <div
-                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                        class="px-7 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
                       >
                         750,000
                         <span class="text-[#fff] md:text-sm font-bold"
@@ -1786,7 +1819,7 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1 w-[14px]"
+                        class="mt-1 ms-[0.5px] w-[14px]"
                         alt=""
                       />
                       <p
@@ -1820,8 +1853,7 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a
+            </a>    <a
               href="./inside-project-lo.html"
               class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
@@ -1857,21 +1889,30 @@
                     alt="recommend"
                   />
                 </div>
-                <div class="flex flex-col justify-between gap-1">
-                  <div class="justify-between flex flex-col gap-1">
+                <div class="flex relative flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-0">
                     <p
-                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      class="text-[#161E2D] mt-1 md:text-lg md:font-semibold font-bold"
                       data-i18n="Apartment - O West Orascom"
                     ></p>
-                    <div class="flex md:hidden items-center gap-1">
+                    <div class="flex  md:hidden items-center gap-1">
                       <img
                         loading="lazy"
                         src="/images/Group (1).svg"
                         alt="bed"
+                        class="h-[13px] mt-3"
                       />
-                      <p class="md:text-sm text-xs text-[#5C6368]">
+                  
+                      <p class="md:text-sm mt-3 flex items-center text-xs text-[#5C6368]">
                         <span class="font-light" data-i18n="Appartment"></span>
                       </p>
+                          <div
+                        class="absolute top-1 rtl:left-1 ltr:right-1 bg-[#1D4265] py-1 px-3 rounded-full"
+                      >
+                        <p class="text-xs font-semibold text-white leading-4">
+                          -5%
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div class="flex justify-between text-center items-center">
@@ -1880,7 +1921,7 @@
                     >
                       <img src="/images/ep_coin.svg" class="mt-1" alt="" />
                       <p
-                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                        class="mt-1 text-[#161E2D] md:text-xl text-[15px] font-extrabold"
                       >
                         10,785,852
                         <span class="text-[#161E2D] md:text-sm font-bold"
@@ -1889,13 +1930,13 @@
                       </p>
                     </div>
                     <p
-                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                      class="mt-1 text-[#959595] md:text-lg text-[13px] line-through font-medium"
                     >
-                      11,350,000
+                      10,785,852 
                     </p>
                   </div>
                   <div
-                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-2 flex flex-row justify-between items-center"
                   >
                     <div class="md:flex hidden items-center gap-1">
                       <img
@@ -1908,16 +1949,16 @@
                       </p>
                     </div>
                     <div
-                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-full overflow-hidden"
                     >
                       <div
-                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                        class="px-3  text-[#1D4265] text-lg font-semibold"
                       >
                         Save
                       </div>
 
                       <div
-                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                        class="px-7 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
                       >
                         750,000
                         <span class="text-[#fff] md:text-sm font-bold"
@@ -1950,7 +1991,7 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1 w-[14px]"
+                        class="mt-1 ms-[0.5px] w-[14px]"
                         alt=""
                       />
                       <p
@@ -1984,8 +2025,7 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a
+            </a>    <a
               href="./inside-project-lo.html"
               class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
@@ -2021,21 +2061,30 @@
                     alt="recommend"
                   />
                 </div>
-                <div class="flex flex-col justify-between gap-1">
-                  <div class="justify-between flex flex-col gap-1">
+                <div class="flex relative flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-0">
                     <p
-                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      class="text-[#161E2D] mt-1 md:text-lg md:font-semibold font-bold"
                       data-i18n="Apartment - O West Orascom"
                     ></p>
-                    <div class="flex md:hidden items-center gap-1">
+                    <div class="flex  md:hidden items-center gap-1">
                       <img
                         loading="lazy"
                         src="/images/Group (1).svg"
                         alt="bed"
+                        class="h-[13px] mt-3"
                       />
-                      <p class="md:text-sm text-xs text-[#5C6368]">
+                  
+                      <p class="md:text-sm mt-3 flex items-center text-xs text-[#5C6368]">
                         <span class="font-light" data-i18n="Appartment"></span>
                       </p>
+                          <div
+                        class="absolute top-1 rtl:left-1 ltr:right-1 bg-[#1D4265] py-1 px-3 rounded-full"
+                      >
+                        <p class="text-xs font-semibold text-white leading-4">
+                          -5%
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div class="flex justify-between text-center items-center">
@@ -2044,7 +2093,7 @@
                     >
                       <img src="/images/ep_coin.svg" class="mt-1" alt="" />
                       <p
-                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                        class="mt-1 text-[#161E2D] md:text-xl text-[15px] font-extrabold"
                       >
                         10,785,852
                         <span class="text-[#161E2D] md:text-sm font-bold"
@@ -2053,13 +2102,13 @@
                       </p>
                     </div>
                     <p
-                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                      class="mt-1 text-[#959595] md:text-lg text-[13px] line-through font-medium"
                     >
-                      11,350,000
+                      10,785,852 
                     </p>
                   </div>
                   <div
-                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-2 flex flex-row justify-between items-center"
                   >
                     <div class="md:flex hidden items-center gap-1">
                       <img
@@ -2072,16 +2121,16 @@
                       </p>
                     </div>
                     <div
-                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-full overflow-hidden"
                     >
                       <div
-                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                        class="px-3  text-[#1D4265] text-lg font-semibold"
                       >
                         Save
                       </div>
 
                       <div
-                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                        class="px-7 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
                       >
                         750,000
                         <span class="text-[#fff] md:text-sm font-bold"
@@ -2114,7 +2163,7 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1 w-[14px]"
+                        class="mt-1 ms-[0.5px] w-[14px]"
                         alt=""
                       />
                       <p
@@ -2148,8 +2197,7 @@
                   </div>
                 </div>
               </div>
-            </a>
-            <a
+            </a>    <a
               href="./inside-project-lo.html"
               class="rounded-2xl lg:w-full shrink-0 bg-white shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)]"
             >
@@ -2185,21 +2233,30 @@
                     alt="recommend"
                   />
                 </div>
-                <div class="flex flex-col justify-between gap-1">
-                  <div class="justify-between flex flex-col gap-1">
+                <div class="flex relative flex-col justify-between gap-1">
+                  <div class="justify-between flex flex-col gap-0">
                     <p
-                      class="text-[#161E2D] md:text-lg md:font-semibold font-bold"
+                      class="text-[#161E2D] mt-1 md:text-lg md:font-semibold font-bold"
                       data-i18n="Apartment - O West Orascom"
                     ></p>
-                    <div class="flex md:hidden items-center gap-1">
+                    <div class="flex  md:hidden items-center gap-1">
                       <img
                         loading="lazy"
                         src="/images/Group (1).svg"
                         alt="bed"
+                        class="h-[13px] mt-3"
                       />
-                      <p class="md:text-sm text-xs text-[#5C6368]">
+                  
+                      <p class="md:text-sm mt-3 flex items-center text-xs text-[#5C6368]">
                         <span class="font-light" data-i18n="Appartment"></span>
                       </p>
+                          <div
+                        class="absolute top-1 rtl:left-1 ltr:right-1 bg-[#1D4265] py-1 px-3 rounded-full"
+                      >
+                        <p class="text-xs font-semibold text-white leading-4">
+                          -5%
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div class="flex justify-between text-center items-center">
@@ -2208,7 +2265,7 @@
                     >
                       <img src="/images/ep_coin.svg" class="mt-1" alt="" />
                       <p
-                        class="mt-1 text-[#161E2D] md:text-xl text-xs font-extrabold"
+                        class="mt-1 text-[#161E2D] md:text-xl text-[15px] font-extrabold"
                       >
                         10,785,852
                         <span class="text-[#161E2D] md:text-sm font-bold"
@@ -2217,13 +2274,13 @@
                       </p>
                     </div>
                     <p
-                      class="mt-1 text-[#959595] md:text-lg text-xs line-through font-medium"
+                      class="mt-1 text-[#959595] md:text-lg text-[13px] line-through font-medium"
                     >
-                      11,350,000
+                      10,785,852 
                     </p>
                   </div>
                   <div
-                    class="md:mt-2 w-full gap-0 md:gap-10 mt-3 flex flex-row justify-between items-center"
+                    class="md:mt-2 w-full gap-0 md:gap-10 mt-2 flex flex-row justify-between items-center"
                   >
                     <div class="md:flex hidden items-center gap-1">
                       <img
@@ -2236,16 +2293,16 @@
                       </p>
                     </div>
                     <div
-                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-fit overflow-hidden"
+                      class="flex items-center bg-[#fff] rounded-full shadow-[0_1px_6.3px_0_rgba(0,0,0,0.25)] w-full overflow-hidden"
                     >
                       <div
-                        class="px-3 py-1 text-[#1D4265] text-lg font-semibold"
+                        class="px-3  text-[#1D4265] text-lg font-semibold"
                       >
                         Save
                       </div>
 
                       <div
-                        class="px-4 py-2 bg-[#1D4265] text-white text-sm font-bold rounded-full"
+                        class="px-7 py-1 bg-[#1D4265] text-white text-sm font-bold rounded-full"
                       >
                         750,000
                         <span class="text-[#fff] md:text-sm font-bold"
@@ -2278,7 +2335,7 @@
                     >
                       <img
                         src="/images/mingcute_time-line.svg"
-                        class="mt-1 w-[14px]"
+                        class="mt-1 ms-[0.5px] w-[14px]"
                         alt=""
                       />
                       <p
@@ -2313,6 +2370,7 @@
                 </div>
               </div>
             </a>
+    
           </div>
 
           <!-- Pagination -->
