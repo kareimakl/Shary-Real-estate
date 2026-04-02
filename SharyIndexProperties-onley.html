@@ -284,7 +284,7 @@
               <span data-i18n="Sign in" class="md:inline hidden text-sm"></span>
             </a>
             <button
-              class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#FFF] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
+              class="xl:hidden flex items-center ltr:bg-gradient-to-r rtl:bg-gradient-to-l from-[#123A4B] to-[#4DBFB1] rounded-full md:px-4 px-2.5 md:py-0 pt-2 pb-1.5"
             >
               <p
                 data-i18n="Get The App"
@@ -1158,7 +1158,7 @@
 
     <!-- Main -->
     <main
-      class="relative bg-gradient-to-r from-[#173A59] to-[#173A59] xl:pt-[70px] pt-40 sm:mb-24 mb-12"
+      class="relative bg-gradient-to-r from-[#173A59] to-[#173A59] xl:pt-[70px] pt-40 "
     >
       <!-- Background -->
       <div
@@ -1238,9 +1238,9 @@
         </div>
 
         <div
-          class="flex flex-col items-center text-center justify-between bg-[#1D4265] rounded-full w-[90%] px-4 py-3 m-auto border border-white/20 shadow-[0_0_30px_rgba(0,0,0,0.4)]"
+          class="flex flex-col items-center text-center justify-around bg-[#1D4265] rounded-full w-[90%] md:px-4 px-1 md:py-3 py-2 m-auto border border-white/20 shadow-[0_0_30px_rgba(0,0,0,0.4)]"
         >
-          <div class="flex flex-wrap gap-8">
+          <div class="flex flex-wrap md:gap-8 gap-4">
             <div class="flex items-center gap-1">
               <img loading="lazy" src="./images/Icon copy 3.svg" alt="bed" />
               <p class="text-sm text-[#FFF] leading-none">
@@ -1454,7 +1454,7 @@
 
                   <!-- Content -->
                   <div
-                    class="relative z-10 flex justify-between h-full p-5 text-white"
+                    class="relative z-10 flex justify-between h-full md:p-5 p-3 text-white"
                   >
                     <!-- Left -->
                     <div
@@ -1462,18 +1462,20 @@
                     >
                       <!-- Title -->
                       <h3
-                        class="text-xl flex justify-start text-start font-Poppins"
+                        class="md:text-xl text-[16px] flex justify-start items-center text-start font-Poppins"
                       >
                         Shary Index Analysis
                       </h3>
                       <!-- Stats -->
-                      <div class="text-sm flex justify-between gap-2 space-y-1">
+                      <div
+                        class="text-sm flex justify-between md:gap-2 gap-1 space-y-1"
+                      >
                         <div
                           class="mt-2 flex flex-nowrap justify-start items-center text-sm"
                         >
                           <div class="flex items-center gap-1 text-sm">
                             <span
-                              class="md:text-[14px] justify-start items-center text-start flex flex-row gap-1 text-[14px]"
+                              class="md:text-[14px] justify-start items-center text-start flex flex-row gap-1 text-[10px]"
                             >
                               Market Score</span
                             >
@@ -1485,7 +1487,7 @@
                           </div>
                         </div>
                         <p
-                          class="md:text-[14px] justify-start items-center text-start flex flex-row gap-1 text-[14px]"
+                          class="md:text-[14px] justify-start pt-1 items-center text-start flex flex-row gap-1 text-[10px]"
                         >
                           <span class=""> Expected Growth</span>
                           <span
@@ -1502,9 +1504,12 @@
                         class="mt-2"
                       />
                       <p
-                        class="text-[32px] font-manrope text-center w-full m-auto flex justify-center font-bold tracking-wide bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent"
+                        class="md:text-[32px] gap-1 text-[24px] font-[800] pt-3 font-manrope text-center w-full m-auto flex justify-center tracking-wide bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent"
                       >
-                        75,000 <span class="text-sm">EGP/M²</span>
+                        75,000
+                        <span class="md:text-sm text-[12px] font-[200] pt-4"
+                          >EGP/M²</span
+                        >
                       </p>
                     </div>
                   </div>
@@ -1521,16 +1526,31 @@
                   <img
                     onclick="perventParentEvent(event)"
                     loading="lazy"
-                    class="h-[35px] bg-[#FFF] w-1/2 md:w-full py-1 rounded-full cursor-pointer"
-                    src="./images/ion_call copy.svg"
+                    class="h-[35px] bg-[#1D4265] md:flex hidden w-1/2 md:w-full py-1 rounded-full cursor-pointer"
+                    src="./images/ion_call.svg"
                     alt="phone"
                   />
                   <!-- WhatsApp -->
                   <img
                     onclick="perventParentEvent(event)"
                     loading="lazy"
-                    class="h-[35px] bg-[#FFF] w-1/2 md:w-full py-1 rounded-full block cursor-pointer"
-                    src="./images/ic_baseline-whatsapp copy.svg"
+                    class="h-[35px] md:bg-[#00DD3B] md:flex hidden w-1/2 md:w-full py-1 rounded-full cursor-pointer"
+                    src="./images/ic_baseline-whatsapp.svg"
+                    alt="whatsapp"
+                  />
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[35px] md:hidden bg-[#FFF] w-1/2 md:w-full py-2 rounded-full cursor-pointer"
+                    src="./images/Vector (9).svg"
+                    alt="phone"
+                  />
+                  <!-- WhatsApp -->
+                  <img
+                    onclick="perventParentEvent(event)"
+                    loading="lazy"
+                    class="h-[35px] md:hidden bg-[#FFF] w-1/2 md:w-full py-1 rounded-full block cursor-pointer"
+                    src="./images/ic_baseline-whatsapp (1) copy 2.svg"
                     alt="whatsapp"
                   />
                   <!-- Z Button -->
@@ -1542,7 +1562,7 @@
                     alt="zoom"
                   />
                   <a
-                    href="./Limited-Offer-form.html"
+                    href="./sharyindexcontact.html"
                     class="bg-[#FFF] w-full h-[35px] flex justify-center items-center md:text-[14px] font-[800] text-xs text-[#1D4265] py-3 rounded-full font-[Manrope] shadow-md"
                   >
                     Contact Us
